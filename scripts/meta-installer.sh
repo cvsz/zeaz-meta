@@ -43,7 +43,21 @@ log "generating source inventory into docs/generated"
 "$ROOT/scripts/full-spectrum-audit.py" --source-root "$SOURCE_ROOT" --output-dir "$ROOT/docs/generated"
 
 log "validating Go platform"
-(cd "$ROOT/platform" && go mod tidy && go test ./...)
+(cd "$ROOT/platform" && go mod tidy && go test ./... && go build ./cmd/...)
+
+if command -v terraform >/dev/null 2>&1; then
+  log "validating Terraform syntax"
+  terraform -chdir="$ROOT/infra/terraform" fmt -check
+else
+  log "warning: terraform not found; skipping Terraform syntax validation"
+fi
+
+if command -v kubectl >/dev/null 2>&1; then
+  log "validating Kubernetes manifests client-side"
+  kubectl apply --dry-run=client -f "$ROOT/infra/kubernetes/zeaz-v19.yaml" >/dev/null
+else
+  log "warning: kubectl not found; skipping Kubernetes manifest validation"
+fi
 
 if [[ "$MODE" == "validate" ]]; then
   log "validate mode complete; no DNS, cluster, or host persistence changes were made"
@@ -63,6 +77,7 @@ else
 fi
 
 log "applying Kubernetes base manifests"
+kubectl apply -f "$ROOT/infra/kubernetes/zeaz-v19.yaml"
 kubectl apply -k "$ROOT/platform/deploy/kubernetes/base"
 
 if [[ -n "$ARGOCD_SERVER" ]]; then
