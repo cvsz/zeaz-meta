@@ -1,0 +1,9 @@
+filebeat.autodiscover:
+  providers:
+    - type: kubernetes
+      hints.enabled: true
+processors:
+  - add_cloud_metadata: {}
+output.elasticsearch:
+  hosts: ["https://elasticsearch:9200"]
+  index: "zeaz-%{[agent.version]}-%{+yyyy.MM.dd}"

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: zeaz-platform
+  labels:
+    istio.io/dataplane-mode: ambient
+    spiffe.io/spire-managed-identity: "true"
