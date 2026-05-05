@@ -16,7 +16,7 @@ terraform plan -out=tfplan
 terraform apply tfplan
 ```
 
-The production Terraform stack creates isolated primary and failover EKS clusters, encrypted data planes, Cloudflare wildcard DNS, private control-plane endpoints, regional node pools, KMS keys, Aurora PostgreSQL, and Redis multi-AZ replication.
+The production Terraform stack creates isolated primary and failover EKS clusters, optional GKE hybrid capacity, encrypted data planes, Cloudflare wildcard DNS/WAF/rate limits, private control-plane endpoints, regional node pools, KMS keys, Aurora PostgreSQL, and Redis multi-AZ replication.
 
 ## 3. Cluster security bootstrap
 
@@ -40,7 +40,7 @@ Rollback is performed by reverting the Git commit that changed image tags or man
 
 ## 5. TSS signer operating model
 
-`tss-signer` runs five pods across at least three zones. A signing operation is accepted only when tenant scope, nonce freshness, policy ID, chain allow-list, risk decision, and quorum approval are present. The cryptographic participant implementation is isolated behind `platform/internal/crypto.Signer`; the deployment stores encrypted participant share metadata in Vault and wraps local material with HSM/PKCS#11 handles.
+`tss-signer` runs five pods across at least three zones on the dedicated signer pool. A signing operation is accepted only when tenant scope, nonce freshness, policy ID, chain allow-list, risk decision, FROST/tss-lib aggregate proof, participant SPIFFE transcripts, and quorum approval are present. The coordinator fails closed without a quorum proof; cryptographic participants load shares from Vault and wrap local material with HSM/PKCS#11 handles.
 
 ## 6. Failure and recovery procedures
 
@@ -57,3 +57,7 @@ Rollback is performed by reverting the Git commit that changed image tags or man
 - Load test tenant-authenticated API flows at the gateway: token exchange, wallet transfer, payment intent, swap order, LINE webhook burst, TikTok webhook burst, and audit read.
 - Chaos test AZ loss, signer pod loss, Redis primary failover, Aurora writer promotion, NATS stream replica loss, and Cloudflare origin failover.
 - Recovery is accepted only when idempotency prevents duplicate ledger entries, audit hashes remain continuous, and tenant-scoped SLO dashboards return to green.
+
+## 8. Clean bootstrap and no-persistence rule
+
+Before reusing any host that previously ran legacy repositories, execute `scripts/clean-os.sh` as root, then deploy only through Terraform/Packer/ArgoCD. Runtime services must not install cron entries, systemd units, PM2 processes, self-heal loops, or generated `.env` secret files.

@@ -1,0 +1,65 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: zeaz-public
+  namespace: zeaz-platform
+spec:
+  gatewayClassName: nginx
+  listeners:
+    - name: https
+      hostname: "*.zeaz.dev"
+      port: 443
+      protocol: HTTPS
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: zeaz-dev-wildcard-tls
+      allowedRoutes:
+        namespaces:
+          from: Same
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: zeaz-api
+  namespace: zeaz-platform
+spec:
+  parentRefs:
+    - name: zeaz-public
+  hostnames: ["api.zeaz.dev"]
+  rules:
+    - matches: [{path: {type: PathPrefix, value: /v1/auth}}]
+      backendRefs: [{name: auth-service, port: 8080}]
+    - matches: [{path: {type: PathPrefix, value: /v1/wallets}}]
+      backendRefs: [{name: wallet-service, port: 8080}]
+    - matches: [{path: {type: PathPrefix, value: /v1/payments}}]
+      backendRefs: [{name: payment-service, port: 8080}]
+    - matches: [{path: {type: PathPrefix, value: /v1/swaps}}]
+      backendRefs: [{name: swap-engine, port: 8080}]
+    - matches: [{path: {type: PathPrefix, value: /v1/bots}}]
+      backendRefs: [{name: bot-service, port: 8080}]
+    - matches: [{path: {type: PathPrefix, value: /v1/affiliate}}]
+      backendRefs: [{name: affiliate-service, port: 8080}]
+    - matches: [{path: {type: PathPrefix, value: /v1/notifications}}]
+      backendRefs: [{name: notification-service, port: 8080}]
+    - matches: [{path: {type: PathPrefix, value: /v1/audit}}]
+      backendRefs: [{name: audit-service, port: 8080}]
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: zeaz-success-rate
+  namespace: zeaz-platform
+spec:
+  metrics:
+    - name: http-success-rate
+      interval: 1m
+      count: 5
+      successCondition: result[0] >= 0.995
+      provider:
+        prometheus:
+          address: http://prometheus.observability.svc:9090
+          query: |
+            sum(rate(http_requests_total{namespace="zeaz-platform",code!~"5.."}[2m])) /
+            sum(rate(http_requests_total{namespace="zeaz-platform"}[2m]))

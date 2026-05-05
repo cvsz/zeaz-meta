@@ -17,8 +17,23 @@ jobs:
         with: { go-version-file: platform/go.mod }
       - run: go test ./...
       - run: go vet ./...
-  build-images:
+  scan:
     needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aquasecurity/trivy-action@0.24.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          severity: CRITICAL,HIGH
+          exit-code: '1'
+      - uses: anchore/sbom-action@v0
+        with:
+          path: .
+          format: spdx-json
+  build-images:
+    needs: scan
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -36,15 +51,36 @@ jobs:
           file: platform/deploy/docker/Dockerfile
           build-args: SERVICE=${{ matrix.service }}
           push: ${{ github.ref == 'refs/heads/main' }}
-          tags: ghcr.io/cvsz/zeaz-meta/${{ matrix.service }}:${{ github.sha }}
-  scan:
+          tags: |
+            ghcr.io/cvsz/zeaz-meta/${{ matrix.service }}:${{ github.sha }}
+            ghcr.io/cvsz/zeaz-meta/${{ matrix.service }}:main
+  deploy-staging:
+    if: github.ref == 'refs/heads/main'
     needs: build-images
     runs-on: ubuntu-latest
+    environment: staging
     steps:
       - uses: actions/checkout@v4
-      - uses: aquasecurity/trivy-action@0.24.0
-        with:
-          scan-type: fs
-          scan-ref: .
-          severity: CRITICAL,HIGH
-          exit-code: '1'
+      - name: Install ArgoCD CLI
+        run: curl -fsSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/v2.11.4/argocd-linux-amd64 && chmod +x /usr/local/bin/argocd
+      - name: Sync staging with canary rollout gates
+        env:
+          ENVIRONMENT: staging
+          ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
+          ARGOCD_AUTH_TOKEN: ${{ secrets.ARGOCD_AUTH_TOKEN }}
+        run: ./scripts/safe-deploy.sh
+  deploy-prod:
+    if: github.ref == 'refs/heads/main'
+    needs: deploy-staging
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ArgoCD CLI
+        run: curl -fsSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/v2.11.4/argocd-linux-amd64 && chmod +x /usr/local/bin/argocd
+      - name: Sync prod after environment approval
+        env:
+          ENVIRONMENT: prod
+          ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
+          ARGOCD_AUTH_TOKEN: ${{ secrets.ARGOCD_AUTH_TOKEN }}
+        run: ./scripts/safe-deploy.sh
