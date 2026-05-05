@@ -61,3 +61,27 @@ Rollback is performed by reverting the Git commit that changed image tags or man
 ## 8. Clean bootstrap and no-persistence rule
 
 Before reusing any host that previously ran legacy repositories, execute `scripts/clean-os.sh` as root, then deploy only through Terraform/Packer/ArgoCD. Runtime services must not install cron entries, systemd units, PM2 processes, self-heal loops, or generated `.env` secret files.
+
+## 9. Enterprise automated installer
+
+`./scripts/meta-installer.sh` is the normalized installer for the refactored meta platform. It is idempotent and defaults to `MODE=validate`, which only regenerates repository inventories and runs Go tests. It does not create cron jobs, systemd units, PM2 processes, local `.env` files, kube contexts, or persisted credentials. Production mutation requires explicit `MODE=deploy` plus environment-supplied credentials.
+
+```bash
+./scripts/meta-installer.sh
+CLEAN_OS=1 sudo -E ./scripts/meta-installer.sh
+MODE=deploy \
+  CLOUDFLARE_API_TOKEN=... \
+  CLOUDFLARE_ZONE_ID=... \
+  PRIMARY_ORIGIN=primary-ingress.example.net \
+  FAILOVER_ORIGIN=failover-ingress.example.net \
+  ./scripts/deploy-unified-stack.sh
+```
+
+Cloudflare provisioning is environment-driven and idempotent. `platform/deploy/cloudflare/provision-zone.sh` upserts `*.zeaz.dev`, `failover.zeaz.dev`, and the service subdomains from `SERVICES_CSV` (default: `api,auth,wallet,payment,swap,bot,affiliate,notification,audit,signer,grafana,prometheus,tracing,argocd,vault`). Runtime service onboarding should call `platform/deploy/cloudflare/dns-record.sh` with `SUBDOMAIN`, `TARGET`, and `DOMAIN` instead of hand-editing DNS.
+
+## 10. Deterministic reproducibility contract
+
+- Source intake is reproducible through `scripts/full-spectrum-audit.py`, which uses `gh repo clone` first and falls back to anonymous shallow `git clone` for public repositories when GitHub CLI authentication is unavailable.
+- Golden nodes are built by Packer, mutable infrastructure is created by Terraform, and application state is reconciled by ArgoCD. The installer never becomes a long-running agent.
+- Secrets are delivered only through Vault/External Secrets leases or the calling process environment. No bootstrap step writes durable secret material into the repository or host filesystem.
+- Canary and rollback are controlled by Argo Rollouts and Prometheus analysis; rollback is a Git revert or image tag pin followed by ArgoCD sync.
