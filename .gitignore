@@ -1,0 +1,10 @@
+# Local audit intake clones are intentionally excluded from the meta repo.
+sources/
+clone-failures.log
+
+# Build/test outputs
+bin/
+dist/
+coverage/
+.tmp/
+.DS_Store

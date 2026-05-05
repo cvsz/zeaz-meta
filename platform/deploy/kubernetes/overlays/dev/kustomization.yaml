@@ -1,0 +1,14 @@
+resources:
+  - ../../base
+namePrefix: dev-
+commonLabels:
+  app.kubernetes.io/part-of: zeaz-platform
+  zeaz.dev/environment: dev
+patches:
+  - target:
+      kind: Deployment
+      name: zeaz-service
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 2

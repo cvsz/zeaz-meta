@@ -1,0 +1,11 @@
+receivers:
+  otlp: { protocols: { grpc: {}, http: {} } }
+processors:
+  batch: {}
+  memory_limiter: { limit_mib: 512 }
+exporters:
+  logging: {}
+  otlphttp/tempo: { endpoint: http://tempo:4318 }
+service:
+  pipelines:
+    traces: { receivers: [otlp], processors: [memory_limiter,batch], exporters: [logging,otlphttp/tempo] }

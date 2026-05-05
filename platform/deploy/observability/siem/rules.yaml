@@ -1,0 +1,19 @@
+rules:
+  - name: signer-denial-spike
+    index: zeaz-*
+    query: 'service:tss-signer AND action:sign.denied'
+    threshold: 5
+    window: 5m
+    severity: critical
+  - name: webhook-replay
+    index: zeaz-*
+    query: 'action:webhook.replay.detected'
+    threshold: 1
+    window: 1m
+    severity: high
+  - name: tenant-privilege-escalation
+    index: zeaz-*
+    query: 'action:rbac.denied AND scope:(admin OR audit:read)'
+    threshold: 3
+    window: 10m
+    severity: high
