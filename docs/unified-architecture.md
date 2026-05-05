@@ -59,7 +59,7 @@ External integrations through egress allow-lists and per-tenant provider credent
 - Public APIs are tenant-scoped REST endpoints in `platform/api/openapi.yaml`.
 - Internal service-to-service APIs use gRPC with SPIFFE-authenticated mTLS and explicit per-method authorization.
 - Every mutating REST endpoint requires an idempotency key, tenant ID, user/service principal, trace ID, and audit event emission.
-- Webhooks validate provider signatures over raw request bodies before JSON parsing and store replay IDs in Redis with provider-specific TTL.
+- Webhooks validate provider signatures over raw request bodies before JSON parsing; the Go implementation covers LINE base64 HMAC, TikTok canonical-header HMAC, and bounded replay rejection before payload handling.
 
 ## Control-flow model
 

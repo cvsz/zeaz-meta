@@ -222,7 +222,12 @@ spec:
           image: ghcr.io/cvsz/zeaz-meta/bot-service:main
           ports: [{containerPort: 8080, name: http}]
           envFrom: [{configMapRef: {name: zeaz-service-config}}]
-          env: [{name: SERVICE_NAME, value: bot-service}]
+          env:
+            - {name: SERVICE_NAME, value: bot-service}
+            - name: LINE_CHANNEL_SECRET
+              valueFrom: {secretKeyRef: {name: zeaz-provider-webhook-secrets, key: line-channel-secret}}
+            - name: TIKTOK_WEBHOOK_SECRET
+              valueFrom: {secretKeyRef: {name: zeaz-provider-webhook-secrets, key: tiktok-webhook-secret}}
           readinessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 10}
           livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
           resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}

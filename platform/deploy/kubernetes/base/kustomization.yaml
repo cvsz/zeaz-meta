@@ -1,4 +1,5 @@
 resources:
+  - external-secrets.yaml
   - namespace.yaml
   - services.yaml
   - gateway-rollouts.yaml
