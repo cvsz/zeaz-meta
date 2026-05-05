@@ -98,6 +98,55 @@ paths:
                           round: {type: integer}
                           transcript_hash: {type: string}
       responses: {'200': {description: Aggregate signature accepted}, '422': {description: Quorum or policy proof rejected}}
+  /v1/ledger/journals:
+    post:
+      summary: Create an idempotent double-entry journal.
+      x-zeaz-owner: ledger-service
+      responses: {'200': {description: Journal accepted}}
+  /v1/signer/sessions:
+    post:
+      summary: Create a FROST or tss-lib signing session bound to Vault/HSM policy.
+      x-zeaz-owner: signer-service
+      responses: {'200': {description: Session accepted}}
+  /v1/automation/line/jobs:
+    post:
+      summary: Schedule a tenant-scoped LINE automation job.
+      x-zeaz-owner: automation-service
+      responses: {'200': {description: Job accepted}}
+  /v1/automation/tiktok/jobs:
+    post:
+      summary: Schedule a tenant-scoped TikTok Shop automation job.
+      x-zeaz-owner: automation-service
+      responses: {'200': {description: Job accepted}}
+  /v1/schedules:
+    get:
+      summary: List deterministic scheduler jobs.
+      x-zeaz-owner: scheduler-service
+      responses: {'200': {description: Schedules listed}}
+    post:
+      summary: Create deterministic scheduler job.
+      x-zeaz-owner: scheduler-service
+      responses: {'200': {description: Schedule accepted}}
+  /v1/events:
+    post:
+      summary: Publish a tenant event to NATS JetStream or Kafka.
+      x-zeaz-owner: event-bus
+      responses: {'200': {description: Event accepted}}
+  /v1/refactor/plans:
+    post:
+      summary: Generate a guarded refactor plan from static analysis.
+      x-zeaz-owner: refactor-engine
+      responses: {'200': {description: Plan created}}
+  /v1/agents/plans:
+    post:
+      summary: Topologically order DAG-based multi-agent work.
+      x-zeaz-owner: agent-orchestrator
+      responses: {'200': {description: DAG accepted}}
+  /v1/ci/analyze:
+    post:
+      summary: Analyze CI signals and recommend canary or rollback action.
+      x-zeaz-owner: ci-intelligence
+      responses: {'200': {description: Analysis accepted}}
   /v1/audit/events:
     get:
       summary: Read append-only audit events with break-glass logging.
