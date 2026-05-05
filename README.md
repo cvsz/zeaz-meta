@@ -17,6 +17,12 @@ This repository is the enterprise architecture, security, and infrastructure con
 - `scripts/safe-deploy.sh` — ArgoCD sync/wait deployment wrapper for controlled promotion.
 - `scripts/audit-repos.sh` — repeatable source repository evidence inventory command.
 
+- `docs/generated/full-spectrum-analysis.md` — deterministic full-spectrum repo inventory, normalized service ownership, flow map, and inconsistency analysis generated from cloned sources.
+- `docs/generated/function-api-inventory.md` — complete static index of detected functions, API expressions, and automation pipeline files.
+- `scripts/full-spectrum-audit.py` — GitHub CLI-first clone/intake analyzer with anonymous git fallback for public repositories.
+- `scripts/meta-installer.sh` — idempotent enterprise installer; default validate mode performs no DNS, cluster, or persistence mutations.
+- `scripts/deploy-unified-stack.sh` — deployment wrapper for Cloudflare, Kubernetes, and ArgoCD promotion.
+
 ## Target Runtime
 
 ```text
@@ -33,4 +39,6 @@ This repository is the enterprise architecture, security, and infrastructure con
 
 ```bash
 ./scripts/bootstrap.sh
+./scripts/meta-installer.sh              # validate-only, no external mutations
+MODE=deploy ./scripts/deploy-unified-stack.sh
 ```
