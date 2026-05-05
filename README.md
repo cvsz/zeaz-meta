@@ -11,7 +11,7 @@ This repository is the enterprise architecture, security, and infrastructure con
 - `docs/production-deployment-guide.md` — production promotion, Terraform, GitOps, TSS, rollback, failure recovery, load, and chaos procedures.
 - `platform/api/openapi.yaml` — unified tenant-scoped API contract for gateway routing and service ownership.
 - `platform/db/migrations/001_core_schema.sql` — tenant, user, wallet, ledger, payment, and immutable audit database schema.
-- `platform/` — production-oriented Go service scaffold, container builds, Kubernetes, Terraform, Vault, SPIRE, observability, GitOps, Cloudflare, and CI/CD assets.
+- `platform/` — production-oriented Go service scaffold, signed webhook verification, replay protection, container builds, Kubernetes, Terraform, Vault, SPIRE, observability, GitOps, Cloudflare, and CI/CD assets.
 - `scripts/bootstrap.sh` — clean local bootstrap and validation entrypoint.
 - `scripts/clean-os.sh` — removes legacy cron/systemd/watchdog/docker residue before deterministic GitOps bootstrap.
 - `scripts/safe-deploy.sh` — ArgoCD sync/wait deployment wrapper for controlled promotion.

@@ -27,16 +27,16 @@ done
 | `tiktok-shop-sdk` | cloned | 376 | TypeScript SDK, docs, tests | 59 | 0 | 785 |
 | `tiktokshop-api-client` | cloned | 16 | PHP Composer SDK | 7 | 0 | 11 |
 | `tiktokshop-php` | cloned | 57 | PHP SDK | 53 | 0 | 0 |
-| `zLinebot` | cloned | 486 | TypeScript, shell, YAML, Python, SQL | 172 | 54 | 369 |
-| `zLinebot-automos` | cloned | 321 | JavaScript, YAML, shell, TypeScript, Python | 219 | 38 | 261 |
+| `zLinebot` | cloned | 486 | TypeScript, shell, YAML, Python, SQL | 166 | 54 | 369 |
+| `zLinebot-automos` | cloned | 321 | JavaScript, YAML, shell, TypeScript, Python | 209 | 38 | 261 |
 | `zeaz-platform` | cloned | 1 | shell | 1 | 1 | 17 |
 | `zgitcp` | cloned | 2 | shell, Markdown | 0 | 1 | 38 |
 | `zlttbots` | cloned | 893 | Python, shell, JS, YAML, TypeScript | 440 | 142 | 608 |
 | `ztsaff` | cloned | 223 | shell, YAML, Python, Terraform | 265 | 143 | 1326 |
-| `zttlbots` | cloned | 52 | TypeScript, shell, YAML, SQL | 23 | 11 | 50 |
+| `zttlbots` | cloned | 52 | TypeScript, shell, YAML, SQL | 15 | 11 | 50 |
 | `zvath` | cloned | 219 | Python, YAML, TypeScript/TSX, SQL | 41 | 3 | 42 |
-| `zwallet` | cloned | 460 | TypeScript, Python, YAML, Kotlin, SQL | 161 | 17 | 117 |
-| `zypto` | cloned | 3757 | YAML, Python, Markdown, Terraform, TOML | 316 | 356 | 123 |
+| `zwallet` | cloned | 460 | TypeScript, Python, YAML, Kotlin, SQL | 126 | 17 | 117 |
+| `zypto` | cloned | 3757 | YAML, Python, Markdown, Terraform, TOML | 314 | 356 | 123 |
 | `zTTato-Platform` | blocked | n/a | unavailable | n/a | n/a | n/a |
 | `zeapay` | blocked | n/a | unavailable | n/a | n/a | n/a |
 
@@ -50,3 +50,21 @@ Risk-pattern hits were generated with a conservative scan for `while true`, `cro
 | Host-mutating repos (`zgitcp`, `zeaz-platform`, `ztsaff`, `zlttbots`, `zLinebot`, `zLinebot-automos`, `zypto`) | Quarantine scripts. Only signed Terraform, Packer, Kubernetes, and ArgoCD artifacts from this meta repository may mutate infrastructure. |
 | Money-movement repos (`zwallet`, `zeapay`, `ZeaZDev-Omega`, payment paths in bot repos) | Require ledger migration, idempotency, audit append, transaction tests, and signer isolation before any user funds are handled. |
 | Unaudited repos (`zTTato-Platform`, `zeapay`) | Blocked from production import until authenticated clone and full scan are complete. |
+
+
+## High-value endpoint evidence
+
+The clone audit resolved concrete endpoint declarations that drive the unified API mapping. Representative source endpoints include:
+
+| Repository | Endpoint evidence | Unified destination |
+|---|---|---|
+| `zwallet` | `/v1/auth/register`, `/v1/auth/login`, `/v1/wallet-metadata`, `/v1/swaps/orchestrate`, `/v1/mpc/sign-transaction`, `/v1/audit-logs` | `auth-service`, `wallet-service`, `swap-engine`, `tss-signer`, `audit-service` |
+| `zLinebot` | `/tiktok`, `/line`, `/stripe/webhook`, `/promptpay`, `/admin/billing`, `/metrics` | `bot-service`, `payment-service`, `notification-service` |
+| `zLinebot-automos` | `/api/register`, `/api/login`, `/api/chat`, `/webhook/{tenant_id}`, `/api/billing/checkout`, `/stripe/webhook`, campaign and lead APIs | `auth-service`, `bot-service`, `payment-service`, `affiliate-service` |
+| `ztsaff` | `/wallet`, `/wallet/deposit`, `/rent/subscribe`, `/generate`, `/product-feed/import`, admin dashboards, `/webhook` | `wallet-service`, `payment-service`, `affiliate-service`, `bot-service`, `audit-service` |
+| `zlttbots` | `/register`, `/login`, `/deploy`, `/v1/trends/analyze`, `/v1/copy/generate`, `/log`, RL `/select` and `/update` | `auth-service`, `affiliate-service`, `notification-service`, quarantine for deploy/RL controls |
+| `zvath` | `/tenants/{org_id}/me`, Stripe `/webhook`, OAuth `/url`, `/callback`, `/refresh` | `auth-service`, `payment-service`, `audit-service` |
+| `ABTPi18n` | `/auth/login`, `/exchange/keys`, strategy, portfolio, and secret rotation APIs | `auth-service`, `swap-engine`, `wallet-service`, Vault rotation workflows |
+| `zypto` | signup/me, checkout, attestation, tenant snapshot, deploy/status, AIOps kill/limit routes | `auth-service`, `payment-service`, `audit-service`; host deploy/AIOps routes are quarantined |
+
+The endpoint evidence was intentionally summarized instead of copied wholesale so the meta repository remains small while still retaining reproducible extraction through `scripts/audit-repos.sh`.

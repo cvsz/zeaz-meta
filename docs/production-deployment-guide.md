@@ -26,7 +26,7 @@ kubectl apply -k platform/deploy/kubernetes/overlays/prod
 vault policy write zeaz-platform platform/deploy/vault/policies.hcl
 ```
 
-SPIRE issues workload identities under `spiffe://zeaz.dev`, Vault maps Kubernetes service accounts to short-lived secret leases, and Kubernetes NetworkPolicies deny all traffic except mesh, Vault, NATS, data, and observability egress.
+SPIRE issues workload identities under `spiffe://zeaz.dev`, Vault maps Kubernetes service accounts to short-lived secret leases, and Kubernetes NetworkPolicies deny all traffic except mesh, Vault, NATS, data, and observability egress. Provider webhook secrets are synchronized by External Secrets from Vault KV paths `zeaz/providers/line` and `zeaz/providers/tiktok`, mounted only into `bot-service`, and webhook handlers fail closed when those leases are absent.
 
 ## 4. GitOps release
 
