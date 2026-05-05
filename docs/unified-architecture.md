@@ -1,141 +1,129 @@
-# Unified Enterprise Architecture
+# Unified Production Architecture
 
-## Service Boundaries
+## Before-state architecture
 
-- **auth-service** owns tenants, users, org membership, OAuth links, JWT issuance, RBAC decisions, and SPIFFE identity mapping.
-- **wallet-service** owns ledger accounts, balances, transfers, idempotency, and signing requests.
-- **payment-service** owns fiat/crypto payment intents, PromptPay/Stripe webhooks, settlement reconciliation, and refunds.
-- **swap-engine** owns quotes, routing, order lifecycle, risk checks, and chain/RPC adapters.
-- **bot-service** owns LINE and TikTok inbound webhooks, normalized bot commands, and conversation state.
-- **affiliate-service** owns creator discovery, consent records, outreach campaigns, TikTok Shop affiliate APIs, and anti-spam budgets.
-- **notification-service** owns email, LINE push, TikTok messages, server-sent events, web push, and i18n content distribution.
-- **audit-service** owns immutable event append, SIEM enrichment, retention, and evidence export.
-- **tss-signer** is isolated from the public API plane and signs only policy-approved payloads after quorum validation.
-
-## Unified API Surface
-
-| Method | Path | Owner | Authz |
-|---|---|---|---|
-| POST | `/v1/auth/register` | auth-service | public + abuse controls |
-| POST | `/v1/auth/login` | auth-service | public + MFA policy |
-| GET | `/v1/auth/me` | auth-service | `user:read:self` |
-| GET | `/v1/wallet/accounts` | wallet-service | `wallet:read` tenant scope |
-| POST | `/v1/wallet/transfers` | wallet-service | `wallet:transfer:create` + risk approval |
-| POST | `/v1/payments/intents` | payment-service | `payment:create` |
-| POST | `/v1/webhooks/stripe` | payment-service | Stripe signature + replay cache |
-| POST | `/v1/swaps/quotes` | swap-engine | `swap:quote` |
-| POST | `/v1/swaps/orders` | swap-engine | `swap:execute` + signer policy |
-| POST | `/v1/bots/line/webhook` | bot-service | LINE signature verifier |
-| POST | `/v1/bots/tiktok/webhook` | bot-service | TikTok signature verifier |
-| POST | `/v1/affiliate/campaigns` | affiliate-service | `affiliate:campaign:create` |
-| POST | `/v1/notifications` | notification-service | `notification:send` |
-| GET | `/v1/audit/events` | audit-service | `audit:read` break-glass logged |
-
-## Domain Model
-
-```mermaid
-erDiagram
-  TENANT ||--o{ USER : contains
-  TENANT ||--o{ WALLET_ACCOUNT : owns
-  USER ||--o{ SESSION : has
-  WALLET_ACCOUNT ||--o{ LEDGER_ENTRY : records
-  PAYMENT_INTENT ||--o{ PAYMENT_EVENT : emits
-  SWAP_ORDER ||--o{ SWAP_FILL : settles
-  BOT_CHANNEL ||--o{ BOT_MESSAGE : receives
-  AFFILIATE_CAMPAIGN ||--o{ OUTREACH_ATTEMPT : sends
-  AUDIT_EVENT }o--|| TENANT : scopes
+```text
+External users, LINE, TikTok, Stripe, PromptPay, chain RPCs
+  ├─> multiple Node/FastAPI/Nest/PHP/Python apps
+  │     ├─ duplicated auth/session/OAuth logic
+  │     ├─ duplicated webhook/signature logic
+  │     ├─ local Docker/PM2/shell/scheduler orchestration
+  │     ├─ ad hoc Redis/Postgres/SQLite/local files
+  │     └─ local logs and partial audit stores
+  └─> shell installers, watchdogs, self-heal loops, compose stacks, generated YAML
 ```
 
-## Architecture Diagram
+This creates unbounded execution paths, uncertain ownership of money movement, inconsistent replay/auth controls, and operational drift.
 
-```mermaid
-flowchart TB
-  CF[Cloudflare WAF/DNS/SSL] --> GW[API Gateway]
-  GW -->|JWT + mTLS| AUTH[auth-service]
-  GW --> WALLET[wallet-service]
-  GW --> PAY[payment-service]
-  GW --> SWAP[swap-engine]
-  GW --> BOT[bot-service]
-  GW --> AFF[affiliate-service]
-  GW --> NOTIF[notification-service]
-  AUTH --> PG[(Postgres)]
-  WALLET --> PG
-  PAY --> PG
-  SWAP --> PG
-  BOT --> REDIS[(Redis)]
-  AFF --> REDIS
-  WALLET --> BUS[NATS JetStream]
-  PAY --> BUS
-  SWAP --> BUS
-  BOT --> BUS
-  AFF --> BUS
-  BUS --> AUDIT[audit-service]
-  AUDIT --> WORM[(Immutable object store)]
-  WALLET --> SIGN[tss-signer]
-  SWAP --> SIGN
-  SIGN --> VAULT[Vault Transit/KV]
-  SIGN --> HSM[PKCS#11 HSM/KMS]
-  BOT --> LINE[LINE API]
-  BOT --> TIKTOK[TikTok Shop API]
-  PAY --> STRIPE[Stripe/PromptPay]
-  SWAP --> RPC[Blockchain RPC]
+## After-state architecture
+
+```text
+Cloudflare WAF / Bot Management / Global Load Balancer / TLS
+  ↓
+Gateway API / NGINX Ingress with JWT validation, request IDs, tenant extraction
+  ↓ mTLS (SPIFFE/SPIRE), network policies, OPA/RBAC
+Go microservices
+  ├─ auth-service: tenants, users, sessions, OIDC/OAuth, RBAC
+  ├─ wallet-service: accounts, balances, double-entry transfers, signer requests
+  ├─ payment-service: Stripe, PromptPay, cards/banks, idempotent webhooks
+  ├─ swap-engine: quote/risk/order/backtest/settlement orchestration
+  ├─ bot-service: LINE/TikTok webhooks, canonical verifier, replay cache
+  ├─ affiliate-service: campaigns, creator discovery, consent/rate budgets
+  ├─ notification-service: LINE/email/push/SSE/WebSocket fanout
+  ├─ audit-service: append-only audit, SIEM export, break-glass logs
+  └─ tss-signer: isolated threshold-signing API, DKG/signing rounds, HSM/Vault custody
+  ↓
+NATS JetStream for durable events, exactly-once-effect semantics via idempotency table
+  ↓
+Aurora/Postgres global database, Redis HA cache, immutable object-lock audit archive
+  ↓
+External integrations through egress allow-lists and per-tenant provider credentials in Vault
 ```
 
-## Zero Trust Controls
+## Bounded contexts and service contracts
 
-- Every workload receives a SPIFFE ID: `spiffe://zeaz.dev/ns/<namespace>/sa/<service-account>`.
-- Ingress JWT identifies the user and tenant; mTLS identifies the workload; OPA evaluates both.
-- No service may call another service except through an allow-listed SPIFFE policy.
-- Secrets are resolved at runtime from Vault using Kubernetes auth and short TTL leases.
-- Egress to LINE, TikTok, Stripe, PromptPay, and chain RPC is allow-listed through the gateway namespace.
+| Service | Synchronous REST/gRPC scope | Async subjects | Storage owner | External dependencies |
+|---|---|---|---|---|
+| `auth-service` | token exchange, registration, login, OAuth link/callback, roles/scopes | `auth.*`, `security.policy.*` | `tenants`, `users`, `sessions`, `roles`, `permissions` | OIDC providers, Vault |
+| `wallet-service` | wallet create/list, transfer request/status, balance read | `wallet.*`, `ledger.*`, `signing.requested` | `wallet_accounts`, `ledger_entries`, `idempotency_keys` | `tss-signer`, Postgres |
+| `payment-service` | payment intents, refunds, provider webhooks | `payment.*`, `audit.event.appended` | `payment_intents`, `provider_webhooks`, `idempotency_keys` | Stripe, PromptPay/bank APIs |
+| `swap-engine` | quote, order submit/cancel/status, backtest | `swap.*`, `risk.*`, `signing.requested` | `swap_orders`, `risk_limits`, `idempotency_keys` | chain RPC, `tss-signer` |
+| `bot-service` | LINE/TikTok webhook ingress, bot command execution | `bot.*`, `notification.*` | `webhook_replay`, command state | LINE, TikTok Shop |
+| `affiliate-service` | campaigns, creator lists, message approvals | `affiliate.*`, `notification.*` | `campaigns`, `creator_contacts`, consent ledger | TikTok Shop/creator APIs |
+| `notification-service` | templated sends, stream publish | `notification.*`, `content.*` | `notification_jobs`, template assets | LINE, email/SMS/push providers |
+| `audit-service` | audit read/export/append | `audit.*`, `security.alert.*` | `audit_events`, object-lock exports | SIEM/ELK |
+| `tss-signer` | DKG session, signing request, quorum transcript, aggregate signature verification | `signing.*` | signer metadata only; no raw private keys | Vault transit, PKCS#11/CloudHSM, isolated signers |
 
-## Vault + HSM + TSS Signer Design
+## API design
 
-- Vault stores encrypted key-share metadata and issues short-lived DB/API credentials.
-- HSM integration uses PKCS#11 handles for wrapping/unwrapping local TSS shares where supported.
-- `tss-signer` exposes only internal mTLS endpoints: `/v1/tss/keygen`, `/v1/tss/sign`, `/healthz`, `/metrics`.
-- Signing policy requires tenant scope, request nonce, chain ID, operation type, risk decision, and quorum approval.
-- Shares are never exported as plaintext logs or API responses; audit-service receives hashes, policy IDs, and signer participant IDs only.
+- Public APIs are tenant-scoped REST endpoints in `platform/api/openapi.yaml`.
+- Internal service-to-service APIs use gRPC with SPIFFE-authenticated mTLS and explicit per-method authorization.
+- Every mutating REST endpoint requires an idempotency key, tenant ID, user/service principal, trace ID, and audit event emission.
+- Webhooks validate provider signatures over raw request bodies before JSON parsing and store replay IDs in Redis with provider-specific TTL.
 
-## Real TSS Implementation Outline
+## Control-flow model
 
-The scaffold includes deterministic request validation and policy gating. Production signing plugs the `crypto.Signer` interface into either Binance `tss-lib` ECDSA or a FROST implementation:
+1. Cloudflare blocks malicious/bot/rate-limit traffic and forwards only TLS requests for `*.zeaz.dev`.
+2. Gateway validates JWT issuer/audience, injects tenant/user headers, enforces request size/timeouts, and records access logs.
+3. Service validates scope through RBAC and tenant context; policy decisions are audited.
+4. Mutating command opens a serializable database transaction, claims an idempotency key, writes domain state, writes outbox events, and commits.
+5. Outbox dispatcher publishes to NATS JetStream with tenant and trace metadata.
+6. Consumers process with durable subscriptions, max-delivery limits, dead-letter subjects, and budget/kill-switch checks.
+7. Audit service receives security and business events, stores append-only rows, and exports object-lock batches to SIEM.
 
-1. Use NATS subjects `tss.keygen.<tenant>` and `tss.sign.<tenant>` for participant coordination.
-2. Persist participant state encrypted in Vault KV v2 and wrap local share files with PKCS#11.
-3. Run at least five signer pods across three zones with threshold `3-of-5`.
-4. Require OPA policy success before broadcasting a signing round.
-5. Emit `audit.event.appended` with digest, participant set, policy decision, and latency.
-6. Refuse signing if tenant risk score, chain allow-list, nonce replay, or quorum freshness checks fail.
+## Data-flow model
 
-## Observability + SIEM
+```text
+Webhook/payment/trade command
+  -> gateway auth and tenant context
+  -> domain service command handler
+  -> Postgres serializable transaction + idempotency claim
+  -> NATS event publication
+  -> audit append + SIEM pipeline
+  -> notification or external provider adapter
+```
 
-- Metrics: Prometheus scrapes `/metrics` on all services and Alertmanager pages SREs.
-- Tracing: OpenTelemetry Collector exports traces to Tempo/OTLP-compatible backend.
-- Logs: Fluent Bit ships JSON logs to Elasticsearch data streams.
-- SIEM: ElastAlert rules flag auth spikes, webhook replay attempts, signer denials, privilege escalation, and anomalous transfer velocity.
-- Audit: append-only audit events are hashed and periodically checkpointed to immutable object storage.
+Money movement uses double-entry ledger rows and never updates balances without a matching debit/credit pair. Provider callbacks can only settle an existing intent with a matching idempotency/provider event key.
 
-## GitOps and Deployment
+## Runtime lifecycle model
 
-- Terraform creates multi-region Kubernetes, Vault, DNS, object stores, and network boundaries.
-- ArgoCD app-of-apps deploys base manifests plus dev/staging/prod overlays.
-- Progressive delivery uses blue/green services and canary weights at the ingress layer.
-- Rollback is declarative: revert the Git commit or sync a previous ArgoCD application revision.
+- **Build:** GitHub Actions tests, vets, scans, builds per-service images, signs artifacts, and updates GitOps manifests.
+- **Provision:** Terraform creates multi-region EKS/GKE-ready networks, private clusters, encrypted data planes, Cloudflare DNS/WAF, and state locking.
+- **Bake:** Packer creates immutable golden nodes with auditd, SSM/Ops agents, disabled password login, and no application secrets.
+- **Deploy:** ArgoCD syncs environment overlays; Argo Rollouts performs canary analysis with Prometheus metrics.
+- **Operate:** HPA scales stateless services; NATS consumers scale independently; failover uses Cloudflare load balancing and database replicas.
+- **Recover:** roll back GitOps revision, pause rollouts, replay NATS dead-letter events after fix, and restore point-in-time database snapshots if invariants fail.
 
-## Validation Plan
+## TSS signer security boundary
 
-- Load test API gateway and services with tenant-isolated scenarios: auth login, wallet transfer, bot webhook bursts, payment webhook replay.
-- Chaos test one AZ loss, NATS leader failover, Postgres replica promotion, Redis eviction, Vault sealed state, and signer participant loss.
-- Recovery procedures: restore Postgres PITR, replay JetStream durable consumers, rotate leaked webhook secrets, rekey Vault, and revoke SPIFFE identities.
+`tss-signer` is not a wallet service and does not expose arbitrary signing. It accepts only policy-approved signing sessions from `wallet-service` or `swap-engine`, verifies tenant/key/policy/quorum metadata, coordinates isolated signers, and returns an aggregate signature plus transcript hash. Private key shares never leave Vault/HSM-backed signer pods.
 
-## Concrete generated implementation assets
+Signing boundary controls:
 
-| Asset | Purpose |
-|---|---|
-| `platform/api/openapi.yaml` | Gateway contract and service ownership for auth, wallet, payment, swap, bot, affiliate, notification, and audit routes. |
-| `platform/db/migrations/001_core_schema.sql` | Postgres tenant isolation, wallet account, double-entry ledger, payment intent, and hash-linked audit schema. |
-| `platform/deploy/kubernetes/base/services.yaml` | Explicit deployments, services, HPAs, PDBs, service account, strict config, and default-deny network controls for every target Go microservice. |
-| `platform/deploy/terraform/modules/eks/main.tf` | Multi-AZ private EKS with encrypted control-plane logs, KMS secret encryption, dedicated signer node pool, and workload node pools. |
-| `platform/deploy/terraform/modules/data-plane/main.tf` | Encrypted Aurora PostgreSQL and Redis multi-AZ data plane with managed secrets and deletion protection. |
-| `scripts/audit-repos.sh` | Repeatable repo evidence extraction without hidden mutation or host persistence. |
+- Signer namespace has dedicated nodes, taints, NetworkPolicy deny-by-default, no public ingress, and egress only to Vault/HSM/NATS/audit.
+- DKG requires an approved ceremony record, participant SPIFFE IDs, HSM key labels, and quorum policy.
+- Signing requires tenant risk approval, replay-resistant nonce, payload digest, policy ID, participant transcript commitments, aggregate signature verification, and audit append.
+- Break-glass requires two-person approval and produces immutable SIEM events.
+
+## Multi-region high availability
+
+| Layer | Active-active design | Failover behavior |
+|---|---|---|
+| Edge | Cloudflare proxied wildcard DNS and load balancing | Health checks remove degraded region; WAF/rate rules remain global |
+| Kubernetes | Primary and failover clusters in separate regions | ArgoCD app-of-apps targets both; workloads maintain minimum regional replicas |
+| Data | Aurora/Postgres global cluster pattern, Redis regional cache, object-lock audit archives | Writes route to elected primary database writer; read-only degraded mode if quorum is unavailable |
+| Events | NATS JetStream per region with mirror/source streams for critical subjects | Consumers pause on split brain; idempotency prevents duplicate side effects after replay |
+| Signer | Independent signer quorums with region-aware policy | Signing requires configured regional quorum; no automatic key export between regions |
+
+## Refactor roadmap
+
+1. **Freeze and quarantine:** block shell installers, watchdogs, PM2 start scripts, self-heal loops, and runtime-generated secrets from deploy paths.
+2. **Introduce edge/gateway:** route all public domains through Cloudflare and Gateway API; reject direct pod/service exposure.
+3. **Centralize identity:** migrate all auth/OAuth/JWT/RBAC into `auth-service` with tenant-scoped claims.
+4. **Move ledger first:** migrate wallet tables into the canonical schema and add double-entry invariant tests before payment/swap traffic.
+5. **Canonicalize webhooks:** implement raw-body verification and replay caches for Stripe/PromptPay/LINE/TikTok in Go.
+6. **Event outbox:** add idempotency and outbox publication to each mutating endpoint.
+7. **Replace background loops:** convert cron/watchdog/autonomous loops into NATS consumers with leases, rate budgets, and dead-letter queues.
+8. **Signer isolation:** deploy `tss-signer`, Vault, HSM/PKCS#11 integration, and ceremony workflows; remove fake MPC paths.
+9. **Observability/SIEM:** enforce trace IDs, RED metrics, audit export, and alert rules before production traffic.
+10. **Progressive migration:** shadow read legacy outputs, dual-write audit-only events, canary tenants, then retire legacy repos.

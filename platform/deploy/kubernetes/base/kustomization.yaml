@@ -1,3 +1,4 @@
 resources:
   - namespace.yaml
   - services.yaml
+  - gateway-rollouts.yaml

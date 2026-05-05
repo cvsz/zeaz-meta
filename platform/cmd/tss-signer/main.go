@@ -10,16 +10,21 @@ import (
 	"zeaz.dev/meta/platform/internal/server"
 )
 
+type signEnvelope struct {
+	Request zcrypto.SigningRequest          `json:"request"`
+	Proof   zcrypto.ThresholdSignatureProof `json:"proof"`
+}
+
 func main() {
 	cfg := config.Load("tss-signer")
 	signer := zcrypto.PolicyGatedThresholdSigner{}
 	routes := []server.Route{{Method: "POST", Path: "/v1/tss/sign", Handler: http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		var req zcrypto.SigningRequest
-		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		var env signEnvelope
+		if err := json.NewDecoder(r.Body).Decode(&env); err != nil {
 			http.Error(w, err.Error(), http.StatusBadRequest)
 			return
 		}
-		resp, err := signer.Sign(req)
+		resp, err := signer.Sign(env.Request, env.Proof)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusUnprocessableEntity)
 			return

@@ -56,6 +56,48 @@ paths:
       summary: Send a templated notification through an approved channel.
       x-zeaz-owner: notification-service
       responses: {'202': {description: Notification queued}}
+  /v1/tss/sign:
+    post:
+      summary: Submit a policy-approved threshold-signing transcript for aggregate signature verification.
+      x-zeaz-owner: tss-signer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [request, proof]
+              properties:
+                request:
+                  type: object
+                  required: [tenant_id, key_id, payload, policy_id, nonce]
+                  properties:
+                    tenant_id: {type: string}
+                    key_id: {type: string}
+                    payload: {type: string, format: byte}
+                    policy_id: {type: string}
+                    nonce: {type: string}
+                proof:
+                  type: object
+                  required: [scheme, threshold, participants, aggregate_signature, group_public_key, protocol_transcript_id]
+                  properties:
+                    scheme: {type: string, enum: [frost-ed25519, tss-lib-ecdsa]}
+                    threshold: {type: integer, minimum: 2}
+                    aggregate_signature: {type: string}
+                    group_public_key: {type: string}
+                    protocol_transcript_id: {type: string}
+                    participants:
+                      type: array
+                      minItems: 2
+                      items:
+                        type: object
+                        required: [participant_id, spiffe_id, round, transcript_hash]
+                        properties:
+                          participant_id: {type: string}
+                          spiffe_id: {type: string}
+                          round: {type: integer}
+                          transcript_hash: {type: string}
+      responses: {'200': {description: Aggregate signature accepted}, '422': {description: Quorum or policy proof rejected}}
   /v1/audit/events:
     get:
       summary: Read append-only audit events with break-glass logging.
