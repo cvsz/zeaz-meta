@@ -128,3 +128,14 @@ The scaffold includes deterministic request validation and policy gating. Produc
 - Load test API gateway and services with tenant-isolated scenarios: auth login, wallet transfer, bot webhook bursts, payment webhook replay.
 - Chaos test one AZ loss, NATS leader failover, Postgres replica promotion, Redis eviction, Vault sealed state, and signer participant loss.
 - Recovery procedures: restore Postgres PITR, replay JetStream durable consumers, rotate leaked webhook secrets, rekey Vault, and revoke SPIFFE identities.
+
+## Concrete generated implementation assets
+
+| Asset | Purpose |
+|---|---|
+| `platform/api/openapi.yaml` | Gateway contract and service ownership for auth, wallet, payment, swap, bot, affiliate, notification, and audit routes. |
+| `platform/db/migrations/001_core_schema.sql` | Postgres tenant isolation, wallet account, double-entry ledger, payment intent, and hash-linked audit schema. |
+| `platform/deploy/kubernetes/base/services.yaml` | Explicit deployments, services, HPAs, PDBs, service account, strict config, and default-deny network controls for every target Go microservice. |
+| `platform/deploy/terraform/modules/eks/main.tf` | Multi-AZ private EKS with encrypted control-plane logs, KMS secret encryption, dedicated signer node pool, and workload node pools. |
+| `platform/deploy/terraform/modules/data-plane/main.tf` | Encrypted Aurora PostgreSQL and Redis multi-AZ data plane with managed secrets and deletion protection. |
+| `scripts/audit-repos.sh` | Repeatable repo evidence extraction without hidden mutation or host persistence. |

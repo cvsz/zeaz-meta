@@ -29,6 +29,20 @@ module "failover_eks" {
   name = "zeaz-prod-failover"
   region = var.failover_region
 }
+module "primary_data" {
+  source = "../../modules/data-plane"
+  name = "zeaz-prod-primary"
+  vpc_id = module.primary_eks.vpc_id
+  subnet_ids = module.primary_eks.private_subnets
+}
+module "failover_data" {
+  source = "../../modules/data-plane"
+  providers = { aws = aws.failover }
+  name = "zeaz-prod-failover"
+  vpc_id = module.failover_eks.vpc_id
+  subnet_ids = module.failover_eks.private_subnets
+}
+
 module "global_dns" {
   source = "../../modules/global-dns"
   zone_id = var.cloudflare_zone_id

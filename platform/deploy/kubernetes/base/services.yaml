@@ -1,71 +1,508 @@
 apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: zeaz-service
+  namespace: zeaz-platform
+  annotations:
+    spiffe.io/spiffe-id: spiffe://zeaz.dev/ns/zeaz-platform/sa/zeaz-service
+---
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: zeaz-service-config
   namespace: zeaz-platform
 data:
+  HTTP_ADDR: ":8080"
   NATS_URL: nats://nats.nats.svc.cluster.local:4222
   VAULT_ADDR: https://vault.vault.svc.cluster.local:8200
+  POSTGRES_HOST: postgres-rw.data.svc.cluster.local
+  REDIS_ADDR: redis-master.data.svc.cluster.local:6379
   TENANT_MODE: strict
+  OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector.observability.svc:4318
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: zeaz-default-deny
+  namespace: zeaz-platform
+spec:
+  podSelector: {}
+  policyTypes: [Ingress, Egress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: zeaz-allow-mesh-egress
+  namespace: zeaz-platform
+spec:
+  podSelector: {}
+  policyTypes: [Egress]
+  egress:
+    - to:
+        - namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: istio-system}}
+        - namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: vault}}
+        - namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: nats}}
+        - namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: data}}
+        - namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: observability}}
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: zeaz-service
+  name: wallet-service
   namespace: zeaz-platform
+  labels: {app.kubernetes.io/name: wallet-service, app.kubernetes.io/component: wallet-service}
 spec:
-  replicas: 3
-  selector:
-    matchLabels: {app.kubernetes.io/name: zeaz-service}
+  replicas: 5
+  selector: {matchLabels: {app.kubernetes.io/name: wallet-service}}
   template:
     metadata:
-      labels: {app.kubernetes.io/name: zeaz-service}
-      annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/port: "8080"
+      labels: {app.kubernetes.io/name: wallet-service, app.kubernetes.io/component: wallet-service}
+      annotations: {prometheus.io/scrape: "true", prometheus.io/port: "8080"}
     spec:
       serviceAccountName: zeaz-service
-      securityContext:
-        seccompProfile: {type: RuntimeDefault}
-        runAsNonRoot: true
+      securityContext: {seccompProfile: {type: RuntimeDefault}, runAsNonRoot: true}
       containers:
         - name: app
           image: ghcr.io/cvsz/zeaz-meta/wallet-service:main
           ports: [{containerPort: 8080, name: http}]
           envFrom: [{configMapRef: {name: zeaz-service-config}}]
-          env:
-            - name: SERVICE_NAME
-              valueFrom: {fieldRef: {fieldPath: metadata.labels['app.kubernetes.io/component']}}
+          env: [{name: SERVICE_NAME, value: wallet-service}]
           readinessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 10}
           livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
-          resources:
-            requests: {cpu: 100m, memory: 128Mi}
-            limits: {cpu: "1", memory: 512Mi}
-          securityContext:
-            allowPrivilegeEscalation: false
-            readOnlyRootFilesystem: true
-            capabilities: {drop: ["ALL"]}
+          resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: ["ALL"]}}
 ---
 apiVersion: v1
 kind: Service
-metadata:
-  name: zeaz-service
-  namespace: zeaz-platform
-spec:
-  selector: {app.kubernetes.io/name: zeaz-service}
-  ports: [{name: http, port: 8080, targetPort: http}]
+metadata: {name: wallet-service, namespace: zeaz-platform}
+spec: {selector: {app.kubernetes.io/name: wallet-service}, ports: [{name: http, port: 8080, targetPort: http}]}
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
-metadata:
-  name: zeaz-service
-  namespace: zeaz-platform
+metadata: {name: wallet-service, namespace: zeaz-platform}
 spec:
-  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: zeaz-service}
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: wallet-service}
+  minReplicas: 5
+  maxReplicas: 40
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: wallet-service, namespace: zeaz-platform}
+spec: {minAvailable: 3, selector: {matchLabels: {app.kubernetes.io/name: wallet-service}}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-service
+  namespace: zeaz-platform
+  labels: {app.kubernetes.io/name: payment-service, app.kubernetes.io/component: payment-service}
+spec:
+  replicas: 5
+  selector: {matchLabels: {app.kubernetes.io/name: payment-service}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: payment-service, app.kubernetes.io/component: payment-service}
+      annotations: {prometheus.io/scrape: "true", prometheus.io/port: "8080"}
+    spec:
+      serviceAccountName: zeaz-service
+      securityContext: {seccompProfile: {type: RuntimeDefault}, runAsNonRoot: true}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector: {matchLabels: {app.kubernetes.io/name: payment-service}}
+      containers:
+        - name: app
+          image: ghcr.io/cvsz/zeaz-meta/payment-service:main
+          ports: [{containerPort: 8080, name: http}]
+          envFrom: [{configMapRef: {name: zeaz-service-config}}]
+          env: [{name: SERVICE_NAME, value: payment-service}]
+          readinessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 10}
+          livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
+          resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: ["ALL"]}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: payment-service, namespace: zeaz-platform}
+spec: {selector: {app.kubernetes.io/name: payment-service}, ports: [{name: http, port: 8080, targetPort: http}]}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: payment-service, namespace: zeaz-platform}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: payment-service}
+  minReplicas: 5
+  maxReplicas: 40
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: payment-service, namespace: zeaz-platform}
+spec: {minAvailable: 3, selector: {matchLabels: {app.kubernetes.io/name: payment-service}}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swap-engine
+  namespace: zeaz-platform
+  labels: {app.kubernetes.io/name: swap-engine, app.kubernetes.io/component: swap-engine}
+spec:
+  replicas: 5
+  selector: {matchLabels: {app.kubernetes.io/name: swap-engine}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: swap-engine, app.kubernetes.io/component: swap-engine}
+      annotations: {prometheus.io/scrape: "true", prometheus.io/port: "8080"}
+    spec:
+      serviceAccountName: zeaz-service
+      securityContext: {seccompProfile: {type: RuntimeDefault}, runAsNonRoot: true}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector: {matchLabels: {app.kubernetes.io/name: swap-engine}}
+      containers:
+        - name: app
+          image: ghcr.io/cvsz/zeaz-meta/swap-engine:main
+          ports: [{containerPort: 8080, name: http}]
+          envFrom: [{configMapRef: {name: zeaz-service-config}}]
+          env: [{name: SERVICE_NAME, value: swap-engine}]
+          readinessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 10}
+          livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
+          resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: ["ALL"]}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: swap-engine, namespace: zeaz-platform}
+spec: {selector: {app.kubernetes.io/name: swap-engine}, ports: [{name: http, port: 8080, targetPort: http}]}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: swap-engine, namespace: zeaz-platform}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: swap-engine}
+  minReplicas: 5
+  maxReplicas: 40
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: swap-engine, namespace: zeaz-platform}
+spec: {minAvailable: 3, selector: {matchLabels: {app.kubernetes.io/name: swap-engine}}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bot-service
+  namespace: zeaz-platform
+  labels: {app.kubernetes.io/name: bot-service, app.kubernetes.io/component: bot-service}
+spec:
+  replicas: 4
+  selector: {matchLabels: {app.kubernetes.io/name: bot-service}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: bot-service, app.kubernetes.io/component: bot-service}
+      annotations: {prometheus.io/scrape: "true", prometheus.io/port: "8080"}
+    spec:
+      serviceAccountName: zeaz-service
+      securityContext: {seccompProfile: {type: RuntimeDefault}, runAsNonRoot: true}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector: {matchLabels: {app.kubernetes.io/name: bot-service}}
+      containers:
+        - name: app
+          image: ghcr.io/cvsz/zeaz-meta/bot-service:main
+          ports: [{containerPort: 8080, name: http}]
+          envFrom: [{configMapRef: {name: zeaz-service-config}}]
+          env: [{name: SERVICE_NAME, value: bot-service}]
+          readinessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 10}
+          livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
+          resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: ["ALL"]}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: bot-service, namespace: zeaz-platform}
+spec: {selector: {app.kubernetes.io/name: bot-service}, ports: [{name: http, port: 8080, targetPort: http}]}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: bot-service, namespace: zeaz-platform}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: bot-service}
+  minReplicas: 4
+  maxReplicas: 30
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: bot-service, namespace: zeaz-platform}
+spec: {minAvailable: 2, selector: {matchLabels: {app.kubernetes.io/name: bot-service}}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: affiliate-service
+  namespace: zeaz-platform
+  labels: {app.kubernetes.io/name: affiliate-service, app.kubernetes.io/component: affiliate-service}
+spec:
+  replicas: 3
+  selector: {matchLabels: {app.kubernetes.io/name: affiliate-service}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: affiliate-service, app.kubernetes.io/component: affiliate-service}
+      annotations: {prometheus.io/scrape: "true", prometheus.io/port: "8080"}
+    spec:
+      serviceAccountName: zeaz-service
+      securityContext: {seccompProfile: {type: RuntimeDefault}, runAsNonRoot: true}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector: {matchLabels: {app.kubernetes.io/name: affiliate-service}}
+      containers:
+        - name: app
+          image: ghcr.io/cvsz/zeaz-meta/affiliate-service:main
+          ports: [{containerPort: 8080, name: http}]
+          envFrom: [{configMapRef: {name: zeaz-service-config}}]
+          env: [{name: SERVICE_NAME, value: affiliate-service}]
+          readinessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 10}
+          livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
+          resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: ["ALL"]}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: affiliate-service, namespace: zeaz-platform}
+spec: {selector: {app.kubernetes.io/name: affiliate-service}, ports: [{name: http, port: 8080, targetPort: http}]}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: affiliate-service, namespace: zeaz-platform}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: affiliate-service}
   minReplicas: 3
   maxReplicas: 20
-  metrics:
-    - type: Resource
-      resource:
-        name: cpu
-        target: {type: Utilization, averageUtilization: 65}
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: affiliate-service, namespace: zeaz-platform}
+spec: {minAvailable: 1, selector: {matchLabels: {app.kubernetes.io/name: affiliate-service}}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-service
+  namespace: zeaz-platform
+  labels: {app.kubernetes.io/name: notification-service, app.kubernetes.io/component: notification-service}
+spec:
+  replicas: 3
+  selector: {matchLabels: {app.kubernetes.io/name: notification-service}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: notification-service, app.kubernetes.io/component: notification-service}
+      annotations: {prometheus.io/scrape: "true", prometheus.io/port: "8080"}
+    spec:
+      serviceAccountName: zeaz-service
+      securityContext: {seccompProfile: {type: RuntimeDefault}, runAsNonRoot: true}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector: {matchLabels: {app.kubernetes.io/name: notification-service}}
+      containers:
+        - name: app
+          image: ghcr.io/cvsz/zeaz-meta/notification-service:main
+          ports: [{containerPort: 8080, name: http}]
+          envFrom: [{configMapRef: {name: zeaz-service-config}}]
+          env: [{name: SERVICE_NAME, value: notification-service}]
+          readinessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 10}
+          livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
+          resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: ["ALL"]}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: notification-service, namespace: zeaz-platform}
+spec: {selector: {app.kubernetes.io/name: notification-service}, ports: [{name: http, port: 8080, targetPort: http}]}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: notification-service, namespace: zeaz-platform}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: notification-service}
+  minReplicas: 3
+  maxReplicas: 20
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: notification-service, namespace: zeaz-platform}
+spec: {minAvailable: 1, selector: {matchLabels: {app.kubernetes.io/name: notification-service}}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+  namespace: zeaz-platform
+  labels: {app.kubernetes.io/name: auth-service, app.kubernetes.io/component: auth-service}
+spec:
+  replicas: 5
+  selector: {matchLabels: {app.kubernetes.io/name: auth-service}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: auth-service, app.kubernetes.io/component: auth-service}
+      annotations: {prometheus.io/scrape: "true", prometheus.io/port: "8080"}
+    spec:
+      serviceAccountName: zeaz-service
+      securityContext: {seccompProfile: {type: RuntimeDefault}, runAsNonRoot: true}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector: {matchLabels: {app.kubernetes.io/name: auth-service}}
+      containers:
+        - name: app
+          image: ghcr.io/cvsz/zeaz-meta/auth-service:main
+          ports: [{containerPort: 8080, name: http}]
+          envFrom: [{configMapRef: {name: zeaz-service-config}}]
+          env: [{name: SERVICE_NAME, value: auth-service}]
+          readinessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 10}
+          livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
+          resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: ["ALL"]}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: auth-service, namespace: zeaz-platform}
+spec: {selector: {app.kubernetes.io/name: auth-service}, ports: [{name: http, port: 8080, targetPort: http}]}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: auth-service, namespace: zeaz-platform}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: auth-service}
+  minReplicas: 5
+  maxReplicas: 50
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: auth-service, namespace: zeaz-platform}
+spec: {minAvailable: 3, selector: {matchLabels: {app.kubernetes.io/name: auth-service}}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: audit-service
+  namespace: zeaz-platform
+  labels: {app.kubernetes.io/name: audit-service, app.kubernetes.io/component: audit-service}
+spec:
+  replicas: 5
+  selector: {matchLabels: {app.kubernetes.io/name: audit-service}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: audit-service, app.kubernetes.io/component: audit-service}
+      annotations: {prometheus.io/scrape: "true", prometheus.io/port: "8080"}
+    spec:
+      serviceAccountName: zeaz-service
+      securityContext: {seccompProfile: {type: RuntimeDefault}, runAsNonRoot: true}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector: {matchLabels: {app.kubernetes.io/name: audit-service}}
+      containers:
+        - name: app
+          image: ghcr.io/cvsz/zeaz-meta/audit-service:main
+          ports: [{containerPort: 8080, name: http}]
+          envFrom: [{configMapRef: {name: zeaz-service-config}}]
+          env: [{name: SERVICE_NAME, value: audit-service}]
+          readinessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 10}
+          livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
+          resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: ["ALL"]}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: audit-service, namespace: zeaz-platform}
+spec: {selector: {app.kubernetes.io/name: audit-service}, ports: [{name: http, port: 8080, targetPort: http}]}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: audit-service, namespace: zeaz-platform}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: audit-service}
+  minReplicas: 5
+  maxReplicas: 50
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: audit-service, namespace: zeaz-platform}
+spec: {minAvailable: 3, selector: {matchLabels: {app.kubernetes.io/name: audit-service}}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tss-signer
+  namespace: zeaz-platform
+  labels: {app.kubernetes.io/name: tss-signer, app.kubernetes.io/component: tss-signer}
+spec:
+  replicas: 5
+  selector: {matchLabels: {app.kubernetes.io/name: tss-signer}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: tss-signer, app.kubernetes.io/component: tss-signer}
+      annotations: {prometheus.io/scrape: "true", prometheus.io/port: "8080"}
+    spec:
+      serviceAccountName: zeaz-service
+      securityContext: {seccompProfile: {type: RuntimeDefault}, runAsNonRoot: true}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector: {matchLabels: {app.kubernetes.io/name: tss-signer}}
+      containers:
+        - name: app
+          image: ghcr.io/cvsz/zeaz-meta/tss-signer:main
+          ports: [{containerPort: 8080, name: http}]
+          envFrom: [{configMapRef: {name: zeaz-service-config}}]
+          env: [{name: SERVICE_NAME, value: tss-signer}]
+          readinessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 10}
+          livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
+          resources: {requests: {cpu: 500m, memory: 512Mi}, limits: {cpu: "2", memory: 2Gi}}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: ["ALL"]}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: tss-signer, namespace: zeaz-platform}
+spec: {selector: {app.kubernetes.io/name: tss-signer}, ports: [{name: http, port: 8080, targetPort: http}]}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: tss-signer, namespace: zeaz-platform}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: tss-signer}
+  minReplicas: 5
+  maxReplicas: 10
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: tss-signer, namespace: zeaz-platform}
+spec: {minAvailable: 3, selector: {matchLabels: {app.kubernetes.io/name: tss-signer}}}
