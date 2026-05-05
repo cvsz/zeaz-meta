@@ -1,0 +1,69 @@
+openapi: 3.1.0
+info:
+  title: ZeaZ Unified Platform API
+  version: 1.0.0
+servers:
+  - url: https://api.zeaz.dev
+security:
+  - bearerAuth: []
+paths:
+  /v1/auth/token:
+    post:
+      summary: Exchange an external identity assertion for a ZeaZ tenant-scoped token.
+      x-zeaz-owner: auth-service
+      responses: {'200': {description: Token issued}}
+  /v1/wallets:
+    get:
+      summary: List tenant wallet accounts.
+      x-zeaz-owner: wallet-service
+      responses: {'200': {description: Wallet list}}
+    post:
+      summary: Create a tenant wallet account after signer policy approval.
+      x-zeaz-owner: wallet-service
+      responses: {'201': {description: Wallet created}}
+  /v1/wallets/transfers:
+    post:
+      summary: Create an idempotent internal transfer with double-entry ledger records.
+      x-zeaz-owner: wallet-service
+      responses: {'202': {description: Transfer accepted}}
+  /v1/payments/intents:
+    post:
+      summary: Create a payment intent for Stripe, PromptPay, card, or bank rails.
+      x-zeaz-owner: payment-service
+      responses: {'202': {description: Intent accepted}}
+  /v1/swaps/orders:
+    post:
+      summary: Submit a swap order for quote, risk check, signing, and settlement.
+      x-zeaz-owner: swap-engine
+      responses: {'202': {description: Swap order accepted}}
+  /v1/bots/line/webhook:
+    post:
+      summary: Receive LINE webhook events after signature verification and replay detection.
+      x-zeaz-owner: bot-service
+      responses: {'204': {description: Accepted}}
+  /v1/bots/tiktok/webhook:
+    post:
+      summary: Receive TikTok Shop webhook events after signature verification and replay detection.
+      x-zeaz-owner: bot-service
+      responses: {'204': {description: Accepted}}
+  /v1/affiliate/campaigns:
+    post:
+      summary: Create a consent-bound affiliate outreach campaign.
+      x-zeaz-owner: affiliate-service
+      responses: {'201': {description: Campaign created}}
+  /v1/notifications:
+    post:
+      summary: Send a templated notification through an approved channel.
+      x-zeaz-owner: notification-service
+      responses: {'202': {description: Notification queued}}
+  /v1/audit/events:
+    get:
+      summary: Read append-only audit events with break-glass logging.
+      x-zeaz-owner: audit-service
+      responses: {'200': {description: Audit event page}}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
