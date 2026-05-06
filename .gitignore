@@ -8,3 +8,6 @@ dist/
 coverage/
 .tmp/
 .DS_Store
+
+# Alternate local audit cache used for one-off full-spectrum analysis.
+.meta-sources/
