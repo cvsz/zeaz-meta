@@ -62,6 +62,15 @@ Rollback is performed by reverting the Git commit that changed image tags or man
 
 Before reusing any host that previously ran legacy repositories, execute `scripts/clean-os.sh` as root, then deploy only through Terraform/Packer/ArgoCD. Runtime services must not install cron entries, systemd units, PM2 processes, self-heal loops, or generated `.env` secret files.
 
+## 8.1 Disposable build-host preparation
+
+Use `scripts/prepare-all-repos.sh` before installer validation when a fresh builder must be prepared for repository intake and platform builds. It is dry-run by default (`APPLY=0`), reports missing tools, prefers GitHub CLI for clone/metadata inspection, falls back to anonymous public git only when `gh` is unauthenticated, and never writes credentials. Set `APPLY=1` only on a disposable builder where package installation is acceptable.
+
+```bash
+./scripts/prepare-all-repos.sh
+APPLY=1 SOURCE_ROOT=/tmp/zeaz-sources ./scripts/prepare-all-repos.sh
+```
+
 ## 9. Enterprise automated installer
 
 `./scripts/meta-installer.sh` is the normalized installer for the refactored meta platform. It is idempotent and defaults to `MODE=validate`, which only regenerates repository inventories and runs Go tests. It does not create cron jobs, systemd units, PM2 processes, local `.env` files, kube contexts, or persisted credentials. Production mutation requires explicit `MODE=deploy` plus environment-supplied credentials.
