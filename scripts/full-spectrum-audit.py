@@ -11,25 +11,43 @@ import re
 import shutil
 import subprocess
 import json
+import os
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-REPOS = [
-    "zgitcp", "zwallet", "ABTPi18n", "zypto", "ZeaZDev-Omega", "ztsaff",
-    "zLinebot", "zlttbots", "zttlbots", "zTTato-Platform", "zvath",
-    "tiktok-shop-bot", "tiktokshop-api-client", "tiktok-shop-sdk",
-    "tiktokshop-php", "zLinebot-automos", "zeaz-platform", "zeapay",
+ECOSYSTEM_REPOS = [
+    ("cvsz", "zgitcp"), ("cvsz", "zwallet"), ("cvsz", "ABTPi18n"),
+    ("cvsz", "zypto"), ("cvsz", "ZeaZDev-Omega"), ("cvsz", "ztsaff"),
+    ("cvsz", "zLinebot"), ("cvsz", "zlttbots"), ("cvsz", "zttlbots"),
+    ("cvsz", "zTTato-Platform"), ("cvsz", "zvath"),
+    ("cvsz", "tiktok-shop-bot"), ("cvsz", "tiktokshop-api-client"),
+    ("cvsz", "tiktok-shop-sdk"), ("cvsz", "tiktokshop-php"),
+    ("cvsz", "zLinebot-automos"), ("cvsz", "zeaz-platform"),
+    ("cvsz", "zeapay"),
+    # Additional ZeaZ/cvsz repositories discovered from
+    # https://github.com/cvsz?tab=repositories on 2026-05-06.
+    ("cvsz", "zcino"), ("cvsz", "zGaming"), ("cvsz", "zSafeGuard"),
+    ("cvsz", "zspin"),
+    # Organization repositories discovered from
+    # https://github.com/orgs/ZeaZDev/repositories on 2026-05-06.
+    ("ZeaZDev", "vscode"), ("ZeaZDev", "ZeaClicker"),
+    ("ZeaZDev", "zeazchain"), ("ZeaZDev", "ZeaZDev"),
+    ("ZeaZDev", "ZeaZDev-Omega"), ("ZeaZDev", "zeazdev-repo"),
+    ("ZeaZDev", "zeaztools"), ("ZeaZDev", "zlms-prod"),
 ]
-REPO_OWNER = "cvsz"
+# Public catalog evidence for the two repository-list URLs. These repos are recorded
+# in source inventory even when they are outside the ZeaZ runtime consolidation scope.
+CATALOG_OWNERS = ("cvsz", "ZeaZDev")
+DISPLAY_LIMIT_PER_REPO = 300
 GH_METADATA_FIELDS = "nameWithOwner,description,defaultBranchRef,primaryLanguage,languages,repositoryTopics,licenseInfo,pushedAt,updatedAt,isPrivate"
 TEXT_SUFFIXES = {
     ".go", ".py", ".js", ".jsx", ".ts", ".tsx", ".php", ".sh", ".rb", ".java",
-    ".kt", ".rs", ".sol", ".sql", ".yaml", ".yml", ".json", ".toml", ".hcl",
+    ".kt", ".rs", ".cs", ".aspx", ".ascx", ".sol", ".sql", ".yaml", ".yml", ".json", ".toml", ".hcl",
     ".tf", ".md", ".env", ".example", ".ini", ".conf", ".Dockerfile", "",
 }
-SKIP_DIRS = {".git", "node_modules", "vendor", "dist", "build", ".next", "coverage", "__pycache__"}
+SKIP_DIRS = {".git", "node_modules", "vendor", "dist", "build", ".next", "coverage", "__pycache__", ".venv", "venv", "env", "bin", "obj", "assets", "images", "Upload", "upload", "Multimedia", "Multimedia_user", "phpMyAdmin", "devexpress", "Content", "Scripts"}
 FUNC_PATTERNS = {
     "go": [("Go", re.compile(r"^\s*func\s+(?:\([^)]*\)\s*)?([A-Za-z_][\w]*)\s*\("))],
     "python": [("Python", re.compile(r"^\s*(?:async\s+)?def\s+([A-Za-z_]\w*)\s*\("))],
@@ -39,6 +57,7 @@ FUNC_PATTERNS = {
         ("JS/TS", re.compile(r"^\s*(?:public\s+|private\s+|protected\s+|static\s+|async\s+)*([A-Za-z_$][\w$]*)\s*\([^)]*\)\s*[:{]")),
     ],
     "php": [("PHP", re.compile(r"^\s*(?:public|private|protected|static|final|abstract|\s)*function\s+([A-Za-z_]\w*)\s*\("))],
+    "csharp": [("C#", re.compile(r"^\s*(?:public|private|protected|internal|static|async|virtual|override|sealed|partial|\s)+[A-Za-z_][\w<>?,\[\] ]+\s+([A-Za-z_]\w*)\s*\("))],
     "shell": [("Shell", re.compile(r"^\s*([A-Za-z_][\w.-]*)\s*\(\)\s*\{"))],
 }
 ENDPOINT_PATTERNS = [
@@ -71,38 +90,74 @@ def run(cmd: list[str], cwd: Path | None = None) -> subprocess.CompletedProcess[
     return subprocess.run(cmd, cwd=cwd, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
 
-def clone_repo(root: Path, repo: str) -> str:
-    dest = root / repo
+def repo_key(owner: str, repo: str) -> str:
+    return repo if owner == "cvsz" else f"{owner}__{repo}"
+
+
+def full_name(owner: str, repo: str) -> str:
+    return f"{owner}/{repo}"
+
+
+def clone_repo(root: Path, owner: str, repo: str) -> str:
+    dest = root / repo_key(owner, repo)
     if (dest / ".git").exists():
         return "cached"
     if shutil.which("gh"):
-        proc = run(["gh", "repo", "clone", f"{REPO_OWNER}/{repo}", str(dest), "--", "--depth=1"])
+        proc = run(["gh", "repo", "clone", full_name(owner, repo), str(dest), "--", "--depth=1"])
         if proc.returncode == 0:
             return "gh"
-    proc = run(["git", "clone", "--depth=1", f"https://github.com/{REPO_OWNER}/{repo}.git", str(dest)])
+    proc = run(["git", "clone", "--depth=1", f"https://github.com/{owner}/{repo}.git", str(dest)])
     return "git" if proc.returncode == 0 else "blocked"
 
 
-def capture_gh_metadata(root: Path, repo: str) -> str:
-    """Capture GitHub metadata with gh when authenticated, without persisting secrets."""
-    meta_path = root / f"{repo}.gh.json"
-    if not shutil.which("gh"):
-        meta_path.write_text(json.dumps({"repo": f"{REPO_OWNER}/{repo}", "status": "gh-unavailable"}, indent=2) + "\n")
-        return "gh-unavailable"
-    proc = run(["gh", "repo", "view", f"{REPO_OWNER}/{repo}", "--json", GH_METADATA_FIELDS])
-    if proc.returncode == 0 and proc.stdout.strip():
-        meta_path.write_text(proc.stdout.strip() + "\n")
-        return "captured"
-    meta_path.write_text(json.dumps({"repo": f"{REPO_OWNER}/{repo}", "status": "blocked", "reason": proc.stdout.strip()[:500]}, indent=2) + "\n")
-    return "blocked"
+def github_api_repo(owner: str, repo: str) -> dict[str, object]:
+    import urllib.request
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{owner}/{repo}",
+        headers={"Accept": "application/vnd.github+json", "User-Agent": "zeaz-meta-audit"},
+    )
+    with urllib.request.urlopen(req, timeout=20) as resp:  # nosec: public metadata only
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def capture_gh_metadata(root: Path, owner: str, repo: str) -> str:
+    """Capture GitHub metadata with gh first, then public REST fallback, without persisting secrets."""
+    meta_path = root / f"{repo_key(owner, repo)}.gh.json"
+    if shutil.which("gh"):
+        proc = run(["gh", "repo", "view", full_name(owner, repo), "--json", GH_METADATA_FIELDS])
+        if proc.returncode == 0 and proc.stdout.strip():
+            meta_path.write_text(proc.stdout.strip() + "\n")
+            return "gh"
+        gh_reason = proc.stdout.strip()[:500]
+    else:
+        gh_reason = "gh-unavailable"
+    try:
+        data = github_api_repo(owner, repo)
+        meta_path.write_text(json.dumps({
+            "nameWithOwner": data.get("full_name"),
+            "description": data.get("description"),
+            "defaultBranchRef": {"name": data.get("default_branch")},
+            "primaryLanguage": {"name": data.get("language")},
+            "licenseInfo": data.get("license"),
+            "pushedAt": data.get("pushed_at"),
+            "updatedAt": data.get("updated_at"),
+            "isPrivate": data.get("private"),
+            "metadataSource": "github-rest-fallback",
+            "ghReason": gh_reason,
+        }, indent=2, sort_keys=True) + "\n")
+        return "rest"
+    except Exception as exc:  # noqa: BLE001 - deterministic evidence capture
+        meta_path.write_text(json.dumps({"repo": full_name(owner, repo), "status": "blocked", "reason": f"{gh_reason}; REST: {exc}"[:500]}, indent=2) + "\n")
+        return "blocked"
 
 
 def iter_files(repo_dir: Path) -> Iterable[Path]:
-    for path in sorted(repo_dir.rglob("*")):
-        if any(part in SKIP_DIRS for part in path.parts):
-            continue
-        if path.is_file():
-            yield path
+    """Yield files while pruning heavy dependency, artifact, binary, and VCS trees."""
+    for current, dirs, files in os.walk(repo_dir):
+        dirs[:] = sorted(d for d in dirs if d not in SKIP_DIRS)
+        base = Path(current)
+        for name in sorted(files):
+            yield base / name
 
 
 def safe_lines(path: Path) -> list[str]:
@@ -124,6 +179,8 @@ def function_pattern_key(path: Path) -> str | None:
         return "js-ts"
     if suffix == ".php":
         return "php"
+    if suffix in {".cs", ".aspx", ".ascx"}:
+        return "csharp"
     if suffix == ".sh" or path.name in {"Makefile"}:
         return "shell"
     return None
@@ -135,7 +192,7 @@ def language(path: Path) -> str:
         ".go": "Go", ".py": "Python", ".js": "JavaScript", ".jsx": "JavaScript",
         ".ts": "TypeScript", ".tsx": "TypeScript", ".php": "PHP", ".sh": "Shell",
         ".tf": "Terraform", ".hcl": "HCL", ".yaml": "YAML", ".yml": "YAML",
-        ".sql": "SQL", ".sol": "Solidity", ".kt": "Kotlin", ".md": "Markdown",
+        ".sql": "SQL", ".sol": "Solidity", ".kt": "Kotlin", ".cs": "C#", ".aspx": "ASP.NET", ".ascx": "ASP.NET", ".md": "Markdown",
     }.get(suffix, suffix.lstrip(".") or "Other")
 
 
@@ -156,10 +213,11 @@ def infer_modules(paths: list[Path], base: Path) -> list[str]:
     return modules
 
 
-def inventory(root: Path, repo: str) -> RepoInventory:
-    repo_dir = root / repo
-    inv = RepoInventory(repo, "blocked", languages=Counter(), functions=[], endpoints=[], pipelines=[], modules=[])
-    meta_path = root / f"{repo}.gh.json"
+def inventory(root: Path, owner: str, repo: str) -> RepoInventory:
+    key = repo_key(owner, repo)
+    repo_dir = root / key
+    inv = RepoInventory(full_name(owner, repo), "blocked", languages=Counter(), functions=[], endpoints=[], pipelines=[], modules=[])
+    meta_path = root / f"{key}.gh.json"
     if meta_path.exists():
         try:
             meta = json.loads(meta_path.read_text())
@@ -269,28 +327,34 @@ def write_docs(outdir: Path, inventories: list[RepoInventory]) -> None:
         f.write("- Terraform/Kubernetes assets exist across repos with divergent state assumptions; normalize into versioned modules and environment overlays owned here.\n")
     with funcs.open("w") as f:
         f.write("# Function, API, and Pipeline Inventory\n\n")
-        f.write("Generated complete static index of detected functions, HTTP/API strings, and automation pipeline files.\n\n")
+        f.write(f"Generated static index of detected functions, HTTP/API strings, and automation pipeline files. Each section displays up to {DISPLAY_LIMIT_PER_REPO} entries per kind per repository while summary tables retain complete detected counts. Re-run the script and raise `DISPLAY_LIMIT_PER_REPO` if a local uncapped artifact is required.\n\n")
         for inv in inventories:
             f.write(f"## `{inv.name}`\n\n")
             f.write(f"Status: **{inv.status}**; commit `{inv.sha}`.\n\n")
             f.write("### API/endpoints\n\n")
             if inv.endpoints:
                 f.write("| File | Line | Endpoint/expression |\n|---|---:|---|\n")
-                for path, line, ep in inv.endpoints:
+                for path, line, ep in inv.endpoints[:DISPLAY_LIMIT_PER_REPO]:
                     f.write(f"| `{md_escape(path)}` | {line} | `{md_escape(ep)}` |\n")
+                if len(inv.endpoints) > DISPLAY_LIMIT_PER_REPO:
+                    f.write(f"\n_Display capped at {DISPLAY_LIMIT_PER_REPO} of {len(inv.endpoints)} detected endpoint/API expressions._\n")
             else:
                 f.write("None detected or repository blocked.\n")
             f.write("\n### Functions/methods\n\n")
             if inv.functions:
                 f.write("| File | Line | Language | Function/method |\n|---|---:|---|---|\n")
-                for path, line, lang, name in inv.functions:
+                for path, line, lang, name in inv.functions[:DISPLAY_LIMIT_PER_REPO]:
                     f.write(f"| `{md_escape(path)}` | {line} | {lang} | `{md_escape(name)}` |\n")
+                if len(inv.functions) > DISPLAY_LIMIT_PER_REPO:
+                    f.write(f"\n_Display capped at {DISPLAY_LIMIT_PER_REPO} of {len(inv.functions)} detected functions/methods._\n")
             else:
                 f.write("None detected or repository blocked.\n")
             f.write("\n### Automation pipeline files\n\n")
             if inv.pipelines:
-                for p in inv.pipelines:
+                for p in inv.pipelines[:DISPLAY_LIMIT_PER_REPO]:
                     f.write(f"- `{md_escape(p)}`\n")
+                if len(inv.pipelines) > DISPLAY_LIMIT_PER_REPO:
+                    f.write(f"- _Display capped at {DISPLAY_LIMIT_PER_REPO} of {len(inv.pipelines)} detected automation files._\n")
             else:
                 f.write("None detected or repository blocked.\n")
             f.write("\n")
@@ -305,16 +369,16 @@ def main() -> None:
     root = Path(args.source_root).resolve()
     root.mkdir(parents=True, exist_ok=True)
     if not args.skip_clone:
-        for repo in REPOS:
-            clone_method = clone_repo(root, repo)
-            dest = root / repo
+        for owner, repo in ECOSYSTEM_REPOS:
+            clone_method = clone_repo(root, owner, repo)
+            dest = root / repo_key(owner, repo)
             if (dest / ".git").exists() and clone_method != "cached":
                 run(["git", "config", "zeaz.cloneMethod", clone_method], dest)
-            metadata_status = capture_gh_metadata(root, repo)
-            print(f"{repo}: clone={clone_method} gh-metadata={metadata_status}")
+            metadata_status = capture_gh_metadata(root, owner, repo)
+            print(f"{full_name(owner, repo)}: clone={clone_method} gh-metadata={metadata_status}")
     else:
-        for repo in REPOS:
-            meta_path = root / f"{repo}.gh.json"
+        for owner, repo in ECOSYSTEM_REPOS:
+            meta_path = root / f"{repo_key(owner, repo)}.gh.json"
             needs_metadata = not meta_path.exists() or meta_path.stat().st_size == 0
             if not needs_metadata:
                 try:
@@ -322,8 +386,8 @@ def main() -> None:
                 except json.JSONDecodeError:
                     needs_metadata = True
             if needs_metadata:
-                capture_gh_metadata(root, repo)
-    inventories = [inventory(root, repo) for repo in REPOS]
+                capture_gh_metadata(root, owner, repo)
+    inventories = [inventory(root, owner, repo) for owner, repo in ECOSYSTEM_REPOS]
     write_docs(Path(args.output_dir), inventories)
     print(f"wrote {args.output_dir}/full-spectrum-analysis.md and function-api-inventory.md")
 
