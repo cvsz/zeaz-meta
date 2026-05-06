@@ -1,8 +1,8 @@
 # Function, API, and Pipeline Inventory
 
-Generated complete static index of detected functions, HTTP/API strings, and automation pipeline files.
+Generated static index of detected functions, HTTP/API strings, and automation pipeline files. Each section displays up to 300 entries per kind per repository while summary tables retain complete detected counts. Re-run the script and raise `DISPLAY_LIMIT_PER_REPO` if a local uncapped artifact is required.
 
-## `zgitcp`
+## `cvsz/zgitcp`
 
 Status: **cloned**; commit `77075fe9a660`.
 
@@ -57,7 +57,7 @@ None detected or repository blocked.
 
 None detected or repository blocked.
 
-## `zwallet`
+## `cvsz/zwallet`
 
 Status: **cloned**; commit `8164cb36fd63`.
 
@@ -448,125 +448,8 @@ Status: **cloned**; commit `8164cb36fd63`.
 | `backend/services/swap-service/src/index.ts` | 229 | JS/TS | `executeWithFallback` |
 | `backend/services/swap-service/src/index.ts` | 243 | JS/TS | `executeSingleRoute` |
 | `infra/installer/install.prod.sh` | 19 | Shell | `log` |
-| `infra/installer/install.prod.sh` | 20 | Shell | `fail` |
-| `infra/installer/install.prod.sh` | 22 | Shell | `require_root` |
-| `infra/installer/install.prod.sh` | 26 | Shell | `install_base` |
-| `infra/installer/install.prod.sh` | 33 | Shell | `setup_dirs` |
-| `infra/installer/install.prod.sh` | 38 | Shell | `generate_secrets` |
-| `infra/installer/install.prod.sh` | 50 | Shell | `generate_tls` |
-| `infra/installer/install.prod.sh` | 58 | Shell | `run_postgres` |
-| `infra/installer/install.prod.sh` | 66 | Shell | `run_redis` |
-| `infra/installer/install.prod.sh` | 74 | Shell | `run_elasticsearch` |
-| `infra/installer/install.prod.sh` | 84 | Shell | `health_check` |
-| `infra/installer/install.prod.sh` | 88 | Shell | `main` |
-| `infra/installer/install.sh` | 14 | Shell | `log` |
-| `infra/installer/install.sh` | 15 | Shell | `err` |
-| `infra/installer/install.sh` | 17 | Shell | `require_root` |
-| `infra/installer/install.sh` | 21 | Shell | `install_base` |
-| `infra/installer/install.sh` | 32 | Shell | `install_docker` |
-| `infra/installer/install.sh` | 48 | Shell | `install_k3s` |
-| `infra/installer/install.sh` | 53 | Shell | `setup_dirs` |
-| `infra/installer/install.sh` | 58 | Shell | `generate_certs` |
-| `infra/installer/install.sh` | 67 | Shell | `run_core_services` |
-| `infra/installer/install.sh` | 90 | Shell | `run_edge_waf` |
-| `infra/installer/install.sh` | 96 | Shell | `run_siem` |
-| `infra/installer/install.sh` | 114 | Shell | `post_checks` |
-| `infra/installer/install.sh` | 120 | Shell | `main` |
-| `infra/observability/alerts/webhook_alert.py` | 9 | Python | `send_alert` |
-| `infra/observability/structured_logger.py` | 9 | Python | `log_event` |
-| `mobile/App.tsx` | 52 | JS/TS | `createIntent` |
-| `packages/crypto-core/src/evmSigner.ts` | 20 | JS/TS | `sign` |
-| `packages/crypto-core/src/hdWallet.ts` | 13 | JS/TS | `constructor` |
-| `packages/crypto-core/src/hdWallet.ts` | 17 | JS/TS | `create` |
-| `packages/crypto-core/src/hdWallet.ts` | 23 | JS/TS | `fromMnemonic` |
-| `packages/crypto-core/src/hdWallet.ts` | 32 | JS/TS | `deriveEvm` |
-| `packages/crypto-core/src/hdWallet.ts` | 51 | JS/TS | `wipe` |
-| `packages/crypto-core/src/txPipeline.ts` | 11 | JS/TS | `simulate` |
-| `packages/crypto-core/src/txPipeline.ts` | 12 | JS/TS | `estimateGas` |
-| `packages/crypto-core/src/txPipeline.ts` | 13 | JS/TS | `sendRawTransaction` |
-| `packages/crypto-core/src/txPipeline.ts` | 19 | JS/TS | `constructor` |
-| `packages/crypto/src/adapters.ts` | 10 | JS/TS | `signByChain` |
-| `packages/crypto/src/btc.ts` | 10 | JS/TS | `buildUnsignedBtcTx` |
-| `packages/crypto/src/btc.ts` | 21 | JS/TS | `txidFromRaw` |
-| `packages/crypto/src/btc.ts` | 27 | JS/TS | `u32` |
-| `packages/crypto/src/btc.ts` | 28 | JS/TS | `u64` |
-| `packages/crypto/src/btc.ts` | 29 | JS/TS | `varSlice` |
-| `packages/crypto/src/encryption.ts` | 9 | JS/TS | `encryptAes256Gcm` |
-| `packages/crypto/src/encryption.ts` | 20 | JS/TS | `decryptAes256Gcm` |
-| `packages/crypto/src/evm.ts` | 11 | JS/TS | `signEvmMessageDeterministic` |
-| `packages/crypto/src/evm.ts` | 18 | JS/TS | `signEip712TypedData` |
-| `packages/crypto/src/hdWallet.ts` | 11 | JS/TS | `createMnemonic` |
-| `packages/crypto/src/hdWallet.ts` | 15 | JS/TS | `deriveBip32Node` |
-| `packages/crypto/src/hdWallet.ts` | 21 | JS/TS | `deriveSeed` |
-| `packages/crypto/src/memory.ts` | 1 | JS/TS | `wipeBuffer` |
-| `packages/crypto/src/mpcWallet.ts` | 15 | JS/TS | `constructor` |
-| `packages/crypto/src/mpcWallet.ts` | 22 | JS/TS | `addShare` |
-| `packages/crypto/src/mpcWallet.ts` | 27 | JS/TS | `combineShares` |
-| `packages/crypto/src/mpcWallet.ts` | 46 | JS/TS | `sign` |
-| `packages/crypto/src/mpcWallet.ts` | 59 | JS/TS | `encryptShare` |
-| `packages/crypto/src/mpcWallet.ts` | 70 | JS/TS | `decryptShare` |
-| `packages/crypto/src/solana.ts` | 9 | JS/TS | `signSolanaMessageDeterministic` |
-| `packages/crypto/src/solana.ts` | 14 | JS/TS | `getSolanaPublicKey` |
-| `packages/crypto/src/solana.ts` | 18 | JS/TS | `verifySolanaSignature` |
-| `packages/events/src/eventBus.ts` | 7 | JS/TS | `connect` |
-| `packages/events/src/eventBus.ts` | 15 | JS/TS | `connect` |
-| `packages/events/src/eventBus.ts` | 34 | JS/TS | `constructor` |
-| `packages/events/src/eventBus.ts` | 40 | JS/TS | `connect` |
-| `packages/events/src/eventBus.ts` | 83 | JS/TS | `shouldProcess` |
-| `packages/events/src/eventBus.ts` | 92 | JS/TS | `createEventBusFromEnv` |
-| `packages/rpc/src/index.ts` | 72 | JS/TS | `getProviderHealth` |
-| `packages/rpc/src/index.ts` | 83 | JS/TS | `pickCandidates` |
-| `packages/rpc/src/index.ts` | 109 | JS/TS | `onSuccess` |
-| `packages/rpc/src/index.ts` | 115 | JS/TS | `onFailure` |
-| `packages/rpc/src/index.ts` | 125 | JS/TS | `createFetchRpcClient` |
-| `packages/shared-types/src/wallet.ts` | 6 | JS/TS | `isSupportedChain` |
-| `packages/shared-types/src/wallet.ts` | 10 | JS/TS | `assertAddress` |
-| `packages/shared-types/src/wallet.ts` | 16 | JS/TS | `assertTransferRequest` |
-| `scripts/migrate.sh` | 6 | Shell | `apply` |
-| `scripts/rollback.sh` | 6 | Shell | `rollback_ledger` |
-| `scripts/rollback.sh` | 11 | Shell | `rollback_idempotency` |
-| `security/controller/main.go` | 30 | Go | `initK8s` |
-| `security/controller/main.go` | 42 | Go | `quarantinePod` |
-| `security/controller/main.go` | 60 | Go | `sanitizeLogField` |
-| `security/controller/main.go` | 66 | Go | `handler` |
-| `security/controller/main.go` | 89 | Go | `main` |
-| `services/card/src/index.ts` | 35 | JS/TS | `createTokenizedCard` |
-| `services/card/src/index.ts` | 36 | JS/TS | `freezeCard` |
-| `services/card/src/index.ts` | 37 | JS/TS | `unfreezeCard` |
-| `services/card/src/index.ts` | 40 | JS/TS | `assertNonEmpty` |
-| `services/card/src/index.ts` | 47 | JS/TS | `constructor` |
-| `services/card/src/index.ts` | 49 | JS/TS | `issueCard` |
-| `services/card/src/index.ts` | 80 | JS/TS | `freeze` |
-| `services/card/src/index.ts` | 85 | JS/TS | `unfreeze` |
-| `services/compliance/src/index.ts` | 25 | JS/TS | `verifyIdentity` |
-| `services/compliance/src/index.ts` | 42 | JS/TS | `evaluate` |
-| `services/compliance/src/index.ts` | 64 | JS/TS | `constructor` |
-| `services/compliance/src/index.ts` | 66 | JS/TS | `runKycAndRisk` |
-| `services/event-workers/src/index.ts` | 19 | JS/TS | `fakeRoutes` |
-| `services/event-workers/src/index.ts` | 26 | JS/TS | `handleTxRequested` |
-| `services/event-workers/src/index.ts` | 39 | JS/TS | `handleSwapRequested` |
-| `services/indexer/src/index.ts` | 69 | JS/TS | `process` |
-| `services/indexer/src/index.ts` | 83 | JS/TS | `hasSeen` |
-| `services/indexer/src/index.ts` | 87 | JS/TS | `buildCursor` |
-| `services/indexer/src/index.ts` | 102 | JS/TS | `buildDedupeKey` |
-| `services/liquidity/src/index.ts` | 28 | JS/TS | `getQuote` |
-| `services/liquidity/src/index.ts` | 29 | JS/TS | `execute` |
-| `services/liquidity/src/index.ts` | 42 | JS/TS | `parsePositiveAtomic` |
-| `services/liquidity/src/index.ts` | 54 | JS/TS | `constructor` |
-| `services/liquidity/src/index.ts` | 56 | JS/TS | `quote` |
-| `services/liquidity/src/index.ts` | 65 | JS/TS | `execute` |
-| `services/router/src/intentRouter.ts` | 32 | JS/TS | `constructor` |
-| `services/router/src/intentRouter.ts` | 36 | JS/TS | `fetchQuotes` |
-| `services/router/src/intentRouter.ts` | 60 | JS/TS | `pickBest` |
-| `services/swap-engine/src/index.ts` | 41 | JS/TS | `assertNonEmpty` |
-| `services/swap-engine/src/index.ts` | 47 | JS/TS | `parseAtomic` |
-| `services/swap-engine/src/index.ts` | 58 | JS/TS | `parseGweiToWei` |
-| `services/swap-engine/src/index.ts` | 77 | JS/TS | `validateQuoteRequest` |
-| `services/swap-engine/src/index.ts` | 90 | JS/TS | `scoreRoute` |
-| `services/swap-engine/src/index.ts` | 117 | JS/TS | `selectBestRoute` |
-| `services/wallet-engine/src/walletEngine.ts` | 6 | JS/TS | `buildTransferDigest` |
-| `terraform/aws/lambda/stop_instances.py` | 7 | Python | `lambda_handler` |
-| `tests/ledger/stress.ts` | 3 | JS/TS | `run` |
+
+_Display capped at 300 of 419 detected functions/methods._
 
 ### Automation pipeline files
 
@@ -603,7 +486,7 @@ Status: **cloned**; commit `8164cb36fd63`.
 - `scripts/installer.config.json`
 - `scripts/run-installer.mjs`
 
-## `ABTPi18n`
+## `cvsz/ABTPi18n`
 
 Status: **cloned**; commit `6749c6f6c414`.
 
@@ -1016,117 +899,8 @@ Status: **cloned**; commit `6749c6f6c414`.
 | `apps/backend/src/worker/tasks.py` | 28 | Python | `run_bot_async` |
 | `apps/backend/src/worker/tasks.py` | 37 | Python | `check_contract_expiry` |
 | `apps/backend/src/worker/tasks.py` | 42 | Python | `check_contract_expiry_async` |
-| `apps/backend/src/worker/tasks.py` | 92 | Python | `check_secret_rotation` |
-| `apps/backend/src/worker/tasks.py` | 97 | Python | `check_secret_rotation_async` |
-| `apps/backend/src/worker/tasks.py` | 138 | Python | `cleanup_audit_logs` |
-| `apps/backend/src/worker/tasks.py` | 143 | Python | `cleanup_audit_logs_async` |
-| `apps/frontend/src/app/[lng]/dashboard/page.tsx` | 49 | JS/TS | `Strategies` |
-| `apps/frontend/src/app/[lng]/dashboard/page.tsx` | 66 | JS/TS | `BotControl` |
-| `apps/frontend/src/app/[lng]/dashboard/page.tsx` | 70 | JS/TS | `startBot` |
-| `apps/frontend/src/app/[lng]/dashboard/page.tsx` | 78 | JS/TS | `stopBot` |
-| `apps/frontend/src/app/[lng]/login/page.tsx` | 19 | JS/TS | `handleSuccess` |
-| `apps/frontend/src/app/[lng]/login/page.tsx` | 25 | JS/TS | `handleError` |
-| `apps/frontend/src/app/[lng]/settings/page.tsx` | 26 | JS/TS | `save` |
-| `apps/frontend/src/app/i18n/client.ts` | 18 | JS/TS | `initI18n` |
-| `apps/frontend/src/components/LanguageSelector.tsx` | 19 | JS/TS | `LanguageSelector` |
-| `apps/frontend/src/components/LanguageSelector.tsx` | 26 | JS/TS | `handleLanguageChange` |
-| `apps/frontend/src/components/Navigation.tsx` | 24 | JS/TS | `Navigation` |
-| `apps/frontend/src/components/Navigation.tsx` | 33 | JS/TS | `isActive` |
-| `apps/frontend/src/components/auth/GoogleSignIn.tsx` | 16 | JS/TS | `GoogleSignIn` |
-| `apps/frontend/src/components/auth/GoogleSignIn.tsx` | 20 | JS/TS | `handleGoogleSignIn` |
-| `apps/frontend/src/components/settings/NotificationPreferences.tsx` | 22 | JS/TS | `NotificationPreferences` |
-| `apps/frontend/src/components/settings/NotificationPreferences.tsx` | 39 | JS/TS | `loadPreferences` |
-| `apps/frontend/src/components/settings/NotificationPreferences.tsx` | 49 | JS/TS | `handleSave` |
-| `apps/frontend/src/components/settings/NotificationPreferences.tsx` | 84 | JS/TS | `togglePreference` |
-| `apps/frontend/src/components/settings/TelegramLink.tsx` | 22 | JS/TS | `TelegramLink` |
-| `apps/frontend/src/components/settings/TelegramLink.tsx` | 37 | JS/TS | `loadStatus` |
-| `apps/frontend/src/components/settings/TelegramLink.tsx` | 47 | JS/TS | `handleLink` |
-| `apps/frontend/src/components/settings/TelegramLink.tsx` | 87 | JS/TS | `handleUnlink` |
-| `apps/frontend/src/components/settings/TelegramLink.tsx` | 122 | JS/TS | `handleTestNotification` |
-| `apps/frontend/src/components/settings/ThemeCustomizer.tsx` | 12 | JS/TS | `ThemeCustomizer` |
-| `apps/frontend/src/components/settings/ThemeCustomizer.tsx` | 29 | JS/TS | `handleApplyColors` |
-| `apps/frontend/src/components/settings/ThemeCustomizer.tsx` | 35 | JS/TS | `handleResetColors` |
-| `apps/frontend/src/contexts/ThemeContext.tsx` | 26 | JS/TS | `ThemeProvider` |
-| `apps/frontend/src/contexts/ThemeContext.tsx` | 58 | JS/TS | `updateActualTheme` |
-| `apps/frontend/src/contexts/ThemeContext.tsx` | 79 | JS/TS | `handleChange` |
-| `apps/frontend/src/contexts/ThemeContext.tsx` | 85 | JS/TS | `setTheme` |
-| `apps/frontend/src/contexts/ThemeContext.tsx` | 92 | JS/TS | `handleSetPrimaryColor` |
-| `apps/frontend/src/contexts/ThemeContext.tsx` | 99 | JS/TS | `handleSetSecondaryColor` |
-| `apps/frontend/src/contexts/ThemeContext.tsx` | 106 | JS/TS | `handleSetAccentColor` |
-| `apps/frontend/src/contexts/ThemeContext.tsx` | 132 | JS/TS | `useTheme` |
-| `core/strategy_autoload.py` | 20 | Python | `load_external_strategies` |
-| `core/strategy_base.py` | 25 | Python | `execute` |
-| `core/strategy_registry.py` | 33 | Python | `register` |
-| `core/strategy_registry.py` | 51 | Python | `create` |
-| `core/strategy_registry.py` | 72 | Python | `list_names` |
-| `core/strategy_registry.py` | 82 | Python | `get_class` |
-| `fix.sh` | 40 | Shell | `log_info` |
-| `fix.sh` | 44 | Shell | `log_success` |
-| `fix.sh` | 48 | Shell | `log_warn` |
-| `fix.sh` | 52 | Shell | `log_error` |
-| `fix.sh` | 56 | Shell | `log_debug` |
-| `fix.sh` | 63 | Shell | `command_exists` |
-| `fix.sh` | 68 | Shell | `check_disk_space` |
-| `fix.sh` | 85 | Shell | `prune_docker` |
-| `fix.sh` | 109 | Shell | `install_nodejs_in_container` |
-| `fix.sh` | 148 | Shell | `generate_prisma_client` |
-| `fix.sh` | 174 | Shell | `run_migrations` |
-| `fix.sh` | 193 | Shell | `main` |
-| `install.sh` | 12 | Shell | `need_cmd` |
-| `scripts/export-docs-to-wiki.sh` | 40 | Shell | `inplace_sed` |
-| `scripts/export-docs-to-wiki.sh` | 58 | Shell | `convert_to_wiki_name` |
-| `scripts/export-docs-to-wiki.sh` | 75 | Shell | `detect_collisions` |
-| `scripts/export-docs-to-wiki.sh` | 109 | Shell | `rewrite_markdown_links` |
-| `scripts/export-docs-to-wiki.sh` | 137 | Shell | `collect_assets` |
-| `scripts/export-docs-to-wiki.sh` | 148 | Shell | `copy_assets` |
-| `scripts/export-docs-to-wiki.sh` | 186 | Shell | `rewrite_asset_paths` |
-| `scripts/export-docs-to-wiki.sh` | 278 | Shell | `copy_doc_file` |
-| `scripts/zeaz_meta_installer.sh` | 12 | Shell | `log` |
-| `scripts/zeaz_meta_installer.sh` | 18 | Shell | `usage` |
-| `scripts/zeaz_meta_installer.sh` | 63 | Shell | `plan` |
-| `scripts/zeaz_meta_installer.sh` | 68 | Shell | `generate` |
-| `scripts/zeaz_meta_installer.sh` | 78 | Shell | `install_files` |
-| `scripts/zeaz_meta_installer.sh` | 97 | Shell | `release` |
-| `tests/test_metaultra_example.py` | 12 | Python | `test_example_strategy_signals` |
-| `tests/test_metaultra_example.py` | 17 | Python | `test_on_tick_prints` |
-| `tools/drive_sync.py` | 27 | Python | `extract_folder_id` |
-| `tools/drive_sync.py` | 63 | Python | `download_drive_folder` |
-| `tools/drive_sync.py` | 113 | Python | `main` |
-| `tools/generate_demo.js` | 24 | JS/TS | `createPlaceholderSVG` |
-| `tools/generate_demo.js` | 308 | JS/TS | `openModal` |
-| `tools/generate_demo.js` | 315 | JS/TS | `closeModal` |
-| `tools/integrate_drive_assets.py` | 29 | Python | `load_mapping_config` |
-| `tools/integrate_drive_assets.py` | 57 | Python | `match_files` |
-| `tools/integrate_drive_assets.py` | 90 | Python | `compute_destination` |
-| `tools/integrate_drive_assets.py` | 133 | Python | `integrate_assets` |
-| `tools/integrate_drive_assets.py` | 219 | Python | `main` |
-| `tools/load_gdrive_strategies.py` | 20 | Python | `main` |
-| `tools/metaultra/example_module.py` | 12 | Python | `__init__` |
-| `tools/metaultra/example_module.py` | 16 | Python | `on_tick` |
-| `tools/metaultra/example_module.py` | 20 | Python | `generate_signals` |
-| `tools/metaultra/example_module.ts` | 7 | JS/TS | `constructor` |
-| `tools/metaultra/example_module.ts` | 12 | JS/TS | `onTick` |
-| `tools/metaultra/example_module.ts` | 16 | JS/TS | `generateSignals` |
-| `tools/screenshot_pages.js` | 35 | JS/TS | `ensureDir` |
-| `tools/screenshot_pages.js` | 44 | JS/TS | `captureScreenshot` |
-| `tools/screenshot_pages.js` | 68 | JS/TS | `captureAllPages` |
-| `tools/screenshot_pages.js` | 126 | JS/TS | `generateIndexHtml` |
-| `tools/screenshot_pages.js` | 309 | JS/TS | `openModal` |
-| `tools/screenshot_pages.js` | 316 | JS/TS | `closeModal` |
-| `tools/screenshot_pages.js` | 344 | JS/TS | `generateLanguageSections` |
-| `tools/test_tradingview_integration.py` | 17 | Python | `check_pydantic_models` |
-| `tools/test_tradingview_integration.py` | 45 | Python | `check_strategy_logic` |
-| `tools/test_tradingview_integration.py` | 53 | Python | `__init__` |
-| `tools/test_tradingview_integration.py` | 57 | Python | `execute` |
-| `tools/test_tradingview_integration.py` | 125 | Python | `check_yaml_config` |
-| `tools/test_tradingview_integration.py` | 155 | Python | `check_gdrive_loader_structure` |
-| `tools/test_tradingview_integration.py` | 181 | Python | `check_endpoint_structure` |
-| `tools/test_tradingview_integration.py` | 218 | Python | `test_pydantic_models` |
-| `tools/test_tradingview_integration.py` | 222 | Python | `test_strategy_logic` |
-| `tools/test_tradingview_integration.py` | 226 | Python | `test_yaml_config` |
-| `tools/test_tradingview_integration.py` | 230 | Python | `test_gdrive_loader_structure` |
-| `tools/test_tradingview_integration.py` | 234 | Python | `test_endpoint_structure` |
-| `tools/test_tradingview_integration.py` | 238 | Python | `main` |
+
+_Display capped at 300 of 411 detected functions/methods._
 
 ### Automation pipeline files
 
@@ -1141,7 +915,7 @@ Status: **cloned**; commit `6749c6f6c414`.
 - `install.sh`
 - `scripts/zeaz_meta_installer.sh`
 
-## `zypto`
+## `cvsz/zypto`
 
 Status: **cloned**; commit `ef0fdd5ce580`.
 
@@ -1729,1527 +1503,8 @@ Status: **cloned**; commit `ef0fdd5ce580`.
 | `moat_simulation/model.py` | 1 | Python | `moat` |
 | `monitoring/prometheus_client.py` | 4 | Python | `query_prometheus` |
 | `monitoring/prometheus_client.py` | 10 | Python | `current_kpi_state` |
-| `monopoly/mna.py` | 14 | Python | `score` |
-| `monopoly/mna.py` | 19 | Python | `shortlist` |
-| `monopoly/pricing.py` | 1 | Python | `segment_price` |
-| `ops/control_plane/edge_cache.py` | 6 | Python | `set_kv` |
-| `ops/control_plane/edge_cache.py` | 10 | Python | `get_kv` |
-| `ops/control_plane/jwks_service.py` | 6 | Python | `publish` |
-| `ops/control_plane/jwks_service.py` | 10 | Python | `get` |
-| `ops/control_plane/policy_service.py` | 1 | Python | `allow` |
-| `ops/control_plane/revocation_service.py` | 6 | Python | `revoke` |
-| `ops/control_plane/revocation_service.py` | 10 | Python | `is_revoked` |
-| `ops/recovery/auto.py` | 1 | Python | `recover` |
-| `p2p/go-node/main.go` | 21 | Go | `HandlePeerFound` |
-| `p2p/go-node/main.go` | 27 | Go | `main` |
-| `p2p/gossipsub/main.go` | 18 | Go | `main` |
-| `partners/incentives.py` | 4 | Python | `partner_commission` |
-| `partners/marketplace.py` | 4 | Python | `list_marketplace` |
-| `partners/onboarding.py` | 4 | Python | `onboard_partner` |
-| `payments/stripe/billing.py` | 4 | Python | `compute_bill` |
-| `payments/stripe/checkout.py` | 10 | Python | `create_subscription` |
-| `payments/stripe/metered.py` | 8 | Python | `report_usage` |
-| `payments/stripe/tax.py` | 4 | Python | `apply_tax` |
-| `payments/stripe/webhook.py` | 9 | Python | `handle` |
-| `pilot/scripts/smoke_test.py` | 6 | Python | `test` |
-| `pitchdeck/demo/app.py` | 24 | Python | `generate_signal` |
-| `pitchdeck/demo/app.py` | 69 | Python | `tenants` |
-| `pitchdeck/demo/app.py` | 74 | Python | `tenant_snapshot` |
-| `pitchdeck/demo/app.py` | 81 | Python | `ws_tenant_stream` |
-| `pitchdeck/demo/app.py` | 101 | Python | `home` |
-| `policy_sim/scenarios.py` | 1 | Python | `simulate` |
-| `post_ipo/capital_allocation.py` | 1 | Python | `allocate` |
-| `post_ipo/metrics.py` | 1 | Python | `metrics` |
-| `public_sector_eu/controls/logging.py` | 3 | Python | `log` |
-| `ratification/telemetry/collector.py` | 4 | Python | `record` |
-| `ratification/telemetry/collector.py` | 8 | Python | `summary` |
-| `regulatory_moat/engine/attestation.py` | 1 | Python | `generate` |
-| `regulatory_moat/engine/control_engine.py` | 5 | Python | `__init__` |
-| `regulatory_moat/engine/control_engine.py` | 8 | Python | `run` |
-| `regulatory_moat/engine/evidence_store.py` | 8 | Python | `put` |
-| `regulatory_moat/engine/evidence_store.py` | 16 | Python | `query` |
-| `regulatory_moat/engine/policy_engine.py` | 9 | Python | `evaluate` |
-| `regulatory_moat/engine/reporting.py` | 1 | Python | `report` |
-| `regulatory_moat/integrations/aws.py` | 1 | Python | `validate_bucket` |
-| `regulatory_moat/integrations/idp.py` | 1 | Python | `validate_identity_policy` |
-| `regulatory_moat/integrations/k8s.py` | 1 | Python | `validate_pod` |
-| `revenue/billing/aggregator.py` | 1 | Python | `total_multi_cloud` |
-| `revenue/billing/aws_cur_ingest.py` | 4 | Python | `load_cur` |
-| `revenue/billing/aws_cur_ingest.py` | 9 | Python | `total_cost` |
-| `revenue/billing/azure_cost_ingest.py` | 1 | Python | `parse_azure` |
-| `revenue/billing/gcp_billing_ingest.py` | 1 | Python | `parse_gcp` |
-| `revenue/billing/invoice.py` | 4 | Python | `generate_invoice` |
-| `revenue/billing/pricing.py` | 17 | Python | `price` |
-| `revenue/marketplace/demand.py` | 1 | Python | `add_demand` |
-| `revenue/marketplace/matching.py` | 1 | Python | `match` |
-| `revenue/marketplace/supply.py` | 1 | Python | `add_supply` |
-| `revenue/metering/collector.py` | 4 | Python | `record` |
-| `revenue/metering/usage_store.py` | 4 | Python | `get_usage` |
-| `revenue/sales/contracts.py` | 1 | Python | `contract` |
-| `revenue/sales/pipeline.py` | 4 | Python | `advance` |
-| `revenue/sla/enforcement.py` | 7 | Python | `check` |
-| `revenue/sla/penalties.py` | 1 | Python | `penalty` |
-| `revenue/workloads/batch.py` | 1 | Python | `run_batch` |
-| `revenue/workloads/inference.py` | 1 | Python | `run_inference` |
-| `revenue/workloads/streaming.py` | 1 | Python | `stream` |
-| `revops/board_metrics.py` | 3 | Python | `metrics` |
-| `revops/compensation.py` | 3 | Python | `commission` |
-| `revops/forecasting_ai.py` | 3 | Python | `weighted_pipeline` |
-| `revops/forecasting_ai.py` | 6 | Python | `forecast_next_month` |
-| `revops/quota.py` | 3 | Python | `assign_quota` |
-| `saas/backend/auth.py` | 10 | Python | `create_token` |
-| `saas/backend/auth.py` | 20 | Python | `verify_token` |
-| `saas/backend/main.py` | 25 | Python | `signup` |
-| `saas/backend/main.py` | 31 | Python | `me` |
-| `saas/backend/main.py` | 39 | Python | `ws_metrics` |
-| `saas/backend/main.py` | 58 | Python | `healthz` |
-| `saas/backend/stripe_api.py` | 16 | Python | `create_checkout` |
-| `saas/frontend/app/billing/page.tsx` | 4 | JS/TS | `subscribe` |
-| `saas/frontend/app/page.tsx` | 12 | JS/TS | `Sparkline` |
-| `sales/pipeline.py` | 4 | Python | `next_stage` |
-| `sales_crm/api.py` | 10 | Python | `pipeline` |
-| `sales_crm/api.py` | 15 | Python | `forecast` |
-| `sales_crm/automation.py` | 1 | Python | `next_action` |
-| `sales_crm/forecasting.py` | 4 | Python | `forecast_revenue` |
-| `sales_crm/forecasting.py` | 9 | Python | `forecast_growth` |
-| `sales_crm/pipeline.py` | 6 | Python | `advance` |
-| `sales_crm/pipeline.py` | 15 | Python | `pipeline_value` |
-| `sales_org/comp_plan.py` | 4 | Python | `commission` |
-| `sales_org/quotas.py` | 4 | Python | `quota` |
-| `scale/traffic/replay.py` | 1 | Python | `replay` |
-| `scaling/kpis.py` | 4 | Python | `metrics` |
-| `scaling_50m/metrics.py` | 4 | Python | `metrics` |
-| `scripts/zeaz-enterprise-install.sh` | 16 | Shell | `usage` |
-| `scripts/zeaz-enterprise-install.sh` | 42 | Shell | `run` |
-| `scripts/zeaz-enterprise-install.sh` | 50 | Shell | `run_bash` |
-| `scripts/zeaz-enterprise-install.sh` | 58 | Shell | `need` |
-| `scripts/zeaz-enterprise-install.sh` | 62 | Shell | `preflight` |
-| `scripts/zeaz-enterprise-install.sh` | 72 | Shell | `generate_values` |
-| `scripts/zeaz-enterprise-install.sh` | 102 | Shell | `install_argocd` |
-| `scripts/zeaz-enterprise-install.sh` | 114 | Shell | `apply_platform_manifests` |
-| `scripts/zeaz-enterprise-install.sh` | 121 | Shell | `post_install_report` |
-| `scripts/zeaz-enterprise-install.sh` | 134 | Shell | `main` |
-| `scripts/zeaz-os-bootstrap.sh` | 14 | Shell | `usage` |
-| `scripts/zeaz-os-bootstrap.sh` | 46 | Shell | `run` |
-| `scripts/zeaz-os-bootstrap.sh` | 54 | Shell | `run_bash` |
-| `scripts/zeaz-os-bootstrap.sh` | 62 | Shell | `require_ubuntu_2404` |
-| `scripts/zeaz-os-bootstrap.sh` | 72 | Shell | `clean_environment` |
-| `scripts/zeaz-os-bootstrap.sh` | 94 | Shell | `install_base_packages` |
-| `scripts/zeaz-os-bootstrap.sh` | 105 | Shell | `install_container_runtime` |
-| `scripts/zeaz-os-bootstrap.sh` | 118 | Shell | `install_k8s_tools` |
-| `scripts/zeaz-os-bootstrap.sh` | 129 | Shell | `harden_defaults` |
-| `scripts/zeaz-os-bootstrap.sh` | 140 | Shell | `write_state` |
-| `scripts/zeaz-os-bootstrap.sh` | 144 | Shell | `main` |
-| `security/risk/scoring.py` | 1 | Python | `risk_score` |
-| `security/risk/scoring.py` | 19 | Python | `allow` |
-| `security/soc2_check.py` | 33 | Python | `run_checks` |
-| `security/soc2_check.py` | 44 | Python | `compliance_score` |
-| `services/bridge/main.go` | 14 | Go | `publishHandler` |
-| `services/bridge/main.go` | 33 | Go | `main` |
-| `services/tss-signing/cmd/server/main.go` | 13 | Go | `main` |
-| `services/tss-signing/internal/audit/audit.go` | 27 | Go | `Emit` |
-| `services/tss-signing/internal/config/config.go` | 19 | Go | `Load` |
-| `services/tss-signing/internal/config/config.go` | 35 | Go | `getenv` |
-| `services/tss-signing/internal/config/config.go` | 42 | Go | `getenvInt` |
-| `services/tss-signing/internal/config/config.go` | 54 | Go | `getenvBool` |
-| `services/tss-signing/internal/signer/signer.go` | 33 | Go | `Sign` |
-| `services/tss-signing/internal/signer/signer.go` | 44 | Go | `Sign` |
-| `services/tss-signing/internal/signer/signer.go` | 61 | Go | `stableDigest` |
-| `sovereign/compliance/audit.py` | 6 | Python | `log` |
-| `sovereign/compliance/audit.py` | 10 | Python | `query` |
-| `sovereign/compliance/dsr.py` | 1 | Python | `export_user` |
-| `sovereign/compliance/dsr.py` | 5 | Python | `delete_user` |
-| `sovereign/compliance/reports.py` | 1 | Python | `compliance_summary` |
-| `sovereign/control_plane/geo_router.py` | 6 | Python | `route` |
-| `sovereign/control_plane/identity.py` | 11 | Python | `assert_eu_scope` |
-| `sovereign/control_plane/policy_engine.py` | 6 | Python | `allow` |
-| `sovereign/data_plane/encryption.py` | 9 | Python | `__init__` |
-| `sovereign/data_plane/encryption.py` | 12 | Python | `encrypt` |
-| `sovereign/data_plane/encryption.py` | 15 | Python | `decrypt` |
-| `sovereign/data_plane/partitioning.py` | 1 | Python | `partition_key` |
-| `sovereign/data_plane/retention.py` | 4 | Python | `ttl_expire` |
-| `sovereign_ai/governance/audit.py` | 6 | Python | `log` |
-| `sovereign_ai/governance/model_registry.py` | 4 | Python | `register` |
-| `sovereign_ai/governance/risk_classification.py` | 1 | Python | `classify` |
-| `sovereign_ai/serving/guardrails.py` | 1 | Python | `enforce` |
-| `sovereign_ai/serving/inference.py` | 6 | Python | `run` |
-| `sovereign_ai/serving/router.py` | 1 | Python | `route` |
-| `tender_ai/generator/proposal_builder.py` | 1 | Python | `build` |
-| `tender_ai/generator/rfp_parser.py` | 1 | Python | `parse_rfp` |
-| `tender_ai/optimization/bid_optimizer.py` | 1 | Python | `optimize` |
-| `tender_ai/optimization/learning.py` | 4 | Python | `record` |
-| `tender_ai/optimization/learning.py` | 8 | Python | `adjust` |
-| `tender_ai/optimization/scoring_model.py` | 1 | Python | `score` |
-| `tender_ai/pipeline/evaluator.py` | 4 | Python | `evaluate` |
-| `tender_ai/pipeline/workflow.py` | 5 | Python | `run` |
-| `testing/locustfile.py` | 8 | Python | `hit_api` |
-| `tests/contract/test_openapi.py` | 11 | Python | `test_openapi_contract` |
-| `tests/contract/test_orders_contract.py` | 8 | Python | `test_metrics_contract_shape` |
-| `tests/revenue/billing/test_pricing.py` | 6 | Python | `test_price_sums_supported_metrics` |
-| `tests/revenue/billing/test_pricing.py` | 15 | Python | `test_price_rejects_unknown_metric` |
-| `tests/security/test_tenant_isolation.py` | 8 | Python | `test_requires_auth_header` |
-| `tests/security/test_tenant_isolation.py` | 13 | Python | `test_tenant_isolation_violation` |
-| `tools/arch_guard.py` | 12 | Python | `load_rules` |
-| `tools/arch_guard.py` | 17 | Python | `top_package` |
-| `tools/arch_guard.py` | 23 | Python | `collect_imports` |
-| `tools/arch_guard.py` | 39 | Python | `resolve_target_pkg` |
-| `tools/arch_guard.py` | 43 | Python | `scan` |
-| `tools/deep_scan.py` | 72 | Python | `run` |
-| `tools/deep_scan.py` | 77 | Python | `safe_clone_or_pull` |
-| `tools/deep_scan.py` | 90 | Python | `git_configure` |
-| `tools/deep_scan.py` | 97 | Python | `create_autofix_branch` |
-| `tools/deep_scan.py` | 104 | Python | `commit_changes` |
-| `tools/deep_scan.py` | 115 | Python | `push_branch` |
-| `tools/deep_scan.py` | 129 | Python | `create_gitea_pr` |
-| `tools/deep_scan.py` | 157 | Python | `collect_python_entities` |
-| `tools/deep_scan.py` | 178 | Python | `safe_backup_file` |
-| `tools/deep_scan.py` | 187 | Python | `ast_autofix_file` |
-| `tools/deep_scan.py` | 195 | Python | `visit_ImportFrom` |
-| `tools/deep_scan.py` | 203 | Python | `visit_Call` |
-| `tools/deep_scan.py` | 212 | Python | `visit_FunctionDef` |
-| `tools/deep_scan.py` | 249 | Python | `build_embeddings` |
-| `tools/deep_scan.py` | 263 | Python | `detect_anomalies` |
-| `tools/deep_scan.py` | 275 | Python | `write_bug_report` |
-| `tools/deep_scan.py` | 286 | Python | `write_graph` |
-| `tools/deep_scan.py` | 292 | Python | `append_changelog` |
-| `tools/deep_scan.py` | 302 | Python | `main` |
-| `tools/dependency_graph.py` | 10 | Python | `top` |
-| `tools/tests/test_autofix.py` | 8 | Python | `setup_module` |
-| `tools/tests/test_autofix.py` | 14 | Python | `teardown_module` |
-| `tools/tests/test_autofix.py` | 19 | Python | `test_ast_autofix_replaces_random_and_backups` |
-| `trillion/ai_plane/inference.py` | 2 | Python | `run` |
-| `trillion/ai_plane/model_router.py` | 9 | Python | `route` |
-| `trillion/ai_plane/model_router.py` | 15 | Python | `score` |
-| `trillion/ai_plane/training.py` | 2 | Python | `fit` |
-| `trillion/control_plane/identity.py` | 4 | Python | `__init__` |
-| `trillion/control_plane/identity.py` | 7 | Python | `issue` |
-| `trillion/control_plane/identity.py` | 10 | Python | `verify` |
-| `trillion/control_plane/policy_engine.py` | 6 | Python | `__init__` |
-| `trillion/control_plane/policy_engine.py` | 9 | Python | `allow` |
-| `trillion/control_plane/scheduler.py` | 9 | Python | `choose` |
-| `trillion/control_plane/scheduler.py` | 16 | Python | `score` |
-| `trillion/data_plane/feature_store.py` | 6 | Python | `__init__` |
-| `trillion/data_plane/feature_store.py` | 10 | Python | `upsert` |
-| `trillion/data_plane/feature_store.py` | 14 | Python | `get` |
-| `trillion/data_plane/lakehouse.py` | 6 | Python | `__init__` |
-| `trillion/data_plane/lakehouse.py` | 9 | Python | `append` |
-| `trillion/data_plane/lakehouse.py` | 12 | Python | `query` |
-| `trillion/data_plane/stream.py` | 9 | Python | `__init__` |
-| `trillion/data_plane/stream.py` | 12 | Python | `publish` |
-| `trillion/data_plane/stream.py` | 15 | Python | `consume` |
-| `trillion/economics/marketplace.py` | 1 | Python | `match_supply` |
-| `trillion/economics/pricing.py` | 1 | Python | `value_based_price` |
-| `trillion/governance/audit.py` | 6 | Python | `log` |
-| `trillion/governance/audit.py` | 10 | Python | `query` |
-| `trust_fabric/attestation/attestor.py` | 1 | Python | `attest` |
-| `trust_fabric/attestation/registry.py` | 4 | Python | `register` |
-| `trust_fabric/attestation/registry.py` | 8 | Python | `get` |
-| `trust_fabric/attestation/verifier.py` | 1 | Python | `verify` |
-| `trust_fabric/identity/federation.py` | 4 | Python | `add_issuer` |
-| `trust_fabric/identity/federation.py` | 8 | Python | `is_trusted` |
-| `trust_fabric/identity/issuer.py` | 6 | Python | `issue` |
-| `trust_fabric/identity/verifier.py` | 5 | Python | `verify` |
-| `trust_fabric/policy/risk.py` | 1 | Python | `score` |
-| `trust_fabric/policy/trust_policy.py` | 1 | Python | `allow` |
-| `trust_fabric/transport/mtls.py` | 1 | Python | `enforce` |
-| `v1/app/ai/agent.py` | 9 | Python | `__init__` |
-| `v1/app/ai/agent.py` | 19 | Python | `forward` |
-| `v1/app/ai/agent.py` | 24 | Python | `__init__` |
-| `v1/app/ai/agent.py` | 31 | Python | `act` |
-| `v1/app/ai/agent.py` | 36 | Python | `store` |
-| `v1/app/ai/agent.py` | 41 | Python | `train_step` |
-| `v1/app/ai/env.py` | 5 | Python | `__init__` |
-| `v1/app/ai/env.py` | 11 | Python | `reset` |
-| `v1/app/ai/env.py` | 17 | Python | `_get_obs` |
-| `v1/app/ai/env.py` | 20 | Python | `step` |
-| `v1/app/ai/inference.py` | 11 | Python | `__init__` |
-| `v1/app/ai/inference.py` | 27 | Python | `predict` |
-| `v1/app/ai/trainer.py` | 8 | Python | `train` |
-| `v1/app/aiops/ab.py` | 5 | Python | `__init__` |
-| `v1/app/aiops/ab.py` | 8 | Python | `set` |
-| `v1/app/aiops/ab.py` | 11 | Python | `route` |
-| `v1/app/aiops/adwin.py` | 8 | Python | `__init__` |
-| `v1/app/aiops/adwin.py` | 13 | Python | `update` |
-| `v1/app/aiops/agent_orchestrator.py` | 5 | Python | `__init__` |
-| `v1/app/aiops/agent_orchestrator.py` | 11 | Python | `step` |
-| `v1/app/aiops/agents/availability.py` | 5 | Python | `propose` |
-| `v1/app/aiops/agents/bidder.py` | 5 | Python | `__init__` |
-| `v1/app/aiops/agents/bidder.py` | 8 | Python | `bid` |
-| `v1/app/aiops/agents/cost.py` | 5 | Python | `__init__` |
-| `v1/app/aiops/agents/cost.py` | 9 | Python | `allow` |
-| `v1/app/aiops/agents/governor.py` | 7 | Python | `__init__` |
-| `v1/app/aiops/agents/governor.py` | 10 | Python | `cast` |
-| `v1/app/aiops/agents/governor.py` | 13 | Python | `approved` |
-| `v1/app/aiops/agents/latency.py` | 5 | Python | `propose` |
-| `v1/app/aiops/agents/planner.py` | 7 | Python | `__init__` |
-| `v1/app/aiops/agents/planner.py` | 11 | Python | `act` |
-| `v1/app/aiops/agents/region.py` | 5 | Python | `propose` |
-| `v1/app/aiops/agents/router.py` | 5 | Python | `decide` |
-| `v1/app/aiops/agents/safety.py` | 5 | Python | `__init__` |
-| `v1/app/aiops/agents/safety.py` | 8 | Python | `allow` |
-| `v1/app/aiops/agents/seller.py` | 7 | Python | `__init__` |
-| `v1/app/aiops/agents/seller.py` | 10 | Python | `ask` |
-| `v1/app/aiops/audit/logger.py` | 10 | Python | `__init__` |
-| `v1/app/aiops/audit/logger.py` | 13 | Python | `log` |
-| `v1/app/aiops/audit/replay.py` | 7 | Python | `run` |
-| `v1/app/aiops/audit/trail.py` | 7 | Python | `verify_chain` |
-| `v1/app/aiops/autoscale.py` | 5 | Python | `set_replicas` |
-| `v1/app/aiops/autoscale.py` | 8 | Python | `decide` |
-| `v1/app/aiops/bandit.py` | 7 | Python | `__init__` |
-| `v1/app/aiops/bandit.py` | 12 | Python | `select` |
-| `v1/app/aiops/bandit.py` | 21 | Python | `update` |
-| `v1/app/aiops/bandit_hb.py` | 9 | Python | `__init__` |
-| `v1/app/aiops/bandit_hb.py` | 18 | Python | `_post` |
-| `v1/app/aiops/bandit_hb.py` | 24 | Python | `_fuse` |
-| `v1/app/aiops/bandit_hb.py` | 31 | Python | `select` |
-| `v1/app/aiops/bandit_hb.py` | 45 | Python | `update` |
-| `v1/app/aiops/bandit_hierarchical.py` | 7 | Python | `__init__` |
-| `v1/app/aiops/bandit_hierarchical.py` | 11 | Python | `select` |
-| `v1/app/aiops/bandit_hierarchical.py` | 16 | Python | `update` |
-| `v1/app/aiops/bandit_nl.py` | 9 | Python | `__init__` |
-| `v1/app/aiops/bandit_nl.py` | 15 | Python | `transform` |
-| `v1/app/aiops/bandit_nl.py` | 24 | Python | `__init__` |
-| `v1/app/aiops/bandit_nl.py` | 30 | Python | `embed` |
-| `v1/app/aiops/bandit_nl.py` | 33 | Python | `select` |
-| `v1/app/aiops/bandit_nl.py` | 50 | Python | `update` |
-| `v1/app/aiops/bandit_nl.py` | 55 | Python | `increase_exploration` |
-| `v1/app/aiops/bandit_nl.py` | 58 | Python | `reset_partial` |
-| `v1/app/aiops/bandit_ts.py` | 7 | Python | `__init__` |
-| `v1/app/aiops/bandit_ts.py` | 14 | Python | `_posterior` |
-| `v1/app/aiops/bandit_ts.py` | 20 | Python | `select` |
-| `v1/app/aiops/bandit_ts.py` | 32 | Python | `update` |
-| `v1/app/aiops/bandit_ts_ns.py` | 7 | Python | `__init__` |
-| `v1/app/aiops/bandit_ts_ns.py` | 15 | Python | `_posterior` |
-| `v1/app/aiops/bandit_ts_ns.py` | 21 | Python | `select` |
-| `v1/app/aiops/bandit_ts_ns.py` | 33 | Python | `update` |
-| `v1/app/aiops/bayesian_rca.py` | 37 | Python | `infer` |
-| `v1/app/aiops/canary.py` | 6 | Python | `__init__` |
-| `v1/app/aiops/canary.py` | 9 | Python | `set_replicas` |
-| `v1/app/aiops/canary.py` | 16 | Python | `rollout` |
-| `v1/app/aiops/canary.py` | 29 | Python | `check` |
-| `v1/app/aiops/changepoint.py` | 5 | Python | `__init__` |
-| `v1/app/aiops/changepoint.py` | 8 | Python | `add` |
-| `v1/app/aiops/changepoint.py` | 11 | Python | `mean` |
-| `v1/app/aiops/changepoint.py` | 18 | Python | `__init__` |
-| `v1/app/aiops/changepoint.py` | 24 | Python | `update` |
-| `v1/app/aiops/compliance/engine.py` | 8 | Python | `__init__` |
-| `v1/app/aiops/compliance/engine.py` | 13 | Python | `check` |
-| `v1/app/aiops/coordination.py` | 6 | Python | `__init__` |
-| `v1/app/aiops/coordination.py` | 9 | Python | `acquire` |
-| `v1/app/aiops/coordination.py` | 13 | Python | `done` |
-| `v1/app/aiops/coordination.py` | 16 | Python | `dedupe` |
-| `v1/app/aiops/cost_model.py` | 10 | Python | `estimate` |
-| `v1/app/aiops/cost_model.py` | 13 | Python | `budget_penalty` |
-| `v1/app/aiops/counterfactual.py` | 1 | Python | `ips` |
-| `v1/app/aiops/counterfactual.py` | 9 | Python | `doubly_robust` |
-| `v1/app/aiops/detector.py` | 5 | Python | `__init__` |
-| `v1/app/aiops/detector.py` | 10 | Python | `ingest` |
-| `v1/app/aiops/detector.py` | 15 | Python | `anomalies` |
-| `v1/app/aiops/diagnoser.py` | 5 | Python | `diagnose` |
-| `v1/app/aiops/dreamer.py` | 8 | Python | `__init__` |
-| `v1/app/aiops/dreamer.py` | 16 | Python | `forward` |
-| `v1/app/aiops/dreamer.py` | 21 | Python | `__init__` |
-| `v1/app/aiops/dreamer.py` | 29 | Python | `forward` |
-| `v1/app/aiops/drift.py` | 4 | Python | `ks_stat` |
-| `v1/app/aiops/drift.py` | 23 | Python | `__init__` |
-| `v1/app/aiops/drift.py` | 26 | Python | `drifted` |
-| `v1/app/aiops/enterprise_pipeline.py` | 16 | Python | `process` |
-| `v1/app/aiops/evaluator.py` | 2 | Python | `better` |
-| `v1/app/aiops/executor.py` | 4 | Python | `_sh` |
-| `v1/app/aiops/executor.py` | 9 | Python | `scale_api` |
-| `v1/app/aiops/executor.py` | 12 | Python | `restart_pods` |
-| `v1/app/aiops/executor.py` | 15 | Python | `rollback_deploy` |
-| `v1/app/aiops/executor.py` | 18 | Python | `scale_consumers` |
-| `v1/app/aiops/executor.py` | 21 | Python | `restart_kafka` |
-| `v1/app/aiops/fairness/monitor.py` | 5 | Python | `check_bias` |
-| `v1/app/aiops/fairness/pricing_guard.py` | 2 | Python | `clamp` |
-| `v1/app/aiops/features.py` | 6 | Python | `__init__` |
-| `v1/app/aiops/features.py` | 10 | Python | `add` |
-| `v1/app/aiops/features.py` | 13 | Python | `mean_std` |
-| `v1/app/aiops/features_auto.py` | 8 | Python | `__init__` |
-| `v1/app/aiops/features_auto.py` | 16 | Python | `forward` |
-| `v1/app/aiops/features_auto.py` | 20 | Python | `feature_importance` |
-| `v1/app/aiops/features_ctx.py` | 4 | Python | `feature_dict` |
-| `v1/app/aiops/features_ctx.py` | 17 | Python | `build_context` |
-| `v1/app/aiops/governance/policy_guard.py` | 5 | Python | `__init__` |
-| `v1/app/aiops/governance/policy_guard.py` | 9 | Python | `allow` |
-| `v1/app/aiops/governance/voting.py` | 5 | Python | `__init__` |
-| `v1/app/aiops/governance/voting.py` | 10 | Python | `vote` |
-| `v1/app/aiops/governance/voting.py` | 13 | Python | `result` |
-| `v1/app/aiops/market/clearing.py` | 18 | Python | `clear_market` |
-| `v1/app/aiops/market/exchange.py` | 15 | Python | `__init__` |
-| `v1/app/aiops/market/exchange.py` | 19 | Python | `run_once` |
-| `v1/app/aiops/market/exchange.py` | 36 | Python | `execute_trades` |
-| `v1/app/aiops/market/orderbook.py` | 16 | Python | `__init__` |
-| `v1/app/aiops/market/orderbook.py` | 20 | Python | `add_bid` |
-| `v1/app/aiops/market/orderbook.py` | 26 | Python | `add_ask` |
-| `v1/app/aiops/market/orderbook.py` | 32 | Python | `get` |
-| `v1/app/aiops/market/orderbook.py` | 37 | Python | `clear` |
-| `v1/app/aiops/market/pricing.py` | 4 | Python | `dynamic_price` |
-| `v1/app/aiops/negotiation.py` | 15 | Python | `__init__` |
-| `v1/app/aiops/negotiation.py` | 18 | Python | `negotiate` |
-| `v1/app/aiops/online_learning.py` | 10 | Python | `__init__` |
-| `v1/app/aiops/online_learning.py` | 13 | Python | `log` |
-| `v1/app/aiops/online_learning.py` | 18 | Python | `replay` |
-| `v1/app/aiops/orchestrator.py` | 12 | Python | `__init__` |
-| `v1/app/aiops/orchestrator.py` | 20 | Python | `ingest_metrics` |
-| `v1/app/aiops/orchestrator.py` | 23 | Python | `step` |
-| `v1/app/aiops/orchestrator.py` | 48 | Python | `run_loop` |
-| `v1/app/aiops/orchestrator_v11.py` | 10 | Python | `__init__` |
-| `v1/app/aiops/orchestrator_v11.py` | 15 | Python | `_gates_passed` |
-| `v1/app/aiops/orchestrator_v11.py` | 26 | Python | `step` |
-| `v1/app/aiops/orchestrator_v2.py` | 12 | Python | `__init__` |
-| `v1/app/aiops/orchestrator_v2.py` | 23 | Python | `step` |
-| `v1/app/aiops/orchestrator_v3.py` | 12 | Python | `__init__` |
-| `v1/app/aiops/orchestrator_v3.py` | 23 | Python | `step` |
-| `v1/app/aiops/orchestrator_v3.py` | 92 | Python | `_reward` |
-| `v1/app/aiops/orchestrator_v4.py` | 18 | Python | `__init__` |
-| `v1/app/aiops/orchestrator_v4.py` | 34 | Python | `_context` |
-| `v1/app/aiops/orchestrator_v4.py` | 46 | Python | `step` |
-| `v1/app/aiops/orchestrator_v4.py` | 112 | Python | `_reward` |
-| `v1/app/aiops/orchestrator_v5.py` | 19 | Python | `__init__` |
-| `v1/app/aiops/orchestrator_v5.py` | 38 | Python | `step` |
-| `v1/app/aiops/orchestrator_v5.py` | 100 | Python | `_reward` |
-| `v1/app/aiops/patcher.py` | 7 | Python | `apply_patch` |
-| `v1/app/aiops/planner.py` | 11 | Python | `plan` |
-| `v1/app/aiops/policy.py` | 12 | Python | `__init__` |
-| `v1/app/aiops/policy.py` | 15 | Python | `register` |
-| `v1/app/aiops/policy.py` | 18 | Python | `get` |
-| `v1/app/aiops/priors_learned.py` | 10 | Python | `__init__` |
-| `v1/app/aiops/priors_learned.py` | 16 | Python | `ingest_incident` |
-| `v1/app/aiops/priors_learned.py` | 22 | Python | `recompute` |
-| `v1/app/aiops/quorum.py` | 12 | Python | `__init__` |
-| `v1/app/aiops/quorum.py` | 17 | Python | `vote` |
-| `v1/app/aiops/quorum.py` | 24 | Python | `approved` |
-| `v1/app/aiops/rewrite.py` | 10 | Python | `_coerce_scalar` |
-| `v1/app/aiops/rewrite.py` | 22 | Python | `_simple_yaml_load` |
-| `v1/app/aiops/rewrite.py` | 43 | Python | `propose_patch` |
-| `v1/app/aiops/risk/circuit.py` | 2 | Python | `__init__` |
-| `v1/app/aiops/risk/circuit.py` | 6 | Python | `record` |
-| `v1/app/aiops/risk/circuit.py` | 12 | Python | `open` |
-| `v1/app/aiops/risk/exposure.py` | 2 | Python | `check` |
-| `v1/app/aiops/risk/limits.py` | 5 | Python | `allow` |
-| `v1/app/aiops/rl_planner.py` | 14 | Python | `__init__` |
-| `v1/app/aiops/rl_planner.py` | 20 | Python | `_state` |
-| `v1/app/aiops/rl_planner.py` | 23 | Python | `select` |
-| `v1/app/aiops/rl_planner.py` | 29 | Python | `update` |
-| `v1/app/aiops/rssm.py` | 10 | Python | `__init__` |
-| `v1/app/aiops/rssm.py` | 18 | Python | `forward` |
-| `v1/app/aiops/safeguards.py` | 8 | Python | `__init__` |
-| `v1/app/aiops/safeguards.py` | 15 | Python | `_refresh_window` |
-| `v1/app/aiops/safeguards.py` | 21 | Python | `allow` |
-| `v1/app/aiops/scaler_cloud.py` | 5 | Python | `__init__` |
-| `v1/app/aiops/scaler_cloud.py` | 8 | Python | `scale_cluster` |
-| `v1/app/aiops/scaler_cloud.py` | 22 | Python | `shift_traffic` |
-| `v1/app/aiops/shadow.py` | 23 | Python | `simulate` |
-| `v1/app/aiops/simulator.py` | 5 | Python | `simulate_step` |
-| `v1/app/aiops/simulator.py` | 23 | Python | `rollout` |
-| `v1/app/aiops/sla.py` | 2 | Python | `__init__` |
-| `v1/app/aiops/sla.py` | 9 | Python | `get` |
-| `v1/app/aiops/sla.py` | 14 | Python | `allow` |
-| `v1/app/aiops/slo_planner.py` | 20 | Python | `choose` |
-| `v1/app/aiops/state.py` | 2 | Python | `__init__` |
-| `v1/app/aiops/state.py` | 6 | Python | `transition` |
-| `v1/app/aiops/state_store.py` | 9 | Python | `lease` |
-| `v1/app/aiops/state_store.py` | 14 | Python | `release` |
-| `v1/app/aiops/state_store.py` | 18 | Python | `idem_key` |
-| `v1/app/aiops/tenant_policy.py` | 7 | Python | `__init__` |
-| `v1/app/aiops/tenant_policy.py` | 10 | Python | `get` |
-| `v1/app/aiops/tenant_policy.py` | 13 | Python | `snapshot` |
-| `v1/app/aiops/tenant_policy.py` | 16 | Python | `load` |
-| `v1/app/api/deps.py` | 7 | Python | `current_user` |
-| `v1/app/api/routes_admin.py` | 12 | Python | `toggle_strategy` |
-| `v1/app/api/routes_admin.py` | 19 | Python | `assign_role` |
-| `v1/app/api/routes_admin.py` | 25 | Python | `list_roles` |
-| `v1/app/api/routes_admin.py` | 31 | Python | `audit_log` |
-| `v1/app/api/routes_admin.py` | 37 | Python | `update_slo` |
-| `v1/app/api/routes_admin.py` | 43 | Python | `slo_dashboard` |
-| `v1/app/api/routes_admin.py` | 49 | Python | `upsert_growth_campaign` |
-| `v1/app/api/routes_admin.py` | 55 | Python | `growth_actions` |
-| `v1/app/api/routes_admin.py` | 61 | Python | `growth_analytics` |
-| `v1/app/api/routes_aiops.py` | 12 | Python | `kill` |
-| `v1/app/api/routes_aiops.py` | 19 | Python | `set_limit` |
-| `v1/app/api/routes_auth.py` | 9 | Python | `login` |
-| `v1/app/api/routes_god.py` | 16 | Python | `kill` |
-| `v1/app/api/routes_god.py` | 23 | Python | `set_budget` |
-| `v1/app/api/routes_god.py` | 31 | Python | `set_circuit` |
-| `v1/app/api/routes_user.py` | 16 | Python | `portfolio` |
-| `v1/app/api/routes_user.py` | 26 | Python | `onboarding_stage` |
-| `v1/app/arb/detector.py` | 4 | Python | `best_pair` |
-| `v1/app/arb/detector.py` | 19 | Python | `net_edge` |
-| `v1/app/arb/detector.py` | 24 | Python | `is_actionable` |
-| `v1/app/arb/engine.py` | 13 | Python | `__init__` |
-| `v1/app/arb/engine.py` | 18 | Python | `run` |
-| `v1/app/arb/executor.py` | 18 | Python | `__init__` |
-| `v1/app/arb/executor.py` | 22 | Python | `run` |
-| `v1/app/auth/jwt.py` | 10 | Python | `sign` |
-| `v1/app/auth/jwt.py` | 16 | Python | `verify` |
-| `v1/app/auth/rbac.py` | 7 | Python | `require` |
-| `v1/app/auth/rbac.py` | 8 | Python | `_check` |
-| `v1/app/billing/engine.py` | 6 | Python | `invoice` |
-| `v1/app/core/event_bus.py` | 6 | Python | `__init__` |
-| `v1/app/core/event_bus.py` | 10 | Python | `start` |
-| `v1/app/core/event_bus.py` | 13 | Python | `publish` |
-| `v1/app/core/event_bus.py` | 16 | Python | `stop` |
-| `v1/app/core/event_bus.py` | 21 | Python | `__init__` |
-| `v1/app/core/event_bus.py` | 28 | Python | `start` |
-| `v1/app/core/event_bus.py` | 31 | Python | `listen` |
-| `v1/app/core/orchestrator.py` | 10 | Python | `__init__` |
-| `v1/app/core/orchestrator.py` | 16 | Python | `run` |
-| `v1/app/data/market.py` | 6 | Python | `get_data` |
-| `v1/app/data/producer.py` | 6 | Python | `__init__` |
-| `v1/app/data/producer.py` | 10 | Python | `run` |
-| `v1/app/data/producer_multi.py` | 17 | Python | `__init__` |
-| `v1/app/data/producer_multi.py` | 20 | Python | `_binance` |
-| `v1/app/data/producer_multi.py` | 27 | Python | `_okx` |
-| `v1/app/data/producer_multi.py` | 37 | Python | `_bybit` |
-| `v1/app/data/producer_multi.py` | 47 | Python | `run` |
-| `v1/app/data/stream.py` | 7 | Python | `__init__` |
-| `v1/app/data/stream.py` | 10 | Python | `stream` |
-| `v1/app/enterprise/saas.py` | 22 | Python | `__init__` |
-| `v1/app/enterprise/saas.py` | 27 | Python | `assign_role` |
-| `v1/app/enterprise/saas.py` | 33 | Python | `list_roles` |
-| `v1/app/enterprise/saas.py` | 37 | Python | `add_audit_event` |
-| `v1/app/enterprise/saas.py` | 42 | Python | `get_audit_events` |
-| `v1/app/enterprise/saas.py` | 46 | Python | `upsert_slo` |
-| `v1/app/enterprise/saas.py` | 56 | Python | `slo_dashboard` |
-| `v1/app/enterprise/saas.py` | 60 | Python | `_append_audit` |
-| `v1/app/execution/base.py` | 7 | Python | `get_best_bid_ask` |
-| `v1/app/execution/base.py` | 11 | Python | `place_market` |
-| `v1/app/execution/base.py` | 15 | Python | `fee_rate` |
-| `v1/app/execution/binance.py` | 11 | Python | `__init__` |
-| `v1/app/execution/binance.py` | 17 | Python | `sign` |
-| `v1/app/execution/binance.py` | 20 | Python | `get_best_bid_ask` |
-| `v1/app/execution/binance.py` | 27 | Python | `place_market` |
-| `v1/app/execution/binance.py` | 41 | Python | `fee_rate` |
-| `v1/app/execution/binance.py` | 44 | Python | `place_order` |
-| `v1/app/execution/bybit.py` | 7 | Python | `__init__` |
-| `v1/app/execution/bybit.py` | 13 | Python | `get_best_bid_ask` |
-| `v1/app/execution/bybit.py` | 20 | Python | `place_market` |
-| `v1/app/execution/bybit.py` | 29 | Python | `fee_rate` |
-| `v1/app/execution/idempotency.py` | 8 | Python | `make_key` |
-| `v1/app/execution/okx.py` | 9 | Python | `__init__` |
-| `v1/app/execution/okx.py` | 16 | Python | `get_best_bid_ask` |
-| `v1/app/execution/okx.py` | 23 | Python | `place_market` |
-| `v1/app/execution/okx.py` | 44 | Python | `fee_rate` |
-| `v1/app/feature_store/offline.py` | 10 | Python | `__init__` |
-| `v1/app/feature_store/offline.py` | 13 | Python | `write` |
-| `v1/app/feature_store/online.py` | 10 | Python | `__init__` |
-| `v1/app/feature_store/online.py` | 13 | Python | `put` |
-| `v1/app/feature_store/online.py` | 18 | Python | `get` |
-| `v1/app/features/builder.py` | 5 | Python | `build` |
-| `v1/app/growth/automation.py` | 18 | Python | `__init__` |
-| `v1/app/growth/automation.py` | 22 | Python | `track_stage` |
-| `v1/app/growth/automation.py` | 28 | Python | `upsert_campaign` |
-| `v1/app/growth/automation.py` | 34 | Python | `generate_actions` |
-| `v1/app/growth/automation.py` | 46 | Python | `analytics` |
-| `v1/app/guardrails/budgets.py` | 5 | Python | `__init__` |
-| `v1/app/guardrails/budgets.py` | 9 | Python | `set` |
-| `v1/app/guardrails/budgets.py` | 12 | Python | `get` |
-| `v1/app/guardrails/circuit.py` | 5 | Python | `__init__` |
-| `v1/app/guardrails/circuit.py` | 9 | Python | `set` |
-| `v1/app/guardrails/circuit.py` | 12 | Python | `get` |
-| `v1/app/guardrails/circuit.py` | 15 | Python | `tripped` |
-| `v1/app/guardrails/kill_switch.py` | 2 | Python | `__init__` |
-| `v1/app/guardrails/kill_switch.py` | 5 | Python | `set` |
-| `v1/app/guardrails/kill_switch.py` | 8 | Python | `is_on` |
-| `v1/app/infra/redis_client.py` | 7 | Python | `__init__` |
-| `v1/app/infra/redis_client.py` | 10 | Python | `set_price` |
-| `v1/app/infra/redis_client.py` | 13 | Python | `get_price` |
-| `v1/app/infra/redis_client.py` | 16 | Python | `set_book` |
-| `v1/app/infra/redis_client.py` | 20 | Python | `get_books` |
-| `v1/app/intelligence/funding.py` | 1 | Python | `funding_signal` |
-| `v1/app/intelligence/fusion.py` | 1 | Python | `fuse` |
-| `v1/app/intelligence/portfolio.py` | 1 | Python | `size` |
-| `v1/app/limits/quotas.py` | 7 | Python | `__init__` |
-| `v1/app/limits/quotas.py` | 11 | Python | `consume` |
-| `v1/app/limits/rate_limit.py` | 11 | Python | `__init__` |
-| `v1/app/limits/rate_limit.py` | 14 | Python | `allow` |
-| `v1/app/main.py` | 10 | Python | `startup` |
-| `v1/app/main.py` | 15 | Python | `health` |
-| `v1/app/metering/usage.py` | 7 | Python | `__init__` |
-| `v1/app/metering/usage.py` | 11 | Python | `inc_req` |
-| `v1/app/metering/usage.py` | 14 | Python | `inc_trade` |
-| `v1/app/risk/engine.py` | 2 | Python | `__init__` |
-| `v1/app/risk/engine.py` | 8 | Python | `size` |
-| `v1/app/risk/engine.py` | 11 | Python | `check_drawdown` |
-| `v1/app/signal/consumer.py` | 9 | Python | `__init__` |
-| `v1/app/signal/consumer.py` | 17 | Python | `run` |
-| `v1/app/signal/engine.py` | 5 | Python | `compute` |
-| `v1/app/slo/metrics.py` | 7 | Python | `init_metrics` |
-| `v1/app/slo/metrics.py` | 11 | Python | `observe` |
-| `v1/app/storage/clickhouse.py` | 7 | Python | `__init__` |
-| `v1/app/storage/clickhouse.py` | 10 | Python | `insert` |
-| `v1/app/tenancy/context.py` | 6 | Python | `set_tenant` |
-| `v1/app/tenancy/context.py` | 10 | Python | `get_tenant` |
-| `v1/app/tenancy/middleware.py` | 7 | Python | `dispatch` |
-| `v1/app/utils/logger.py` | 6 | Python | `get_logger` |
-| `v1/infra/hft/ebpf/exporter.py` | 7 | Python | `main` |
-| `v1/infra/hft/ebpf/run_probe.py` | 4 | Python | `main` |
-| `v1/infra/scripts/ui.py` | 15 | Python | `_run_deploy_script` |
-| `v1/infra/scripts/ui.py` | 28 | Python | `deploy` |
-| `v1/infra/scripts/ui.py` | 42 | Python | `status` |
-| `v1/src/zcyptobot/__main__.py` | 4 | Python | `main` |
-| `v1/src/zcyptobot/core/arbitrage.py` | 23 | Python | `find` |
-| `v1/src/zcyptobot/core/arbitrage_v6.py` | 26 | Python | `__init__` |
-| `v1/src/zcyptobot/core/arbitrage_v6.py` | 31 | Python | `plan` |
-| `v1/src/zcyptobot/core/event_bus.py` | 13 | Python | `__init__` |
-| `v1/src/zcyptobot/core/event_bus.py` | 18 | Python | `start` |
-| `v1/src/zcyptobot/core/event_bus.py` | 21 | Python | `publish` |
-| `v1/src/zcyptobot/core/event_bus.py` | 24 | Python | `consume` |
-| `v1/src/zcyptobot/core/event_bus.py` | 39 | Python | `stop` |
-| `v1/src/zcyptobot/core/infra_v7.py` | 19 | Python | `terraform_vars` |
-| `v1/src/zcyptobot/core/infra_v7.py` | 28 | Python | `helm_values` |
-| `v1/src/zcyptobot/core/orchestrator_v2.py` | 18 | Python | `__init__` |
-| `v1/src/zcyptobot/core/orchestrator_v2.py` | 24 | Python | `process` |
-| `v1/src/zcyptobot/core/orchestrator_v2.py` | 39 | Python | `run` |
-| `v1/src/zcyptobot/core/orderbook.py` | 19 | Python | `snapshot` |
-| `v1/src/zcyptobot/core/orderbook.py` | 37 | Python | `spread_bps` |
-| `v1/src/zcyptobot/core/orderbook.py` | 42 | Python | `imbalance` |
-| `v1/src/zcyptobot/core/rl_cluster.py` | 17 | Python | `resources` |
-| `v1/src/zcyptobot/core/rl_v5.py` | 20 | Python | `__init__` |
-| `v1/src/zcyptobot/core/rl_v5.py` | 24 | Python | `score` |
-| `v1/src/zcyptobot/core/rl_v5.py` | 27 | Python | `action` |
-| `v1/src/zcyptobot/core/streams.py` | 13 | Python | `__init__` |
-| `v1/src/zcyptobot/core/streams.py` | 17 | Python | `publish` |
-| `v1/src/zcyptobot/core/streams.py` | 21 | Python | `consume_group` |
-| `v1/src/zcyptobot/core/streams.py` | 48 | Python | `ack` |
-| `v1/src/zcyptobot/core/streams.py` | 51 | Python | `close` |
-| `v1/src/zcyptobot/data/stream.py` | 10 | Python | `__init__` |
-| `v1/src/zcyptobot/data/stream.py` | 14 | Python | `listen` |
-| `v1/src/zcyptobot/engines.py` | 11 | Python | `__init__` |
-| `v1/src/zcyptobot/engines.py` | 14 | Python | `accept` |
-| `v1/src/zcyptobot/engines.py` | 25 | Python | `__init__` |
-| `v1/src/zcyptobot/engines.py` | 34 | Python | `on_tick` |
-| `v1/src/zcyptobot/engines.py` | 68 | Python | `__init__` |
-| `v1/src/zcyptobot/engines.py` | 73 | Python | `market_value` |
-| `v1/src/zcyptobot/engines.py` | 81 | Python | `__init__` |
-| `v1/src/zcyptobot/engines.py` | 84 | Python | `propose_order` |
-| `v1/src/zcyptobot/engines.py` | 112 | Python | `__init__` |
-| `v1/src/zcyptobot/engines.py` | 115 | Python | `execute` |
-| `v1/src/zcyptobot/execution/base.py` | 5 | Python | `place_order` |
-| `v1/src/zcyptobot/execution/binance.py` | 13 | Python | `__init__` |
-| `v1/src/zcyptobot/execution/binance.py` | 18 | Python | `_sign` |
-| `v1/src/zcyptobot/execution/binance.py` | 21 | Python | `place_order` |
-| `v1/src/zcyptobot/orchestrator.py` | 22 | Python | `__init__` |
-| `v1/src/zcyptobot/orchestrator.py` | 30 | Python | `run_cycle` |
-| `v1/src/zcyptobot/pipeline.py` | 18 | Python | `__init__` |
-| `v1/src/zcyptobot/pipeline.py` | 27 | Python | `_apply_fill` |
-| `v1/src/zcyptobot/pipeline.py` | 43 | Python | `on_tick` |
-| `v1/src/zcyptobot/risk/engine.py` | 5 | Python | `__init__` |
-| `v1/src/zcyptobot/risk/engine.py` | 11 | Python | `size` |
-| `v1/src/zcyptobot/risk/engine.py` | 14 | Python | `check_drawdown` |
-| `v1/src/zcyptobot/services.py` | 16 | Python | `__init__` |
-| `v1/src/zcyptobot/services.py` | 19 | Python | `next_tick` |
-| `v1/src/zcyptobot/services.py` | 32 | Python | `__init__` |
-| `v1/src/zcyptobot/services.py` | 35 | Python | `trending_symbols` |
-| `v1/src/zcyptobot/signal/engine.py` | 9 | Python | `compute` |
-| `v1/src/zcyptobot/simulator.py` | 18 | Python | `generate_ticks` |
-| `v1/src/zcyptobot/simulator.py` | 33 | Python | `run_simulation` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 35 | Python | `__init__` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 40 | Python | `build_hermetic` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 44 | Python | `attest_sbom` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 47 | Python | `set_dependency_trust` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 50 | Python | `risk_gate` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 53 | Python | `register_artifact` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 60 | Python | `enforce_provenance` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 67 | Python | `__init__` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 71 | Python | `sync_feature_store` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 75 | Python | `infer_realtime` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 80 | Python | `world_model_plan` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 83 | Python | `negotiate_agents` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 86 | Python | `automl_train_and_deploy` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 90 | Python | `causal_uplift_gate` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 95 | Python | `__init__` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 99 | Python | `set_budget` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 102 | Python | `record_usage` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 105 | Python | `enforce_throttling` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 108 | Python | `revenue_metrics` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 111 | Python | `dynamic_price` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 116 | Python | `evaluate_error_budget` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 119 | Python | `trace_context` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 122 | Python | `inject_chaos` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 125 | Python | `auto_remediate` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 128 | Python | `forecast_capacity` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 135 | Python | `__init__` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 138 | Python | `record_attestation` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 141 | Python | `map_regulation` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 144 | Python | `classify_data` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 149 | Python | `provision_service` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 152 | Python | `publish_sdk` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 155 | Python | `contract_test` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 160 | Python | `place_workload` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 163 | Python | `orchestrate_spot` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 166 | Python | `schedule_gpu` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 170 | Python | `storage_tier` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 179 | Python | `register_plugin` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 182 | Python | `list_data_asset` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 185 | Python | `list_compute_asset` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 190 | Python | `self_heal` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 193 | Python | `self_optimize` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 196 | Python | `run_agent` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 199 | Python | `ai_refactor` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 204 | Python | `dao_vote` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 207 | Python | `policy_consensus` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 212 | Python | `treaty_route` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 217 | Python | `zk_proof` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 220 | Python | `fhe_compute` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 223 | Python | `federated_round` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 226 | Python | `quantum_safe_cipher` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 233 | Python | `__init__` |
-| `v1/src/zcyptobot/v14/future_stack.py` | 246 | Python | `bootstrap` |
-| `v1/src/zcyptobot/v4/governance.py` | 16 | Python | `__init__` |
-| `v1/src/zcyptobot/v4/governance.py` | 20 | Python | `requires_human_approval` |
-| `v1/src/zcyptobot/v4/portfolio.py` | 16 | Python | `allocate` |
-| `v1/src/zcyptobot/v4/surveillance.py` | 16 | Python | `detect_quote_instability` |
-| `v1/tests/test_aiops_v11.py` | 6 | Python | `__init__` |
-| `v1/tests/test_aiops_v11.py` | 9 | Python | `propose` |
-| `v1/tests/test_aiops_v11.py` | 13 | Python | `test_negotiation_filters_constraints` |
-| `v1/tests/test_aiops_v11.py` | 23 | Python | `test_orchestrator_rewrite_requires_gates` |
-| `v1/tests/test_aiops_v11.py` | 30 | Python | `test_orchestrator_rewrite_when_ready` |
-| `v1/tests/test_aiops_v12_market_governance.py` | 6 | Python | `test_double_auction_clears_when_prices_cross` |
-| `v1/tests/test_aiops_v12_market_governance.py` | 15 | Python | `test_weighted_vote_threshold` |
-| `v1/tests/test_aiops_v12_market_governance.py` | 22 | Python | `test_policy_guard_cost_ceiling` |
-| `v1/tests/test_aiops_v3.py` | 5 | Python | `test_bayesian_rca_returns_ranked_probabilities` |
-| `v1/tests/test_aiops_v3.py` | 14 | Python | `test_rl_planner_updates_q_value` |
-| `v1/tests/test_aiops_v6_v7_nonstationary.py` | 10 | Python | `test_lints_ns_discounted_update_changes_state` |
-| `v1/tests/test_aiops_v6_v7_nonstationary.py` | 18 | Python | `test_hierarchical_ts_select_and_update` |
-| `v1/tests/test_aiops_v6_v7_nonstationary.py` | 26 | Python | `test_counterfactual_estimators_return_float` |
-| `v1/tests/test_aiops_v6_v7_nonstationary.py` | 33 | Python | `test_policy_registry_roundtrip_and_drift_monitor` |
-| `v1/tests/test_enterprise_growth_upgrade.py` | 5 | Python | `test_multi_tenant_role_isolation_and_audit` |
-| `v1/tests/test_enterprise_growth_upgrade.py` | 20 | Python | `test_slo_dashboard_and_growth_analytics` |
-| `v1/tests/test_institutional_upgrade.py` | 6 | Python | `test_orderbook_depth_model_features` |
-| `v1/tests/test_institutional_upgrade.py` | 15 | Python | `test_multi_exchange_arbitrage_detects_net_edge` |
-| `v1/tests/test_institutional_upgrade.py` | 29 | Python | `test_rl_training_planner_resources` |
-| `v1/tests/test_orchestrator.py` | 4 | Python | `test_orchestrator_cycle_produces_stats` |
-| `v1/tests/test_orchestrator.py` | 12 | Python | `test_orchestrator_can_run_multiple_cycles` |
-| `v1/tests/test_pipeline.py` | 7 | Python | `test_bot_accepts_valid_ticks_and_updates_equity` |
-| `v1/tests/test_pipeline.py` | 16 | Python | `test_bot_rejects_invalid_symbol` |
-| `v1/tests/test_pipeline.py` | 23 | Python | `test_simulation_runs_end_to_end` |
-| `v1/tests/test_v2_core.py` | 5 | Python | `test_signal_engine_long` |
-| `v1/tests/test_v2_core.py` | 10 | Python | `test_risk_engine_size_and_drawdown` |
-| `v1/tests/test_v4_stack.py` | 6 | Python | `test_approval_policy_threshold` |
-| `v1/tests/test_v4_stack.py` | 12 | Python | `test_portfolio_allocator_respects_gross_limit` |
-| `v1/tests/test_v4_stack.py` | 25 | Python | `test_surveillance_detects_quote_instability` |
-| `v1/tests/test_v5_v6_v7_upgrade.py` | 7 | Python | `test_v5_rl_policy_actions` |
-| `v1/tests/test_v5_v6_v7_upgrade.py` | 13 | Python | `test_v6_arbitrage_router_builds_plan` |
-| `v1/tests/test_v5_v6_v7_upgrade.py` | 31 | Python | `test_v7_infra_blueprint_materializes_configs` |
-| `v1/zeaz-quant/app/data/collector.py` | 7 | Python | `get_market` |
-| `v1/zeaz-quant/app/execution/engine.py` | 2 | Python | `execute` |
-| `v1/zeaz-quant/app/features/builder.py` | 5 | Python | `build` |
-| `v1/zeaz-quant/app/main.py` | 21 | Python | `loop` |
-| `v1/zeaz-quant/app/risk/manager.py` | 2 | Python | `__init__` |
-| `v1/zeaz-quant/app/risk/manager.py` | 7 | Python | `validate` |
-| `v1/zeaz-quant/app/risk/manager.py` | 16 | Python | `update` |
-| `v1/zeaz-quant/app/signal/engine.py` | 2 | Python | `generate` |
-| `v1/zeaz-quant/app/storage/db.py` | 5 | Python | `__init__` |
-| `v1/zeaz-quant/app/storage/db.py` | 11 | Python | `save` |
-| `war_simulation/metrics.py` | 1 | Python | `kpis` |
-| `war_simulation/response_engine.py` | 4 | Python | `respond` |
-| `war_simulation/strategies.py` | 1 | Python | `choose` |
-| `warfare/engine.py` | 4 | Python | `step` |
-| `warfare/metrics.py` | 1 | Python | `kpis` |
-| `warfare/response.py` | 1 | Python | `respond` |
-| `zcyptobot-hyperscale/scripts/bootstrap.py` | 11 | Python | `write` |
-| `zcyptobot-hyperscale/scripts/bootstrap.py` | 16 | Python | `service_scaffold` |
-| `zcyptobot-hyperscale/scripts/bootstrap.py` | 28 | Python | `infra_scaffold` |
-| `zcyptobot-hyperscale/scripts/bootstrap.py` | 36 | Python | `observability_scaffold` |
-| `zcyptobot-hyperscale/scripts/bootstrap.py` | 49 | Python | `ai_scaffold` |
-| `zcyptobot-hyperscale/scripts/bootstrap.py` | 54 | Python | `main` |
-| `zcyptobot-hyperscale/services/service_0001/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0001/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0002/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0002/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0003/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0003/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0004/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0004/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0005/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0005/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0006/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0006/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0007/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0007/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0008/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0008/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0009/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0009/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_001/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_001/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0010/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0010/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0011/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0011/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0012/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0012/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0013/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0013/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0014/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0014/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0015/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0015/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0016/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0016/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0017/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0017/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0018/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0018/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0019/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0019/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_002/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_002/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0020/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0020/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0021/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0021/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0022/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0022/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0023/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0023/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0024/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0024/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0025/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0025/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0026/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0026/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0027/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0027/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0028/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0028/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0029/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0029/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_003/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_003/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0030/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0030/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0031/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0031/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0032/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0032/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0033/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0033/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0034/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0034/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0035/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0035/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0036/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0036/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0037/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0037/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0038/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0038/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0039/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0039/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_004/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_004/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0040/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0040/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0041/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0041/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0042/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0042/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0043/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0043/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0044/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0044/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0045/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0045/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0046/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0046/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0047/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0047/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0048/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0048/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0049/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0049/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_005/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_005/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0050/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0050/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0051/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0051/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0052/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0052/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0053/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0053/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0054/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0054/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0055/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0055/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0056/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0056/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0057/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0057/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0058/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0058/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0059/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0059/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_006/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_006/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0060/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0060/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0061/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0061/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0062/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0062/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0063/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0063/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0064/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0064/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0065/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0065/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0066/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0066/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0067/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0067/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0068/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0068/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0069/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0069/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_007/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_007/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0070/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0070/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0071/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0071/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0072/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0072/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0073/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0073/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0074/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0074/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0075/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0075/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0076/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0076/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0077/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0077/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0078/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0078/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0079/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0079/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_008/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_008/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0080/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0080/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0081/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0081/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0082/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0082/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0083/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0083/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0084/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0084/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0085/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0085/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0086/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0086/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0087/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0087/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0088/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0088/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0089/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0089/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_009/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_009/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0090/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0090/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0091/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0091/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0092/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0092/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0093/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0093/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0094/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0094/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0095/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0095/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0096/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0096/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0097/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0097/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0098/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0098/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0099/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0099/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_010/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_010/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0100/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0100/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0101/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0101/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0102/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0102/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0103/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0103/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0104/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0104/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0105/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0105/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0106/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0106/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0107/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0107/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0108/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0108/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0109/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0109/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_011/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_011/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0110/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0110/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0111/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0111/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0112/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0112/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0113/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0113/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0114/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0114/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0115/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0115/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0116/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0116/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0117/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0117/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0118/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0118/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0119/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0119/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_012/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_012/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0120/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0120/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0121/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0121/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0122/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0122/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0123/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0123/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0124/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0124/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0125/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0125/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0126/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0126/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0127/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0127/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0128/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0128/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0129/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0129/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_013/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_013/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0130/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0130/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0131/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0131/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0132/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0132/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0133/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0133/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0134/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0134/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0135/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0135/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0136/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0136/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0137/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0137/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0138/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0138/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0139/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0139/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_014/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_014/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0140/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0140/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0141/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0141/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0142/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0142/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0143/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0143/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0144/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0144/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0145/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0145/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0146/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0146/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0147/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0147/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0148/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0148/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0149/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0149/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_015/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_015/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0150/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0150/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0151/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0151/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0152/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0152/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0153/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0153/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0154/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0154/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0155/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0155/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0156/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0156/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0157/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0157/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0158/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0158/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0159/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0159/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_016/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_016/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0160/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0160/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0161/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0161/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0162/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0162/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0163/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0163/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0164/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0164/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0165/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0165/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0166/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0166/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0167/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0167/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0168/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0168/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0169/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0169/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_017/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_017/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0170/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0170/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0171/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0171/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0172/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0172/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0173/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0173/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0174/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0174/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0175/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0175/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0176/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0176/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0177/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0177/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0178/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0178/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0179/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0179/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_018/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_018/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0180/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0180/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0181/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0181/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0182/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0182/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0183/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0183/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0184/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0184/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0185/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0185/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0186/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0186/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0187/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0187/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0188/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0188/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0189/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0189/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_019/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_019/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0190/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0190/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0191/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0191/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0192/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0192/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0193/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0193/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0194/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0194/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0195/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0195/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0196/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0196/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0197/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0197/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0198/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0198/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0199/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0199/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_020/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_020/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0200/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0200/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0201/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0201/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0202/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0202/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0203/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0203/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0204/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0204/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0205/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0205/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0206/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0206/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0207/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0207/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0208/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0208/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0209/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0209/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_021/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_021/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0210/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0210/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0211/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0211/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0212/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0212/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0213/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0213/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0214/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0214/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0215/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0215/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0216/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0216/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0217/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0217/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0218/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0218/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_0219/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0219/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_022/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_022/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_0220/src/main.py` | 6 | Python | `health` |
-| `zcyptobot-hyperscale/services/service_0220/tests/test_basic.py` | 1 | Python | `test_health_payload_shape` |
-| `zcyptobot-hyperscale/services/service_023/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_023/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_024/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_024/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_025/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_025/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_026/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_026/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_027/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_027/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_028/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_028/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_029/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_029/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_030/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_030/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_031/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_031/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_032/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_032/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_033/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_033/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_034/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_034/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_035/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_035/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_036/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_036/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_037/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_037/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_038/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_038/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_039/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_039/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_040/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_040/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_041/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_041/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_042/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_042/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_043/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_043/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_044/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_044/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_045/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_045/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_046/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_046/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_047/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_047/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_048/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_048/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_049/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_049/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_050/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_050/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_051/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_051/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_052/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_052/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_053/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_053/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_054/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_054/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_055/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_055/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_056/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_056/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_057/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_057/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_058/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_058/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_059/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_059/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_060/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_060/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_061/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_061/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_062/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_062/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_063/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_063/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_064/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_064/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_065/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_065/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_066/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_066/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_067/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_067/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_068/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_068/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_069/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_069/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_070/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_070/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_071/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_071/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_072/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_072/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_073/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_073/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_074/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_074/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_075/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_075/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_076/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_076/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_077/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_077/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_078/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_078/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_079/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_079/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_080/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_080/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_081/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_081/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_082/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_082/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_083/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_083/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_084/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_084/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_085/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_085/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_086/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_086/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_087/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_087/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_088/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_088/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_089/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_089/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_090/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_090/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_091/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_091/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_092/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_092/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_093/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_093/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_094/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_094/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_095/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_095/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_096/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_096/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_097/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_097/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_098/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_098/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_099/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_099/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/services/service_100/src/main.py` | 1 | Python | `handler` |
-| `zcyptobot-hyperscale/services/service_100/tests/test_basic.py` | 1 | Python | `test_basic` |
-| `zcyptobot-hyperscale/tests/test_smoke.py` | 1 | Python | `test_smoke` |
-| `zeaz-enterprise/backend/auth_sso.py` | 12 | Python | `verify` |
-| `zeaz-enterprise/backend/db.py` | 7 | Python | `__init__` |
-| `zeaz-enterprise/backend/db.py` | 11 | Python | `__enter__` |
-| `zeaz-enterprise/backend/db.py` | 16 | Python | `__exit__` |
-| `zeaz-enterprise/backend/main.py` | 22 | Python | `get_state` |
-| `zeaz-enterprise/backend/main.py` | 29 | Python | `ws` |
-| `zeaz-enterprise/backend/rl/agents.py` | 2 | Python | `__init__` |
-| `zeaz-enterprise/backend/rl/agents.py` | 5 | Python | `propose` |
-| `zeaz-enterprise/backend/rl/agents.py` | 10 | Python | `allow` |
-| `zeaz-enterprise/backend/rl/agents.py` | 15 | Python | `allow` |
-| `zeaz-enterprise/backend/rl/agents.py` | 20 | Python | `decide` |
-| `zeaz-enterprise/backend/rl/planner.py` | 7 | Python | `onehot` |
-| `zeaz-enterprise/backend/rl/planner.py` | 14 | Python | `__init__` |
-| `zeaz-enterprise/backend/rl/planner.py` | 17 | Python | `plan` |
-| `zeaz-enterprise/backend/rl/world_model.py` | 6 | Python | `__init__` |
-| `zeaz-enterprise/backend/rl/world_model.py` | 10 | Python | `forward` |
-| `zeaz-enterprise/backend/stripe_billing.py` | 13 | Python | `_ensure_api_key` |
-| `zeaz-enterprise/backend/stripe_billing.py` | 18 | Python | `create_customer` |
-| `zeaz-enterprise/backend/stripe_billing.py` | 23 | Python | `create_subscription` |
-| `zeaz-enterprise/backend/stripe_billing.py` | 28 | Python | `report_usage` |
-| `zeaz-enterprise/backend/tenancy.py` | 6 | Python | `schema_for` |
-| `zeaz-enterprise/backend/tenancy.py` | 12 | Python | `set_schema` |
-| `zeaz-hyperscale/agents/evolver.py` | 9 | Python | `propose_policy` |
-| `zeaz-hyperscale/agents/evolver.py` | 16 | Python | `propose_code_patch` |
-| `zeaz-hyperscale/agents/evolver.py` | 24 | Python | `commit_patch` |
-| `zeaz-hyperscale/agents/guardrails.py` | 2 | Python | `ips_dr_gate` |
-| `zeaz-hyperscale/agents/guardrails.py` | 5 | Python | `cost_cap` |
-| `zeaz-hyperscale/agents/guardrails.py` | 8 | Python | `quorum` |
-| `zeaz-hyperscale/agents/patcher.py` | 6 | Python | `argocd_sync` |
-| `zeaz-hyperscale/agents/scorer.py` | 1 | Python | `rank` |
-| `zeaz-hyperscale/agents/validator.py` | 5 | Python | `run_unit` |
-| `zeaz-hyperscale/agents/validator.py` | 9 | Python | `run_lint` |
-| `zeaz-hyperscale/agents/validator.py` | 13 | Python | `simulate` |
-| `zeaz-hyperscale/agents/validator.py` | 18 | Python | `validate` |
-| `zeaz-live/backend/auth.py` | 6 | Python | `create` |
-| `zeaz-live/backend/auth.py` | 10 | Python | `verify` |
-| `zeaz-live/backend/billing.py` | 4 | Python | `track` |
-| `zeaz-live/backend/billing.py` | 8 | Python | `get_usage` |
-| `zeaz-live/backend/engine.py` | 7 | Python | `decide` |
-| `zeaz-live/backend/feature_store/offline.py` | 6 | Python | `insert` |
-| `zeaz-live/backend/feature_store/online.py` | 8 | Python | `put` |
-| `zeaz-live/backend/feature_store/online.py` | 12 | Python | `get` |
-| `zeaz-live/backend/i18n.py` | 50 | Python | `normalize_locale` |
-| `zeaz-live/backend/i18n.py` | 59 | Python | `get_messages` |
-| `zeaz-live/backend/main.py` | 26 | Python | `require_auth` |
-| `zeaz-live/backend/main.py` | 32 | Python | `get_state` |
-| `zeaz-live/backend/main.py` | 39 | Python | `metrics` |
-| `zeaz-live/backend/main.py` | 46 | Python | `admin_usage` |
-| `zeaz-live/backend/main.py` | 53 | Python | `ws` |
-| `zeaz-live/backend/main.py` | 79 | Python | `i18n_messages` |
-| `zeaz-live/backend/rbac.py` | 1 | Python | `check` |
-| `zeaz-live/backend/rl/model.py` | 8 | Python | `__init__` |
-| `zeaz-live/backend/rl/model.py` | 16 | Python | `forward` |
-| `zeaz-live/backend/rl/train.py` | 8 | Python | `train` |
-| `zeaz-live/backend/stream.py` | 4 | Python | `update_state` |
-| `zeaz-live/backend/tenant.py` | 4 | Python | `get_tenant_state` |
-| `zeaz-live/frontend/src/api.ts` | 1 | JS/TS | `getMetrics` |
-| `zeaz-live/frontend/src/api.ts` | 6 | JS/TS | `getDecision` |
-| `zeaz-live/frontend/src/i18n.ts` | 13 | JS/TS | `fetchMessages` |
-| `zeaz-live/frontend/src/ws.ts` | 1 | JS/TS | `connectWS` |
-| `zeaz-prod/backend/auth.py` | 12 | Python | `create_token` |
-| `zeaz-prod/backend/auth.py` | 21 | Python | `verify` |
-| `zeaz-prod/backend/auth.py` | 28 | Python | `verify_credentials` |
-| `zeaz-prod/backend/db.py` | 15 | Python | `init_db` |
-| `zeaz-prod/backend/db.py` | 35 | Python | `save_decision` |
-| `zeaz-prod/backend/explain.py` | 1 | Python | `explain` |
-| `zeaz-prod/backend/kafka.py` | 7 | Python | `_serialize` |
-| `zeaz-prod/backend/kafka.py` | 17 | Python | `publish` |
-| `zeaz-prod/backend/main.py` | 19 | Python | `startup` |
-| `zeaz-prod/backend/main.py` | 24 | Python | `token` |
-| `zeaz-prod/backend/main.py` | 28 | Python | `get_state` |
-| `zeaz-prod/backend/main.py` | 35 | Python | `ws` |
-| `zeaz-prod/backend/redis_client.py` | 13 | Python | `publish` |
-| `zeaz-prod/backend/redis_client.py` | 17 | Python | `cache_set` |
-| `zeaz-prod/backend/rl/agent.py` | 11 | Python | `__init__` |
-| `zeaz-prod/backend/rl/agent.py` | 18 | Python | `key` |
-| `zeaz-prod/backend/rl/agent.py` | 21 | Python | `_ensure` |
-| `zeaz-prod/backend/rl/agent.py` | 25 | Python | `act` |
-| `zeaz-prod/backend/rl/agent.py` | 34 | Python | `update` |
-| `zeaz-prod/backend/rl/agent.py` | 41 | Python | `replay_train` |
-| `zeaz-prod/backend/rl/replay.py` | 6 | Python | `__init__` |
-| `zeaz-prod/backend/rl/replay.py` | 10 | Python | `add` |
-| `zeaz-prod/backend/rl/replay.py` | 15 | Python | `sample` |
-| `zeaz-quant/app/data/collector.py` | 7 | Python | `get_market` |
-| `zeaz-quant/app/execution/engine.py` | 2 | Python | `execute` |
-| `zeaz-quant/app/features/builder.py` | 5 | Python | `build` |
-| `zeaz-quant/app/main.py` | 21 | Python | `loop` |
-| `zeaz-quant/app/risk/manager.py` | 2 | Python | `__init__` |
-| `zeaz-quant/app/risk/manager.py` | 7 | Python | `validate` |
-| `zeaz-quant/app/risk/manager.py` | 16 | Python | `update` |
-| `zeaz-quant/app/signal/engine.py` | 2 | Python | `generate` |
-| `zeaz-quant/app/storage/db.py` | 5 | Python | `__init__` |
-| `zeaz-quant/app/storage/db.py` | 11 | Python | `save` |
-| `zeaz-v12/app/aiops/carbon.py` | 8 | Python | `best_region` |
-| `zeaz-v12/app/aiops/carbon.py` | 11 | Python | `score` |
-| `zeaz-v12/app/aiops/chaos.py` | 7 | Python | `inject` |
-| `zeaz-v12/app/aiops/cost_optimizer.py` | 4 | Python | `__init__` |
-| `zeaz-v12/app/aiops/cost_optimizer.py` | 10 | Python | `estimate` |
-| `zeaz-v12/app/aiops/cost_optimizer.py` | 13 | Python | `recommend` |
-| `zeaz-v12/app/aiops/cost_optimizer.py` | 18 | Python | `enforce_budget` |
-| `zeaz-v12/app/aiops/economic_router.py` | 7 | Python | `__init__` |
-| `zeaz-v12/app/aiops/economic_router.py` | 12 | Python | `route` |
-| `zeaz-v12/app/aiops/global_router.py` | 4 | Python | `split` |
-| `zeaz-v12/app/aiops/global_router.py` | 15 | Python | `failover` |
-| `zeaz-v12/app/aiops/orchestrator.py` | 2 | Python | `step` |
-| `zeaz-v12/app/aiops/pricing_rt.py` | 2 | Python | `__init__` |
-| `zeaz-v12/app/aiops/pricing_rt.py` | 5 | Python | `price` |
-| `zeaz-v12/app/aiops/pricing_rt.py` | 8 | Python | `surge` |
-| `zeaz-v12/app/aiops/sla_negotiation.py` | 2 | Python | `negotiate` |
-| `zeaz-v12/app/aiops/spot_scheduler.py` | 4 | Python | `choose_pool` |
-| `zeaz-v12/app/aiops/spot_scheduler.py` | 9 | Python | `can_evict` |
-| `zeaz-v12/app/infra_client/k8s.py` | 11 | Python | `apply_action` |
-| `zeaz-v12/app/sim/simulator.py` | 5 | Python | `__init__` |
-| `zeaz-v12/app/sim/simulator.py` | 12 | Python | `step` |
-| `zeaz/app/aiops/dataset.py` | 5 | Python | `__init__` |
-| `zeaz/app/aiops/dataset.py` | 9 | Python | `add` |
-| `zeaz/app/aiops/dataset.py` | 14 | Python | `sample` |
-| `zeaz/app/aiops/evolution.py` | 5 | Python | `__init__` |
-| `zeaz/app/aiops/evolution.py` | 8 | Python | `propose` |
-| `zeaz/app/aiops/evolution.py` | 18 | Python | `promote` |
-| `zeaz/app/aiops/evolution.py` | 21 | Python | `rollback` |
-| `zeaz/app/aiops/meta.py` | 4 | Python | `maml_step` |
-| `zeaz/app/aiops/planner_mpc.py` | 9 | Python | `onehot` |
-| `zeaz/app/aiops/planner_mpc.py` | 16 | Python | `__init__` |
-| `zeaz/app/aiops/planner_mpc.py` | 22 | Python | `plan` |
-| `zeaz/app/aiops/policy_actor.py` | 6 | Python | `__init__` |
-| `zeaz/app/aiops/policy_actor.py` | 14 | Python | `forward` |
-| `zeaz/app/aiops/world_model.py` | 6 | Python | `__init__` |
-| `zeaz/app/aiops/world_model.py` | 14 | Python | `forward` |
-| `zeaz/app/aiops/world_model.py` | 19 | Python | `__init__` |
-| `zeaz/app/aiops/world_model.py` | 27 | Python | `forward` |
-| `zeaz/app/aiops/world_model.py` | 33 | Python | `__init__` |
-| `zeaz/app/aiops/world_model.py` | 41 | Python | `forward` |
-| `zeaz/app/aiops/world_model.py` | 46 | Python | `__init__` |
-| `zeaz/app/aiops/world_model.py` | 52 | Python | `forward` |
-| `zeaz/app/control_main.py` | 7 | Python | `main` |
-| `zeaz/app/execution/engine.py` | 5 | Python | `execute` |
-| `zeaz/app/ingestion/market.py` | 11 | Python | `run` |
-| `zeaz/app/ingestion/sentiment.py` | 4 | Python | `run` |
-| `zeaz/app/main.py` | 8 | Python | `main` |
-| `zeaz/app/observability/metrics.py` | 12 | Python | `start_metrics_server` |
-| `zeaz/app/risk/engine.py` | 5 | Python | `__init__` |
-| `zeaz/app/risk/engine.py` | 10 | Python | `validate` |
-| `zeaz/app/risk/engine.py` | 18 | Python | `update` |
-| `zeaz/app/signal/engine.py` | 5 | Python | `generate` |
-| `zeaz/app/storage/clickhouse.py` | 7 | Python | `__init__` |
-| `zeaz/app/storage/clickhouse.py` | 10 | Python | `insert` |
-| `zeaz/app/stream/processor.py` | 14 | Python | `run` |
-| `zk/commit_trace.py` | 6 | Python | `trace_commit` |
-| `zk/prover/main.go` | 10 | Go | `VerifyTransition` |
-| `zk/prover/main.go` | 16 | Go | `main` |
-| `zk/prover_stub.py` | 1 | Python | `generate_proof` |
-| `zk/prover_stub.py` | 6 | Python | `verify_proof` |
+
+_Display capped at 300 of 1821 detected functions/methods._
 
 ### Automation pipeline files
 
@@ -3313,7 +1568,7 @@ Status: **cloned**; commit `ef0fdd5ce580`.
 - `zeaz-v12/helm/zeaz/templates/api-deployment.yaml`
 - `zeaz/infra/docker-compose.yml`
 
-## `ZeaZDev-Omega`
+## `cvsz/ZeaZDev-Omega`
 
 Status: **cloned**; commit `d0e4ba7b48f5`.
 
@@ -3390,7 +1645,7 @@ Status: **cloned**; commit `d0e4ba7b48f5`.
 - `install.sh`
 - `packages/contracts/scripts/deploy.ts`
 
-## `ztsaff`
+## `cvsz/ztsaff`
 
 Status: **cloned**; commit `f4e0e25f255d`.
 
@@ -3636,7 +1891,7 @@ Status: **cloned**; commit `f4e0e25f255d`.
 - `zgitea-v8/scripts/bootstrap.sh`
 - `zt-gitea-v10/install-v10.sh`
 
-## `zLinebot`
+## `cvsz/zLinebot`
 
 Status: **cloned**; commit `0c0c3ec4d7d5`.
 
@@ -3986,272 +2241,8 @@ Status: **cloned**; commit `0c0c3ec4d7d5`.
 | `app/src/services/recommend.ts` | 11 | JS/TS | `recommendProducts` |
 | `app/src/services/reconcile.ts` | 6 | JS/TS | `reconcile` |
 | `app/src/services/redis.ts` | 14 | JS/TS | `ensureRedisConnected` |
-| `app/src/services/referral.ts` | 5 | JS/TS | `registerReferral` |
-| `app/src/services/risk.infer.ts` | 1 | JS/TS | `finalRisk` |
-| `app/src/services/risk.ts` | 7 | JS/TS | `ruleScore` |
-| `app/src/services/rl.ts` | 3 | JS/TS | `rankRL` |
-| `app/src/services/rlhf.ts` | 13 | JS/TS | `normalizeReward` |
-| `app/src/services/rlhf.ts` | 21 | JS/TS | `saveFeedback` |
-| `app/src/services/rlhf.ts` | 59 | JS/TS | `logFeedback` |
-| `app/src/services/routing.ts` | 8 | JS/TS | `chooseWarehouse` |
-| `app/src/services/runpod.client.ts` | 6 | JS/TS | `assertEnv` |
-| `app/src/services/runpod.client.ts` | 11 | JS/TS | `sign` |
-| `app/src/services/runpod.client.ts` | 15 | JS/TS | `runpodInfer` |
-| `app/src/services/scheduler.ts` | 3 | JS/TS | `chooseCompute` |
-| `app/src/services/session.ts` | 7 | JS/TS | `keyFor` |
-| `app/src/services/session.ts` | 9 | JS/TS | `getSessionVec` |
-| `app/src/services/session.ts` | 22 | JS/TS | `setSessionVec` |
-| `app/src/services/sessionUpdate.ts` | 4 | JS/TS | `normalizeAlpha` |
-| `app/src/services/sessionUpdate.ts` | 8 | JS/TS | `ema` |
-| `app/src/services/sessionUpdate.ts` | 19 | JS/TS | `updateSession` |
-| `app/src/services/stripe.ts` | 6 | JS/TS | `getStripeClient` |
-| `app/src/services/stripe.ts` | 16 | JS/TS | `createCheckout` |
-| `app/src/services/tenantProvision.ts` | 3 | JS/TS | `safeTenantSchema` |
-| `app/src/services/tenantProvision.ts` | 7 | JS/TS | `createTenantSchema` |
-| `app/src/services/tiktok.shop.ts` | 53 | JS/TS | `readString` |
-| `app/src/services/tiktok.shop.ts` | 57 | JS/TS | `readNumber` |
-| `app/src/services/tiktok.shop.ts` | 65 | JS/TS | `loadLocalProducts` |
-| `app/src/services/tiktok.shop.ts` | 91 | JS/TS | `loadTikTokShowcaseFromApi` |
-| `app/src/services/tiktok.shop.ts` | 120 | JS/TS | `loadTikTokUserProfilesFromApi` |
-| `app/src/services/tiktok.shop.ts` | 151 | JS/TS | `loadLocalUserProfiles` |
-| `app/src/services/tiktok.shop.ts` | 158 | JS/TS | `COUNT` |
-| `app/src/services/tiktok.shop.ts` | 180 | JS/TS | `fetchShowcaseProducts` |
-| `app/src/services/tiktok.shop.ts` | 194 | JS/TS | `fetchShopUserProfiles` |
-| `app/src/services/tiktok.shop.ts` | 208 | JS/TS | `buildShopIntelligenceReport` |
-| `app/src/services/tiktok.shop.ts` | 239 | JS/TS | `escapeCsv` |
-| `app/src/services/tiktok.shop.ts` | 244 | JS/TS | `exportShopIntelligenceCsv` |
-| `app/src/services/tiktok.shop.ts` | 283 | JS/TS | `parseHashtags` |
-| `app/src/services/tiktok.shop.ts` | 288 | JS/TS | `parseShotPlan` |
-| `app/src/services/tiktok.shop.ts` | 297 | JS/TS | `generateVideoDrafts` |
-| `app/src/services/tiktok.shop.ts` | 345 | JS/TS | `listVideoJobs` |
-| `app/src/services/tiktok.stream.ts` | 24 | JS/TS | `normalizeString` |
-| `app/src/services/tiktok.stream.ts` | 33 | JS/TS | `enqueueTikTokWebhookEvent` |
-| `app/src/services/tiktok.stream.ts` | 75 | JS/TS | `ensureConsumerGroup` |
-| `app/src/services/tiktok.stream.ts` | 87 | JS/TS | `mapFieldsToRecord` |
-| `app/src/services/tiktok.stream.ts` | 102 | JS/TS | `isStreamReadResult` |
-| `app/src/services/tiktok.stream.ts` | 128 | JS/TS | `persistTikTokEvent` |
-| `app/src/services/tiktok.stream.ts` | 147 | JS/TS | `moveToDlq` |
-| `app/src/services/tiktok.stream.ts` | 168 | JS/TS | `processStreamEntry` |
-| `app/src/services/tiktok.stream.ts` | 186 | JS/TS | `startTikTokStreamWorker` |
-| `app/src/services/tiktok.ts` | 35 | JS/TS | `asJsonRecord` |
-| `app/src/services/tiktok.ts` | 43 | JS/TS | `normalizeScope` |
-| `app/src/services/tiktok.ts` | 55 | JS/TS | `createState` |
-| `app/src/services/tiktok.ts` | 59 | JS/TS | `buildAuthorizationUrl` |
-| `app/src/services/tiktok.ts` | 76 | JS/TS | `exchangeCodeForToken` |
-| `app/src/services/tiktok.ts` | 118 | JS/TS | `fetchUserInfo` |
-| `app/src/services/tiktok.ts` | 135 | JS/TS | `verifyWebhookSignature` |
-| `app/src/services/traffic.ts` | 5 | JS/TS | `variant` |
-| `app/src/services/traffic.ts` | 11 | JS/TS | `setTrafficSplit` |
-| `app/src/services/twotower.ts` | 5 | JS/TS | `loadTwoTower` |
-| `app/src/services/twotower.ts` | 15 | JS/TS | `scoreTwoTower` |
-| `app/src/services/userEmbedding.ts` | 4 | JS/TS | `updateUserEmbedding` |
-| `app/src/services/vector.search.ts` | 1 | JS/TS | `search` |
-| `app/src/services/vector.ts` | 3 | JS/TS | `resolveCloudEndpoint` |
-| `app/src/services/vector.ts` | 10 | JS/TS | `endpoint` |
-| `app/src/services/vector.ts` | 14 | JS/TS | `upsert` |
-| `app/src/services/warehouse.consumer.ts` | 5 | JS/TS | `startWarehouseConsumer` |
-| `app/src/types/onnxruntime-node.d.ts` | 13 | JS/TS | `create` |
-| `app/src/types/onnxruntime-node.d.ts` | 14 | JS/TS | `run` |
-| `app/src/utils/env.ts` | 1 | JS/TS | `parsePort` |
-| `app/src/utils/env.ts` | 15 | JS/TS | `parsePositiveInt` |
-| `app/src/utils/env.ts` | 28 | JS/TS | `parseBoolean` |
-| `app/src/utils/env.ts` | 46 | JS/TS | `parseWorkerMode` |
-| `app/src/utils/env.ts` | 54 | JS/TS | `requireNonEmpty` |
-| `app/src/utils/env.ts` | 63 | JS/TS | `ensureSecretStrength` |
-| `app/src/worker.ts` | 18 | JS/TS | `shutdown` |
-| `app/src/world/basic.ts` | 3 | JS/TS | `step` |
-| `app/src/world/mixture.ts` | 1 | JS/TS | `mixture` |
-| `app/src/world/self_improve.basic.ts` | 15 | JS/TS | `predict` |
-| `app/src/world/self_improve.basic.ts` | 20 | JS/TS | `update` |
-| `app/src/world/self_improve.basic.ts` | 28 | JS/TS | `guard` |
-| `app/src/world/self_improve.ts` | 10 | JS/TS | `setTrafficSplit` |
-| `app/src/ws.ts` | 7 | JS/TS | `startWS` |
-| `apps/admin/src/pages/Automations.tsx` | 7 | JS/TS | `addAction` |
-| `apps/admin/src/pages/Automations.tsx` | 11 | JS/TS | `saveAutomation` |
-| `apps/admin/src/pages/Builder.tsx` | 23 | JS/TS | `onConnect` |
-| `apps/admin/src/pages/Builder.tsx` | 27 | JS/TS | `saveFlow` |
-| `apps/api/src/middleware/auth.ts` | 3 | JS/TS | `authMiddleware` |
-| `apps/api/src/plugins/rateLimit.ts` | 3 | JS/TS | `rateLimitPlugin` |
-| `apps/api/src/routes/analytics.ts` | 3 | JS/TS | `analyticsRoutes` |
-| `apps/api/src/routes/auth.ts` | 5 | JS/TS | `authRoutes` |
-| `apps/api/src/routes/automation.ts` | 4 | JS/TS | `automationRoutes` |
-| `apps/api/src/routes/health.ts` | 3 | JS/TS | `healthRoutes` |
-| `apps/api/src/routes/logs.ts` | 3 | JS/TS | `logsRoutes` |
-| `apps/api/src/routes/stripeWebhook.ts` | 10 | JS/TS | `stripeWebhook` |
-| `apps/api/src/routes/webhook.ts` | 74 | JS/TS | `safeEqual` |
-| `apps/api/src/routes/webhook.ts` | 84 | JS/TS | `verifyTikTokSignature` |
-| `apps/api/src/routes/webhook.ts` | 106 | JS/TS | `verifyLineSignature` |
-| `apps/api/src/routes/webhook.ts` | 119 | JS/TS | `parseTikTokSignature` |
-| `apps/api/src/routes/webhook.ts` | 147 | JS/TS | `isFreshTimestamp` |
-| `apps/api/src/routes/webhook.ts` | 158 | JS/TS | `parseTenantId` |
-| `apps/api/src/routes/webhook.ts` | 167 | JS/TS | `validatePayload` |
-| `apps/api/src/routes/webhook.ts` | 183 | JS/TS | `validateLinePayload` |
-| `apps/api/src/routes/webhook.ts` | 200 | JS/TS | `headerValue` |
-| `apps/api/src/routes/webhook.ts` | 210 | JS/TS | `getRawBody` |
-| `apps/api/src/routes/webhook.ts` | 214 | JS/TS | `rememberConversation` |
-| `apps/api/src/routes/webhook.ts` | 231 | JS/TS | `parseAutoReplyOverrides` |
-| `apps/api/src/routes/webhook.ts` | 244 | JS/TS | `sanitizeText` |
-| `apps/api/src/routes/webhook.ts` | 248 | JS/TS | `autoReplyIntent` |
-| `apps/api/src/routes/webhook.ts` | 261 | JS/TS | `tenantAutoReplyProfile` |
-| `apps/api/src/routes/webhook.ts` | 281 | JS/TS | `buildTenantAutoReply` |
-| `apps/api/src/routes/webhook.ts` | 333 | JS/TS | `webhookRoutes` |
-| `apps/api/src/tracing.ts` | 3 | JS/TS | `initTracer` |
-| `apps/worker/src/executor.ts` | 7 | JS/TS | `executeAutomation` |
-| `apps/worker/src/executor.ts` | 35 | JS/TS | `resolveValue` |
-| `apps/worker/src/executor.ts` | 42 | JS/TS | `evalCondition` |
-| `apps/worker/src/executor.ts` | 56 | JS/TS | `runAction` |
-| `apps/worker/src/tracing.ts` | 3 | JS/TS | `initWorkerTracer` |
-| `apps/worker/src/worker.ts` | 9 | JS/TS | `runKafkaWorker` |
-| `bootstrap.sh` | 9 | Shell | `log` |
-| `bootstrap.sh` | 13 | Shell | `require_root` |
-| `bootstrap.sh` | 20 | Shell | `wait_for_deploy` |
-| `cloud/worker/main.py` | 12 | Python | `infer` |
-| `cloudflare/router.js` | 2 | JS/TS | `fetch` |
-| `cloudflare/worker.js` | 1 | JS/TS | `computeLineSignature` |
-| `cloudflare/worker.js` | 13 | JS/TS | `verifyLineSignature` |
-| `cloudflare/worker.js` | 24 | JS/TS | `forwardLineWebhook` |
-| `cloudflare/worker.js` | 42 | JS/TS | `fetch` |
-| `ml/anomaly.py` | 4 | Python | `fit_anomaly_model` |
-| `ml/diffusion_rec.py` | 10 | Python | `__init__` |
-| `ml/diffusion_rec.py` | 25 | Python | `forward` |
-| `ml/diffusion_rec.py` | 30 | Python | `sample` |
-| `ml/export_onnx.py` | 11 | Python | `_verify_model_file` |
-| `ml/export_onnx.py` | 24 | Python | `export_onnx` |
-| `ml/federated_client.py` | 1 | Python | `local_train` |
-| `ml/federated_server.py` | 4 | Python | `aggregate` |
-| `ml/federated_server.py` | 11 | Python | `apply` |
-| `ml/fhe_secure.py` | 8 | Python | `secure_add` |
-| `ml/foundation_ranker.py` | 14 | Python | `__init__` |
-| `ml/foundation_ranker.py` | 28 | Python | `forward` |
-| `ml/he.py` | 8 | Python | `encrypt` |
-| `ml/he.py` | 12 | Python | `add` |
-| `ml/he.py` | 17 | Python | `decrypt` |
-| `ml/market_env.py` | 17 | Python | `__init__` |
-| `ml/market_env.py` | 43 | Python | `_sample_seller_state` |
-| `ml/market_env.py` | 51 | Python | `_obs` |
-| `ml/market_env.py` | 60 | Python | `reset` |
-| `ml/market_env.py` | 73 | Python | `step` |
-| `ml/ppo.py` | 4 | Python | `ppo_step` |
-| `ml/reward_model.py` | 6 | Python | `__init__` |
-| `ml/reward_model.py` | 14 | Python | `forward` |
-| `ml/reward_model.py` | 18 | Python | `train_reward_model` |
-| `ml/shap_explain.py` | 4 | Python | `explain` |
-| `ml/simulate.py` | 5 | Python | `simulate` |
-| `ml/train.py` | 6 | Python | `__init__` |
-| `ml/train.py` | 14 | Python | `forward` |
-| `ml/train.py` | 19 | Python | `train` |
-| `ml/train_multi_agent.py` | 21 | Python | `__init__` |
-| `ml/train_multi_agent.py` | 25 | Python | `score` |
-| `ml/train_multi_agent.py` | 32 | Python | `act` |
-| `ml/train_multi_agent.py` | 46 | Python | `generate_logs` |
-| `ml/transformer_ranker.py` | 14 | Python | `__init__` |
-| `ml/transformer_ranker.py` | 23 | Python | `forward` |
-| `ml/two_tower.py` | 6 | Python | `__init__` |
-| `ml/two_tower.py` | 14 | Python | `forward` |
-| `ml/two_tower.py` | 19 | Python | `__init__` |
-| `ml/two_tower.py` | 24 | Python | `forward` |
-| `ml/two_tower.py` | 30 | Python | `train` |
-| `ml/world_model.py` | 6 | Python | `__init__` |
-| `ml/world_model.py` | 14 | Python | `forward` |
-| `ml/world_model.py` | 22 | Python | `__init__` |
-| `ml/world_model.py` | 27 | Python | `forward` |
-| `mobile/Admin.tsx` | 123 | JS/TS | `applyGuardrailPreset` |
-| `mobile/Admin.tsx` | 160 | JS/TS | `acknowledgeIncident` |
-| `mobile/Admin.tsx` | 169 | JS/TS | `toggleExperimentLocal` |
-| `mobile/Admin.tsx` | 187 | JS/TS | `runRetrain` |
-| `mobile/Admin.tsx` | 427 | JS/TS | `TabButton` |
-| `mobile/Admin.tsx` | 449 | JS/TS | `PanelToggle` |
-| `mobile/Admin.tsx` | 465 | JS/TS | `Stepper` |
-| `mobile/App.tsx` | 149 | JS/TS | `addToCart` |
-| `mobile/App.tsx` | 162 | JS/TS | `checkout` |
-| `mobile/App.tsx` | 186 | JS/TS | `advanceOrder` |
-| `mobile/App.tsx` | 201 | JS/TS | `setPreference` |
-| `mobile/App.tsx` | 205 | JS/TS | `saveProfile` |
-| `mobile/App.tsx` | 209 | JS/TS | `runAssistant` |
-| `mobile/App.tsx` | 427 | JS/TS | `TabButton` |
-| `mobile/App.tsx` | 449 | JS/TS | `PanelToggle` |
-| `mobile/ai.ts` | 1 | JS/TS | `localAI` |
-| `mobile/api.ts` | 1 | JS/TS | `triggerRetrain` |
-| `mobile/api.ts` | 5 | JS/TS | `toggleExperiment` |
-| `packages/auth/apiKey.ts` | 4 | JS/TS | `createApiKey` |
-| `packages/auth/encryption.ts` | 5 | JS/TS | `encrypt` |
-| `packages/auth/jwt.ts` | 5 | JS/TS | `signToken` |
-| `packages/auth/jwt.ts` | 9 | JS/TS | `verifyToken` |
-| `packages/automation/ai-builder.ts` | 29 | JS/TS | `generateFlow` |
-| `packages/automation/ai.ts` | 7 | JS/TS | `generateReply` |
-| `packages/automation/compiler.ts` | 1 | JS/TS | `compileFlow` |
-| `packages/automation/kafka.ts` | 18 | JS/TS | `emitEvent` |
-| `packages/automation/logger.ts` | 19 | JS/TS | `log` |
-| `packages/automation/plugins.ts` | 5 | JS/TS | `registerPlugin` |
-| `packages/automation/plugins.ts` | 9 | JS/TS | `runPlugin` |
-| `packages/automation/runner.ts` | 12 | JS/TS | `processEvent` |
-| `packages/automation/stream.ts` | 21 | JS/TS | `startStream` |
-| `packages/automation/stream.ts` | 46 | JS/TS | `stopStream` |
-| `packages/billing/cost.ts` | 3 | JS/TS | `trackCost` |
-| `packages/billing/subscription.ts` | 4 | JS/TS | `createCustomer` |
-| `packages/billing/subscription.ts` | 21 | JS/TS | `createSubscription` |
-| `packages/billing/usage.ts` | 3 | JS/TS | `trackUsage` |
-| `packages/config/generate-env.ts` | 5 | JS/TS | `generateSecret` |
-| `packages/monitoring/anomaly.ts` | 10 | JS/TS | `parsePrometheusValue` |
-| `packages/monitoring/anomaly.ts` | 18 | JS/TS | `detectAnomaly` |
-| `scripts/bootstrap-saas-foundation.sh` | 11 | Shell | `write_if_missing` |
-| `scripts/configure_cloudflare.sh` | 7 | Shell | `require_env` |
-| `scripts/configure_cloudflare.sh` | 83 | Shell | `upsert_record` |
-| `scripts/configure_cloudflare_zero_trust_full.sh` | 20 | Shell | `require_value` |
-| `scripts/configure_cloudflare_zero_trust_full.sh` | 40 | Shell | `cf_call` |
-| `scripts/configure_cloudflare_zero_trust_full.sh` | 71 | Shell | `configure_tunnel_ingress` |
-| `scripts/configure_cloudflare_zero_trust_full.sh` | 93 | Shell | `find_dns_record_id` |
-| `scripts/configure_cloudflare_zero_trust_full.sh` | 116 | Shell | `upsert_dns_cname` |
-| `scripts/deploy-k8s.sh` | 8 | Shell | `log` |
-| `scripts/deploy-k8s.sh` | 10 | Shell | `check_command` |
-| `scripts/deploy-k8s.sh` | 19 | Shell | `main` |
-| `scripts/deploy.sh` | 13 | Shell | `log` |
-| `scripts/deploy.sh` | 15 | Shell | `check_docker` |
-| `scripts/deploy.sh` | 41 | Shell | `main` |
-| `scripts/generate-secrets.sh` | 35 | Shell | `rand_base64` |
-| `scripts/generate-secrets.sh` | 39 | Shell | `rand_hex` |
-| `scripts/generate-secrets.sh` | 43 | Shell | `rand_hex_64` |
-| `scripts/generate-secrets.sh` | 50 | Shell | `prompt_value` |
-| `scripts/install_full.sh` | 6 | Shell | `log` |
-| `scripts/install_full.sh` | 10 | Shell | `resolve_repo_root` |
-| `scripts/install_full.sh` | 49 | Shell | `install_tenant_namespace` |
-| `scripts/install_full.sh` | 60 | Shell | `run_npm_install_autoheal` |
-| `scripts/install_full.sh` | 89 | Shell | `configure_cloudflare_zero_trust_autoheal` |
-| `scripts/install_secure.sh` | 4 | Shell | `gen_secret` |
-| `scripts/master_meta_deep_impact_dive_audit_scan.sh` | 20 | Shell | `count_files` |
-| `scripts/master_meta_deep_impact_dive_audit_scan.sh` | 26 | Shell | `count_loc` |
-| `scripts/master_meta_full_source_ci_cd.sh` | 12 | Shell | `run_ci` |
-| `scripts/master_meta_full_source_ci_cd.sh` | 20 | Shell | `run_cd` |
-| `scripts/spiffe.sh` | 9 | Shell | `cleanup` |
-| `tools/codex_engine/analyzers.py` | 30 | Python | `run` |
-| `tools/codex_engine/analyzers.py` | 67 | Python | `run` |
-| `tools/codex_engine/analyzers.py` | 97 | Python | `run` |
-| `tools/codex_engine/analyzers.py` | 130 | Python | `run` |
-| `tools/codex_engine/analyzers.py` | 164 | Python | `run` |
-| `tools/codex_engine/analyzers.py` | 200 | Python | `__init__` |
-| `tools/codex_engine/analyzers.py` | 203 | Python | `run` |
-| `tools/codex_engine/cli.py` | 12 | Python | `main` |
-| `tools/codex_engine/models.py` | 47 | Python | `blocking_findings` |
-| `tools/codex_engine/pipeline.py` | 21 | Python | `__init__` |
-| `tools/codex_engine/pipeline.py` | 31 | Python | `_target_files` |
-| `tools/codex_engine/pipeline.py` | 48 | Python | `_ollama_review` |
-| `tools/codex_engine/pipeline.py` | 71 | Python | `run` |
-| `watchdog.sh` | 8 | Shell | `log` |
-| `zlinebot-master-orchestrator.sh` | 13 | Shell | `log` |
-| `zlinebot-master-orchestrator.sh` | 15 | Shell | `check_docker` |
-| `zlinebot-master-orchestrator.sh` | 29 | Shell | `setup_cloudflare_tunnel` |
-| `zlinebot-master-orchestrator.sh` | 46 | Shell | `validate_secrets` |
-| `zlinebot-master-orchestrator.sh` | 58 | Shell | `main` |
-| `zlinebot-master-selfheal.sh` | 16 | Shell | `log` |
-| `zlinebot-master-selfheal.sh` | 20 | Shell | `retry` |
-| `zlinebot-master-selfheal.sh` | 33 | Shell | `wait_k8s` |
-| `zlinebot-master-selfheal.sh` | 44 | Shell | `wait_pods` |
-| `zlinebot-master-selfheal.sh` | 62 | Shell | `wait_rollouts` |
-| `zlinebot-master-selfheal.sh` | 69 | Shell | `health_check` |
-| `zlinebot-master-selfheal.sh` | 83 | Shell | `rollback` |
-| `zlinebot-master-selfheal.sh` | 92 | Shell | `main` |
-| `zlinebot-master.sh` | 31 | Shell | `install_docker_engine` |
-| `zlinebot-master.sh` | 71 | Shell | `wait_for_k3s_api` |
+
+_Display capped at 300 of 566 detected functions/methods._
 
 ### Automation pipeline files
 
@@ -4304,7 +2295,7 @@ Status: **cloned**; commit `0c0c3ec4d7d5`.
 - `tools/codex_engine/pipeline.py`
 - `watchdog.sh`
 
-## `zlttbots`
+## `cvsz/zlttbots`
 
 Status: **cloned**; commit `139bde44dfa3`.
 
@@ -4794,1154 +2785,8 @@ Status: **cloned**; commit `139bde44dfa3`.
 | `services/account-farm/src/core/accounts.js` | 3 | JS/TS | `getAccount` |
 | `services/account-farm/src/core/jobs.js` | 3 | JS/TS | `nextJob` |
 | `services/account-farm/src/core/jobs.js` | 13 | JS/TS | `completeJob` |
-| `services/account-farm/src/core/proxy.js` | 3 | JS/TS | `getProxy` |
-| `services/account-farm/src/monitor/health.js` | 3 | JS/TS | `farmHealth` |
-| `services/account-farm/src/scheduler/scheduler.js` | 3 | JS/TS | `scheduler` |
-| `services/account-farm/src/scheduler/worker.js` | 7 | JS/TS | `worker` |
-| `services/account-farm/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/account-farm/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/account-farm/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/account-farm/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/affiliate-webhook/src/main.py` | 35 | Python | `verify` |
-| `services/affiliate-webhook/src/main.py` | 40 | Python | `db_connection` |
-| `services/affiliate-webhook/src/main.py` | 47 | Python | `healthz` |
-| `services/affiliate-webhook/src/main.py` | 66 | Python | `conversion` |
-| `services/affiliate-webhook/src/main.py` | 115 | Python | `get_server_config` |
-| `services/affiliate-webhook/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/affiliate-webhook/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/affiliate-webhook/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/affiliate-webhook/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/ai-fix/src/engine.py` | 5 | Python | `generate_patch` |
-| `services/ai-fix/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/ai-fix/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/ai-fix/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/ai-fix/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/ai-orchestrator/src/main.py` | 11 | Python | `health` |
-| `services/ai-orchestrator/src/main.py` | 15 | Python | `run_growth_cycle` |
-| `services/ai-orchestrator/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/ai-orchestrator/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/ai-orchestrator/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/ai-orchestrator/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/ai-video-generator/src/core/generator.js` | 5 | JS/TS | `generateVideo` |
-| `services/ai-video-generator/src/core/worker.js` | 4 | JS/TS | `worker` |
-| `services/ai-video-generator/src/index.js` | 3 | JS/TS | `main` |
-| `services/ai-video-generator/src/render/video.js` | 3 | JS/TS | `renderVideo` |
-| `services/ai-video-generator/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/ai-video-generator/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/ai-video-generator/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/ai-video-generator/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/ai-video-generator/src/subtitle/subtitle.js` | 7 | JS/TS | `safeSubtitlePath` |
-| `services/ai-video-generator/src/subtitle/subtitle.js` | 21 | JS/TS | `generateSubtitle` |
-| `services/ai-video-generator/src/tts/voice.js` | 10 | JS/TS | `validateFilename` |
-| `services/ai-video-generator/src/tts/voice.js` | 22 | JS/TS | `resolveOutputPath` |
-| `services/ai-video-generator/src/tts/voice.js` | 32 | JS/TS | `hasKnownAudioHeader` |
-| `services/ai-video-generator/src/tts/voice.js` | 43 | JS/TS | `toSafeAudioBuffer` |
-| `services/ai-video-generator/src/tts/voice.js` | 54 | JS/TS | `generateVoice` |
-| `services/analytics/ltv_model.py` | 7 | Python | `predict` |
-| `services/analytics/roi.py` | 9 | Python | `fetch_revenue` |
-| `services/analytics/roi.py` | 11 | Python | `fetch_cost` |
-| `services/analytics/roi.py` | 22 | Python | `profitable` |
-| `services/analytics/roi.py` | 29 | Python | `__init__` |
-| `services/analytics/roi.py` | 32 | Python | `evaluate` |
-| `services/analytics/src/metrics/campaign.js` | 3 | JS/TS | `campaignROI` |
-| `services/analytics/src/metrics/conversion.js` | 3 | JS/TS | `conversionRate` |
-| `services/analytics/src/metrics/products.js` | 3 | JS/TS | `productPerformance` |
-| `services/analytics/src/metrics/revenue.js` | 3 | JS/TS | `totalRevenue` |
-| `services/analytics/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/analytics/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/analytics/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/analytics/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/analytics/unit_economics.py` | 16 | Python | `profit` |
-| `services/analytics/unit_economics.py` | 20 | Python | `cpa` |
-| `services/analytics/unit_economics.py` | 26 | Python | `ltv` |
-| `services/analytics/unit_economics.py` | 32 | Python | `roas` |
-| `services/analytics/unit_economics.py` | 38 | Python | `profitable` |
-| `services/arbitrage-engine/src/api/server.py` | 91 | Python | `get_db` |
-| `services/arbitrage-engine/src/api/server.py` | 95 | Python | `_probe_database` |
-| `services/arbitrage-engine/src/api/server.py` | 106 | Python | `startup_probe` |
-| `services/arbitrage-engine/src/api/server.py` | 118 | Python | `lifespan` |
-| `services/arbitrage-engine/src/api/server.py` | 127 | Python | `health_live` |
-| `services/arbitrage-engine/src/api/server.py` | 132 | Python | `health_ready` |
-| `services/arbitrage-engine/src/api/server.py` | 141 | Python | `healthz` |
-| `services/arbitrage-engine/src/api/server.py` | 156 | Python | `metrics` |
-| `services/arbitrage-engine/src/api/server.py` | 161 | Python | `list_arbitrage_events` |
-| `services/arbitrage-engine/src/api/server.py` | 170 | Python | `scan_arbitrage` |
-| `services/arbitrage-engine/src/api/server.py` | 196 | Python | `ingest_payout` |
-| `services/arbitrage-engine/src/api/server.py` | 216 | Python | `sync_affiliate` |
-| `services/arbitrage-engine/src/api/server.py` | 238 | Python | `enqueue_publish_job` |
-| `services/arbitrage-engine/src/api/server.py` | 246 | Python | `run_daily` |
-| `services/arbitrage-engine/src/api/server.py` | 247 | Python | `publish_fn` |
-| `services/arbitrage-engine/src/api/server.py` | 255 | Python | `get_counter` |
-| `services/arbitrage-engine/src/api/server.py` | 261 | Python | `ingest_video` |
-| `services/arbitrage-engine/src/api/server.py` | 267 | Python | `ingest_performance` |
-| `services/arbitrage-engine/src/api/server.py` | 277 | Python | `posted_product_reporting` |
-| `services/arbitrage-engine/src/bakup/commission.py` | 1 | Python | `commission_rate` |
-| `services/arbitrage-engine/src/connectors/client.py` | 8 | Python | `__init__` |
-| `services/arbitrage-engine/src/connectors/client.py` | 11 | Python | `fetch_network_snapshot` |
-| `services/arbitrage-engine/src/connectors/contracts.py` | 29 | Python | `normalize_currency` |
-| `services/arbitrage-engine/src/connectors/providers.py` | 21 | Python | `fetch_snapshot` |
-| `services/arbitrage-engine/src/connectors/providers.py` | 26 | Python | `__init__` |
-| `services/arbitrage-engine/src/connectors/providers.py` | 30 | Python | `_request` |
-| `services/arbitrage-engine/src/connectors/providers.py` | 42 | Python | `fetch_snapshot` |
-| `services/arbitrage-engine/src/connectors/providers.py` | 71 | Python | `default_connectors` |
-| `services/arbitrage-engine/src/core/database.py` | 32 | Python | `__init__` |
-| `services/arbitrage-engine/src/core/database.py` | 44 | Python | `seed_products` |
-| `services/arbitrage-engine/src/core/database.py` | 53 | Python | `get_db` |
-| `services/arbitrage-engine/src/core/database.py` | 57 | Python | `fetch_products` |
-| `services/arbitrage-engine/src/core/database.py` | 82 | Python | `insert_event` |
-| `services/arbitrage-engine/src/core/database.py` | 106 | Python | `list_events` |
-| `services/arbitrage-engine/src/core/database.py` | 137 | Python | `upsert_product_payout` |
-| `services/arbitrage-engine/src/core/database.py` | 157 | Python | `get_product_payout` |
-| `services/arbitrage-engine/src/core/database.py` | 176 | Python | `enqueue_publish_job` |
-| `services/arbitrage-engine/src/core/database.py` | 180 | Python | `dequeue_publish_jobs` |
-| `services/arbitrage-engine/src/core/database.py` | 187 | Python | `increase_daily_counter` |
-| `services/arbitrage-engine/src/core/database.py` | 193 | Python | `get_daily_counter` |
-| `services/arbitrage-engine/src/core/database.py` | 197 | Python | `put_dead_letter` |
-| `services/arbitrage-engine/src/core/database.py` | 201 | Python | `record_publish_result` |
-| `services/arbitrage-engine/src/core/database.py` | 205 | Python | `record_video` |
-| `services/arbitrage-engine/src/core/database.py` | 209 | Python | `record_performance` |
-| `services/arbitrage-engine/src/core/database.py` | 213 | Python | `get_posted_product_reporting` |
-| `services/arbitrage-engine/src/core/database.py` | 241 | Python | `utc_now` |
-| `services/arbitrage-engine/src/engine/arbitrage.py` | 3 | Python | `detect` |
-| `services/arbitrage-engine/src/main.py` | 4 | Python | `_safe_port` |
-| `services/arbitrage-engine/src/main.py` | 19 | Python | `get_server_config` |
-| `services/arbitrage-engine/src/publishing/controller.py` | 24 | Python | `__init__` |
-| `services/arbitrage-engine/src/publishing/controller.py` | 28 | Python | `run_for_tenant` |
-| `services/arbitrage-engine/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/arbitrage-engine/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/arbitrage-engine/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/arbitrage-engine/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/arbitrage-engine/src/workers/worker.py` | 7 | Python | `worker` |
-| `services/auto-ml/loop.py` | 19 | Python | `_log` |
-| `services/auto-ml/loop.py` | 24 | Python | `_run_command` |
-| `services/auto-ml/loop.py` | 48 | Python | `train` |
-| `services/auto-ml/loop.py` | 54 | Python | `evaluate` |
-| `services/auto-ml/loop.py` | 66 | Python | `load_metric` |
-| `services/auto-ml/loop.py` | 74 | Python | `save_metric` |
-| `services/auto-ml/loop.py` | 80 | Python | `deploy` |
-| `services/auto-ml/loop.py` | 86 | Python | `loop` |
-| `services/billing-service/src/main.py` | 19 | Python | `healthz` |
-| `services/billing-service/src/main.py` | 24 | Python | `charge` |
-| `services/billing-service/src/main.py` | 36 | Python | `get_server_config` |
-| `services/billing-service/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/billing-service/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/billing-service/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/billing-service/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/blockchain/bridge_secure.py` | 6 | Python | `verify_tx` |
-| `services/budget-allocator/src/bandit.py` | 7 | Python | `__init__` |
-| `services/budget-allocator/src/bandit.py` | 11 | Python | `select` |
-| `services/budget-allocator/src/bandit.py` | 19 | Python | `update` |
-| `services/budget-allocator/src/global_allocator.py` | 5 | Python | `__init__` |
-| `services/budget-allocator/src/global_allocator.py` | 9 | Python | `allocate` |
-| `services/budget-allocator/src/global_allocator.py` | 16 | Python | `update` |
-| `services/budget-allocator/src/main.py` | 45 | Python | `healthz` |
-| `services/budget-allocator/src/main.py` | 50 | Python | `allocate` |
-| `services/budget-allocator/src/main.py` | 76 | Python | `get_server_config` |
-| `services/budget-allocator/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/budget-allocator/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/budget-allocator/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/budget-allocator/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/campaign-optimizer/src/main.py` | 10 | Python | `_required_env` |
-| `services/campaign-optimizer/src/main.py` | 17 | Python | `db` |
-| `services/campaign-optimizer/src/main.py` | 40 | Python | `optimize` |
-| `services/campaign-optimizer/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/campaign-optimizer/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/campaign-optimizer/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/campaign-optimizer/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/capital-allocator/src/capital_engine.py` | 7 | Python | `__init__` |
-| `services/capital-allocator/src/capital_engine.py` | 10 | Python | `reinvest` |
-| `services/capital-allocator/src/capital_engine.py` | 16 | Python | `allocate` |
-| `services/capital-allocator/src/main.py` | 43 | Python | `healthz` |
-| `services/capital-allocator/src/main.py` | 53 | Python | `allocate` |
-| `services/capital-allocator/src/main.py` | 75 | Python | `get_server_config` |
-| `services/capital-allocator/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/capital-allocator/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/capital-allocator/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/capital-allocator/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/click-tracker/src/core/tracker.js` | 5 | JS/TS | `normalizeRedirectTarget` |
-| `services/click-tracker/src/core/tracker.js` | 16 | JS/TS | `trackClick` |
-| `services/click-tracker/src/core/tracker.js` | 33 | JS/TS | `resolveProductRedirect` |
-| `services/click-tracker/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/click-tracker/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/click-tracker/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/click-tracker/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/click-tracker/src/server/server.js` | 9 | JS/TS | `isAllowedRedirect` |
-| `services/click-tracker/src/server/server.js` | 25 | JS/TS | `sendJson` |
-| `services/click-tracker/src/utils/fingerprint.js` | 1 | JS/TS | `fingerprint` |
-| `services/core/profit_loop.py` | 13 | Python | `create_campaign` |
-| `services/core/profit_loop.py` | 15 | Python | `pause_campaign` |
-| `services/core/profit_loop.py` | 17 | Python | `scale_campaign` |
-| `services/core/profit_loop.py` | 28 | Python | `snapshot` |
-| `services/core/profit_loop.py` | 32 | Python | `__init__` |
-| `services/core/profit_loop.py` | 44 | Python | `launch` |
-| `services/core/profit_loop.py` | 49 | Python | `run_once` |
-| `services/cost/control.py` | 10 | Python | `allow` |
-| `services/cost/control.py` | 19 | Python | `reset` |
-| `services/cost/controls.py` | 14 | Python | `enable_kill_switch` |
-| `services/cost/controls.py` | 17 | Python | `disable_kill_switch` |
-| `services/cost/controls.py` | 20 | Python | `allow_spend` |
-| `services/cost/controls.py` | 32 | Python | `should_stop_for_roi` |
-| `services/cost/controls.py` | 35 | Python | `is_cost_spike` |
-| `services/cost/guard.py` | 12 | Python | `allow` |
-| `services/cost/guard.py` | 20 | Python | `reset` |
-| `services/cost/guard.py` | 24 | Python | `from_env` |
-| `services/creative-generator/src/ab_test.py` | 7 | Python | `__init__` |
-| `services/creative-generator/src/ab_test.py` | 10 | Python | `update` |
-| `services/creative-generator/src/ab_test.py` | 17 | Python | `select` |
-| `services/creative-generator/src/llm.py` | 10 | Python | `generate_ad` |
-| `services/creative-generator/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/creative-generator/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/creative-generator/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/creative-generator/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/data/pipeline.py` | 23 | Python | `validate` |
-| `services/data/pipeline.py` | 28 | Python | `label` |
-| `services/data/pipeline.py` | 34 | Python | `run` |
-| `services/drift-detector/src/main.py` | 12 | Python | `loop` |
-| `services/drift-detector/src/psi.py` | 6 | Python | `psi` |
-| `services/drift-detector/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/drift-detector/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/drift-detector/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/drift-detector/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/edge-worker/index.js` | 2 | JS/TS | `fetch` |
-| `services/exchange/src/main.py` | 40 | Python | `place` |
-| `services/exchange/src/orderbook.py` | 16 | Python | `__post_init__` |
-| `services/exchange/src/orderbook.py` | 25 | Python | `__init__` |
-| `services/exchange/src/orderbook.py` | 29 | Python | `add` |
-| `services/exchange/src/orderbook.py` | 35 | Python | `match` |
-| `services/exchange/src/security.py` | 16 | Python | `verify_signature` |
-| `services/exchange/src/security.py` | 24 | Python | `check_replay` |
-| `services/exchange/src/security.py` | 31 | Python | `rate_limit` |
-| `services/exchange/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/exchange/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/exchange/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/exchange/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/execution-engine/src/main.py` | 39 | Python | `http_post` |
-| `services/execution-engine/src/main.py` | 59 | Python | `acquire_token` |
-| `services/execution-engine/src/main.py` | 76 | Python | `_sanitize_log_value` |
-| `services/execution-engine/src/main.py` | 81 | Python | `healthz` |
-| `services/execution-engine/src/main.py` | 95 | Python | `publish` |
-| `services/execution-engine/src/main.py` | 116 | Python | `status` |
-| `services/execution-engine/src/main.py` | 120 | Python | `get_server_config` |
-| `services/execution-engine/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/execution-engine/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/execution-engine/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/execution-engine/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/feature-store/src/main.py` | 14 | Python | `__init__` |
-| `services/feature-store/src/main.py` | 17 | Python | `hgetall` |
-| `services/feature-store/src/main.py` | 20 | Python | `hset` |
-| `services/feature-store/src/main.py` | 23 | Python | `ping` |
-| `services/feature-store/src/main.py` | 53 | Python | `validate_daily_cap` |
-| `services/feature-store/src/main.py` | 72 | Python | `_load_features` |
-| `services/feature-store/src/main.py` | 90 | Python | `_save_features` |
-| `services/feature-store/src/main.py` | 110 | Python | `healthz` |
-| `services/feature-store/src/main.py` | 120 | Python | `get_features` |
-| `services/feature-store/src/main.py` | 127 | Python | `update_features` |
-| `services/feature-store/src/main.py` | 163 | Python | `replace_all_features` |
-| `services/feature-store/src/main.py` | 172 | Python | `replace_all_campaign_features` |
-| `services/feature-store/src/main.py` | 183 | Python | `get_server_config` |
-| `services/feature-store/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/feature-store/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/feature-store/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/feature-store/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/federation/src/main.py` | 22 | Python | `_safe_int_env` |
-| `services/federation/src/main.py` | 43 | Python | `_safe_float_env` |
-| `services/federation/src/main.py` | 87 | Python | `encode_signed_claims` |
-| `services/federation/src/main.py` | 93 | Python | `db_connection` |
-| `services/federation/src/main.py` | 97 | Python | `ensure_schema` |
-| `services/federation/src/main.py` | 119 | Python | `startup` |
-| `services/federation/src/main.py` | 153 | Python | `healthz` |
-| `services/federation/src/main.py` | 168 | Python | `list_nodes` |
-| `services/federation/src/main.py` | 198 | Python | `register` |
-| `services/federation/src/main.py` | 276 | Python | `get_server_config` |
-| `services/federation/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/federation/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/federation/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/federation/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/gpu-renderer/src/api/server.py` | 21 | Python | `healthz` |
-| `services/gpu-renderer/src/api/server.py` | 40 | Python | `metrics` |
-| `services/gpu-renderer/src/api/server.py` | 45 | Python | `render_video` |
-| `services/gpu-renderer/src/core/queue.py` | 7 | Python | `enqueue` |
-| `services/gpu-renderer/src/core/queue.py` | 10 | Python | `dequeue` |
-| `services/gpu-renderer/src/core/render.py` | 6 | Python | `_should_use_cuda` |
-| `services/gpu-renderer/src/core/render.py` | 20 | Python | `build_ffmpeg_command` |
-| `services/gpu-renderer/src/core/render.py` | 55 | Python | `render` |
-| `services/gpu-renderer/src/main.py` | 4 | Python | `get_server_config` |
-| `services/gpu-renderer/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/gpu-renderer/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/gpu-renderer/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/gpu-renderer/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/gpu-renderer/src/worker/worker.py` | 5 | Python | `worker` |
-| `services/gpu/adapter.py` | 12 | Python | `create_pod` |
-| `services/identity/did.py` | 16 | Python | `_b64` |
-| `services/identity/did.py` | 20 | Python | `_b64decode` |
-| `services/identity/did.py` | 25 | Python | `load_or_create_key` |
-| `services/identity/did.py` | 41 | Python | `get_did` |
-| `services/identity/did.py` | 49 | Python | `export_public_key` |
-| `services/identity/did.py` | 57 | Python | `sign` |
-| `services/identity/did.py` | 63 | Python | `verify` |
-| `services/identity/keystore.py` | 15 | Python | `__init__` |
-| `services/identity/keystore.py` | 20 | Python | `_load_or_create` |
-| `services/identity/keystore.py` | 43 | Python | `get` |
-| `services/jwt-auth/src/main.py` | 27 | Python | `_b64encode` |
-| `services/jwt-auth/src/main.py` | 31 | Python | `_b64decode` |
-| `services/jwt-auth/src/main.py` | 36 | Python | `encode` |
-| `services/jwt-auth/src/main.py` | 47 | Python | `decode` |
-| `services/jwt-auth/src/main.py` | 106 | Python | `_parse_positive_int_env` |
-| `services/jwt-auth/src/main.py` | 130 | Python | `healthz` |
-| `services/jwt-auth/src/main.py` | 135 | Python | `jwks` |
-| `services/jwt-auth/src/main.py` | 149 | Python | `issue_token` |
-| `services/jwt-auth/src/main.py` | 176 | Python | `verify_bearer_token` |
-| `services/jwt-auth/src/main.py` | 201 | Python | `introspect` |
-| `services/jwt-auth/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/jwt-auth/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/jwt-auth/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/jwt-auth/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/landing-service/src/main.py` | 10 | Python | `healthz` |
-| `services/landing-service/src/main.py` | 15 | Python | `landing` |
-| `services/landing-service/src/main.py` | 23 | Python | `get_server_config` |
-| `services/landing-service/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/landing-service/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/landing-service/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/landing-service/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/market-crawler/src/api/server.py` | 20 | Python | `healthz` |
-| `services/market-crawler/src/api/server.py` | 39 | Python | `metrics` |
-| `services/market-crawler/src/api/server.py` | 44 | Python | `crawl` |
-| `services/market-crawler/src/core/database.py` | 6 | Python | `get_db` |
-| `services/market-crawler/src/core/database.py` | 10 | Python | `insert_product` |
-| `services/market-crawler/src/core/queue.py` | 9 | Python | `enqueue` |
-| `services/market-crawler/src/core/queue.py` | 12 | Python | `dequeue` |
-| `services/market-crawler/src/main.py` | 4 | Python | `get_server_config` |
-| `services/market-crawler/src/parsers/amazon.py` | 4 | Python | `crawl_amazon` |
-| `services/market-crawler/src/parsers/lazada.py` | 4 | Python | `crawl_lazada` |
-| `services/market-crawler/src/parsers/shopee.py` | 3 | Python | `crawl_shopee` |
-| `services/market-crawler/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/market-crawler/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/market-crawler/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/market-crawler/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/market-crawler/src/workers/worker.py` | 10 | Python | `process` |
-| `services/market-crawler/src/workers/worker.py` | 23 | Python | `worker` |
-| `services/market-creator/engine.py` | 13 | Python | `discover` |
-| `services/market-creator/engine.py` | 21 | Python | `validate` |
-| `services/market-creator/engine.py` | 26 | Python | `launch` |
-| `services/market-creator/engine.py` | 36 | Python | `loop` |
-| `services/market-orchestrator/src/main.py` | 20 | Python | `healthz` |
-| `services/market-orchestrator/src/main.py` | 25 | Python | `launch` |
-| `services/market-orchestrator/src/main.py` | 47 | Python | `get_server_config` |
-| `services/market-orchestrator/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/market-orchestrator/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/market-orchestrator/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/market-orchestrator/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/master-orchestrator/src/deployment_controller.py` | 18 | Python | `_sanitize_log_value` |
-| `services/master-orchestrator/src/deployment_controller.py` | 84 | Python | `_now_iso` |
-| `services/master-orchestrator/src/deployment_controller.py` | 87 | Python | `create` |
-| `services/master-orchestrator/src/deployment_controller.py` | 121 | Python | `apply_event` |
-| `services/master-orchestrator/src/deployment_controller.py` | 149 | Python | `get` |
-| `services/master-orchestrator/src/deployment_controller.py` | 155 | Python | `_log` |
-| `services/master-orchestrator/src/distributed_loop.py` | 14 | Python | `_assert_internal_url` |
-| `services/master-orchestrator/src/distributed_loop.py` | 25 | Python | `safe_call` |
-| `services/master-orchestrator/src/distributed_loop.py` | 41 | Python | `run_cycle` |
-| `services/master-orchestrator/src/economy_loop.py` | 13 | Python | `safe_call` |
-| `services/master-orchestrator/src/economy_loop.py` | 25 | Python | `run_economy` |
-| `services/master-orchestrator/src/execution.py` | 4 | Python | `execute_campaign` |
-| `services/master-orchestrator/src/federated_loop.py` | 23 | Python | `_assert_internal_url` |
-| `services/master-orchestrator/src/federated_loop.py` | 34 | Python | `safe_call` |
-| `services/master-orchestrator/src/federated_loop.py` | 50 | Python | `build_task_token` |
-| `services/master-orchestrator/src/federated_loop.py` | 60 | Python | `run_global_task` |
-| `services/master-orchestrator/src/kafka_producer.py` | 14 | Python | `emit_decision` |
-| `services/master-orchestrator/src/main.py` | 23 | Python | `_load_emit_decision` |
-| `services/master-orchestrator/src/main.py` | 103 | Python | `_validate_base_url` |
-| `services/master-orchestrator/src/main.py` | 121 | Python | `safe_call` |
-| `services/master-orchestrator/src/main.py` | 179 | Python | `healthz` |
-| `services/master-orchestrator/src/main.py` | 184 | Python | `create_deployment` |
-| `services/master-orchestrator/src/main.py` | 200 | Python | `get_deployment` |
-| `services/master-orchestrator/src/main.py` | 209 | Python | `handle_deployment_event` |
-| `services/master-orchestrator/src/main.py` | 234 | Python | `run_cycle_endpoint` |
-| `services/master-orchestrator/src/main.py` | 239 | Python | `run_economy_endpoint` |
-| `services/master-orchestrator/src/main.py` | 244 | Python | `run_federated_task_endpoint` |
-| `services/master-orchestrator/src/main.py` | 248 | Python | `build_tracked_destination` |
-| `services/master-orchestrator/src/main.py` | 254 | Python | `create_checkout` |
-| `services/master-orchestrator/src/main.py` | 274 | Python | `run_campaign` |
-| `services/master-orchestrator/src/main.py` | 315 | Python | `activate_profit_mode` |
-| `services/master-orchestrator/src/main.py` | 378 | Python | `get_server_config` |
-| `services/master-orchestrator/src/rl_loop.py` | 4 | Python | `decide_and_scale` |
-| `services/master-orchestrator/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/master-orchestrator/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/master-orchestrator/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/master-orchestrator/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/model-registry/src/main.py` | 19 | Python | `_ensure_writable_directory` |
-| `services/model-registry/src/main.py` | 35 | Python | `_allowed_source_roots` |
-| `services/model-registry/src/main.py` | 42 | Python | `_safe_model_component` |
-| `services/model-registry/src/main.py` | 49 | Python | `_resolve_source_file` |
-| `services/model-registry/src/main.py` | 73 | Python | `_resolve_destination` |
-| `services/model-registry/src/main.py` | 81 | Python | `_is_within_roots` |
-| `services/model-registry/src/main.py` | 103 | Python | `_atomic_copy` |
-| `services/model-registry/src/main.py` | 129 | Python | `healthz` |
-| `services/model-registry/src/main.py` | 138 | Python | `register` |
-| `services/model-registry/src/main.py` | 154 | Python | `latest` |
-| `services/model-registry/src/main.py` | 159 | Python | `get_server_config` |
-| `services/model-registry/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/model-registry/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/model-registry/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/model-registry/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/model-service/src/async_queue.py` | 23 | Python | `from_env` |
-| `services/model-service/src/async_queue.py` | 32 | Python | `enqueue` |
-| `services/model-service/src/main.py` | 24 | Python | `_load_local_metrics_module` |
-| `services/model-service/src/main.py` | 67 | Python | `lifespan` |
-| `services/model-service/src/main.py` | 75 | Python | `featurize` |
-| `services/model-service/src/main.py` | 81 | Python | `fallback_predict` |
-| `services/model-service/src/main.py` | 87 | Python | `predict` |
-| `services/model-service/src/main.py` | 97 | Python | `predict_from_payload` |
-| `services/model-service/src/main.py` | 107 | Python | `healthz` |
-| `services/model-service/src/main.py` | 118 | Python | `metrics` |
-| `services/model-service/src/main.py` | 123 | Python | `predict_api` |
-| `services/model-service/src/main.py` | 128 | Python | `predict_async` |
-| `services/model-service/src/main.py` | 154 | Python | `fetch_result` |
-| `services/model-service/src/main.py` | 162 | Python | `wait_result` |
-| `services/model-service/src/main.py` | 174 | Python | `ws_result` |
-| `services/model-service/src/main.py` | 188 | Python | `get_server_config` |
-| `services/model-service/src/metrics.py` | 27 | Python | `inc` |
-| `services/model-service/src/metrics.py` | 30 | Python | `observe` |
-| `services/model-service/src/metrics.py` | 33 | Python | `labels` |
-| `services/model-service/src/onnx_model.py` | 12 | Python | `__init__` |
-| `services/model-service/src/onnx_model.py` | 22 | Python | `_load` |
-| `services/model-service/src/onnx_model.py` | 48 | Python | `warm_up` |
-| `services/model-service/src/onnx_model.py` | 55 | Python | `input_width` |
-| `services/model-service/src/onnx_model.py` | 64 | Python | `predict` |
-| `services/model-service/src/queue_runtime.py` | 15 | Python | `_load_local_metrics_module` |
-| `services/model-service/src/queue_runtime.py` | 42 | Python | `_consumer` |
-| `services/model-service/src/queue_runtime.py` | 56 | Python | `_decode_message` |
-| `services/model-service/src/queue_runtime.py` | 63 | Python | `_publish` |
-| `services/model-service/src/queue_runtime.py` | 68 | Python | `_request_loop` |
-| `services/model-service/src/queue_runtime.py` | 103 | Python | `_response_loop` |
-| `services/model-service/src/queue_runtime.py` | 127 | Python | `start_background_consumers` |
-| `services/model-service/src/ray_serve.py` | 18 | Python | `__init__` |
-| `services/model-service/src/ray_serve.py` | 21 | Python | `__call__` |
-| `services/model-service/src/result_store.py` | 17 | Python | `_sanitize_log_value` |
-| `services/model-service/src/result_store.py` | 22 | Python | `__init__` |
-| `services/model-service/src/result_store.py` | 25 | Python | `_build_client` |
-| `services/model-service/src/result_store.py` | 31 | Python | `_key` |
-| `services/model-service/src/result_store.py` | 34 | Python | `set_result` |
-| `services/model-service/src/result_store.py` | 52 | Python | `get_result` |
-| `services/model-service/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/model-service/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/model-service/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/model-service/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/model-sync/src/main.py` | 16 | Python | `sync` |
-| `services/model-sync/src/monitor.py` | 9 | Python | `loop` |
-| `services/model-sync/src/rollback.py` | 11 | Python | `backup` |
-| `services/model-sync/src/rollback.py` | 21 | Python | `rollback` |
-| `services/model-sync/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/model-sync/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/model-sync/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/model-sync/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/model-sync/src/sync.py` | 15 | Python | `upload` |
-| `services/model-sync/src/sync.py` | 19 | Python | `download` |
-| `services/model-sync/src/sync.py` | 23 | Python | `loop` |
-| `services/network-egress/src/client.py` | 17 | Python | `__init__` |
-| `services/network-egress/src/client.py` | 38 | Python | `_is_blocked_address` |
-| `services/network-egress/src/client.py` | 48 | Python | `_validate_url` |
-| `services/network-egress/src/client.py` | 69 | Python | `post` |
-| `services/network-egress/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/network-egress/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/network-egress/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/network-egress/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/omniscient/engine.py` | 29 | Python | `analyze` |
-| `services/omniscient/engine.py` | 51 | Python | `reason` |
-| `services/omniscient/engine.py` | 64 | Python | `fix` |
-| `services/omniscient/engine.py` | 71 | Python | `verify` |
-| `services/omniscient/engine.py` | 75 | Python | `defend` |
-| `services/omniscient/engine.py` | 79 | Python | `run` |
-| `services/omniscient/engine.py` | 104 | Python | `_log_event` |
-| `services/omniscient/security_ops.py` | 20 | Python | `simulate_attack` |
-| `services/omniscient/security_ops.py` | 38 | Python | `deploy_defense` |
-| `services/omniscient/security_ops.py` | 45 | Python | `learn` |
-| `services/omniscient/security_ops.py` | 52 | Python | `risk_score` |
-| `services/org/legal_gate.py` | 5 | Python | `check` |
-| `services/org/treasury.py` | 9 | Python | `__init__` |
-| `services/org/treasury.py` | 12 | Python | `can_spend` |
-| `services/org/treasury.py` | 15 | Python | `spend` |
-| `services/p2p-node/src/node.js` | 9 | JS/TS | `startNode` |
-| `services/p2p-node/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/p2p-node/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/p2p-node/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/p2p-node/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/p2p/libp2p_bridge.py` | 10 | Python | `start` |
-| `services/payment/adapter.py` | 17 | Python | `send` |
-| `services/payment/audit.py` | 13 | Python | `log` |
-| `services/payment/circuit.py` | 13 | Python | `allow` |
-| `services/payment/circuit.py` | 24 | Python | `success` |
-| `services/payment/circuit.py` | 31 | Python | `fail` |
-| `services/payment/main.py` | 30 | Python | `healthz` |
-| `services/payment/main.py` | 35 | Python | `checkout` |
-| `services/payment/main.py` | 57 | Python | `get_server_config` |
-| `services/payment/stripe_adapter.py` | 11 | Python | `charge` |
-| `services/payment/webhook.py` | 17 | Python | `execute` |
-| `services/payment/webhook.py` | 21 | Python | `_verify_event` |
-| `services/payment/webhook.py` | 41 | Python | `_persist_order` |
-| `services/payment/webhook.py` | 59 | Python | `_default_db` |
-| `services/payment/webhook.py` | 70 | Python | `execute` |
-| `services/payment/webhook.py` | 80 | Python | `stripe_webhook` |
-| `services/pr-bot/src/autofix.py` | 15 | Python | `redact_patch_secrets` |
-| `services/pr-bot/src/autofix.py` | 19 | Python | `create_auto_fix_pr` |
-| `services/pr-bot/src/bot.py` | 10 | Python | `_require_env` |
-| `services/pr-bot/src/bot.py` | 17 | Python | `create_pr` |
-| `services/pr-bot/src/config.py` | 12 | Python | `_require_env` |
-| `services/pr-bot/src/config.py` | 26 | Python | `from_env` |
-| `services/pr-bot/src/github_app.py` | 24 | Python | `__init__` |
-| `services/pr-bot/src/github_app.py` | 28 | Python | `generate_jwt` |
-| `services/pr-bot/src/github_app.py` | 33 | Python | `get_installation_token` |
-| `services/pr-bot/src/memory.py` | 21 | Python | `__init__` |
-| `services/pr-bot/src/memory.py` | 25 | Python | `_validate_embedding` |
-| `services/pr-bot/src/memory.py` | 31 | Python | `insert_memory` |
-| `services/pr-bot/src/memory.py` | 54 | Python | `search_similar` |
-| `services/pr-bot/src/opa.py` | 6 | Python | `evaluate_gate` |
-| `services/pr-bot/src/rl.py` | 18 | Python | `__init__` |
-| `services/pr-bot/src/rl.py` | 25 | Python | `select_agents` |
-| `services/pr-bot/src/rl.py` | 31 | Python | `update` |
-| `services/pr-bot/src/rl.py` | 38 | Python | `snapshot` |
-| `services/pr-bot/src/security.py` | 7 | Python | `verify_webhook_signature` |
-| `services/pr-bot/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/pr-bot/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/pr-bot/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/pr-bot/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/pr-bot/src/server.py` | 21 | Python | `health` |
-| `services/pr-bot/src/server.py` | 26 | Python | `webhook` |
-| `services/pr-bot/src/server.py` | 70 | Python | `get_server_config` |
-| `services/product-discovery/src/main.py` | 32 | Python | `format` |
-| `services/product-discovery/src/main.py` | 59 | Python | `_is_blocked_ip` |
-| `services/product-discovery/src/main.py` | 70 | Python | `_validate_market_crawler_url` |
-| `services/product-discovery/src/main.py` | 98 | Python | `fetch_products` |
-| `services/product-discovery/src/main.py` | 120 | Python | `request_logging_middleware` |
-| `services/product-discovery/src/main.py` | 151 | Python | `http_exception_handler` |
-| `services/product-discovery/src/main.py` | 156 | Python | `unhandled_exception_handler` |
-| `services/product-discovery/src/main.py` | 162 | Python | `healthz` |
-| `services/product-discovery/src/main.py` | 182 | Python | `discover` |
-| `services/product-discovery/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/product-discovery/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/product-discovery/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/product-discovery/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/product-generator/src/main.py` | 20 | Python | `healthz` |
-| `services/product-generator/src/main.py` | 25 | Python | `generate` |
-| `services/product-generator/src/main.py` | 42 | Python | `get_server_config` |
-| `services/product-generator/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/product-generator/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/product-generator/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/product-generator/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/retraining-loop/src/main.py` | 17 | Python | `trigger_once` |
-| `services/retraining-loop/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/retraining-loop/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/retraining-loop/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/retraining-loop/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/reward-collector/src/kafka_producer.py` | 14 | Python | `emit_feedback` |
-| `services/reward-collector/src/main.py` | 28 | Python | `safe_call` |
-| `services/reward-collector/src/main.py` | 41 | Python | `healthz` |
-| `services/reward-collector/src/main.py` | 46 | Python | `reward` |
-| `services/reward-collector/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/reward-collector/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/reward-collector/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/reward-collector/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/reward-collector/src/server.py` | 4 | Python | `get_server_config` |
-| `services/reward-collector/src/server.py` | 12 | Python | `run` |
-| `services/rl-coordinator/src/main.py` | 35 | Python | `call_agent` |
-| `services/rl-coordinator/src/main.py` | 49 | Python | `healthz` |
-| `services/rl-coordinator/src/main.py` | 71 | Python | `decide` |
-| `services/rl-coordinator/src/main.py` | 96 | Python | `update` |
-| `services/rl-coordinator/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/rl-coordinator/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/rl-coordinator/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/rl-coordinator/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/rl-coordinator/src/server.py` | 4 | Python | `get_agents` |
-| `services/rl-coordinator/src/server.py` | 12 | Python | `run` |
-| `services/rl-engine/src/linucb.py` | 7 | Python | `__init__` |
-| `services/rl-engine/src/linucb.py` | 21 | Python | `add_arm` |
-| `services/rl-engine/src/linucb.py` | 28 | Python | `select` |
-| `services/rl-engine/src/linucb.py` | 45 | Python | `update` |
-| `services/rl-engine/src/main.py` | 53 | Python | `to_vector` |
-| `services/rl-engine/src/main.py` | 59 | Python | `load_agent` |
-| `services/rl-engine/src/main.py` | 72 | Python | `persist_agent` |
-| `services/rl-engine/src/main.py` | 81 | Python | `load_policy_model` |
-| `services/rl-engine/src/main.py` | 93 | Python | `score_with_policy` |
-| `services/rl-engine/src/main.py` | 107 | Python | `healthz` |
-| `services/rl-engine/src/main.py` | 123 | Python | `select` |
-| `services/rl-engine/src/main.py` | 154 | Python | `update` |
-| `services/rl-engine/src/policy_model.py` | 10 | Python | `__init__` |
-| `services/rl-engine/src/policy_model.py` | 16 | Python | `forward` |
-| `services/rl-engine/src/policy_model.py` | 25 | Python | `load_state_dict` |
-| `services/rl-engine/src/policy_model.py` | 32 | Python | `load` |
-| `services/rl-engine/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/rl-engine/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/rl-engine/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/rl-engine/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/rl-engine/src/server.py` | 4 | Python | `run` |
-| `services/rl-engine/src/store.py` | 15 | Python | `db_connection` |
-| `services/rl-engine/src/store.py` | 24 | Python | `save_state` |
-| `services/rl-engine/src/store.py` | 28 | Python | `load_state` |
-| `services/rl-engine/src/store.py` | 33 | Python | `log_decision` |
-| `services/rl-policy/src/export_onnx.py` | 16 | Python | `export_policy_to_onnx` |
-| `services/rl-policy/src/main.py` | 26 | Python | `healthz` |
-| `services/rl-policy/src/main.py` | 31 | Python | `train` |
-| `services/rl-policy/src/model.py` | 10 | Python | `__init__` |
-| `services/rl-policy/src/model.py` | 16 | Python | `forward` |
-| `services/rl-policy/src/model.py` | 25 | Python | `train_step` |
-| `services/rl-policy/src/model.py` | 31 | Python | `save` |
-| `services/rl-policy/src/model.py` | 42 | Python | `load` |
-| `services/rl-policy/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/rl-policy/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/rl-policy/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/rl-policy/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/rl-policy/src/train.py` | 13 | Python | `train_episode` |
-| `services/rl-trainer/src/agent_replicator.py` | 28 | Python | `__init__` |
-| `services/rl-trainer/src/agent_replicator.py` | 38 | Python | `deploy` |
-| `services/rl-trainer/src/agent_replicator.py` | 48 | Python | `replicate` |
-| `services/rl-trainer/src/agent_replicator.py` | 60 | Python | `parse_targets` |
-| `services/rl-trainer/src/agent_replicator.py` | 78 | Python | `build_remote_command` |
-| `services/rl-trainer/src/agent_replicator.py` | 90 | Python | `build_ssh_command` |
-| `services/rl-trainer/src/agent_replicator.py` | 107 | Python | `_validate_target_inputs` |
-| `services/rl-trainer/src/agent_replicator.py` | 115 | Python | `_validate_runtime` |
-| `services/rl-trainer/src/agent_replicator.py` | 120 | Python | `_validate_image` |
-| `services/rl-trainer/src/agent_replicator.py` | 132 | Python | `_execute_ssh_command` |
-| `services/rl-trainer/src/autonomy/ai_sre.py` | 24 | Python | `detect` |
-| `services/rl-trainer/src/autonomy/ai_sre.py` | 34 | Python | `evaluate` |
-| `services/rl-trainer/src/autonomy/infra_tuner_pipeline.py` | 42 | Python | `parse_args` |
-| `services/rl-trainer/src/autonomy/infra_tuner_pipeline.py` | 50 | Python | `load_states` |
-| `services/rl-trainer/src/autonomy/infra_tuner_pipeline.py` | 78 | Python | `to_matrix` |
-| `services/rl-trainer/src/autonomy/infra_tuner_pipeline.py` | 95 | Python | `choose_action` |
-| `services/rl-trainer/src/autonomy/infra_tuner_pipeline.py` | 109 | Python | `build_policy` |
-| `services/rl-trainer/src/autonomy/infra_tuner_pipeline.py` | 144 | Python | `main` |
-| `services/rl-trainer/src/autonomy/p2p.py` | 13 | Python | `default_envelope` |
-| `services/rl-trainer/src/autonomy/redteam.py` | 20 | Python | `allow` |
-| `services/rl-trainer/src/autonomy/redteam.py` | 24 | Python | `sample_payload` |
-| `services/rl-trainer/src/autonomy/redteam.py` | 38 | Python | `plan` |
-| `services/rl-trainer/src/autonomy/simulation.py` | 14 | Python | `policy` |
-| `services/rl-trainer/src/autonomy/simulation.py` | 22 | Python | `__init__` |
-| `services/rl-trainer/src/autonomy/simulation.py` | 25 | Python | `step` |
-| `services/rl-trainer/src/autonomy/simulation.py` | 29 | Python | `metrics` |
-| `services/rl-trainer/src/causal_rl.py` | 4 | Python | `doubly_robust` |
-| `services/rl-trainer/src/civilization.py` | 7 | Python | `__init__` |
-| `services/rl-trainer/src/civilization.py` | 11 | Python | `act` |
-| `services/rl-trainer/src/civilization.py` | 18 | Python | `__init__` |
-| `services/rl-trainer/src/civilization.py` | 21 | Python | `step` |
-| `services/rl-trainer/src/civilization.py` | 25 | Python | `metrics` |
-| `services/rl-trainer/src/compute_market.py` | 16 | Python | `__init__` |
-| `services/rl-trainer/src/compute_market.py` | 19 | Python | `register` |
-| `services/rl-trainer/src/compute_market.py` | 29 | Python | `bid` |
-| `services/rl-trainer/src/compute_market.py` | 44 | Python | `assign` |
-| `services/rl-trainer/src/global_strategy.py` | 7 | Python | `__init__` |
-| `services/rl-trainer/src/global_strategy.py` | 12 | Python | `update` |
-| `services/rl-trainer/src/global_strategy.py` | 19 | Python | `equilibrium` |
-| `services/rl-trainer/src/global_strategy.py` | 22 | Python | `coordinate` |
-| `services/rl-trainer/src/hierarchical_rl.py` | 8 | Python | `_initial_weights` |
-| `services/rl-trainer/src/hierarchical_rl.py` | 11 | Python | `__init__` |
-| `services/rl-trainer/src/hierarchical_rl.py` | 18 | Python | `_dot` |
-| `services/rl-trainer/src/hierarchical_rl.py` | 22 | Python | `_vector` |
-| `services/rl-trainer/src/hierarchical_rl.py` | 25 | Python | `select` |
-| `services/rl-trainer/src/hierarchical_rl.py` | 33 | Python | `update` |
-| `services/rl-trainer/src/hybrid_rl.py` | 10 | Python | `_initial_policy_weights` |
-| `services/rl-trainer/src/hybrid_rl.py` | 13 | Python | `__init__` |
-| `services/rl-trainer/src/hybrid_rl.py` | 19 | Python | `select_arm` |
-| `services/rl-trainer/src/hybrid_rl.py` | 28 | Python | `update` |
-| `services/rl-trainer/src/long_term_reward.py` | 4 | Python | `long_term_reward` |
-| `services/rl-trainer/src/main.py` | 16 | Python | `__init__` |
-| `services/rl-trainer/src/main.py` | 19 | Python | `subscribe` |
-| `services/rl-trainer/src/main.py` | 22 | Python | `poll` |
-| `services/rl-trainer/src/main.py` | 65 | Python | `build_autonomous_snapshot` |
-| `services/rl-trainer/src/main.py` | 106 | Python | `_redact_snapshot` |
-| `services/rl-trainer/src/main.py` | 118 | Python | `_snapshot_fingerprint` |
-| `services/rl-trainer/src/main.py` | 123 | Python | `loop` |
-| `services/rl-trainer/src/meta_learning.py` | 7 | Python | `__init__` |
-| `services/rl-trainer/src/meta_learning.py` | 12 | Python | `adapt` |
-| `services/rl-trainer/src/p2p_agent.py` | 11 | Python | `__init__` |
-| `services/rl-trainer/src/p2p_agent.py` | 23 | Python | `_validate_host` |
-| `services/rl-trainer/src/p2p_agent.py` | 35 | Python | `start_server` |
-| `services/rl-trainer/src/p2p_agent.py` | 36 | Python | `run` |
-| `services/rl-trainer/src/p2p_agent.py` | 56 | Python | `gossip` |
-| `services/rl-trainer/src/ppo.py` | 7 | Python | `__init__` |
-| `services/rl-trainer/src/ppo.py` | 12 | Python | `policy` |
-| `services/rl-trainer/src/ppo.py` | 16 | Python | `update` |
-| `services/rl-trainer/src/reward.py` | 4 | Python | `compute_reward` |
-| `services/rl-trainer/src/rllib_ppo.py` | 6 | Python | `train_distributed_ppo` |
-| `services/rl-trainer/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/rl-trainer/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/rl-trainer/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/rl-trainer/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/rl-trainer/src/sovereign_identity.py` | 15 | Python | `_b64` |
-| `services/rl-trainer/src/sovereign_identity.py` | 19 | Python | `load_or_create_key` |
-| `services/rl-trainer/src/sovereign_identity.py` | 35 | Python | `get_did` |
-| `services/rl-trainer/src/sovereign_identity.py` | 43 | Python | `export_public_key` |
-| `services/rl-trainer/src/sovereign_identity.py` | 51 | Python | `sign` |
-| `services/rl-trainer/src/sovereign_identity.py` | 56 | Python | `build_heartbeat_identity` |
-| `services/rl-trainer/src/token_engine.py` | 5 | Python | `__init__` |
-| `services/rl-trainer/src/token_engine.py` | 9 | Python | `stake` |
-| `services/rl-trainer/src/token_engine.py` | 13 | Python | `reward` |
-| `services/rl-trainer/src/token_engine.py` | 17 | Python | `slash` |
-| `services/rl-trainer/src/treasury.py` | 7 | Python | `__init__` |
-| `services/rl-trainer/src/treasury.py` | 11 | Python | `hedge` |
-| `services/rl-trainer/src/treasury.py` | 15 | Python | `allocate` |
-| `services/rl-trainer/src/uplift_model.py` | 8 | Python | `__init__` |
-| `services/rl-trainer/src/uplift_model.py` | 12 | Python | `fit` |
-| `services/rl-trainer/src/uplift_model.py` | 20 | Python | `predict_uplift` |
-| `services/rl-trainer/src/world_model.py` | 7 | Python | `__init__` |
-| `services/rl-trainer/src/world_model.py` | 11 | Python | `predict_next` |
-| `services/rl-trainer/src/world_model.py` | 15 | Python | `update` |
-| `services/rl-trainer/tests/test_security_hardening.py` | 16 | Python | `_parse_module` |
-| `services/rl-trainer/tests/test_security_hardening.py` | 21 | Python | `_iter_calls` |
-| `services/rl-trainer/tests/test_security_hardening.py` | 25 | Python | `test_parse_targets_rejects_invalid_host` |
-| `services/rl-trainer/tests/test_security_hardening.py` | 30 | Python | `test_build_remote_command_rejects_invalid_image` |
-| `services/rl-trainer/tests/test_security_hardening.py` | 35 | Python | `test_sample_payload_is_deterministic` |
-| `services/rl-trainer/tests/test_security_hardening.py` | 43 | Python | `test_plan_uses_deterministic_payloads` |
-| `services/rl-trainer/tests/test_security_hardening.py` | 50 | Python | `test_agent_replicator_does_not_use_subprocess_run` |
-| `services/rl-trainer/tests/test_security_hardening.py` | 61 | Python | `test_redteam_does_not_use_non_deterministic_random_calls` |
-| `services/rtb-engine/src/causal_rl.py` | 4 | Python | `doubly_robust` |
-| `services/rtb-engine/src/hierarchical_rl.py` | 7 | Python | `__init__` |
-| `services/rtb-engine/src/hierarchical_rl.py` | 14 | Python | `_dot` |
-| `services/rtb-engine/src/hierarchical_rl.py` | 18 | Python | `_vector` |
-| `services/rtb-engine/src/hierarchical_rl.py` | 21 | Python | `select` |
-| `services/rtb-engine/src/hierarchical_rl.py` | 29 | Python | `update` |
-| `services/rtb-engine/src/latency_bid.py` | 1 | Python | `latency_adjusted_bid` |
-| `services/rtb-engine/src/long_term_reward.py` | 4 | Python | `long_term_reward` |
-| `services/rtb-engine/src/ltv_model.py` | 7 | Python | `predict` |
-| `services/rtb-engine/src/main.py` | 75 | Python | `healthz` |
-| `services/rtb-engine/src/main.py` | 80 | Python | `bid` |
-| `services/rtb-engine/src/main.py` | 117 | Python | `openrtb_bid` |
-| `services/rtb-engine/src/main.py` | 135 | Python | `_env_flag` |
-| `services/rtb-engine/src/main.py` | 142 | Python | `resolve_bind_host` |
-| `services/rtb-engine/src/rtb.py` | 5 | Python | `__init__` |
-| `services/rtb-engine/src/rtb.py` | 9 | Python | `compute_bid` |
-| `services/rtb-engine/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/rtb-engine/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/rtb-engine/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/rtb-engine/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/scaling-engine/src/main.py` | 24 | Python | `healthz` |
-| `services/scaling-engine/src/main.py` | 29 | Python | `scale` |
-| `services/scaling-engine/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/scaling-engine/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/scaling-engine/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/scaling-engine/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/scheduler/src/main.py` | 39 | Python | `healthz` |
-| `services/scheduler/src/main.py` | 54 | Python | `fetch_nodes` |
-| `services/scheduler/src/main.py` | 64 | Python | `decode_task_token` |
-| `services/scheduler/src/main.py` | 83 | Python | `verify_task_token` |
-| `services/scheduler/src/main.py` | 93 | Python | `assign` |
-| `services/scheduler/src/main.py` | 113 | Python | `score` |
-| `services/scheduler/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/scheduler/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/scheduler/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/scheduler/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/security-api/src/app/deps.py` | 22 | Python | `__init__` |
-| `services/security-api/src/app/deps.py` | 26 | Python | `save` |
-| `services/security-api/src/app/deps.py` | 30 | Python | `get` |
-| `services/security-api/src/app/deps.py` | 37 | Python | `get_scan_service` |
-| `services/security-api/src/app/deps.py` | 41 | Python | `validate_repo_url` |
-| `services/security-api/src/app/deps.py` | 54 | Python | `require_api_key` |
-| `services/security-api/src/app/deps.py` | 61 | Python | `_run_scan` |
-| `services/security-api/src/app/deps.py` | 66 | Python | `enqueue_scan` |
-| `services/security-api/src/app/deps.py` | 86 | Python | `get_scan_payload` |
-| `services/security-api/src/app/main.py` | 19 | Python | `_configure_logging` |
-| `services/security-api/src/app/main.py` | 28 | Python | `_security_headers_middleware` |
-| `services/security-api/src/app/main.py` | 29 | Python | `security_headers` |
-| `services/security-api/src/app/main.py` | 39 | Python | `create_app` |
-| `services/security-api/src/app/routes.py` | 8 | Python | `build_router` |
-| `services/security-api/src/app/routes.py` | 13 | Python | `healthz` |
-| `services/security-api/src/app/routes.py` | 18 | Python | `run_scan` |
-| `services/security-api/src/app/routes.py` | 29 | Python | `get_scan` |
-| `services/security-api/src/container/di.py` | 10 | Python | `__init__` |
-| `services/security-api/src/container/di.py` | 13 | Python | `register` |
-| `services/security-api/src/container/di.py` | 16 | Python | `resolve` |
-| `services/security-api/src/container/di.py` | 25 | Python | `init_container` |
-| `services/security-api/src/domain/interfaces.py` | 13 | Python | `scan` |
-| `services/security-api/src/domain/runtime_policy.py` | 10 | Python | `normalize_language` |
-| `services/security-api/src/domain/runtime_policy.py` | 16 | Python | `assert_allowed` |
-| `services/security-api/src/infra/backpressure.py` | 12 | Python | `run_limited` |
-| `services/security-api/src/infra/config.py` | 6 | Python | `_ensure_under_base` |
-| `services/security-api/src/infra/config.py` | 16 | Python | `get_secure_tmp_dir` |
-| `services/security-api/src/infra/config.py` | 28 | Python | `configure_process_umask` |
-| `services/security-api/src/infra/config.py` | 32 | Python | `get_server_config` |
-| `services/security-api/src/infra/process.py` | 11 | Python | `safe_exec` |
-| `services/security-api/src/infra/rate_limit.py` | 16 | Python | `rate_limit` |
-| `services/security-api/src/infra/rate_limit.py` | 17 | Python | `wrapper` |
-| `services/security-api/src/infra/rate_limit.py` | 27 | Python | `rate_limit` |
-| `services/security-api/src/infra/rate_limit.py` | 28 | Python | `wrapper` |
-| `services/security-api/src/infra/rate_limit.py` | 30 | Python | `passthrough` |
-| `services/security-api/src/infra/scan_service.py` | 25 | Python | `resolve_executable` |
-| `services/security-api/src/infra/scan_service.py` | 35 | Python | `safe_exec_async` |
-| `services/security-api/src/infra/scan_service.py` | 61 | Python | `scan` |
-| `services/security-api/src/runtime_engine/base.py` | 17 | Python | `__post_init__` |
-| `services/security-api/src/runtime_engine/base.py` | 49 | Python | `execute` |
-| `services/security-api/src/runtime_engine/manager.py` | 10 | Python | `__init__` |
-| `services/security-api/src/runtime_engine/manager.py` | 16 | Python | `resolve` |
-| `services/security-api/src/runtime_engine/manager.py` | 23 | Python | `execute` |
-| `services/security-api/src/runtime_engine/node.py` | 12 | Python | `execute` |
-| `services/security-api/src/runtime_engine/python.py` | 12 | Python | `execute` |
-| `services/security-api/src/runtime_engine/runner.py` | 10 | Python | `_resolve_entrypoint` |
-| `services/security-api/src/runtime_engine/runner.py` | 27 | Python | `run_exec` |
-| `services/security-api/src/server.py` | 7 | Python | `run` |
-| `services/security-api/src/shared/event_bus/interface.py` | 10 | Python | `publish` |
-| `services/security-api/src/shared/event_bus/interface.py` | 14 | Python | `subscribe` |
-| `services/security-api/src/shared/event_bus/nats_bus.py` | 11 | Python | `__init__` |
-| `services/security-api/src/shared/event_bus/nats_bus.py` | 15 | Python | `connect` |
-| `services/security-api/src/shared/event_bus/nats_bus.py` | 23 | Python | `publish` |
-| `services/security-api/src/shared/event_bus/nats_bus.py` | 29 | Python | `subscribe` |
-| `services/security-api/src/shared/event_bus/nats_bus.py` | 34 | Python | `callback` |
-| `services/security-api/src/shared/queue/async_queue.py` | 10 | Python | `producer` |
-| `services/security-api/src/shared/queue/async_queue.py` | 14 | Python | `consumer` |
-| `services/security-api/src/shared/security/auth.py` | 7 | Python | `verify_internal_request` |
-| `services/security-api/src/shared/security/crypto.py` | 8 | Python | `sign` |
-| `services/security-api/src/shared/security/crypto_impl.py` | 10 | Python | `__init__` |
-| `services/security-api/src/shared/security/crypto_impl.py` | 13 | Python | `sign` |
-| `services/security-api/src/shared/security/secrets.py` | 7 | Python | `get` |
-| `services/security-api/src/shared/security/validation.py` | 8 | Python | `validate_target` |
-| `services/self-modifier/engine.py` | 10 | Python | `apply_patch_request` |
-| `services/self-modifier/kms_verify.py` | 12 | Python | `verify` |
-| `services/shared/event_bus.py` | 11 | Python | `publish` |
-| `services/shared/kafka_producer.py` | 7 | Python | `__init__` |
-| `services/shared/kafka_producer.py` | 13 | Python | `publish` |
-| `services/shared/kafka_secure.py` | 17 | Python | `safe_produce` |
-| `services/shared/region_sync.py` | 18 | Python | `broadcast` |
-| `services/shared/schema.py` | 6 | Python | `validate` |
-| `services/shopee-crawler/src/core/affiliate.js` | 1 | JS/TS | `generateAffiliateLink` |
-| `services/shopee-crawler/src/core/crawler.js` | 6 | JS/TS | `crawl` |
-| `services/shopee-crawler/src/core/scheduler.js` | 11 | JS/TS | `scheduler` |
-| `services/shopee-crawler/src/crawler/search.js` | 3 | JS/TS | `searchProducts` |
-| `services/shopee-crawler/src/index.js` | 3 | JS/TS | `main` |
-| `services/shopee-crawler/src/parser/product.js` | 1 | JS/TS | `parseProduct` |
-| `services/shopee-crawler/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/shopee-crawler/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/shopee-crawler/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/shopee-crawler/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/singularity/src/agents.py` | 25 | Python | `handle` |
-| `services/singularity/src/agents.py` | 32 | Python | `handle` |
-| `services/singularity/src/agents.py` | 54 | Python | `handle` |
-| `services/singularity/src/agents.py` | 75 | Python | `handle` |
-| `services/singularity/src/agents.py` | 95 | Python | `handle` |
-| `services/singularity/src/agents.py` | 109 | Python | `handle` |
-| `services/singularity/src/agents.py` | 118 | Python | `handle` |
-| `services/singularity/src/agents.py` | 137 | Python | `handle` |
-| `services/singularity/src/agents.py` | 152 | Python | `handle` |
-| `services/singularity/src/orchestrator.py` | 17 | Python | `__init__` |
-| `services/singularity/src/orchestrator.py` | 21 | Python | `publish` |
-| `services/singularity/src/orchestrator.py` | 30 | Python | `consume` |
-| `services/singularity/src/orchestrator.py` | 34 | Python | `history` |
-| `services/singularity/src/orchestrator.py` | 41 | Python | `handle` |
-| `services/singularity/src/orchestrator.py` | 45 | Python | `__init__` |
-| `services/singularity/src/orchestrator.py` | 49 | Python | `dispatch` |
-| `services/singularity/src/orchestrator.py` | 54 | Python | `run` |
-| `services/singularity/src/risk.py` | 4 | Python | `risk` |
-| `services/singularity/src/run.py` | 19 | Python | `main` |
-| `services/singularity/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/singularity/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/singularity/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/singularity/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/singularity/src/verify.py` | 10 | Python | `_is_url_allowed` |
-| `services/singularity/src/verify.py` | 15 | Python | `ssrf_probe` |
-| `services/singularity/src/verify.py` | 26 | Python | `path_traversal_probe` |
-| `services/stream-consumer/src/main.py` | 34 | Python | `db_connection` |
-| `services/stream-consumer/src/main.py` | 43 | Python | `shutdown` |
-| `services/stream-consumer/src/main.py` | 49 | Python | `update_online_features` |
-| `services/stream-consumer/src/main.py` | 84 | Python | `persist_offline_metrics` |
-| `services/stream-consumer/src/main.py` | 101 | Python | `process` |
-| `services/stream-consumer/src/main.py` | 108 | Python | `create_consumer` |
-| `services/stream-consumer/src/main.py` | 121 | Python | `main` |
-| `services/stream-consumer/src/producer.py` | 10 | Python | `emit_decision` |
-| `services/stream-consumer/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/stream-consumer/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/stream-consumer/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/stream-consumer/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/tenant-service/src/main.py` | 22 | Python | `hash_api_key` |
-| `services/tenant-service/src/main.py` | 39 | Python | `db_connection` |
-| `services/tenant-service/src/main.py` | 59 | Python | `healthz` |
-| `services/tenant-service/src/main.py` | 73 | Python | `create_tenant` |
-| `services/tenant-service/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/tenant-service/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/tenant-service/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/tenant-service/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/tiktok-farm/src/core/accounts.js` | 3 | JS/TS | `getAccount` |
-| `services/tiktok-farm/src/core/proxies.js` | 3 | JS/TS | `getProxy` |
-| `services/tiktok-farm/src/core/queue.js` | 9 | JS/TS | `enqueue` |
-| `services/tiktok-farm/src/core/queue.js` | 18 | JS/TS | `dequeue` |
-| `services/tiktok-farm/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/tiktok-farm/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/tiktok-farm/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/tiktok-farm/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/tiktok-farm/src/uploader/uploader.js` | 3 | JS/TS | `upload` |
-| `services/tiktok-farm/src/workers/worker.js` | 6 | JS/TS | `worker` |
-| `services/tiktok-shop-miner/src/core/miner.js` | 6 | JS/TS | `mine` |
-| `services/tiktok-shop-miner/src/core/scheduler.js` | 11 | JS/TS | `scheduler` |
-| `services/tiktok-shop-miner/src/core/trending.js` | 1 | JS/TS | `scoreProduct` |
-| `services/tiktok-shop-miner/src/crawler/search.js` | 3 | JS/TS | `searchProducts` |
-| `services/tiktok-shop-miner/src/index.js` | 3 | JS/TS | `main` |
-| `services/tiktok-shop-miner/src/parser/product.js` | 1 | JS/TS | `parseProduct` |
-| `services/tiktok-shop-miner/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/tiktok-shop-miner/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/tiktok-shop-miner/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/tiktok-shop-miner/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/tiktok-uploader/src/api.ts` | 5 | JS/TS | `uploadVideo` |
-| `services/tiktok-uploader/src/automation/login.js` | 1 | JS/TS | `login` |
-| `services/tiktok-uploader/src/automation/upload.js` | 1 | JS/TS | `uploadVideo` |
-| `services/tiktok-uploader/src/core/browser.js` | 3 | JS/TS | `createBrowser` |
-| `services/tiktok-uploader/src/core/uploader.js` | 5 | JS/TS | `runUploader` |
-| `services/tiktok-uploader/src/core/worker.js` | 4 | JS/TS | `worker` |
-| `services/tiktok-uploader/src/index.js` | 3 | JS/TS | `main` |
-| `services/tiktok-uploader/src/models/account.js` | 3 | JS/TS | `constructor` |
-| `services/tiktok-uploader/src/models/video.js` | 3 | JS/TS | `constructor` |
-| `services/tiktok-uploader/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/tiktok-uploader/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/tiktok-uploader/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/tiktok-uploader/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/tracking/server.py` | 21 | Python | `_connect` |
-| `services/tracking/server.py` | 32 | Python | `_assert_campaign_id` |
-| `services/tracking/server.py` | 41 | Python | `_sanitize_log_value` |
-| `services/tracking/server.py` | 45 | Python | `_validated_affiliate_base_url` |
-| `services/tracking/server.py` | 60 | Python | `healthz` |
-| `services/tracking/server.py` | 65 | Python | `track` |
-| `services/viral-predictor/src/api/server.py` | 24 | Python | `healthz` |
-| `services/viral-predictor/src/api/server.py` | 48 | Python | `metrics` |
-| `services/viral-predictor/src/api/server.py` | 53 | Python | `predict_viral` |
-| `services/viral-predictor/src/core/database.py` | 4 | Python | `get_db` |
-| `services/viral-predictor/src/features/features.py` | 3 | Python | `extract_features` |
-| `services/viral-predictor/src/main.py` | 6 | Python | `_safe_port` |
-| `services/viral-predictor/src/model/model.py` | 15 | Python | `__init__` |
-| `services/viral-predictor/src/model/model.py` | 19 | Python | `forward` |
-| `services/viral-predictor/src/model/model.py` | 23 | Python | `save` |
-| `services/viral-predictor/src/model/model.py` | 27 | Python | `load` |
-| `services/viral-predictor/src/model/model.py` | 37 | Python | `predict` |
-| `services/viral-predictor/src/security/rate_limit.py` | 9 | Python | `rate_limit` |
-| `services/viral-predictor/src/security/rate_limit.py` | 10 | Python | `wrapper` |
-| `services/viral-predictor/src/security/rate_limit.py` | 20 | Python | `rate_limit` |
-| `services/viral-predictor/src/security/rate_limit.py` | 21 | Python | `wrapper` |
-| `services/viral-predictor/src/training/train.py` | 12 | Python | `_sigmoid` |
-| `services/viral-predictor/src/training/train.py` | 16 | Python | `train` |
-| `start-zlttbots.sh` | 62 | Shell | `start_background_process` |
-| `tests/omniscient/test_engine.py` | 9 | Python | `test_run_returns_actions` |
-| `tests/omniscient/test_engine.py` | 19 | Python | `test_simulate_attack_requires_http_scheme` |
-| `tests/omniscient/test_engine.py` | 23 | Python | `test_security_helpers` |
-| `tests/runtime/test_service_health_import_safe.py` | 8 | Python | `_load_app` |
-| `tests/runtime/test_service_health_import_safe.py` | 20 | Python | `test_reward_collector_healthz` |
-| `tests/runtime/test_service_health_import_safe.py` | 27 | Python | `test_rl_engine_healthz` |
-| `tests/runtime/test_service_health_import_safe.py` | 34 | Python | `test_rl_coordinator_healthz` |
-| `tests/security_platform/test_ai_fix_engine.py` | 13 | Python | `test_generate_patch` |
-| `tests/security_platform/test_pr_bot_extension.py` | 28 | Python | `test_gate_blocks_critical_and_warns_medium` |
-| `tests/security_platform/test_pr_bot_extension.py` | 39 | Python | `test_rl_bandit_updates_weights_deterministically` |
-| `tests/security_platform/test_pr_bot_extension.py` | 53 | Python | `test_verify_signature_uses_hmac_sha256` |
-| `tests/security_platform/test_pr_bot_extension.py` | 62 | Python | `test_memory_store_validates_embedding_dimensions` |
-| `tests/security_platform/test_runtime_engine.py` | 11 | Python | `test_python_runtime_executes_script` |
-| `tests/security_platform/test_runtime_engine.py` | 31 | Python | `test_runtime_allowlist_rejects_unknown` |
-| `tests/security_platform/test_runtime_request_validation.py` | 10 | Python | `_load_runtime_request` |
-| `tests/security_platform/test_runtime_request_validation.py` | 15 | Python | `test_runtime_request_rejects_non_positive_timeout` |
-| `tests/security_platform/test_runtime_request_validation.py` | 26 | Python | `test_runtime_request_rejects_non_string_env` |
-| `tests/security_platform/test_secure_tmp_dir_validation.py` | 11 | Python | `test_secure_tmp_dir_rejects_traversal` |
-| `tests/security_platform/test_security_api.py` | 18 | Python | `test_healthz` |
-| `tests/security_platform/test_security_api.py` | 25 | Python | `test_validate_repo_url_rejects_http` |
-| `tests/services/security_api_runtime_import.py` | 13 | Python | `_load_module` |
-| `tests/services/security_api_runtime_import.py` | 23 | Python | `load_runtime_engine_manager` |
-| `tests/test_advanced_rl_features.py` | 10 | Python | `_load_module` |
-| `tests/test_advanced_rl_features.py` | 20 | Python | `test_rtb_engine_openrtb_and_reward_fields` |
-| `tests/test_advanced_rl_features.py` | 55 | Python | `test_capital_allocator_reports_reinvestment_and_allocations` |
-| `tests/test_affiliate_publishing_flow.py` | 14 | Python | `load_module` |
-| `tests/test_affiliate_publishing_flow.py` | 24 | Python | `test_affiliate_connector_payout_ingestion_daily_controller_and_reporting` |
-| `tests/test_affiliate_publishing_flow.py` | 38 | Python | `fake_snapshot` |
-| `tests/test_affiliate_publishing_flow.py` | 122 | Python | `test_dead_letter_after_retry_budget` |
-| `tests/test_affiliate_publishing_flow.py` | 155 | Python | `test_arbitrage_scan_and_listing_work_inmemory` |
-| `tests/test_ai_economy_saas.py` | 11 | Python | `_load_app` |
-| `tests/test_ai_economy_saas.py` | 20 | Python | `test_product_generator_is_deterministic` |
-| `tests/test_ai_economy_saas.py` | 34 | Python | `test_billing_service_rates_by_plan` |
-| `tests/test_ai_economy_saas.py` | 43 | Python | `test_market_orchestrator_launches_supported_markets` |
-| `tests/test_ai_economy_saas.py` | 50 | Python | `__init__` |
-| `tests/test_ai_economy_saas.py` | 53 | Python | `raise_for_status` |
-| `tests/test_ai_economy_saas.py` | 56 | Python | `json` |
-| `tests/test_ai_economy_saas.py` | 59 | Python | `fake_post` |
-| `tests/test_ai_economy_saas.py` | 69 | Python | `test_master_orchestrator_economy_endpoint` |
-| `tests/test_ai_economy_saas.py` | 78 | Python | `__init__` |
-| `tests/test_ai_economy_saas.py` | 81 | Python | `raise_for_status` |
-| `tests/test_ai_economy_saas.py` | 84 | Python | `json` |
-| `tests/test_ai_economy_saas.py` | 87 | Python | `fake_get` |
-| `tests/test_ai_economy_saas.py` | 91 | Python | `fake_post` |
-| `tests/test_auto_ml_loop_security.py` | 15 | Python | `test_run_command_uses_argument_list_without_shell` |
-| `tests/test_auto_ml_loop_security.py` | 18 | Python | `fake_run` |
-| `tests/test_auto_ml_loop_security.py` | 32 | Python | `test_evaluate_rejects_non_numeric_output` |
-| `tests/test_auto_ml_loop_security.py` | 47 | Python | `test_loop_returns_evaluate_failed_when_eval_command_fails` |
-| `tests/test_autonomous_rl_services.py` | 13 | Python | `_load_module` |
-| `tests/test_autonomous_rl_services.py` | 23 | Python | `_load_app` |
-| `tests/test_autonomous_rl_services.py` | 27 | Python | `test_model_registry_registers_and_returns_latest` |
-| `tests/test_autonomous_rl_services.py` | 48 | Python | `test_reward_collector_clips_profit_reward` |
-| `tests/test_autonomous_rl_services.py` | 54 | Python | `fake_safe_call` |
-| `tests/test_autonomous_rl_services.py` | 66 | Python | `test_rl_engine_uses_policy_model_when_present` |
-| `tests/test_autonomous_rl_services.py` | 75 | Python | `eval` |
-| `tests/test_autonomous_rl_services.py` | 78 | Python | `__call__` |
-| `tests/test_autonomous_rl_services.py` | 94 | Python | `test_budget_allocator_exposes_market_budget` |
-| `tests/test_autonomous_rl_services.py` | 112 | Python | `test_rtb_engine_uses_floor_bid` |
-| `tests/test_autonomous_rl_services.py` | 131 | Python | `test_tlearner_predicts_uplift` |
-| `tests/test_autonomous_rl_services.py` | 145 | Python | `test_identity_signatures_round_trip` |
-| `tests/test_autonomous_rl_services.py` | 160 | Python | `test_exchange_matches_orders_with_signature` |
-| `tests/test_autonomous_rl_services.py` | 169 | Python | `signed_order` |
-| `tests/test_autonomous_rl_services.py` | 192 | Python | `test_rl_trainer_autonomous_snapshot_includes_new_subsystems` |
-| `tests/test_distributed_rl_stack.py` | 11 | Python | `_load_app` |
-| `tests/test_distributed_rl_stack.py` | 20 | Python | `test_budget_allocator_enforces_step_and_cap` |
-| `tests/test_distributed_rl_stack.py` | 44 | Python | `test_rtb_engine_clamps_bid_and_applies_pacing` |
-| `tests/test_distributed_rl_stack.py` | 66 | Python | `test_rl_coordinator_picks_highest_score` |
-| `tests/test_distributed_rl_stack.py` | 73 | Python | `__init__` |
-| `tests/test_distributed_rl_stack.py` | 76 | Python | `raise_for_status` |
-| `tests/test_distributed_rl_stack.py` | 79 | Python | `json` |
-| `tests/test_distributed_rl_stack.py` | 82 | Python | `fake_post` |
-| `tests/test_distributed_rl_stack.py` | 96 | Python | `test_rtb_engine_applies_latency_penalty` |
-| `tests/test_enterprise_maturity.py` | 13 | Python | `test_secret_manager_rotation_due` |
-| `tests/test_enterprise_maturity.py` | 21 | Python | `test_rbac_policy_and_audit_pipeline` |
-| `tests/test_enterprise_maturity.py` | 32 | Python | `test_retry_and_idempotency_controls` |
-| `tests/test_enterprise_maturity.py` | 35 | Python | `flaky` |
-| `tests/test_enterprise_maturity.py` | 47 | Python | `test_circuit_breaker_opens` |
-| `tests/test_enterprise_maturity.py` | 61 | Python | `test_slo_alerting_and_probe` |
-| `tests/test_enterprise_maturity.py` | 75 | Python | `test_governance_scaling_and_queue_admission` |
-| `tests/test_enterprise_maturity.py` | 89 | Python | `test_roadmap_has_all_items` |
-| `tests/test_enterprise_maturity.py` | 95 | Python | `test_full_upgrade_blueprint_covers_requested_capabilities` |
-| `tests/test_enterprise_maturity.py` | 104 | Python | `test_full_upgrade_blueprint_validation_rejects_small_layout` |
-| `tests/test_extract_gemini_source.py` | 6 | Python | `test_extracts_patch_and_heredoc` |
-| `tests/test_extract_gemini_source.py` | 31 | Python | `test_extracts_hinted_file` |
-| `tests/test_feature_impact_dive.py` | 22 | Python | `test_extract_compose_services_reads_services_block` |
-| `tests/test_feature_impact_dive.py` | 41 | Python | `test_extract_app_features_discovers_endpoints_from_multiple_files` |
-| `tests/test_feature_impact_dive.py` | 63 | Python | `test_extract_runtime_service_features_supports_python_decorators` |
-| `tests/test_feature_impact_dive.py` | 69 | Python | `healthz` |
-| `tests/test_feature_impact_dive.py` | 82 | Python | `test_extract_documented_features_reads_titles` |
-| `tests/test_feature_impact_dive.py` | 92 | Python | `test_build_surface_manifest_contains_write_endpoint_policy` |
-| `tests/test_feature_impact_dive.py` | 107 | Python | `test_validate_manifest_detects_drift` |
-| `tests/test_feature_impact_dive.py` | 126 | Python | `test_validate_manifest_reports_json_decode_errors` |
-| `tests/test_feature_impact_dive.py` | 140 | Python | `test_validate_manifest_rejects_non_string_policy_fields` |
-| `tests/test_feature_impact_dive.py` | 159 | Python | `test_format_markdown_contains_counts` |
-| `tests/test_feature_impact_dive.py` | 182 | Python | `test_manifest_to_dict_is_json_serializable` |
-| `tests/test_feature_impact_dive.py` | 194 | Python | `test_validate_manifest_rejects_missing_required_keys` |
-| `tests/test_feature_impact_dive.py` | 208 | Python | `test_resolve_output_path_rejects_traversal` |
-| `tests/test_frontend_auth_security_defaults.py` | 4 | Python | `test_frontend_does_not_ship_seeded_credentials` |
-| `tests/test_frontend_auth_security_defaults.py` | 10 | Python | `test_frontend_requires_credentials_before_auth_calls` |
-| `tests/test_go_to_market_system.py` | 13 | Python | `test_generate_daily_plan_phases_and_validation` |
-| `tests/test_go_to_market_system.py` | 25 | Python | `test_generate_post_is_deterministic_by_slot` |
-| `tests/test_go_to_market_system.py` | 37 | Python | `test_pitch_deck_and_status_contains_metrics` |
-| `tests/test_gpu_renderer_no_cost.py` | 13 | Python | `test_build_ffmpeg_command_defaults_to_cpu_when_no_gpu` |
-| `tests/test_gpu_renderer_no_cost.py` | 25 | Python | `test_build_ffmpeg_command_uses_cuda_when_forced` |
-| `tests/test_infra_hardening_modules.py` | 11 | Python | `load_module` |
-| `tests/test_infra_hardening_modules.py` | 21 | Python | `test_payment_circuit_opens_after_repeated_failures` |
-| `tests/test_infra_hardening_modules.py` | 31 | Python | `test_payment_audit_writes_json_line` |
-| `tests/test_infra_hardening_modules.py` | 40 | Python | `test_cost_control_enforces_daily_budget` |
-| `tests/test_infra_hardening_modules.py` | 49 | Python | `test_legal_gate_filters_jurisdictions` |
-| `tests/test_infra_hardening_modules.py` | 55 | Python | `test_treasury_caps_spending` |
-| `tests/test_jwt_auth_service.py` | 7 | Python | `_load_jwt_auth_app` |
-| `tests/test_jwt_auth_service.py` | 16 | Python | `test_token_and_introspect_round_trip` |
-| `tests/test_jwt_auth_service.py` | 31 | Python | `test_token_rejects_invalid_subject` |
-| `tests/test_model_service_async.py` | 10 | Python | `__init__` |
-| `tests/test_model_service_async.py` | 13 | Python | `__getitem__` |
-| `tests/test_model_service_async.py` | 16 | Python | `__len__` |
-| `tests/test_model_service_async.py` | 19 | Python | `item` |
-| `tests/test_model_service_async.py` | 29 | Python | `tensor` |
-| `tests/test_model_service_async.py` | 33 | Python | `dot` |
-| `tests/test_model_service_async.py` | 38 | Python | `__init__` |
-| `tests/test_model_service_async.py` | 41 | Python | `produce` |
-| `tests/test_model_service_async.py` | 44 | Python | `flush` |
-| `tests/test_model_service_async.py` | 49 | Python | `__init__` |
-| `tests/test_model_service_async.py` | 52 | Python | `subscribe` |
-| `tests/test_model_service_async.py` | 55 | Python | `poll` |
-| `tests/test_model_service_async.py` | 60 | Python | `__init__` |
-| `tests/test_model_service_async.py` | 63 | Python | `set_result` |
-| `tests/test_model_service_async.py` | 68 | Python | `get_result` |
-| `tests/test_model_service_async.py` | 73 | Python | `inc` |
-| `tests/test_model_service_async.py` | 76 | Python | `observe` |
-| `tests/test_model_service_async.py` | 79 | Python | `labels` |
-| `tests/test_model_service_async.py` | 83 | Python | `load_main_module` |
-| `tests/test_model_service_async.py` | 103 | Python | `test_predict_async_accepts_idempotency_key` |
-| `tests/test_model_service_async.py` | 119 | Python | `test_fetch_result_returns_pending_when_missing` |
-| `tests/test_network_bind_hardening.py` | 10 | Python | `_load_module` |
-| `tests/test_network_bind_hardening.py` | 20 | Python | `test_p2p_agent_rejects_wildcard_bind_by_default` |
-| `tests/test_network_bind_hardening.py` | 26 | Python | `test_p2p_agent_accepts_loopback_address` |
-| `tests/test_network_bind_hardening.py` | 32 | Python | `test_resolve_bind_host_disables_wildcard_without_explicit_opt_in` |
-| `tests/test_network_bind_hardening.py` | 39 | Python | `test_resolve_bind_host_allows_wildcard_with_explicit_opt_in` |
-| `tests/test_network_egress_client.py` | 17 | Python | `__init__` |
-| `tests/test_network_egress_client.py` | 21 | Python | `test_retries_on_server_error_and_succeeds` |
-| `tests/test_network_egress_client.py` | 24 | Python | `fake_post` |
-| `tests/test_network_egress_client.py` | 39 | Python | `test_raises_after_retry_exhaustion` |
-| `tests/test_network_egress_client.py` | 40 | Python | `failing_post` |
-| `tests/test_network_egress_client.py` | 51 | Python | `test_blocks_disallowed_host` |
-| `tests/test_network_egress_client.py` | 57 | Python | `test_blocks_private_address` |
-| `tests/test_payment_adapter_resilience.py` | 10 | Python | `test_payment_modules_importable` |
-| `tests/test_payment_adapter_resilience.py` | 15 | Python | `test_circuit_opens_at_failure_threshold` |
-| `tests/test_payment_adapter_resilience.py` | 27 | Python | `test_send_rejects_invalid_retry_count` |
-| `tests/test_payment_adapter_resilience.py` | 32 | Python | `test_send_returns_failed_after_http_5xx` |
-| `tests/test_platform_core_auth_context_guard.py` | 4 | Python | `test_platform_core_missing_user_context_returns_unauthorized` |
-| `tests/test_profit_blueprint_modules.py` | 17 | Python | `__init__` |
-| `tests/test_profit_blueprint_modules.py` | 21 | Python | `fetch_revenue` |
-| `tests/test_profit_blueprint_modules.py` | 24 | Python | `fetch_cost` |
-| `tests/test_profit_blueprint_modules.py` | 29 | Python | `__init__` |
-| `tests/test_profit_blueprint_modules.py` | 33 | Python | `create_campaign` |
-| `tests/test_profit_blueprint_modules.py` | 36 | Python | `pause_campaign` |
-| `tests/test_profit_blueprint_modules.py` | 39 | Python | `scale_campaign` |
-| `tests/test_profit_blueprint_modules.py` | 44 | Python | `snapshot` |
-| `tests/test_profit_blueprint_modules.py` | 54 | Python | `test_roi_engine_calculates_ratio_with_decimal_precision` |
-| `tests/test_profit_blueprint_modules.py` | 61 | Python | `test_unit_economics_computes_profit_cpa_ltv_and_roas` |
-| `tests/test_profit_blueprint_modules.py` | 75 | Python | `test_profit_loop_scales_when_roi_reaches_threshold` |
-| `tests/test_profit_blueprint_modules.py` | 83 | Python | `test_profit_loop_pauses_when_roi_is_non_positive` |
-| `tests/test_profit_blueprint_modules.py` | 91 | Python | `test_daily_cost_guard_blocks_when_budget_exceeded` |
-| `tests/test_profit_blueprint_modules.py` | 100 | Python | `test_daily_cost_guard_rejects_negative_cost` |
-| `tests/test_profit_blueprint_modules.py` | 106 | Python | `test_profit_loop_enforces_stop_loss_from_unit_economics` |
-| `tests/test_profit_blueprint_modules.py` | 118 | Python | `test_profit_loop_respects_global_kill_switch` |
-| `tests/test_profit_blueprint_modules.py` | 126 | Python | `test_spend_control_plane_validates_caps_and_anomaly_and_roi` |
-| `tests/test_profit_mode_pipeline.py` | 16 | Python | `load_module` |
-| `tests/test_profit_mode_pipeline.py` | 27 | Python | `__init__` |
-| `tests/test_profit_mode_pipeline.py` | 30 | Python | `ping` |
-| `tests/test_profit_mode_pipeline.py` | 33 | Python | `hgetall` |
-| `tests/test_profit_mode_pipeline.py` | 36 | Python | `hset` |
-| `tests/test_profit_mode_pipeline.py` | 42 | Python | `test_feature_store_supports_budget_and_revenue_updates` |
-| `tests/test_profit_mode_pipeline.py` | 77 | Python | `test_feature_store_can_replace_all_campaign_features` |
-| `tests/test_profit_mode_pipeline.py` | 119 | Python | `test_feature_store_rejects_daily_cap_above_budget` |
-| `tests/test_profit_mode_pipeline.py` | 140 | Python | `test_affiliate_webhook_updates_feature_store_and_reward_collector` |
-| `tests/test_profit_mode_pipeline.py` | 145 | Python | `__enter__` |
-| `tests/test_profit_mode_pipeline.py` | 148 | Python | `__exit__` |
-| `tests/test_profit_mode_pipeline.py` | 151 | Python | `cursor` |
-| `tests/test_profit_mode_pipeline.py` | 154 | Python | `execute` |
-| `tests/test_profit_mode_pipeline.py` | 161 | Python | `fake_post` |
-| `tests/test_profit_mode_pipeline.py` | 178 | Python | `test_profit_mode_activation_wires_tracking_payment_and_execution` |
-| `tests/test_profit_mode_pipeline.py` | 194 | Python | `fake_safe_call` |
-| `tests/test_rebrand_zlttbots_to_zlttbots.py` | 16 | Python | `test_audit_detects_legacy_tokens` |
-| `tests/test_rebrand_zlttbots_to_zlttbots.py` | 28 | Python | `test_apply_mode_rewrites_tokens` |
-| `tests/test_repo_cleanup_audit.py` | 10 | Python | `test_candidate_local_module_targets_resolves_index_and_suffix` |
-| `tests/test_repo_cleanup_audit.py` | 21 | Python | `test_traverse_reachable_returns_transitive_nodes` |
-| `tests/test_repo_cleanup_audit.py` | 37 | Python | `test_normalize_path_list_ignores_non_existing_entries` |
-| `tests/test_safe_edge_pack.py` | 4 | Python | `test_tunnel_config_contains_expected_hosts` |
-| `tests/test_safe_edge_pack.py` | 19 | Python | `test_kong_config_exposes_summary_and_redirect_routes` |
-| `tests/test_safe_edge_pack.py` | 26 | Python | `test_go_live_doc_has_safety_note` |
-| `tests/test_safe_edge_pack.py` | 31 | Python | `test_global_tunnel_config_supports_wildcard_host` |
-| `tests/test_safe_edge_pack.py` | 36 | Python | `test_global_deploy_script_includes_multi_region_and_worker_steps` |
-| `tests/test_safe_edge_pack.py` | 43 | Python | `test_interactive_domain_env_generator_supports_wildcard_zeaz_domain` |
-| `tests/test_script_lifecycle_smoke.py` | 10 | Python | `run_command` |
-| `tests/test_script_lifecycle_smoke.py` | 14 | Python | `test_feature_impact_dive_help_smoke` |
-| `tests/test_script_lifecycle_smoke.py` | 19 | Python | `test_docs_snippet_validator_smoke` |
-| `tests/test_script_lifecycle_smoke.py` | 24 | Python | `test_node_dependency_scan_shell_syntax` |
-| `tests/test_singularity_engine.py` | 24 | Python | `test_singularity_orchestration_generates_verify_event` |
-| `tests/test_singularity_engine.py` | 58 | Python | `test_risk_score_stable` |
-| `tests/test_tracking_and_payment_webhook.py` | 10 | Python | `__init__` |
-| `tests/test_tracking_and_payment_webhook.py` | 13 | Python | `execute` |
-| `tests/test_tracking_and_payment_webhook.py` | 16 | Python | `__enter__` |
-| `tests/test_tracking_and_payment_webhook.py` | 19 | Python | `__exit__` |
-| `tests/test_tracking_and_payment_webhook.py` | 24 | Python | `__init__` |
-| `tests/test_tracking_and_payment_webhook.py` | 27 | Python | `cursor` |
-| `tests/test_tracking_and_payment_webhook.py` | 30 | Python | `commit` |
-| `tests/test_tracking_and_payment_webhook.py` | 33 | Python | `__enter__` |
-| `tests/test_tracking_and_payment_webhook.py` | 36 | Python | `__exit__` |
-| `tests/test_tracking_and_payment_webhook.py` | 40 | Python | `test_tracking_redirects_with_click_id` |
-| `tests/test_tracking_and_payment_webhook.py` | 54 | Python | `test_payment_webhook_records_payment` |
-| `tests/test_tracking_and_payment_webhook.py` | 58 | Python | `execute` |
-| `tests/test_v3_runtime.py` | 26 | Python | `test_api_gateway_uses_service_discovery_round_robin` |
-| `tests/test_v3_runtime.py` | 38 | Python | `test_central_queue_publish_consume` |
-| `tests/test_v3_runtime.py` | 48 | Python | `test_autoscaling_worker_pool` |
-| `tests/test_v3_runtime.py` | 63 | Python | `test_gpu_scheduler_assigns_best_fit` |
-| `tests/test_v3_runtime.py` | 73 | Python | `test_distributed_crawler_cluster_reconcile_and_dispatch` |
-| `tests/test_v3_runtime.py` | 90 | Python | `test_enterprise_runtime_bootstrap_and_components` |
-| `tests/test_v3_runtime.py` | 103 | Python | `test_multi_region_canary_auto_rollback_and_pipeline_optimization` |
-| `tests/test_v3_runtime.py` | 130 | Python | `test_policy_analytics_persistence_manifest_healing_and_notifications` |
-| `tools/auto_fix_optional_deps.sh` | 6 | Shell | `create_rate_limit_module` |
-| `tools/auto_fix_optional_deps.sh` | 43 | Shell | `fix_slowapi_imports` |
-| `tools/auto_fix_optional_deps.sh` | 58 | Shell | `fix_uvicorn` |
-| `tools/check_imports.py` | 12 | Python | `_check_file` |
-| `tools/check_no_runtime_imports.py` | 8 | Python | `is_excluded` |
-| `tools/check_no_runtime_imports.py` | 12 | Python | `is_main_guard` |
-| `tools/check_no_runtime_imports.py` | 26 | Python | `check_nodes` |
-| `tools/check_no_runtime_imports.py` | 46 | Python | `check_file` |
-| `tools/check_runtime_dependency_guards.py` | 14 | Python | `_blocked_import` |
-| `tools/check_runtime_dependency_guards.py` | 18 | Python | `check_file` |
+
+_Display capped at 300 of 1448 detected functions/methods._
 
 ### Automation pipeline files
 
@@ -5988,7 +2833,7 @@ Status: **cloned**; commit `139bde44dfa3`.
 - `services/rl-trainer/src/autonomy/infra_tuner_pipeline.py`
 - `tests/test_profit_mode_pipeline.py`
 
-## `zttlbots`
+## `cvsz/zttlbots`
 
 Status: **cloned**; commit `40949c6038d1`.
 
@@ -6074,7 +2919,7 @@ Status: **cloned**; commit `40949c6038d1`.
 - `zlinebot-lean/scripts/bootstrap-infra.sh`
 - `zlinebot-lean/scripts/install.sh`
 
-## `zTTato-Platform`
+## `cvsz/zTTato-Platform`
 
 Status: **blocked**; commit `blocked`.
 
@@ -6090,7 +2935,7 @@ None detected or repository blocked.
 
 None detected or repository blocked.
 
-## `zvath`
+## `cvsz/zvath`
 
 Status: **cloned**; commit `9553b27b0c23`.
 
@@ -6415,152 +3260,8 @@ Status: **cloned**; commit `9553b27b0c23`.
 | `packages/revenue/cohort.py` | 6 | Python | `retention_rate` |
 | `packages/revenue/engine.py` | 22 | Python | `__init__` |
 | `packages/revenue/engine.py` | 27 | Python | `track_usage` |
-| `packages/revenue/engine.py` | 41 | Python | `enforce_limit` |
-| `packages/revenue/engine.py` | 52 | Python | `dynamic_pricing` |
-| `packages/revenue/funnel.py` | 6 | Python | `upsell_decision` |
-| `packages/revenue/funnel.py` | 15 | Python | `next_step` |
-| `packages/revenue/funnel_v2.py` | 6 | Python | `funnel` |
-| `packages/revenue/growth.py` | 6 | Python | `growth_decision` |
-| `packages/revenue/ltv.py` | 4 | Python | `calculate_ltv` |
-| `packages/revenue/optimizer.py` | 4 | Python | `optimize` |
-| `packages/revenue/pricing_ai.py` | 6 | Python | `price_optimize` |
-| `packages/revenue/rl_agent.py` | 24 | Python | `_q` |
-| `packages/revenue/rl_agent.py` | 28 | Python | `choose_action` |
-| `packages/revenue/rl_agent.py` | 40 | Python | `observe` |
-| `packages/revenue/rl_agent.py` | 58 | Python | `build_default_agent` |
-| `packages/sre/autonomous.py` | 38 | Python | `__init__` |
-| `packages/sre/autonomous.py` | 43 | Python | `detect_issues` |
-| `packages/sre/autonomous.py` | 61 | Python | `propose_plan` |
-| `packages/sre/chaos.py` | 23 | Python | `success_rate` |
-| `packages/sre/chaos.py` | 40 | Python | `__init__` |
-| `packages/sre/chaos.py` | 43 | Python | `propose_actions` |
-| `packages/sre/chaos.py` | 76 | Python | `maybe_fail` |
-| `packages/sre/chaos.py` | 82 | Python | `auto_heal` |
-| `packages/sre/chaos.py` | 104 | Python | `run_chaos_simulation` |
-| `packages/tenant/enforcer.py` | 6 | Python | `enforce` |
-| `packages/vector/repo.py` | 8 | Python | `search_similar` |
-| `scripts/install.sh` | 12 | Shell | `pick_python` |
-| `tests/helpers.py` | 7 | Python | `__init__` |
-| `tests/helpers.py` | 11 | Python | `llen` |
-| `tests/helpers.py` | 14 | Python | `set` |
-| `tests/helpers.py` | 21 | Python | `rpush` |
-| `tests/helpers.py` | 25 | Python | `lpop` |
-| `tests/helpers.py` | 31 | Python | `setup_oauth_env` |
-| `tests/helpers.py` | 40 | Python | `__init__` |
-| `tests/helpers.py` | 49 | Python | `json` |
-| `tests/test_ai_safety_and_compliance.py` | 14 | Python | `test_ai_red_teaming_report` |
-| `tests/test_ai_safety_and_compliance.py` | 29 | Python | `test_adversarial_defense_flags_attack` |
-| `tests/test_ai_safety_and_compliance.py` | 38 | Python | `test_model_watermark_round_trip` |
-| `tests/test_ai_safety_and_compliance.py` | 46 | Python | `test_regulatory_compliance_frameworks` |
-| `tests/test_ai_security_expansions.py` | 13 | Python | `test_ai_security_soc_detects_elevated_threats` |
-| `tests/test_ai_security_expansions.py` | 25 | Python | `test_opa_policy_engine_blocks_disallowed_values` |
-| `tests/test_ai_security_expansions.py` | 35 | Python | `test_robust_cryptographic_watermark_detects_tampering` |
-| `tests/test_ai_security_expansions.py` | 43 | Python | `test_compliance_certification_pipeline_requires_stage_gates` |
-| `tests/test_api_security_hardening.py` | 17 | Python | `_build_request` |
-| `tests/test_api_security_hardening.py` | 42 | Python | `receive` |
-| `tests/test_api_security_hardening.py` | 55 | Python | `__init__` |
-| `tests/test_api_security_hardening.py` | 59 | Python | `get` |
-| `tests/test_api_security_hardening.py` | 62 | Python | `delete` |
-| `tests/test_api_security_hardening.py` | 65 | Python | `execute` |
-| `tests/test_api_security_hardening.py` | 73 | Python | `__init__` |
-| `tests/test_api_security_hardening.py` | 76 | Python | `set` |
-| `tests/test_api_security_hardening.py` | 83 | Python | `getdel` |
-| `tests/test_api_security_hardening.py` | 86 | Python | `pipeline` |
-| `tests/test_api_security_hardening.py` | 90 | Python | `test_generate_requires_auth_header` |
-| `tests/test_api_security_hardening.py` | 96 | Python | `test_generate_enforces_role_and_tenant` |
-| `tests/test_api_security_hardening.py` | 108 | Python | `test_oauth_uses_s256_and_validates_state` |
-| `tests/test_api_security_hardening.py` | 132 | Python | `test_oauth_callback_rejects_replayed_state` |
-| `tests/test_api_security_hardening.py` | 154 | Python | `test_stripe_webhook_requires_secret_in_production` |
-| `tests/test_api_security_hardening.py` | 167 | Python | `test_stripe_webhook_requires_signature_in_non_local` |
-| `tests/test_api_security_hardening.py` | 180 | Python | `test_auth_context_accepts_valid_bearer` |
-| `tests/test_api_security_hardening.py` | 187 | Python | `test_oauth_state_is_shared_across_api_instances` |
-| `tests/test_autonomous_sre_and_sovereign_ml.py` | 9 | Python | `test_autonomous_sre_agent_detects_failover_and_prioritizes_tasks` |
-| `tests/test_autonomous_sre_and_sovereign_ml.py` | 26 | Python | `test_homomorphic_inference_engine_linear_infer` |
-| `tests/test_autonomous_sre_and_sovereign_ml.py` | 35 | Python | `test_homomorphic_addition_preserves_sum` |
-| `tests/test_health_logging.py` | 8 | Python | `test_health_degraded_logging_is_rate_limited` |
-| `tests/test_health_logging.py` | 12 | Python | `ping` |
-| `tests/test_health_logging.py` | 19 | Python | `warning` |
-| `tests/test_health_logging.py` | 22 | Python | `info` |
-| `tests/test_health_logging.py` | 37 | Python | `test_health_logs_recovery_once` |
-| `tests/test_health_logging.py` | 44 | Python | `warning` |
-| `tests/test_health_logging.py` | 47 | Python | `info` |
-| `tests/test_health_logging.py` | 53 | Python | `ping` |
-| `tests/test_input_validation.py` | 14 | Python | `test_compute_ctr_rejects_invalid_inputs` |
-| `tests/test_input_validation.py` | 24 | Python | `test_detect_winner_rejects_empty_list` |
-| `tests/test_input_validation.py` | 30 | Python | `test_cac_and_ltv_reject_negative_values` |
-| `tests/test_input_validation.py` | 43 | Python | `test_optimizer_handles_zero_cac_and_negative_inputs` |
-| `tests/test_mlops_stack.py` | 23 | Python | `test_drift_detector_flags_shift` |
-| `tests/test_mlops_stack.py` | 30 | Python | `test_model_monitor_emits_alerts` |
-| `tests/test_mlops_stack.py` | 37 | Python | `test_shadow_deployment_routes_deterministically` |
-| `tests/test_mlops_stack.py` | 45 | Python | `test_pipeline_spec_is_unified` |
-| `tests/test_mlops_stack.py` | 53 | Python | `test_safe_rl_controller_clamps_action` |
-| `tests/test_mlops_stack.py` | 60 | Python | `test_estimate_uplift` |
-| `tests/test_mlops_stack.py` | 65 | Python | `test_lineage_payloads` |
-| `tests/test_mlops_stack.py` | 75 | Python | `test_privacy_layer_detects_and_redacts` |
-| `tests/test_mlops_stack.py` | 86 | Python | `test_dp_sgd_clips_and_noises` |
-| `tests/test_mlops_stack.py` | 94 | Python | `test_federated_aggregation_weighted_average` |
-| `tests/test_mlops_stack.py` | 111 | Python | `test_explainability_shap_and_lime` |
-| `tests/test_mlops_stack.py` | 122 | Python | `test_compliance_summary_risk_level` |
-| `tests/test_production_upgrade.py` | 12 | Python | `test_crypto_requires_strong_key` |
-| `tests/test_production_upgrade.py` | 20 | Python | `test_queue_enqueue_is_idempotent` |
-| `tests/test_production_upgrade.py` | 31 | Python | `test_queue_sends_invalid_json_to_dlq` |
-| `tests/test_production_upgrade.py` | 36 | Python | `stop_after_first_sleep` |
-| `tests/test_production_upgrade.py` | 49 | Python | `test_oauth_refresh_normalizes_payload` |
-| `tests/test_quantum_governance_federation.py` | 20 | Python | `test_quantum_safe_encrypt_decrypt_round_trip` |
-| `tests/test_quantum_governance_federation.py` | 33 | Python | `test_quantum_safe_rejects_tampered_payload` |
-| `tests/test_quantum_governance_federation.py` | 46 | Python | `test_ai_governance_board_enforces_critical_threshold_and_signoff` |
-| `tests/test_quantum_governance_federation.py` | 75 | Python | `test_global_ai_federation_network_filters_by_policy` |
-| `tests/test_revenue_optimizer.py` | 8 | Python | `test_calculate_ltv_handles_zero_churn` |
-| `tests/test_revenue_optimizer.py` | 13 | Python | `test_calculate_cac_handles_zero_users` |
-| `tests/test_revenue_optimizer.py` | 18 | Python | `test_optimize_returns_expected_strategy` |
-| `tests/test_rl_and_recommendations.py` | 9 | Python | `test_rl_agent_updates_q_and_prefers_best_action` |
-| `tests/test_rl_and_recommendations.py` | 29 | Python | `test_vector_clustering_and_recommendations` |
-| `tests/test_service_smoke.py` | 11 | Python | `__init__` |
-| `tests/test_service_smoke.py` | 15 | Python | `__iter__` |
-| `tests/test_service_smoke.py` | 18 | Python | `commit` |
-| `tests/test_service_smoke.py` | 23 | Python | `__init__` |
-| `tests/test_service_smoke.py` | 27 | Python | `send` |
-| `tests/test_service_smoke.py` | 30 | Python | `flush` |
-| `tests/test_service_smoke.py` | 38 | Python | `test_kafka_worker_smoke_routes_failed_job_to_dlq` |
-| `tests/test_service_smoke.py` | 53 | Python | `test_redis_worker_smoke_sends_retry_exhausted_job_to_dlq` |
-| `tests/test_service_smoke.py` | 58 | Python | `stop_after_second_idle` |
-| `tests/test_ultra_expansion.py` | 8 | Python | `test_retention_rate` |
-| `tests/test_ultra_expansion.py` | 14 | Python | `test_price_optimize` |
-| `tests/test_ultra_expansion.py` | 19 | Python | `test_growth_decision_paths` |
-| `tests/test_ultra_extensions.py` | 21 | Python | `__init__` |
-| `tests/test_ultra_extensions.py` | 25 | Python | `fetch_one` |
-| `tests/test_ultra_extensions.py` | 30 | Python | `test_crypto_encrypt_decrypt_and_rotate` |
-| `tests/test_ultra_extensions.py` | 44 | Python | `test_crypto_rejects_tampered_ciphertext` |
-| `tests/test_ultra_extensions.py` | 58 | Python | `test_crypto_decrypt_supports_legacy_format` |
-| `tests/test_ultra_extensions.py` | 70 | Python | `test_budget_manager_and_guarded_call` |
-| `tests/test_ultra_extensions.py` | 82 | Python | `test_circuit_breaker_opens_after_threshold` |
-| `tests/test_ultra_extensions.py` | 86 | Python | `fail` |
-| `tests/test_ultra_extensions.py` | 97 | Python | `test_chaos_injection_paths` |
-| `tests/test_ultra_extensions.py` | 107 | Python | `test_auto_heal_recovers_transient_failures` |
-| `tests/test_ultra_extensions.py` | 110 | Python | `flaky` |
-| `tests/test_ultra_extensions.py` | 120 | Python | `test_run_chaos_simulation_tracks_recovery` |
-| `tests/test_ultra_modules.py` | 8 | Python | `test_viral_score_increases_with_keywords` |
-| `tests/test_ultra_modules.py` | 15 | Python | `test_compute_ctr_zero_division_safe` |
-| `tests/test_ultra_modules.py` | 20 | Python | `test_detect_winner_returns_max_score` |
-| `tests/test_ultra_modules.py` | 26 | Python | `test_upsell_decision_paths` |
-| `tests/test_ultra_system.py` | 9 | Python | `test_extract_trend_patterns_filters_by_viral_keyword` |
-| `tests/test_ultra_system.py` | 15 | Python | `test_funnel_v2_paths` |
-| `tests/test_worker_resilience.py` | 14 | Python | `test_competitor_scraper_uses_https_proxy` |
-| `tests/test_worker_resilience.py` | 24 | Python | `raise_for_status` |
-| `tests/test_worker_resilience.py` | 27 | Python | `fake_get` |
-| `tests/test_worker_resilience.py` | 44 | Python | `test_competitor_scraper_allows_empty_proxy_list` |
-| `tests/test_worker_resilience.py` | 54 | Python | `raise_for_status` |
-| `tests/test_worker_resilience.py` | 57 | Python | `fake_get` |
-| `tests/test_worker_resilience.py` | 71 | Python | `test_stealth_jitter_handles_reversed_bounds` |
-| `tests/test_worker_resilience.py` | 89 | Python | `test_queue_dependency_failure_retries_then_dlq` |
-| `tests/test_worker_resilience.py` | 97 | Python | `labels` |
-| `tests/test_worker_resilience.py` | 101 | Python | `inc` |
-| `tests/test_worker_resilience.py` | 104 | Python | `fail_with_timeout` |
-| `tests/test_worker_resilience.py` | 107 | Python | `stop_after_idle` |
-| `tests/test_zero_trust_confidential_and_healing.py` | 11 | Python | `test_spiffe_parsing_and_workload_identity_allowlist` |
-| `tests/test_zero_trust_confidential_and_healing.py` | 21 | Python | `test_confidential_compute_policy_evaluates_attestation` |
-| `tests/test_zero_trust_confidential_and_healing.py` | 44 | Python | `test_ai_threat_intel_feed_deduplicates_and_ranks` |
-| `tests/test_zero_trust_confidential_and_healing.py` | 60 | Python | `test_autonomous_healer_generates_remediation_actions` |
+
+_Display capped at 300 of 446 detected functions/methods._
 
 ### Automation pipeline files
 
@@ -6574,7 +3275,7 @@ Status: **cloned**; commit `9553b27b0c23`.
 - `packages/ai/mlops/pipeline.py`
 - `scripts/install.sh`
 
-## `tiktok-shop-bot`
+## `cvsz/tiktok-shop-bot`
 
 Status: **cloned**; commit `0e6128856c86`.
 
@@ -6613,7 +3314,7 @@ None detected or repository blocked.
 
 None detected or repository blocked.
 
-## `tiktokshop-api-client`
+## `cvsz/tiktokshop-api-client`
 
 Status: **cloned**; commit `68dc36ff8524`.
 
@@ -6670,7 +3371,7 @@ Status: **cloned**; commit `68dc36ff8524`.
 
 None detected or repository blocked.
 
-## `tiktok-shop-sdk`
+## `cvsz/tiktok-shop-sdk`
 
 Status: **cloned**; commit `0c53da6cbba9`.
 
@@ -6999,1627 +3700,8 @@ Status: **cloned**; commit `0c53da6cbba9`.
 | `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4432 | JS/TS | `isMapEqual` |
 | `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4443 | JS/TS | `resolveCssVars` |
 | `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4479 | JS/TS | `isMismatchAllowed` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4500 | JS/TS | `hydrateOnIdle` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4504 | JS/TS | `elementIsVisibleInViewport` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4509 | JS/TS | `hydrateOnVisible` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4529 | JS/TS | `hydrateOnMediaQuery` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4540 | JS/TS | `hydrateOnInteraction` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4543 | JS/TS | `doHydrate` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4551 | JS/TS | `teardown` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4565 | JS/TS | `forEachElement` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4588 | JS/TS | `isAsyncWrapper` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4589 | JS/TS | `defineAsyncComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4607 | JS/TS | `retry` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4612 | JS/TS | `load` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4618 | JS/TS | `userRetry` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4619 | JS/TS | `userFail` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4647 | JS/TS | `__asyncHydrate` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4650 | JS/TS | `performHydrate` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4679 | JS/TS | `setup` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4685 | JS/TS | `onError` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4749 | JS/TS | `createInnerComp` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4757 | JS/TS | `isKeepAlive` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4769 | JS/TS | `setup` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4844 | JS/TS | `unmount` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4848 | JS/TS | `pruneCache` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4856 | JS/TS | `pruneCacheEntry` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4876 | JS/TS | `cacheSubtree` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4965 | JS/TS | `matches` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4976 | JS/TS | `onActivated` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4979 | JS/TS | `onDeactivated` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 4982 | JS/TS | `registerKeepAliveHook` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5004 | JS/TS | `injectToKeepAliveRoot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5016 | JS/TS | `resetShapeFlag` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5020 | JS/TS | `getInnerChild` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5023 | JS/TS | `injectHook` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5047 | JS/TS | `createHook` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5067 | JS/TS | `onErrorCaptured` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5072 | JS/TS | `resolveComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5076 | JS/TS | `resolveDynamicComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5083 | JS/TS | `resolveDirective` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5086 | JS/TS | `resolveAsset` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5120 | JS/TS | `resolve` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5123 | JS/TS | `renderList` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5175 | JS/TS | `createSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5192 | JS/TS | `renderSlot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5235 | JS/TS | `ensureValidVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5244 | JS/TS | `toHandlers` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5255 | JS/TS | `getPublicInstance` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5283 | JS/TS | `isReservedPrefix` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5284 | JS/TS | `hasSetupBinding` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5286 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5364 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5403 | JS/TS | `defineProperty` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5421 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5427 | JS/TS | `has` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5439 | JS/TS | `createDevRenderContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5458 | JS/TS | `exposePropsOnRenderContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5474 | JS/TS | `exposeSetupStateOnRenderContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5495 | JS/TS | `warnRuntimeUsage` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5498 | JS/TS | `defineProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5504 | JS/TS | `defineEmits` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5510 | JS/TS | `defineExpose` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5515 | JS/TS | `defineOptions` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5520 | JS/TS | `defineSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5526 | JS/TS | `defineModel` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5531 | JS/TS | `withDefaults` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5537 | JS/TS | `useSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5540 | JS/TS | `useAttrs` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5543 | JS/TS | `getContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5550 | JS/TS | `normalizePropsOrEmits` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5556 | JS/TS | `mergeDefaults` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5578 | JS/TS | `mergeModels` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5583 | JS/TS | `createPropsRestProxy` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5595 | JS/TS | `withAsyncContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5612 | JS/TS | `createDuplicateChecker` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5623 | JS/TS | `applyOptions` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5773 | JS/TS | `registerLifecycleHook` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5818 | JS/TS | `resolveInjections` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5853 | JS/TS | `callHook` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5860 | JS/TS | `createWatcher` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5890 | JS/TS | `resolveMergedOptions` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5920 | JS/TS | `mergeOptions` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5973 | JS/TS | `mergeDataFn` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5987 | JS/TS | `mergeInject` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 5990 | JS/TS | `normalizeInject` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6000 | JS/TS | `mergeAsArray` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6003 | JS/TS | `mergeObjectOptions` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6006 | JS/TS | `mergeEmitsOrPropsOptions` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6020 | JS/TS | `mergeWatchOptions` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6029 | JS/TS | `createAppContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6051 | JS/TS | `createAppAPI` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6082 | JS/TS | `use` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6098 | JS/TS | `mixin` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6112 | JS/TS | `component` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6125 | JS/TS | `directive` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6138 | JS/TS | `mount` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6180 | JS/TS | `onUnmount` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6188 | JS/TS | `unmount` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6205 | JS/TS | `provide` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6220 | JS/TS | `runWithContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6234 | JS/TS | `provide` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6249 | JS/TS | `inject` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6264 | JS/TS | `hasInjectionContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6268 | JS/TS | `useSSRContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6279 | JS/TS | `watchEffect` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6282 | JS/TS | `watchPostEffect` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6289 | JS/TS | `watchSyncEffect` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6296 | JS/TS | `watch2` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6304 | JS/TS | `doWatch` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6332 | JS/TS | `watchStopHandle` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6379 | JS/TS | `instanceWatch` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6394 | JS/TS | `createPathGetter` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6404 | JS/TS | `useModel` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6429 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6433 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6456 | JS/TS | `next` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6467 | JS/TS | `getModelModifiers` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6470 | JS/TS | `emit` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6556 | JS/TS | `normalizeEmitsOptions` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6566 | JS/TS | `extendEmits` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6599 | JS/TS | `isEmitListener` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6607 | JS/TS | `markAttrsAccessed` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6610 | JS/TS | `renderComponentRoot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6638 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6756 | JS/TS | `getChildRoot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6767 | JS/TS | `setRoot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6779 | JS/TS | `filterSingleRoot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6800 | JS/TS | `getFunctionalFallthrough` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6809 | JS/TS | `filterModelListeners` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6818 | JS/TS | `isElementRoot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6821 | JS/TS | `shouldUpdateComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6868 | JS/TS | `hasPropsChanged` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6881 | JS/TS | `updateHOCHostEl` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6896 | JS/TS | `createInternalObject` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6897 | JS/TS | `isInternalObject` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6898 | JS/TS | `initProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6922 | JS/TS | `isInHmrContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 6928 | JS/TS | `updateProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7020 | JS/TS | `setFullProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7062 | JS/TS | `resolvePropValue` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7104 | JS/TS | `normalizePropsOptions` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7115 | JS/TS | `extendProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7193 | JS/TS | `validatePropName` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7201 | JS/TS | `getType` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7213 | JS/TS | `validateProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7229 | JS/TS | `validateProp` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7259 | JS/TS | `assertType` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7282 | JS/TS | `getInvalidTypeMessage` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7300 | JS/TS | `styleValue` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7309 | JS/TS | `isExplicable` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7313 | JS/TS | `isBoolean` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7316 | JS/TS | `isInternalKey` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7317 | JS/TS | `normalizeSlotValue` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7318 | JS/TS | `normalizeSlot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7333 | JS/TS | `normalizeObjectSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7351 | JS/TS | `normalizeVNodeSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7360 | JS/TS | `assignSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7367 | JS/TS | `initSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7383 | JS/TS | `updateSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7417 | JS/TS | `startMeasure` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7425 | JS/TS | `endMeasure` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7440 | JS/TS | `isSupported` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7452 | JS/TS | `initFeatureFlags` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7476 | JS/TS | `createRenderer` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7479 | JS/TS | `createHydrationRenderer` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7482 | JS/TS | `baseCreateRenderer` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7505 | JS/TS | `patch` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7607 | JS/TS | `processText` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7621 | JS/TS | `processCommentNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7632 | JS/TS | `mountStaticNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7642 | JS/TS | `patchStaticNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7657 | JS/TS | `moveStaticNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7666 | JS/TS | `removeStaticNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7675 | JS/TS | `processElement` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7714 | JS/TS | `mountElement` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7775 | JS/TS | `setScopeId` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7801 | JS/TS | `mountChildren` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7817 | JS/TS | `patchElement` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7908 | JS/TS | `patchBlockChildren` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7939 | JS/TS | `patchProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 7968 | JS/TS | `processFragment` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8044 | JS/TS | `processComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8070 | JS/TS | `mountComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8119 | JS/TS | `updateComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8140 | JS/TS | `setupRenderEffect` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8141 | JS/TS | `componentUpdateFn` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8156 | JS/TS | `hydrateSubTree` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8332 | JS/TS | `updateComponentPreRender` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8343 | JS/TS | `patchChildren` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8420 | JS/TS | `patchUnkeyedChildren` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8464 | JS/TS | `patchKeyedChildren` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8630 | JS/TS | `move` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8664 | JS/TS | `remove22` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8671 | JS/TS | `performLeave` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8693 | JS/TS | `unmount` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8772 | JS/TS | `remove2` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8792 | JS/TS | `performRemove` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8800 | JS/TS | `performLeave` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8810 | JS/TS | `removeFragment` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8819 | JS/TS | `unmountComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8844 | JS/TS | `unmountChildren` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8849 | JS/TS | `getNextHostNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8861 | JS/TS | `render2` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8910 | JS/TS | `resolveChildrenNamespace` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8913 | JS/TS | `toggleRecurse` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8922 | JS/TS | `needTransition` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8925 | JS/TS | `traverseStaticChildren` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8953 | JS/TS | `getSequence` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 8993 | JS/TS | `locateNonHydratedAsyncRoot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9003 | JS/TS | `invalidateMount` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9009 | JS/TS | `isSuspense` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9018 | JS/TS | `process` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9055 | JS/TS | `triggerEvent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9061 | JS/TS | `mountSuspense` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9108 | JS/TS | `patchSuspense` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9269 | JS/TS | `createSuspenseBoundary` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9312 | JS/TS | `resolve` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9396 | JS/TS | `fallback` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9403 | JS/TS | `mountFallback` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9438 | JS/TS | `move` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9442 | JS/TS | `next` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9445 | JS/TS | `registerDep` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9494 | JS/TS | `unmount` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9516 | JS/TS | `hydrateSuspense` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9544 | JS/TS | `normalizeSuspenseChildren` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9552 | JS/TS | `normalizeSuspenseSlot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9580 | JS/TS | `queueEffectWithSuspense` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9591 | JS/TS | `setActiveBranch` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9605 | JS/TS | `isVNodeSuspensible` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9615 | JS/TS | `openBlock` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9618 | JS/TS | `closeBlock` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9623 | JS/TS | `setBlockTracking` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9629 | JS/TS | `setupBlock` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9637 | JS/TS | `createElementBlock` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9650 | JS/TS | `createBlock` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9662 | JS/TS | `isVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9665 | JS/TS | `isSameVNodeType` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9677 | JS/TS | `transformVNodeArgs` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9680 | JS/TS | `createVNodeWithArgsTransform` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9685 | JS/TS | `normalizeKey` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9696 | JS/TS | `createBaseVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9751 | JS/TS | `_createVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9815 | JS/TS | `guardReactiveProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9819 | JS/TS | `cloneVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9874 | JS/TS | `deepCloneVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9881 | JS/TS | `createTextVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9884 | JS/TS | `createStaticVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9889 | JS/TS | `createCommentVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9892 | JS/TS | `normalizeVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9908 | JS/TS | `cloneIfMounted` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9911 | JS/TS | `normalizeChildren` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9956 | JS/TS | `mergeProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9980 | JS/TS | `invokeVNodeHook` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 9988 | JS/TS | `createComponentInstance` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10080 | JS/TS | `getCurrentInstance` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10085 | JS/TS | `registerGlobalSetter` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10103 | JS/TS | `setCurrentInstance` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10112 | JS/TS | `unsetCurrentInstance` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10117 | JS/TS | `validateComponentName` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10124 | JS/TS | `isStatefulComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10128 | JS/TS | `setupComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10138 | JS/TS | `setupStatefulComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10211 | JS/TS | `handleSetupResult` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10240 | JS/TS | `registerRuntimeCompiler` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10248 | JS/TS | `isRuntimeOnly` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10249 | JS/TS | `finishComponentSetup` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10302 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10307 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10311 | JS/TS | `deleteProperty` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10316 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10321 | JS/TS | `getSlotsProxy` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10323 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10329 | JS/TS | `createSetupContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10330 | JS/TS | `expose` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10377 | JS/TS | `getComponentPublicInstance` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10380 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10387 | JS/TS | `has` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10396 | JS/TS | `classify` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10397 | JS/TS | `getComponentName` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10400 | JS/TS | `formatComponentName` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10409 | JS/TS | `inferFromRegistry` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10422 | JS/TS | `isClassComponent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10425 | JS/TS | `computed2` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10435 | JS/TS | `h` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10460 | JS/TS | `initCustomFormatter` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10470 | JS/TS | `header` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10509 | JS/TS | `hasBody` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10512 | JS/TS | `body` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10522 | JS/TS | `formatInstance` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10555 | JS/TS | `createInstanceBlock` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10586 | JS/TS | `formatValue` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10599 | JS/TS | `extractKeys` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10612 | JS/TS | `isKeyOfType` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10624 | JS/TS | `genRefFlag` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10639 | JS/TS | `withMemo` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10649 | JS/TS | `isMemoSame` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10731 | JS/TS | `setScopeId` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10738 | JS/TS | `insertStaticContent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10793 | JS/TS | `decorate$1` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10801 | JS/TS | `callHook2` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10808 | JS/TS | `hasExplicitCallback` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10811 | JS/TS | `resolveTransitionProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10848 | JS/TS | `finishEnter` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10854 | JS/TS | `finishLeave` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10861 | JS/TS | `makeEnterHook` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10864 | JS/TS | `resolve2` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10876 | JS/TS | `onBeforeEnter` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10881 | JS/TS | `onBeforeAppear` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10888 | JS/TS | `onLeave` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10890 | JS/TS | `resolve2` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10911 | JS/TS | `onEnterCancelled` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10915 | JS/TS | `onAppearCancelled` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10919 | JS/TS | `onLeaveCancelled` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10925 | JS/TS | `normalizeDuration` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10935 | JS/TS | `NumberOf` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10942 | JS/TS | `addTransitionClass` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10946 | JS/TS | `removeTransitionClass` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10956 | JS/TS | `nextFrame` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10962 | JS/TS | `whenTransitionEnds` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10964 | JS/TS | `resolveIfNotStale` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10978 | JS/TS | `end` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10982 | JS/TS | `onEnd` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10994 | JS/TS | `getTransitionInfo` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 10996 | JS/TS | `getStyleProperties` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11033 | JS/TS | `getTimeout` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11039 | JS/TS | `toMs` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11043 | JS/TS | `forceReflow` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11047 | JS/TS | `patchClass` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11065 | JS/TS | `beforeMount` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11073 | JS/TS | `mounted` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11078 | JS/TS | `updated` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11094 | JS/TS | `beforeUnmount` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11098 | JS/TS | `setDisplay` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11102 | JS/TS | `initVShowForSSR` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11110 | JS/TS | `useCssVars` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11124 | JS/TS | `setVars` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11143 | JS/TS | `setVarsOnVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11169 | JS/TS | `setVarsOnNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11182 | JS/TS | `patchStyle` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11232 | JS/TS | `setStyle` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11262 | JS/TS | `autoPrefix` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11281 | JS/TS | `patchAttr` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11299 | JS/TS | `patchDOMProp` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11349 | JS/TS | `addEventListener` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11352 | JS/TS | `removeEventListener` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11356 | JS/TS | `patchEvent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11376 | JS/TS | `parseName` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11391 | JS/TS | `getNow` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11392 | JS/TS | `createInvoker` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11393 | JS/TS | `invoker` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11410 | JS/TS | `sanitizeEventValue` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11420 | JS/TS | `patchStopImmediatePropagation` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11434 | JS/TS | `isNativeOn` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11436 | JS/TS | `patchProp` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11465 | JS/TS | `shouldSetAsProp` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11502 | JS/TS | `defineCustomElement` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11506 | JS/TS | `constructor` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11513 | JS/TS | `defineSSRCustomElement` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11519 | JS/TS | `constructor` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11555 | JS/TS | `connectedCallback` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11583 | JS/TS | `_setParent` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11589 | JS/TS | `_inheritParentContext` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11597 | JS/TS | `disconnectedCallback` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11615 | JS/TS | `_processMutations` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11623 | JS/TS | `_resolveDef` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11632 | JS/TS | `resolve2` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11669 | JS/TS | `_mount` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11693 | JS/TS | `_resolveProps` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11703 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11706 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11712 | JS/TS | `_setAttr` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11725 | JS/TS | `_getProp` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11731 | JS/TS | `_setProp` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11762 | JS/TS | `_update` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11767 | JS/TS | `_createVNode` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11789 | JS/TS | `dispatch` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11808 | JS/TS | `_applyStyles` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11841 | JS/TS | `_parseSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11853 | JS/TS | `_renderSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11883 | JS/TS | `_getSlots` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11900 | JS/TS | `_injectChildStyle` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11906 | JS/TS | `_beginPatch` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11913 | JS/TS | `_endPatch` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11922 | JS/TS | `_removeChildStyle` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11935 | JS/TS | `useHost` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11953 | JS/TS | `useShadowRoot` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11957 | JS/TS | `useCssModule` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11981 | JS/TS | `decorate` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 11991 | JS/TS | `setup` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12075 | JS/TS | `callPendingCbs` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12084 | JS/TS | `recordPosition` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12090 | JS/TS | `applyTranslation` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12102 | JS/TS | `hasCSSTransform` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12118 | JS/TS | `getModelAssigner` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12122 | JS/TS | `onCompositionStart` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12125 | JS/TS | `onCompositionEnd` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12133 | JS/TS | `castValue` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12139 | JS/TS | `created` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12158 | JS/TS | `mounted` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12161 | JS/TS | `beforeUpdate` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12183 | JS/TS | `created` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12215 | JS/TS | `beforeUpdate` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12220 | JS/TS | `setChecked` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12236 | JS/TS | `created` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12243 | JS/TS | `beforeUpdate` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12253 | JS/TS | `created` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12271 | JS/TS | `mounted` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12274 | JS/TS | `beforeUpdate` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12277 | JS/TS | `updated` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12283 | JS/TS | `setSelected` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12315 | JS/TS | `getValue` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12318 | JS/TS | `getCheckboxValue` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12323 | JS/TS | `created` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12326 | JS/TS | `mounted` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12329 | JS/TS | `beforeUpdate` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12332 | JS/TS | `updated` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12336 | JS/TS | `resolveDynamicModel` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12353 | JS/TS | `callModelHook` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12361 | JS/TS | `initVModelForSSR` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12409 | JS/TS | `withModifiers` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12429 | JS/TS | `withKeys` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12447 | JS/TS | `ensureRenderer` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12450 | JS/TS | `ensureHydrationRenderer` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12455 | JS/TS | `render` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12458 | JS/TS | `hydrate` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12461 | JS/TS | `createApp` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12487 | JS/TS | `createSSRApp` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12502 | JS/TS | `resolveRootNamespace` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12510 | JS/TS | `injectNativeTagCheck` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12516 | JS/TS | `injectCompilerOptionsCheck` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12520 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12523 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12535 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12539 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12545 | JS/TS | `normalizeContainer` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12563 | JS/TS | `initDirectivesForSSR` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12572 | JS/TS | `initDev` |
-| `apps/docs/.vitepress/cache/deps/chunk-KK2TUMQT.js` | 12580 | JS/TS | `compile2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 8 | JS/TS | `__esm` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 11 | JS/TS | `__commonJS` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 14 | JS/TS | `__copyProps` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 22 | JS/TS | `__toESM` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 40 | JS/TS | `copyBuffer` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 46 | JS/TS | `rfdc2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 60 | JS/TS | `cloneArray` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 78 | JS/TS | `clone` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 100 | JS/TS | `cloneProto` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 122 | JS/TS | `rfdcCircles` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 136 | JS/TS | `cloneArray` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 159 | JS/TS | `clone` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 190 | JS/TS | `cloneProto` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 236 | JS/TS | `toUpper` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 239 | JS/TS | `classify` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 242 | JS/TS | `basename` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 256 | JS/TS | `isUrlString` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 265 | JS/TS | `debounce` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 275 | JS/TS | `applyFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 314 | JS/TS | `_applyPromised` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 319 | JS/TS | `flatHooks` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 332 | JS/TS | `_createTask` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 334 | JS/TS | `serialTaskCaller` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 342 | JS/TS | `parallelTaskCaller` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 347 | JS/TS | `callEachWith` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 353 | JS/TS | `constructor` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 363 | JS/TS | `hook` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 405 | JS/TS | `hookOnce` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 407 | JS/TS | `_function` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 418 | JS/TS | `removeHook` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 429 | JS/TS | `deprecateHook` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 437 | JS/TS | `deprecateHooks` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 443 | JS/TS | `addHooks` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 454 | JS/TS | `removeHooks` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 460 | JS/TS | `removeAllHooks` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 465 | JS/TS | `callHook` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 469 | JS/TS | `callHookParallel` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 473 | JS/TS | `callHookWith` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 494 | JS/TS | `beforeEach` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 506 | JS/TS | `afterEach` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 519 | JS/TS | `createHooks` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 534 | JS/TS | `__esm2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 537 | JS/TS | `__commonJS2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 540 | JS/TS | `__copyProps2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 548 | JS/TS | `__toESM2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2071 | JS/TS | `define` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2103 | JS/TS | `getComponentTypeName` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2111 | JS/TS | `getComponentFileName` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2116 | JS/TS | `saveComponentGussedName` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2120 | JS/TS | `getAppRecord` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2126 | JS/TS | `isFragment` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2135 | JS/TS | `getInstanceName` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2155 | JS/TS | `getUniqueComponentId` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2161 | JS/TS | `getComponentInstance` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2166 | JS/TS | `createRect` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2182 | JS/TS | `getTextRect` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2188 | JS/TS | `getFragmentRect` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2209 | JS/TS | `mergeRects` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2228 | JS/TS | `getComponentBoundingRect` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2243 | JS/TS | `getRootElementsFromComponentInstance` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2250 | JS/TS | `getFragmentRootElements` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2297 | JS/TS | `getContainerElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2300 | JS/TS | `getCardElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2303 | JS/TS | `getIndicatorElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2306 | JS/TS | `getNameElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2309 | JS/TS | `getStyles` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2317 | JS/TS | `create` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2345 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2362 | JS/TS | `highlight` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2370 | JS/TS | `unhighlight` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2376 | JS/TS | `inspectFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2392 | JS/TS | `selectComponentFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2401 | JS/TS | `cancelInspectComponentHighLighter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2407 | JS/TS | `inspectComponentHighLighter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2410 | JS/TS | `onSelect` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2427 | JS/TS | `scrollToComponent` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2469 | JS/TS | `waitForInspectorInit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2482 | JS/TS | `setupInspector` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2490 | JS/TS | `getComponentInspector` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2492 | JS/TS | `setup` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2507 | JS/TS | `isReadonly` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2513 | JS/TS | `isReactive` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2525 | JS/TS | `isRef` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2528 | JS/TS | `toRaw` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2537 | JS/TS | `constructor` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2540 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2566 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2580 | JS/TS | `has` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2593 | JS/TS | `createDefaultSetCallback` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2619 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2646 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2649 | JS/TS | `isRef` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2658 | JS/TS | `getTimelineLayersStateFromStorage` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2686 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2690 | JS/TS | `addTimelineLayer` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2702 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2709 | JS/TS | `addInspector` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2722 | JS/TS | `getActiveInspectors` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2738 | JS/TS | `getInspector` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2741 | JS/TS | `DevToolsV6PluginAPIHookKeys` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2753 | JS/TS | `DevToolsContextHookKeys` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2767 | JS/TS | `DevToolsMessagingHookKeys` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2778 | JS/TS | `createDevToolsCtxHooks` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2920 | JS/TS | `initStateFactory` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2945 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2952 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2960 | JS/TS | `updateAllStates` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2969 | JS/TS | `setActiveAppRecord` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2973 | JS/TS | `setActiveAppRecordId` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2978 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2990 | JS/TS | `deleteProperty` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 2994 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3001 | JS/TS | `onDevToolsConnected` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3015 | JS/TS | `resolveIcon` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3025 | JS/TS | `addCustomTab` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3035 | JS/TS | `addCustomCommand` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3049 | JS/TS | `removeCustomCommand` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3057 | JS/TS | `openInEditor` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3085 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3089 | JS/TS | `_getSettings` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3096 | JS/TS | `getPluginLocalKey` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3099 | JS/TS | `getPluginSettingsOptions` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3101 | JS/TS | `item` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3107 | JS/TS | `getPluginSettings` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3117 | JS/TS | `item` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3122 | JS/TS | `initPluginSettings` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3129 | JS/TS | `setPluginSettings` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3167 | JS/TS | `vueAppInit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3170 | JS/TS | `vueAppUnmount` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3173 | JS/TS | `vueAppConnected` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3176 | JS/TS | `componentAdded` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3179 | JS/TS | `componentEmit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3182 | JS/TS | `componentUpdated` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3185 | JS/TS | `componentRemoved` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3188 | JS/TS | `setupDevtoolsPlugin` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3191 | JS/TS | `perfStart` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3194 | JS/TS | `perfEnd` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3200 | JS/TS | `setupDevToolsPlugin` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3205 | JS/TS | `constructor` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3245 | JS/TS | `notifyComponentUpdate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3270 | JS/TS | `addInspector` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3276 | JS/TS | `sendInspectorTree` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3282 | JS/TS | `sendInspectorState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3288 | JS/TS | `selectInspectorNode` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3291 | JS/TS | `visitComponentTree` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3295 | JS/TS | `now` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3301 | JS/TS | `addTimelineLayer` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3304 | JS/TS | `addTimelineEvent` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3311 | JS/TS | `getSettings` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3315 | JS/TS | `getComponentInstances` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3318 | JS/TS | `getComponentBounds` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3321 | JS/TS | `getComponentName` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3324 | JS/TS | `highlightElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3328 | JS/TS | `unhighlightElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3364 | JS/TS | `setupDevToolsPlugin` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3367 | JS/TS | `callDevToolsPluginSetupFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3385 | JS/TS | `registerDevToolsPlugin` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3411 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3416 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3422 | JS/TS | `getRoutes` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3426 | JS/TS | `filterRoutes` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3439 | JS/TS | `filterCurrentRoute` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3455 | JS/TS | `normalizeRouterInfo` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3456 | JS/TS | `init` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3482 | JS/TS | `createDevToolsApi` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3485 | JS/TS | `getInspectorTree` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3504 | JS/TS | `getInspectorState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3526 | JS/TS | `editInspectorState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3544 | JS/TS | `sendInspectorState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3552 | JS/TS | `inspectComponentInspector` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3556 | JS/TS | `cancelInspectComponentInspector` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3560 | JS/TS | `getComponentRenderCode` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3566 | JS/TS | `scrollToComponent` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3574 | JS/TS | `toggleApp` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3585 | JS/TS | `inspectDOM` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3594 | JS/TS | `updatePluginSettings` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3597 | JS/TS | `getPluginSettings` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3636 | JS/TS | `onDevToolsClientConnected` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3652 | JS/TS | `toggleHighPerfMode` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3661 | JS/TS | `updateDevToolsClientDetected` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3680 | JS/TS | `constructor` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3684 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3688 | JS/TS | `getByKey` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3691 | JS/TS | `getByValue` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3694 | JS/TS | `clear` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3700 | JS/TS | `constructor` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3704 | JS/TS | `register` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3713 | JS/TS | `clear` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3716 | JS/TS | `getIdentifier` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3719 | JS/TS | `getValue` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3724 | JS/TS | `constructor` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3728 | JS/TS | `register` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3738 | JS/TS | `getAllowedProps` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3744 | JS/TS | `valuesOfObj` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3756 | JS/TS | `find` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3770 | JS/TS | `forEach` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3773 | JS/TS | `includes` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3776 | JS/TS | `findArr` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3786 | JS/TS | `constructor` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3789 | JS/TS | `register` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3792 | JS/TS | `findApplicable` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3795 | JS/TS | `findByName` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3801 | JS/TS | `getType` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3802 | JS/TS | `isUndefined` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3803 | JS/TS | `isNull` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3804 | JS/TS | `isPlainObject2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3813 | JS/TS | `isEmptyObject` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3814 | JS/TS | `isArray` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3815 | JS/TS | `isString` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3816 | JS/TS | `isNumber` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3817 | JS/TS | `isBoolean` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3818 | JS/TS | `isRegExp` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3819 | JS/TS | `isMap` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3820 | JS/TS | `isSet` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3821 | JS/TS | `isSymbol` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3822 | JS/TS | `isDate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3823 | JS/TS | `isError` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3824 | JS/TS | `isNaNValue` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3825 | JS/TS | `isPrimitive2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3826 | JS/TS | `isBigint` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3827 | JS/TS | `isInfinite` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3828 | JS/TS | `isTypedArray` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3829 | JS/TS | `isURL` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3831 | JS/TS | `escapeKey` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3832 | JS/TS | `stringifyPath` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3833 | JS/TS | `parsePath` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3857 | JS/TS | `simpleTransformation` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3922 | JS/TS | `compositeTransformation` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 3967 | JS/TS | `isInstanceOfRegisteredClass` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4010 | JS/TS | `transformValue` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4031 | JS/TS | `untransformValue` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4054 | JS/TS | `getNthKey` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4064 | JS/TS | `validatePath` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4075 | JS/TS | `getDeep` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4099 | JS/TS | `setDeep` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4168 | JS/TS | `traverse` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4184 | JS/TS | `applyValueAnnotations` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4190 | JS/TS | `applyReferentialEqualityAnnotations` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4191 | JS/TS | `apply` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4210 | JS/TS | `isDeep` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4211 | JS/TS | `addIdentity` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4219 | JS/TS | `generateReferentialEqualityAnnotations` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4308 | JS/TS | `getType2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4311 | JS/TS | `isArray2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4314 | JS/TS | `isPlainObject3` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4320 | JS/TS | `isNull2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4323 | JS/TS | `isOneOf` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4326 | JS/TS | `isUndefined2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4330 | JS/TS | `assignProp` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4343 | JS/TS | `copy` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4366 | JS/TS | `constructor` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4376 | JS/TS | `serialize` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4397 | JS/TS | `deserialize` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4408 | JS/TS | `stringify` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4411 | JS/TS | `parse` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4414 | JS/TS | `registerClass` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4417 | JS/TS | `registerSymbol` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4420 | JS/TS | `registerCustom` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | 4426 | JS/TS | `allowErrorProps` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 41 | JS/TS | `computedEager` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 52 | JS/TS | `computedWithControl` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 57 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 68 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 76 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 85 | JS/TS | `tryOnScopeDispose` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 92 | JS/TS | `createEventHook` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 94 | JS/TS | `off` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 97 | JS/TS | `clear` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 100 | JS/TS | `on` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 102 | JS/TS | `offFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 108 | JS/TS | `trigger` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 118 | JS/TS | `createGlobalState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 131 | JS/TS | `injectLocal` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 141 | JS/TS | `provideLocal` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 152 | JS/TS | `createInjectionState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 155 | JS/TS | `useProvidingState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 160 | JS/TS | `useInjectedState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 163 | JS/TS | `createRef` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 170 | JS/TS | `createSharedComposable` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 174 | JS/TS | `dispose` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 192 | JS/TS | `extendRef` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 198 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 201 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 212 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 217 | JS/TS | `isDefined` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 220 | JS/TS | `makeDestructurable` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 225 | JS/TS | `value` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 240 | JS/TS | `reactify` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 246 | JS/TS | `reactifyObject` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 268 | JS/TS | `toReactive` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 272 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 275 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 282 | JS/TS | `deleteProperty` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 285 | JS/TS | `has` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 288 | JS/TS | `ownKeys` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 291 | JS/TS | `getOwnPropertyDescriptor` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 300 | JS/TS | `reactiveComputed` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 303 | JS/TS | `reactiveOmit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 310 | JS/TS | `isDef` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 311 | JS/TS | `notNullish` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 312 | JS/TS | `assert` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 317 | JS/TS | `isObject` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 318 | JS/TS | `now` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 319 | JS/TS | `timestamp` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 320 | JS/TS | `clamp` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 321 | JS/TS | `noop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 323 | JS/TS | `rand` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 328 | JS/TS | `hasOwn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 330 | JS/TS | `getIsIOS` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 334 | JS/TS | `createFilterWrapper` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 335 | JS/TS | `wrapper` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 342 | JS/TS | `bypassFilter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 345 | JS/TS | `debounceFilter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 349 | JS/TS | `_clearTimeout` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 355 | JS/TS | `filter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 388 | JS/TS | `throttleFilter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 402 | JS/TS | `clear` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 410 | JS/TS | `filter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 413 | JS/TS | `invoke2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 442 | JS/TS | `pausableFilter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 447 | JS/TS | `pause` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 450 | JS/TS | `resume` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 453 | JS/TS | `eventFilter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 459 | JS/TS | `cacheStringFunction` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 472 | JS/TS | `promiseTimeout` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 480 | JS/TS | `identity` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 483 | JS/TS | `createSingletonPromise` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 485 | JS/TS | `wrapper` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 498 | JS/TS | `invoke` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 501 | JS/TS | `containsProp` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 504 | JS/TS | `increaseWithUnit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 515 | JS/TS | `pxValue` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 518 | JS/TS | `objectPick` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 527 | JS/TS | `objectOmit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 532 | JS/TS | `objectEntries` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 535 | JS/TS | `getLifeCycleTarget` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 538 | JS/TS | `toArray` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 541 | JS/TS | `toRef2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 548 | JS/TS | `reactivePick` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 553 | JS/TS | `refAutoReset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 557 | JS/TS | `resetAfter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 565 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 569 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 578 | JS/TS | `useDebounceFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 584 | JS/TS | `refDebounced` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 592 | JS/TS | `refDefault` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 594 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 598 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 603 | JS/TS | `useThrottleFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 609 | JS/TS | `refThrottled` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 619 | JS/TS | `refWithControl` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 627 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 630 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 635 | JS/TS | `get2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 640 | JS/TS | `set2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 652 | JS/TS | `untrackedGet` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 653 | JS/TS | `silentSet` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 654 | JS/TS | `peek` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 655 | JS/TS | `lay` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 670 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 680 | JS/TS | `watchWithFilter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 694 | JS/TS | `watchPausable` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 711 | JS/TS | `syncRef` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 744 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 749 | JS/TS | `syncRefs` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 762 | JS/TS | `toRefs2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 768 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 771 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 794 | JS/TS | `tryOnBeforeMount` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 803 | JS/TS | `tryOnBeforeUnmount` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 808 | JS/TS | `tryOnMounted` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 817 | JS/TS | `tryOnUnmounted` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 822 | JS/TS | `createUntil` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 823 | JS/TS | `toMatch` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 852 | JS/TS | `toBe` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 887 | JS/TS | `toBeTruthy` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 890 | JS/TS | `toBeNull` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 893 | JS/TS | `toBeUndefined` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 896 | JS/TS | `toBeNaN` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 899 | JS/TS | `toContains` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 905 | JS/TS | `changed` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 908 | JS/TS | `changedTimes` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 943 | JS/TS | `until` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 946 | JS/TS | `defaultComparator` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 949 | JS/TS | `useArrayDifference` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 969 | JS/TS | `useArrayEvery` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 972 | JS/TS | `useArrayFilter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 975 | JS/TS | `useArrayFind` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 980 | JS/TS | `useArrayFindIndex` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 983 | JS/TS | `findLast` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 991 | JS/TS | `useArrayFindLast` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 996 | JS/TS | `isArrayIncludesOptions` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 999 | JS/TS | `useArrayIncludes` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1021 | JS/TS | `useArrayJoin` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1024 | JS/TS | `useArrayMap` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1027 | JS/TS | `useArrayReduce` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1028 | JS/TS | `reduceCallback` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1034 | JS/TS | `useArraySome` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1037 | JS/TS | `uniq` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1040 | JS/TS | `uniqueElementsBy` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1047 | JS/TS | `useArrayUnique` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1053 | JS/TS | `useCounter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1060 | JS/TS | `inc` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1061 | JS/TS | `dec` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1062 | JS/TS | `get2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1063 | JS/TS | `set2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1064 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1072 | JS/TS | `defaultMeridiem` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1078 | JS/TS | `formatOrdinal` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1083 | JS/TS | `formatDate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1094 | JS/TS | `stripTimeZone` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1141 | JS/TS | `normalizeDate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1158 | JS/TS | `useDateFormat` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1161 | JS/TS | `useIntervalFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1168 | JS/TS | `clean` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1174 | JS/TS | `pause` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1178 | JS/TS | `resume` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1205 | JS/TS | `useInterval` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1212 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1213 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1234 | JS/TS | `useLastChanged` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1244 | JS/TS | `useTimeoutFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1251 | JS/TS | `clear` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1257 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1261 | JS/TS | `start` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1284 | JS/TS | `useTimeout` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1304 | JS/TS | `useToNumber` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1321 | JS/TS | `useToString` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1324 | JS/TS | `useToggle` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1331 | JS/TS | `toggle` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1346 | JS/TS | `watchArray` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1368 | JS/TS | `watchAtMost` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1386 | JS/TS | `watchDebounced` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1401 | JS/TS | `watchDeep` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1411 | JS/TS | `watchIgnorable` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1481 | JS/TS | `watchImmediate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1491 | JS/TS | `watchOnce` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1498 | JS/TS | `watchThrottled` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1514 | JS/TS | `watchTriggerable` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1516 | JS/TS | `onEffect` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1523 | JS/TS | `onCleanup` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1526 | JS/TS | `_cb` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1532 | JS/TS | `trigger` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1544 | JS/TS | `getWatchSources` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1551 | JS/TS | `getOldValue` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1554 | JS/TS | `whenever` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1573 | JS/TS | `computedAsync` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1630 | JS/TS | `computedInject` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1645 | JS/TS | `createReusableTemplate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1651 | JS/TS | `setup` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1660 | JS/TS | `setup` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1678 | JS/TS | `keysToCamelKebabCase` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1684 | JS/TS | `createTemplatePromise` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1687 | JS/TS | `create` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1714 | JS/TS | `start` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1720 | JS/TS | `renderList` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1731 | JS/TS | `createUnrefFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1740 | JS/TS | `unrefElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1745 | JS/TS | `useEventListener` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1747 | JS/TS | `cleanup` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1751 | JS/TS | `register` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1785 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1793 | JS/TS | `onClickOutside` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1805 | JS/TS | `shouldIgnore` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1815 | JS/TS | `hasMultipleRoots` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1819 | JS/TS | `checkMultipleRoots` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1826 | JS/TS | `listener` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1867 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1883 | JS/TS | `useMounted` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1893 | JS/TS | `useSupported` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1900 | JS/TS | `useMutationObserver` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1904 | JS/TS | `cleanup` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1926 | JS/TS | `takeRecords` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1929 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1940 | JS/TS | `onElementRemoval` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1949 | JS/TS | `cleanupAndUpdate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1973 | JS/TS | `stopHandle` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1980 | JS/TS | `createKeyPredicate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 1989 | JS/TS | `onKeyStroke` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2017 | JS/TS | `listener` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2025 | JS/TS | `onKeyDown` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2028 | JS/TS | `onKeyPressed` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2031 | JS/TS | `onKeyUp` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2036 | JS/TS | `onLongPress` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2043 | JS/TS | `clear` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2052 | JS/TS | `onRelease` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2069 | JS/TS | `onDown` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2091 | JS/TS | `onMove` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2116 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2119 | JS/TS | `isFocusedElementEditable` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2132 | JS/TS | `isTypedCharValid` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2146 | JS/TS | `onStartTyping` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2148 | JS/TS | `keydown` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2156 | JS/TS | `templateRef` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2158 | JS/TS | `_trigger` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2163 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2168 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2176 | JS/TS | `useActiveElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2184 | JS/TS | `getDeepActiveElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2194 | JS/TS | `trigger` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2225 | JS/TS | `useRafFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2238 | JS/TS | `loop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2257 | JS/TS | `resume` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2264 | JS/TS | `pause` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2280 | JS/TS | `useAnimate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2316 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2319 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2326 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2329 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2338 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2341 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2348 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2351 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2357 | JS/TS | `play` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2370 | JS/TS | `pause` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2379 | JS/TS | `reverse` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2391 | JS/TS | `finish` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2400 | JS/TS | `cancel` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2431 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2465 | JS/TS | `syncResume` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2469 | JS/TS | `syncPause` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2492 | JS/TS | `useAsyncQueue` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2515 | JS/TS | `updateResult` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2555 | JS/TS | `whenAborted` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2564 | JS/TS | `useAsyncState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2578 | JS/TS | `execute` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2612 | JS/TS | `waitUntilIsLoaded` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2619 | JS/TS | `then` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2631 | JS/TS | `getDefaultSerialization` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2643 | JS/TS | `useBase64` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2646 | JS/TS | `execute` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2699 | JS/TS | `imgLoaded` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2711 | JS/TS | `blobToBase64` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2721 | JS/TS | `useBattery` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2730 | JS/TS | `updateBatteryInfo` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2751 | JS/TS | `useBluetooth` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2766 | JS/TS | `requestDevice` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2784 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2789 | JS/TS | `connectToBluetoothGATTServer` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2824 | JS/TS | `useSSRWidth` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2828 | JS/TS | `provideSSRWidth` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2835 | JS/TS | `useMediaQuery` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2841 | JS/TS | `handler` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2951 | JS/TS | `useBreakpoints` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2952 | JS/TS | `getValue2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2966 | JS/TS | `match` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2974 | JS/TS | `greaterOrEqual` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2977 | JS/TS | `smallerOrEqual` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2988 | JS/TS | `current` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2995 | JS/TS | `greater` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 2998 | JS/TS | `smaller` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3001 | JS/TS | `between` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3004 | JS/TS | `isGreater` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3007 | JS/TS | `isGreaterOrEqual` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3010 | JS/TS | `isSmaller` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3013 | JS/TS | `isSmallerOrEqual` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3016 | JS/TS | `isInBetween` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3020 | JS/TS | `active` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3026 | JS/TS | `useBroadcastChannel` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3036 | JS/TS | `post` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3040 | JS/TS | `close` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3086 | JS/TS | `useBrowserLocation` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3098 | JS/TS | `buildState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3120 | JS/TS | `useCached` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3129 | JS/TS | `usePermission` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3138 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3169 | JS/TS | `useClipboard` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3184 | JS/TS | `updateText` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3199 | JS/TS | `copy` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3216 | JS/TS | `legacyCopy` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3226 | JS/TS | `legacyRead` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3230 | JS/TS | `isAllowed` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3240 | JS/TS | `useClipboardItems` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3251 | JS/TS | `updateContent` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3260 | JS/TS | `copy` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3275 | JS/TS | `cloneFnJSON` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3278 | JS/TS | `useCloned` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3299 | JS/TS | `sync` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3318 | JS/TS | `getHandlers` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3323 | JS/TS | `getSSRHandler` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3326 | JS/TS | `setSSRHandler` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3329 | JS/TS | `usePreferredDark` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3332 | JS/TS | `guessSerializerType` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3370 | JS/TS | `useStorage` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3421 | JS/TS | `dispatchWriteEvent` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3434 | JS/TS | `write` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3451 | JS/TS | `read` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3470 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3492 | JS/TS | `updateFromCustomEvent` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3498 | JS/TS | `useColorMode` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3564 | JS/TS | `defaultOnChanged` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3568 | JS/TS | `onChanged` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3577 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3580 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3586 | JS/TS | `useConfirmDialog` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3591 | JS/TS | `reveal` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3598 | JS/TS | `confirm` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3603 | JS/TS | `cancel` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3618 | JS/TS | `useCountdown` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3631 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3635 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3639 | JS/TS | `resume` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3646 | JS/TS | `start` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3660 | JS/TS | `useCssVar` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3667 | JS/TS | `updateCssVar` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3706 | JS/TS | `useCurrentElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3716 | JS/TS | `useCycleList` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3720 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3728 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3732 | JS/TS | `set2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3740 | JS/TS | `shift` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3743 | JS/TS | `next` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3746 | JS/TS | `prev` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3749 | JS/TS | `getInitialValue` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3762 | JS/TS | `useDark` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3783 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3786 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3796 | JS/TS | `fnBypass` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3799 | JS/TS | `fnSetSource` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3802 | JS/TS | `defaultDump` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3805 | JS/TS | `defaultParse` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3808 | JS/TS | `useManualRefHistory` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3815 | JS/TS | `_createHistoryRecord` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3824 | JS/TS | `_setSource` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3828 | JS/TS | `commit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3836 | JS/TS | `clear` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3840 | JS/TS | `undo` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3847 | JS/TS | `redo` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3854 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3875 | JS/TS | `useRefHistory` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3896 | JS/TS | `setSource` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3904 | JS/TS | `commit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3908 | JS/TS | `resume` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3913 | JS/TS | `batch` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3915 | JS/TS | `cancel` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3922 | JS/TS | `dispose` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3936 | JS/TS | `useDebouncedRefHistory` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3943 | JS/TS | `useDeviceMotion` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3960 | JS/TS | `init` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 3987 | JS/TS | `ensurePermissions` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4023 | JS/TS | `useDeviceOrientation` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4046 | JS/TS | `useDevicePixelRatio` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4061 | JS/TS | `useDevicesList` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4075 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4085 | JS/TS | `ensurePermissions` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4124 | JS/TS | `useDisplayMedia` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4136 | JS/TS | `_start` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4144 | JS/TS | `_stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4149 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4153 | JS/TS | `start` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4177 | JS/TS | `useDocumentVisibility` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4187 | JS/TS | `useDraggable` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4208 | JS/TS | `filterEvent` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4213 | JS/TS | `handleEvent` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4219 | JS/TS | `start` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4239 | JS/TS | `move` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4264 | JS/TS | `end` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4274 | JS/TS | `config` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4294 | JS/TS | `useDropZone` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4304 | JS/TS | `getFiles` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4309 | JS/TS | `checkDataTypes` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4321 | JS/TS | `checkValidity` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4327 | JS/TS | `isSafari` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4328 | JS/TS | `handleDragEvent` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4381 | JS/TS | `useResizeObserver` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4385 | JS/TS | `cleanup` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4409 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4419 | JS/TS | `useElementBounding` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4435 | JS/TS | `recalculate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4460 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4491 | JS/TS | `useElementByPoint` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4506 | JS/TS | `cb` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4517 | JS/TS | `useElementHover` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4526 | JS/TS | `toggle` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4549 | JS/TS | `useElementSize` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4595 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4605 | JS/TS | `useIntersectionObserver` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4644 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4653 | JS/TS | `pause` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4657 | JS/TS | `resume` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4663 | JS/TS | `useElementVisibility` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4700 | JS/TS | `useEventBus` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4702 | JS/TS | `on` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4707 | JS/TS | `_off` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4711 | JS/TS | `once` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4712 | JS/TS | `_listener` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4718 | JS/TS | `off` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4726 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4729 | JS/TS | `emit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4735 | JS/TS | `resolveNestedOptions$1` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4740 | JS/TS | `useEventSource` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4756 | JS/TS | `close` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4764 | JS/TS | `_init` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4805 | JS/TS | `open` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4829 | JS/TS | `useEyeDropper` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4833 | JS/TS | `open` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4843 | JS/TS | `useFavicon` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4850 | JS/TS | `applyIcon` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4878 | JS/TS | `isFetchOptions` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4882 | JS/TS | `isAbsoluteURL` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4885 | JS/TS | `headersToObject` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4890 | JS/TS | `combineCallbacks` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4914 | JS/TS | `createFetch` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4918 | JS/TS | `useFactoryFetch` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 4959 | JS/TS | `useFetch` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5002 | JS/TS | `abort` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5013 | JS/TS | `loading` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5020 | JS/TS | `execute` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5156 | JS/TS | `setMethod` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5174 | JS/TS | `then` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5182 | JS/TS | `waitUntilFinished` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5187 | JS/TS | `setType` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5193 | JS/TS | `then` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5205 | JS/TS | `then` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5210 | JS/TS | `joinPaths` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5225 | JS/TS | `prepareInitialFiles` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5236 | JS/TS | `useFileDialog` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5256 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5263 | JS/TS | `open` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5288 | JS/TS | `useFileSystemAccess` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5314 | JS/TS | `open` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5321 | JS/TS | `create` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5328 | JS/TS | `save` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5340 | JS/TS | `saveAs` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5351 | JS/TS | `updateFile` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5355 | JS/TS | `updateData` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5382 | JS/TS | `useFocus` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5395 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5415 | JS/TS | `useFocusWithin` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5432 | JS/TS | `useFps` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5459 | JS/TS | `useFullscreen` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5506 | JS/TS | `isCurrentElementFullScreen` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5511 | JS/TS | `isElementFullScreen` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5524 | JS/TS | `exit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5538 | JS/TS | `enter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5549 | JS/TS | `toggle` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5550 | JS/TS | `await` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5552 | JS/TS | `handlerCallback` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5570 | JS/TS | `mapGamepadToXbox360Controller` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5613 | JS/TS | `useGamepad` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5621 | JS/TS | `stateFromGamepad` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5640 | JS/TS | `updateGamepadState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5648 | JS/TS | `onGamepadConnected` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5655 | JS/TS | `onGamepadDisconnected` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5680 | JS/TS | `useGeolocation` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5700 | JS/TS | `updatePosition` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5706 | JS/TS | `resume` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5721 | JS/TS | `pause` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5739 | JS/TS | `useIdle` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5750 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5781 | JS/TS | `loadImage` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5814 | JS/TS | `useImage` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5830 | JS/TS | `resolveElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5838 | JS/TS | `useScroll` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5863 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5866 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5871 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5874 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5878 | JS/TS | `scrollTo` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5909 | JS/TS | `onScrollEnd` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5920 | JS/TS | `setArrivedState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5956 | JS/TS | `onScrollHandler` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 5994 | JS/TS | `measure` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6001 | JS/TS | `useInfiniteScroll` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6024 | JS/TS | `checkAndLoad` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6050 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6056 | JS/TS | `useKeyModifier` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6073 | JS/TS | `useLocalStorage` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6087 | JS/TS | `useMagicKeys` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6097 | JS/TS | `toJSON` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6105 | JS/TS | `setRefs` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6113 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6118 | JS/TS | `updateRefs` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6156 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6177 | JS/TS | `usingElRef` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6181 | JS/TS | `timeRangeToArray` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6187 | JS/TS | `tracksToArray` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6194 | JS/TS | `useMediaControls` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6221 | JS/TS | `disableTrack` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6233 | JS/TS | `enableTrack` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6242 | JS/TS | `togglePictureInPicture` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6488 | JS/TS | `useMemoize` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6489 | JS/TS | `initCache` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6495 | JS/TS | `generateKey` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6496 | JS/TS | `_loadData` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6500 | JS/TS | `loadData` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6501 | JS/TS | `deleteData` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6504 | JS/TS | `clearData` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6507 | JS/TS | `memoized` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6520 | JS/TS | `useMemory` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6537 | JS/TS | `useMouse` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6555 | JS/TS | `mouseHandler` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6567 | JS/TS | `touchHandler` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6576 | JS/TS | `scrollHandler` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6585 | JS/TS | `reset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6609 | JS/TS | `useMouseInElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6624 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6674 | JS/TS | `useMousePressed` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6690 | JS/TS | `onPressed` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6696 | JS/TS | `onReleased` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6722 | JS/TS | `useNavigatorLanguage` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6736 | JS/TS | `useNetwork` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6750 | JS/TS | `updateNetworkInformation` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6792 | JS/TS | `useNow` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6798 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6809 | JS/TS | `useObjectUrl` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6811 | JS/TS | `release` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6828 | JS/TS | `useClamp` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6833 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6836 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6841 | JS/TS | `useOffsetPagination` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6868 | JS/TS | `prev` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6871 | JS/TS | `next` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6894 | JS/TS | `useOnline` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6898 | JS/TS | `usePageLeave` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6901 | JS/TS | `handler` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6916 | JS/TS | `useScreenOrientation` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6930 | JS/TS | `lockOrientation` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6935 | JS/TS | `unlockOrientation` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 6947 | JS/TS | `useParallax` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7021 | JS/TS | `useParentElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7023 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7032 | JS/TS | `usePerformanceObserver` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7040 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7043 | JS/TS | `start` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7072 | JS/TS | `usePointer` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7079 | JS/TS | `handler` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7095 | JS/TS | `usePointerLock` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7121 | JS/TS | `lock` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7132 | JS/TS | `unlock` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7147 | JS/TS | `usePointerSwipe` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7157 | JS/TS | `updatePosStart` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7162 | JS/TS | `updatePosEnd` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7181 | JS/TS | `eventIsAllowed` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7230 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7241 | JS/TS | `usePreferredColorScheme` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7252 | JS/TS | `usePreferredContrast` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7266 | JS/TS | `usePreferredLanguages` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7277 | JS/TS | `usePreferredReducedMotion` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7285 | JS/TS | `usePreferredReducedTransparency` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7293 | JS/TS | `usePrevious` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7308 | JS/TS | `useScreenSafeArea` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7325 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7339 | JS/TS | `getValue` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7342 | JS/TS | `useScriptTag` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7357 | JS/TS | `loadScript` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7358 | JS/TS | `resolveWithElement` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7402 | JS/TS | `load` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7407 | JS/TS | `unload` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7423 | JS/TS | `checkOverflowScroll` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7434 | JS/TS | `preventDefault` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7446 | JS/TS | `useScrollLock` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7466 | JS/TS | `lock` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7483 | JS/TS | `unlock` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7495 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7498 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7505 | JS/TS | `useSessionStorage` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7509 | JS/TS | `useShare` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7513 | JS/TS | `share` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7531 | JS/TS | `defaultSortFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7532 | JS/TS | `defaultCompare` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7533 | JS/TS | `useSorted` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7564 | JS/TS | `useSpeechRecognition` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7577 | JS/TS | `start` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7580 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7583 | JS/TS | `toggle` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7644 | JS/TS | `useSpeechSynthesis` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7658 | JS/TS | `toggle` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7661 | JS/TS | `bindEventsForUtterance` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7694 | JS/TS | `speak` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7699 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7735 | JS/TS | `useStepper` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7744 | JS/TS | `at` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7749 | JS/TS | `get2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7754 | JS/TS | `goTo` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7758 | JS/TS | `goToNext` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7763 | JS/TS | `goToPrevious` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7768 | JS/TS | `goBackTo` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7772 | JS/TS | `isNext` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7775 | JS/TS | `isPrevious` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7778 | JS/TS | `isCurrent` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7781 | JS/TS | `isBefore` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7784 | JS/TS | `isAfter` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7809 | JS/TS | `useStorageAsync` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7838 | JS/TS | `read` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7887 | JS/TS | `useStyleTag` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7896 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7898 | JS/TS | `load` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7919 | JS/TS | `unload` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7938 | JS/TS | `useSwipe` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7962 | JS/TS | `getTouchEventCoords` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7963 | JS/TS | `updateCoordsStart` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7967 | JS/TS | `updateCoordsEnd` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 7972 | JS/TS | `onTouchEnd` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8000 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8013 | JS/TS | `useTemplateRefsList` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8024 | JS/TS | `useTextDirection` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8031 | JS/TS | `getValue2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8045 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8048 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8060 | JS/TS | `getRangesFromSelection` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8065 | JS/TS | `useTextSelection` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8076 | JS/TS | `onSelectionChange` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8090 | JS/TS | `tryRequestAnimationFrame` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8097 | JS/TS | `useTextareaAutosize` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8105 | JS/TS | `triggerResize` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8140 | JS/TS | `useThrottledRefHistory` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8170 | JS/TS | `DEFAULT_FORMATTER` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8173 | JS/TS | `useTimeAgo` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8189 | JS/TS | `formatTimeAgo` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8202 | JS/TS | `getValue2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8205 | JS/TS | `format` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8211 | JS/TS | `applyFormat` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8222 | JS/TS | `unitMax` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8235 | JS/TS | `useTimeoutPoll` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8242 | JS/TS | `loop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8248 | JS/TS | `resume` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8256 | JS/TS | `pause` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8268 | JS/TS | `useTimestamp` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8277 | JS/TS | `update` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8292 | JS/TS | `useTitle` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8301 | JS/TS | `format` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8361 | JS/TS | `createEasingFunction` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8362 | JS/TS | `a` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8363 | JS/TS | `b` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8364 | JS/TS | `c` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8365 | JS/TS | `calcBezier` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8366 | JS/TS | `getSlope` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8367 | JS/TS | `getTforX` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8380 | JS/TS | `lerp` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8383 | JS/TS | `toVec` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8386 | JS/TS | `executeTransition` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8399 | JS/TS | `tick` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8425 | JS/TS | `useTransition` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8427 | JS/TS | `sourceVal` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8463 | JS/TS | `useUrlSearchParams` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8475 | JS/TS | `getRawParams` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8486 | JS/TS | `constructQuery` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8498 | JS/TS | `read` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8501 | JS/TS | `updateState` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8529 | JS/TS | `write` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8548 | JS/TS | `onChanged` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8564 | JS/TS | `useUserMedia` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8575 | JS/TS | `getDeviceOptions` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8589 | JS/TS | `_start` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8598 | JS/TS | `_stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8603 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8607 | JS/TS | `start` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8613 | JS/TS | `restart` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8648 | JS/TS | `useVModel` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8665 | JS/TS | `cloneFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8666 | JS/TS | `getValue2` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8667 | JS/TS | `triggerEmit` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8700 | JS/TS | `get` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8703 | JS/TS | `set` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8709 | JS/TS | `useVModels` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8721 | JS/TS | `useVibrate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8730 | JS/TS | `vibrate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8734 | JS/TS | `stop` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8757 | JS/TS | `useVirtualList` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8772 | JS/TS | `useVirtualListResources` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8780 | JS/TS | `createGetViewCapacity` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8797 | JS/TS | `createGetOffset` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8814 | JS/TS | `createCalculateRange` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8833 | JS/TS | `createGetDistance` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8843 | JS/TS | `useWatchForSizes` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8848 | JS/TS | `createComputedTotalSize` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8859 | JS/TS | `createScrollTo` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8867 | JS/TS | `useHorizontalVirtualList` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8899 | JS/TS | `useVerticalVirtualList` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8930 | JS/TS | `useWakeLock` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8953 | JS/TS | `forceRequest` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8958 | JS/TS | `request` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8964 | JS/TS | `release` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 8979 | JS/TS | `useWebNotification` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9003 | JS/TS | `ensurePermissions` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9017 | JS/TS | `show` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9028 | JS/TS | `close` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9059 | JS/TS | `resolveNestedOptions` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9064 | JS/TS | `useWebSocket` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9086 | JS/TS | `_sendBuffer` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9093 | JS/TS | `resetRetry` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9099 | JS/TS | `resetHeartbeat` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9103 | JS/TS | `close` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9113 | JS/TS | `send` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9123 | JS/TS | `_init` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9200 | JS/TS | `open` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9221 | JS/TS | `useWebWorker` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9227 | JS/TS | `post` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9259 | JS/TS | `depsParser` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9275 | JS/TS | `jobRunner` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9285 | JS/TS | `createWorkerBlobUrl` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9291 | JS/TS | `useWebWorkerFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9302 | JS/TS | `workerTerminate` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9314 | JS/TS | `generateWorker` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9349 | JS/TS | `callWorker` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9358 | JS/TS | `workerFn` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9374 | JS/TS | `useWindowFocus` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9388 | JS/TS | `useWindowScroll` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9392 | JS/TS | `useWindowSize` |
-| `apps/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js` | 9403 | JS/TS | `update` |
-| `apps/docs/.vitepress/theme/index.ts` | 14 | JS/TS | `enhanceApp` |
-| `apps/examples/src/affiliate_partner/createConversationwithCreator.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/editAffiliatePartnerCampaign.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/generateAffiliatePartnerCampaignProductLink.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/getAffiliateCampaignCreatorFulfillmentStatusInfo.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/getAffiliateCampaignCreatorFulfillmentStatusList.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/getAffiliateCampaignCreatorProductContentStatistics.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/getAffiliateCampaignCreatorProductSampleStatus.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/getAffiliatePartnerCampaignDetail.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/getAffiliatePartnerCampaignList.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/getAffiliatePartnerCampaignProductList.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/partnerGenerateMultiAffiliateCampaignProductLink.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/publishAffiliatePartnerCampaign.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/reviewAffiliatePartnerCampaign.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/searchCAPAffiliateOrders.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_partner/searchTapAffiliateOrders.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/affiliate_seller/createConversationwithCreator.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/analytics/getShopPerformance.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/analytics/getShopProductPerformance.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/analytics/getShopProductPerformanceList.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/analytics/getShopSKUPerformance.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/analytics/getShopSKUPerformanceList.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/analytics/getShopVideoPerformanceDetails.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/analytics/getShopVideoPerformanceList.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/analytics/getShopVideoPerformanceOverview.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/analytics/getShopVideoProductPerformanceList.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/authentication/generateToken.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/authentication/refreshToken.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/cli.ts` | 11 | JS/TS | `getAllModules` |
-| `apps/examples/src/cli.ts` | 26 | JS/TS | `main` |
-| `apps/examples/src/event/deleteShopWebhook.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/event/getShopWebhooks.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/event/updateShopWebhook.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/finances/getPayments.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/finances/getStatements.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/finances/getTransactionsByOrder.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/finances/getTransactionsByStatement.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/finances/getWithdrawals.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/fulfillment/combinablePackage.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/fulfillment/createFirstMileBundle.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/fulfillment/createPackage.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/fulfillment/getEligibleShippingService.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/fulfillment/getOrderSplitAttributes.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/fulfillment/getPackageHandoverTimeSlots.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/fulfillment/searchCombinablePackages.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/fulfillment/searchPackage.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/fulfillment/splitOrders.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/fulfillment/uncombinePackages.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/logistic/getGlobalSellerWarehouse.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/logistic/getShippingProviders.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/logistic/getWarehouseDeliveryOptions.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/logistic/getWarehouseList.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/orders/addExternalOrderReferences.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/orders/getExternalOrderReferences.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/orders/getOrderDetail.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/orders/getOrderList.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/orders/getPriceDetail.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/orders/searchOrderByExternalOrderReference.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/SearchResponsiblePersons.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/activateProducts.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/checkProductListing.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/createCategoryUpgradeTask.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/createCustomBrands.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/createGlobalProduct.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/createImageTranslationTasks.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/createManufacturer.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/createProduct.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/createResponsiblePerson.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/deactivateProducts.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/deleteGlobalProducts.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/deleteProducts.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/editGlobalProduct.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/editPartialManufacturer.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/editProduct.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/editResponsiblePersons.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getAttributes.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getBrands.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getCategories.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getCategoryRules.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getGlobalAttributes.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getGlobalCategories.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getGlobalCategoryRules.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getGlobalProduct.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getImageTranslationTasks.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getProduct.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getProductPrerequisites.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getProductsSEOWords.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/getRecommendedProductTitleAndDescription.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/optimizedImages.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/productInformationIssueDiagnosis.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/publishGlobalProduct.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/recommendCategory.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/recommendGlobalCategory.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/recoverProduct.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/searchGlobalProducts.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/searchInventory.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/searchManufacturer.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/searchProducts.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/searchSizeCharts.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/updateGlobalInventory.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/updatePrice.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/updateProductInventory.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/product/uploadProductFile.ts` | 12 | JS/TS | `main` |
-| `apps/examples/src/product/uploadProductImage.ts` | 12 | JS/TS | `main` |
-| `apps/examples/src/promotion/createActivity.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/promotion/deactivateActivity.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/promotion/getActivity.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/promotion/getCoupon.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/promotion/removeActivityProduct.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/promotion/searchActivity.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/promotion/searchCoupon.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/promotion/updateActivity.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/promotion/updateActivityProduct.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/approveCancellation.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/approveReturn.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/calculateCancellation.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/cancelOrder.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/createReturn.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/getAftersaleEligibility.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/getRejectReasons.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/getReturnRecord.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/rejectCancellation.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/rejectReturn.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/searchCancellation.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/return_refund/searchReturn.ts` | 9 | JS/TS | `main` |
-| `apps/examples/src/seller/getActiveShops.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/seller/getSellerPermissions.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/shop/getAuthorizedShops.ts` | 10 | JS/TS | `main` |
-| `apps/examples/src/shop/getCategoryAssets.ts` | 10 | JS/TS | `main` |
-| `apps/landing/scripts/generate-i18n-types.ts` | 14 | JS/TS | `flattenKeys` |
-| `apps/landing/scripts/generate-i18n-types.ts` | 25 | JS/TS | `generateTypes` |
-| `apps/landing/scripts/generate-i18n-types.ts` | 79 | JS/TS | `capitalize` |
-| `apps/landing/src/components/Navbar.tsx` | 19 | JS/TS | `handleScroll` |
-| `apps/landing/src/components/Navbar.tsx` | 29 | JS/TS | `switchLang` |
-| `apps/landing/src/components/contributors/ContributorCard.tsx` | 5 | JS/TS | `ContributorCard` |
-| `apps/landing/src/components/contributors/ContributorSkeleton.tsx` | 1 | JS/TS | `ContributorSkeleton` |
-| `apps/landing/src/components/pages/QuickLinksSection.tsx` | 21 | JS/TS | `copyToClipboard` |
-| `apps/landing/src/constants/footerSections.ts` | 16 | JS/TS | `getFooterSections` |
-| `apps/landing/src/context/theme/ThemeContext.tsx` | 14 | JS/TS | `useTheme` |
-| `apps/landing/src/context/theme/ThemeProvider.tsx` | 4 | JS/TS | `ThemeProvider` |
-| `apps/landing/src/context/theme/ThemeProvider.tsx` | 9 | JS/TS | `initTheme` |
-| `apps/landing/src/context/theme/ThemeProvider.tsx` | 25 | JS/TS | `toggleTheme` |
-| `apps/landing/src/hooks/useI18n.ts` | 32 | JS/TS | `useI18n` |
-| `apps/landing/src/hooks/useI18n.ts` | 38 | JS/TS | `useI18n` |
-| `apps/landing/src/pages/_app.tsx` | 6 | JS/TS | `App` |
-| `apps/landing/src/pages/index.tsx` | 32 | JS/TS | `getStaticProps` |
-| `apps/landing/src/services/contributors.service.ts` | 3 | JS/TS | `getContributors` |
-| `packages/sdk/src/client/RequestMultipart.ts` | 19 | JS/TS | `requestMultipart` |
-| `packages/sdk/src/client/__tests__/Request.test.ts` | 14 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/AffiliatePartnerModule.ts` | 44 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/AffiliateSellerModule.ts` | 70 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/AffiliateSellerModule.ts` | 357 | JS/TS | `getOpenCollaborationSettings` |
-| `packages/sdk/src/modules/AffiliateSellerModule.ts` | 556 | JS/TS | `getLatestUnreadMessages` |
-| `packages/sdk/src/modules/AnalyticsModule.ts` | 34 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/AuthModule.ts` | 15 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/EventModule.ts` | 18 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/EventModule.ts` | 26 | JS/TS | `getShopWebhooks` |
-| `packages/sdk/src/modules/FinanceModule.ts` | 23 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/FulfillmentModule.ts` | 30 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/LogisticModule.ts` | 22 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/LogisticModule.ts` | 29 | JS/TS | `getWarehouseList` |
-| `packages/sdk/src/modules/LogisticModule.ts` | 41 | JS/TS | `getGlobalSellerWarehouse` |
-| `packages/sdk/src/modules/OrderModule.ts` | 22 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/ProductModule.ts` | 110 | JS/TS | `getProductPrerequisites` |
-| `packages/sdk/src/modules/ProductModule.ts` | 284 | JS/TS | `createCategoryUpgradeTask` |
-| `packages/sdk/src/modules/ProductModule.ts` | 427 | JS/TS | `deleteProducts` |
-| `packages/sdk/src/modules/PromotionModule.ts` | 31 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/PromotionModule.ts` | 156 | JS/TS | `getCoupon` |
-| `packages/sdk/src/modules/ReturnRefundModule.ts` | 42 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/ReturnRefundModule.ts` | 126 | JS/TS | `rejectReturn` |
-| `packages/sdk/src/modules/SellerModule.ts` | 17 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/SellerModule.ts` | 28 | JS/TS | `getActiveShops` |
-| `packages/sdk/src/modules/SellerModule.ts` | 46 | JS/TS | `getSellerPermissions` |
-| `packages/sdk/src/modules/ShopModule.ts` | 14 | JS/TS | `constructor` |
-| `packages/sdk/src/modules/ShopModule.ts` | 22 | JS/TS | `getAuthorizedShops` |
-| `packages/sdk/src/modules/ShopModule.ts` | 37 | JS/TS | `getCategoryAssets` |
-| `packages/sdk/src/modules/__tests__/productModule.test.ts` | 3 | JS/TS | `append` |
-| `packages/sdk/src/modules/__tests__/productModule.test.ts` | 6 | JS/TS | `get` |
-| `packages/sdk/src/sdk/TikTokShopSDK.ts` | 51 | JS/TS | `constructor` |
-| `packages/sdk/src/sdk/TikTokShopSDK.ts` | 122 | JS/TS | `setAccessToken` |
-| `packages/sdk/src/sdk/TikTokShopSDK.ts` | 126 | JS/TS | `setShopCipher` |
-| `packages/sdk/src/sdk/TikTokShopSDK.ts` | 130 | JS/TS | `setCategoryAssetsCipher` |
-| `packages/sdk/src/utils/handleResponse.ts` | 7 | JS/TS | `constructor` |
-| `packages/sdk/src/utils/signature.ts` | 15 | JS/TS | `generateSignature` |
+
+_Display capped at 300 of 1921 detected functions/methods._
 
 ### Automation pipeline files
 
@@ -8630,7 +3712,7 @@ Status: **cloned**; commit `0c53da6cbba9`.
 - `apps/examples/src/finances/getTransactionsByOrder.ts`
 - `apps/examples/src/finances/getTransactionsByStatement.ts`
 
-## `tiktokshop-php`
+## `cvsz/tiktokshop-php`
 
 Status: **cloned**; commit `dbbec213d9d1`.
 
@@ -8950,101 +4032,14 @@ Status: **cloned**; commit `dbbec213d9d1`.
 | `tests/Resources/FulfillmentTest.php` | 28 | PHP | `testGetPackageHandoverTimeSlots` |
 | `tests/Resources/FulfillmentTest.php` | 35 | PHP | `testUpdatePackageDeliveryStatus` |
 | `tests/Resources/FulfillmentTest.php` | 41 | PHP | `testSearchCombinablePackages` |
-| `tests/Resources/FulfillmentTest.php` | 47 | PHP | `testSearchPackage` |
-| `tests/Resources/FulfillmentTest.php` | 53 | PHP | `testCombinePackage` |
-| `tests/Resources/FulfillmentTest.php` | 59 | PHP | `testFulfillmentUploadDeliveryFile` |
-| `tests/Resources/FulfillmentTest.php` | 65 | PHP | `testUpdateShippingInfo` |
-| `tests/Resources/FulfillmentTest.php` | 72 | PHP | `testMarkPackageAsShipped` |
-| `tests/Resources/FulfillmentTest.php` | 79 | PHP | `testGetTracking` |
-| `tests/Resources/FulfillmentTest.php` | 86 | PHP | `testGetOrderSplitAttributes` |
-| `tests/Resources/FulfillmentTest.php` | 92 | PHP | `testUncombinePackages` |
-| `tests/Resources/FulfillmentTest.php` | 99 | PHP | `testGetPackageDetail` |
-| `tests/Resources/FulfillmentTest.php` | 106 | PHP | `testBatchShipPackages` |
-| `tests/Resources/FulfillmentTest.php` | 112 | PHP | `testSplitOrders` |
-| `tests/Resources/FulfillmentTest.php` | 119 | PHP | `testCreatePackages` |
-| `tests/Resources/FulfillmentTest.php` | 125 | PHP | `testShipPackage` |
-| `tests/Resources/FulfillmentTest.php` | 132 | PHP | `testUpdatePackageShippingInfo` |
-| `tests/Resources/FulfillmentTest.php` | 139 | PHP | `testFulfillmentUploadDeliveryImage` |
-| `tests/Resources/FulfillmentTest.php` | 145 | PHP | `testGetEligibleShippingService` |
-| `tests/Resources/GlobalProductTest.php` | 23 | PHP | `testGetGlobalCategories` |
-| `tests/Resources/GlobalProductTest.php` | 29 | PHP | `testGetGlobalAttributes` |
-| `tests/Resources/GlobalProductTest.php` | 35 | PHP | `testGetGlobalCategoryRules` |
-| `tests/Resources/GlobalProductTest.php` | 41 | PHP | `testUpdateGlobalInventory` |
-| `tests/Resources/GlobalProductTest.php` | 47 | PHP | `testEditGlobalProduct` |
-| `tests/Resources/GlobalProductTest.php` | 53 | PHP | `testSearchGlobalProducts` |
-| `tests/Resources/GlobalProductTest.php` | 59 | PHP | `testGetGlobalProduct` |
-| `tests/Resources/GlobalProductTest.php` | 65 | PHP | `testDeleteGlobalProducts` |
-| `tests/Resources/GlobalProductTest.php` | 71 | PHP | `testCreateGlobalProduct` |
-| `tests/Resources/GlobalProductTest.php` | 77 | PHP | `testRecommendGlobalCategories` |
-| `tests/Resources/GlobalProductTest.php` | 83 | PHP | `testPublishGlobalProduct` |
-| `tests/Resources/LogisticTest.php` | 21 | PHP | `testGetGlobalSellerWarehouse` |
-| `tests/Resources/LogisticTest.php` | 27 | PHP | `testGetShippingProvider` |
-| `tests/Resources/LogisticTest.php` | 34 | PHP | `testGetWarehouseDeliveryOptions` |
-| `tests/Resources/LogisticTest.php` | 41 | PHP | `testGetWarehouseList` |
-| `tests/Resources/OrderTest.php` | 20 | PHP | `testGetOrderDetail` |
-| `tests/Resources/OrderTest.php` | 26 | PHP | `testGetOrderList` |
-| `tests/Resources/ProductTest.php` | 23 | PHP | `testDeactivateProducts` |
-| `tests/Resources/ProductTest.php` | 29 | PHP | `testGetBrands` |
-| `tests/Resources/ProductTest.php` | 35 | PHP | `testCreateProduct` |
-| `tests/Resources/ProductTest.php` | 41 | PHP | `testSearchProducts` |
-| `tests/Resources/ProductTest.php` | 47 | PHP | `testGetAttributes` |
-| `tests/Resources/ProductTest.php` | 53 | PHP | `testUploadProductImage` |
-| `tests/Resources/ProductTest.php` | 59 | PHP | `testGetProduct` |
-| `tests/Resources/ProductTest.php` | 65 | PHP | `testUploadProductFile` |
-| `tests/Resources/ProductTest.php` | 71 | PHP | `testUpdateInventory` |
-| `tests/Resources/ProductTest.php` | 77 | PHP | `testInventorySearch` |
-| `tests/Resources/ProductTest.php` | 83 | PHP | `testDeleteProducts` |
-| `tests/Resources/ProductTest.php` | 89 | PHP | `testEditProduct` |
-| `tests/Resources/ProductTest.php` | 95 | PHP | `testActivateProducts` |
-| `tests/Resources/ProductTest.php` | 101 | PHP | `testPartialEditProduct` |
-| `tests/Resources/ProductTest.php` | 107 | PHP | `testRecommendCategory` |
-| `tests/Resources/ProductTest.php` | 113 | PHP | `testCheckListingPrerequisites` |
-| `tests/Resources/ProductTest.php` | 119 | PHP | `testUpdatePrice` |
-| `tests/Resources/ProductTest.php` | 125 | PHP | `testGetCategoryRules` |
-| `tests/Resources/ProductTest.php` | 131 | PHP | `testGetCategories` |
-| `tests/Resources/ProductTest.php` | 137 | PHP | `testRecoverProducts` |
-| `tests/Resources/ProductTest.php` | 143 | PHP | `testCreateCustomBrand` |
-| `tests/Resources/PromotionTest.php` | 21 | PHP | `testSearchActivities` |
-| `tests/Resources/PromotionTest.php` | 27 | PHP | `testGetActivity` |
-| `tests/Resources/PromotionTest.php` | 34 | PHP | `testUpdateActivity` |
-| `tests/Resources/PromotionTest.php` | 41 | PHP | `testDeactivateActivity` |
-| `tests/Resources/PromotionTest.php` | 48 | PHP | `testUpdateActivityProduct` |
-| `tests/Resources/PromotionTest.php` | 55 | PHP | `testCreateActivity` |
-| `tests/Resources/PromotionTest.php` | 61 | PHP | `testRemoveActivityProduct` |
-| `tests/Resources/PromotionTest.php` | 68 | PHP | `testSearchCoupons` |
-| `tests/Resources/PromotionTest.php` | 74 | PHP | `testGetCoupon` |
-| `tests/Resources/ReturnRefundTest.php` | 21 | PHP | `testRejectCancellation` |
-| `tests/Resources/ReturnRefundTest.php` | 27 | PHP | `testCreateReturn` |
-| `tests/Resources/ReturnRefundTest.php` | 33 | PHP | `testApproveCancellation` |
-| `tests/Resources/ReturnRefundTest.php` | 39 | PHP | `testGetRejectReasons` |
-| `tests/Resources/ReturnRefundTest.php` | 45 | PHP | `testCancelOrder` |
-| `tests/Resources/ReturnRefundTest.php` | 51 | PHP | `testGetAftersaleEligibility` |
-| `tests/Resources/ReturnRefundTest.php` | 57 | PHP | `testSearchReturns` |
-| `tests/Resources/ReturnRefundTest.php` | 63 | PHP | `testApproveReturn` |
-| `tests/Resources/ReturnRefundTest.php` | 69 | PHP | `testRejectReturn` |
-| `tests/Resources/ReturnRefundTest.php` | 75 | PHP | `testSearchCancellations` |
-| `tests/Resources/ReturnRefundTest.php` | 81 | PHP | `testCalculateRefund` |
-| `tests/Resources/ReturnRefundTest.php` | 87 | PHP | `testGetReturnRecords` |
-| `tests/Resources/SellerTest.php` | 21 | PHP | `testGetActiveShopList` |
-| `tests/Resources/SellerTest.php` | 27 | PHP | `testGetSellerPermissions` |
-| `tests/Resources/SupplychainTest.php` | 20 | PHP | `testConfirmPackageShipment` |
-| `tests/TestResource.php` | 30 | PHP | `setUp` |
-| `tests/TestResource.php` | 55 | PHP | `tiktokShopClientForTest` |
-| `tests/TestResource.php` | 63 | PHP | `assertPreviousRequest` |
-| `tests/WebhookTest.php` | 24 | PHP | `setUpBeforeClass` |
-| `tests/WebhookTest.php` | 37 | PHP | `testGetShopId` |
-| `tests/WebhookTest.php` | 42 | PHP | `testVerify` |
-| `tests/WebhookTest.php` | 58 | PHP | `testGetType` |
-| `tests/WebhookTest.php` | 63 | PHP | `testGetTimestamp` |
-| `tests/WebhookTest.php` | 68 | PHP | `testGetData` |
-| `tests/WebhookTest.php` | 74 | PHP | `test__construct` |
-| `tests/WebhookTest.php` | 86 | PHP | `testCapture` |
+
+_Display capped at 300 of 389 detected functions/methods._
 
 ### Automation pipeline files
 
 - `.github/workflows/ci.yml`
 
-## `zLinebot-automos`
+## `cvsz/zLinebot-automos`
 
 Status: **cloned**; commit `ba8382907971`.
 
@@ -9472,197 +4467,8 @@ Status: **cloned**; commit `ba8382907971`.
 | `dl/orderbook_model.py` | 21 | Python | `build_feature_vector` |
 | `dl/orderbook_model.py` | 34 | Python | `softmax_probs` |
 | `execution/smartRouter.ts` | 9 | JS/TS | `bestExecution` |
-| `frontend/src/App.jsx` | 8 | JS/TS | `resolveRoute` |
-| `frontend/src/components/AuthForm.jsx` | 3 | JS/TS | `messageFromResult` |
-| `frontend/src/components/AuthForm.jsx` | 31 | JS/TS | `handleSubmit` |
-| `frontend/src/components/ChatDemo.jsx` | 9 | JS/TS | `onAsk` |
-| `frontend/src/lib/api.js` | 7 | JS/TS | `tenantHeader` |
-| `frontend/src/lib/api.js` | 11 | JS/TS | `parseResponse` |
-| `frontend/src/lib/api.js` | 31 | JS/TS | `apiRequest` |
-| `frontend/src/lib/api.js` | 53 | JS/TS | `apiPost` |
-| `frontend/src/lib/api.js` | 65 | JS/TS | `apiGet` |
-| `frontend/src/lib/api.js` | 74 | JS/TS | `apiPatch` |
-| `frontend/src/lib/api.js` | 86 | JS/TS | `postRegister` |
-| `frontend/src/lib/api.js` | 90 | JS/TS | `postLogin` |
-| `frontend/src/lib/api.js` | 94 | JS/TS | `postChat` |
-| `frontend/src/lib/api.js` | 98 | JS/TS | `getMe` |
-| `frontend/src/lib/api.js` | 102 | JS/TS | `getStats` |
-| `frontend/src/lib/api.js` | 106 | JS/TS | `getLeads` |
-| `frontend/src/lib/api.js` | 111 | JS/TS | `patchLead` |
-| `frontend/src/lib/api.js` | 115 | JS/TS | `getRevenueDaily` |
-| `frontend/src/lib/api.js` | 119 | JS/TS | `getTemplates` |
-| `frontend/src/lib/api.js` | 123 | JS/TS | `createTemplate` |
-| `frontend/src/lib/api.js` | 127 | JS/TS | `getCampaigns` |
-| `frontend/src/lib/api.js` | 131 | JS/TS | `createBroadcast` |
-| `frontend/src/lib/api.js` | 135 | JS/TS | `createCheckout` |
-| `frontend/src/pages/DashboardPage.jsx` | 17 | JS/TS | `formatMoney` |
-| `frontend/src/pages/DashboardPage.jsx` | 25 | JS/TS | `readSession` |
-| `frontend/src/pages/DashboardPage.jsx` | 34 | JS/TS | `actionsForStatus` |
-| `frontend/src/pages/DashboardPage.jsx` | 43 | JS/TS | `formatDateTime` |
-| `frontend/src/pages/DashboardPage.jsx` | 201 | JS/TS | `updateLeadStatus` |
-| `frontend/src/pages/DashboardPage.jsx` | 206 | JS/TS | `submitTemplate` |
-| `frontend/src/pages/DashboardPage.jsx` | 214 | JS/TS | `submitBroadcast` |
-| `frontend/src/pages/DashboardPage.jsx` | 225 | JS/TS | `startBilling` |
-| `frontend/src/pages/DashboardPage.jsx` | 239 | JS/TS | `logout` |
-| `frontend/src/pages/DashboardPage.jsx` | 538 | JS/TS | `MetricCard` |
-| `frontend/src/pages/DashboardPage.jsx` | 547 | JS/TS | `Panel` |
-| `frontend/src/pages/DashboardPage.jsx` | 559 | JS/TS | `EmptyState` |
-| `frontend/src/pages/DashboardPage.jsx` | 567 | JS/TS | `StatusBadge` |
-| `frontend/src/pages/LoginPage.jsx` | 10 | JS/TS | `submitLogin` |
-| `frontend/src/pages/SignupPage.jsx` | 10 | JS/TS | `submitSignup` |
-| `infra/monitor/health.sh` | 7 | Shell | `check` |
-| `install_and_run.sh` | 7 | Shell | `log` |
-| `install_and_run.sh` | 8 | Shell | `warn` |
-| `install_and_run.sh` | 9 | Shell | `err` |
-| `install_and_run.sh` | 11 | Shell | `require_cmd` |
-| `install_full_stack.sh` | 7 | Shell | `log` |
-| `install_full_stack.sh` | 8 | Shell | `require_root` |
-| `installer/install.sh` | 21 | Shell | `require_option_value` |
-| `installer/install.sh` | 29 | Shell | `usage` |
-| `installer/lib/common.sh` | 13 | Shell | `log` |
-| `installer/lib/common.sh` | 17 | Shell | `die` |
-| `installer/lib/common.sh` | 22 | Shell | `require_root` |
-| `installer/lib/common.sh` | 28 | Shell | `require_cmds` |
-| `installer/lib/common.sh` | 39 | Shell | `ensure_parent_dir` |
-| `installer/lib/common.sh` | 43 | Shell | `sanitize_domain` |
-| `installer/lib/common.sh` | 51 | Shell | `is_public_domain` |
-| `installer/lib/common.sh` | 56 | Shell | `write_file` |
-| `installer/lib/runtime.sh` | 10 | Shell | `preflight_checks` |
-| `installer/lib/runtime.sh` | 16 | Shell | `install_system_packages` |
-| `installer/lib/stack.sh` | 10 | Shell | `stage_source_tree` |
-| `installer/lib/stack.sh` | 49 | Shell | `generate_stack_env` |
-| `installer/lib/stack.sh` | 119 | Shell | `configure_tls_assets` |
-| `installer/lib/stack.sh` | 164 | Shell | `export_stack_archive` |
-| `installer/lib/stack.sh` | 173 | Shell | `prepare_stack` |
-| `investor/portal.jsx` | 5 | JS/TS | `hasInvestorAccess` |
-| `landing/src/App.jsx` | 8 | JS/TS | `startCheckout` |
-| `landing/src/App.jsx` | 16 | JS/TS | `scrollToDemo` |
-| `landing/src/components/DemoChat.jsx` | 9 | JS/TS | `sendMsg` |
-| `marketplace/service.ts` | 5 | JS/TS | `listBots` |
-| `marketplace/service.ts` | 16 | JS/TS | `purchaseBot` |
-| `mobile/App.tsx` | 16 | JS/TS | `connect` |
-| `one-click-deploy-config-installer-starter.sh` | 17 | Shell | `usage` |
-| `one-click-deploy-config-installer-starter.sh` | 50 | Shell | `log` |
-| `one-click-deploy-config-installer-starter.sh` | 51 | Shell | `err` |
-| `one-click-deploy-config-installer-starter.sh` | 53 | Shell | `require_cmd` |
-| `portfolio/engine.ts` | 3 | JS/TS | `aggregate` |
-| `portfolio/optimizer.js` | 3 | JS/TS | `normalize` |
-| `portfolio/optimizer.js` | 12 | JS/TS | `covarianceMatrix` |
-| `portfolio/optimizer.js` | 31 | JS/TS | `optimize` |
-| `rl/agent.py` | 12 | Python | `__init__` |
-| `rl/agent.py` | 38 | Python | `act` |
-| `rl/agent.py` | 47 | Python | `remember` |
-| `rl/agent.py` | 50 | Python | `train` |
-| `rl/agent.py` | 87 | Python | `sync_target` |
-| `rl/infer.py` | 9 | Python | `main` |
-| `rl/model.py` | 5 | Python | `__init__` |
-| `rl/model.py` | 15 | Python | `forward` |
-| `rl/train.py` | 11 | Python | `step_environment` |
-| `rl/train.py` | 21 | Python | `shape_reward` |
-| `rl/train.py` | 25 | Python | `main` |
-| `scripts/build-images.sh` | 7 | Shell | `usage` |
-| `scripts/codemods/fix_backend.py` | 5 | Python | `process_file` |
-| `scripts/codemods/fix_backend.py` | 20 | Python | `run` |
-| `scripts/codemods/fix_frontend.js` | 4 | JS/TS | `processFile` |
-| `scripts/codemods/fix_frontend.js` | 13 | JS/TS | `walk` |
-| `scripts/deploy-images.sh` | 13 | Shell | `usage` |
-| `scripts/run-stack.sh` | 8 | Shell | `ensure_env` |
-| `scripts/runner_ultra_v4.3.sh` | 24 | Shell | `fail` |
-| `scripts/runner_ultra_v4.3.sh` | 25 | Shell | `ok` |
-| `scripts/runner_ultra_v4.3.sh` | 27 | Shell | `retry` |
-| `scripts/runner_ultra_v5.sh` | 29 | Shell | `fail` |
-| `scripts/runner_ultra_v5.sh` | 30 | Shell | `ok` |
-| `scripts/runner_ultra_v5.sh` | 32 | Shell | `cleanup` |
-| `scripts/runner_ultra_v5.sh` | 40 | Shell | `retry` |
-| `scripts/zlinebot_autonomos.sh` | 12 | Shell | `log` |
-| `scripts/zlinebot_autonomos.sh` | 14 | Shell | `display_path` |
-| `scripts/zlinebot_autonomos.sh` | 30 | Shell | `ensure_cmd` |
-| `scripts/zlinebot_autonomos.sh` | 37 | Shell | `write_if_missing` |
-| `scripts/zlinebot_autonomos.sh` | 49 | Shell | `main` |
-| `security/middleware.py` | 5 | Python | `security_layer` |
-| `stack-workflow-manager.sh` | 23 | Shell | `usage` |
-| `stack-workflow-manager.sh` | 44 | Shell | `setup_logging` |
-| `stack-workflow-manager.sh` | 60 | Shell | `log` |
-| `stack-workflow-manager.sh` | 61 | Shell | `warn` |
-| `stack-workflow-manager.sh` | 63 | Shell | `parse_args` |
-| `stack-workflow-manager.sh` | 105 | Shell | `collect_signatures` |
-| `stack-workflow-manager.sh` | 114 | Shell | `script_inventory` |
-| `stack-workflow-manager.sh` | 125 | Shell | `inspect_exact_duplicates` |
-| `stack-workflow-manager.sh` | 168 | Shell | `inspect_overlap` |
-| `stack-workflow-manager.sh` | 190 | Shell | `print_priority` |
-| `stack-workflow-manager.sh` | 199 | Shell | `confirm_run` |
-| `stack-workflow-manager.sh` | 211 | Shell | `execute_workflow` |
-| `stack-workflow-manager.sh` | 238 | Shell | `main` |
-| `start-zLineBot-automos.sh` | 17 | Shell | `usage` |
-| `start-zLineBot-automos.sh` | 37 | Shell | `ensure_runtime` |
-| `start-zLineBot-automos.sh` | 44 | Shell | `ensure_install_exists` |
-| `start-zLineBot-automos.sh` | 48 | Shell | `current_lock_version` |
-| `start-zLineBot-automos.sh` | 54 | Shell | `resolve_target_ref` |
-| `start-zLineBot-automos.sh` | 64 | Shell | `clone_or_update_repo` |
-| `start-zLineBot-automos.sh` | 91 | Shell | `create_service` |
-| `start-zLineBot-automos.sh` | 115 | Shell | `prepare_install_tree` |
-| `start-zLineBot-automos.sh` | 131 | Shell | `start_service` |
-| `start-zLineBot-automos.sh` | 138 | Shell | `stop_service` |
-| `start-zLineBot-automos.sh` | 144 | Shell | `restart_service` |
-| `start-zLineBot-automos.sh` | 150 | Shell | `status_service` |
-| `start-zLineBot-automos.sh` | 155 | Shell | `logs_service` |
-| `start-zLineBot-automos.sh` | 160 | Shell | `install_app` |
-| `start-zLineBot-automos.sh` | 207 | Shell | `uninstall_app` |
-| `start-zLineBot-automos.sh` | 221 | Shell | `update_app` |
-| `start-zLineBot-automos.sh` | 236 | Shell | `upgrade_app` |
-| `start-zLineBot-automos.sh` | 246 | Shell | `lock_version` |
-| `start-zLineBot-automos.sh` | 259 | Shell | `main` |
-| `tools/control_panel/app.py` | 29 | Python | `_available_scripts` |
-| `tools/control_panel/app.py` | 33 | Python | `_safe_log_path` |
-| `tools/control_panel/app.py` | 43 | Python | `_timestamp` |
-| `tools/control_panel/app.py` | 47 | Python | `_spawn_script` |
-| `tools/control_panel/app.py` | 74 | Python | `_iter_log_lines` |
-| `tools/control_panel/app.py` | 81 | Python | `index` |
-| `tools/control_panel/app.py` | 91 | Python | `run_script` |
-| `tools/control_panel/app.py` | 98 | Python | `view_log` |
-| `tools/control_panel/app.py` | 111 | Python | `stream_log` |
-| `tools/control_panel/app.py` | 116 | Python | `event_stream` |
-| `zBAutomos/ai/cnn_ob.py` | 15 | Python | `__init__` |
-| `zBAutomos/ai/cnn_ob.py` | 31 | Python | `forward` |
-| `zBAutomos/ai/infer.py` | 11 | Python | `predict` |
-| `zBAutomos/ai/infer_cnn.py` | 12 | Python | `predict` |
-| `zBAutomos/ai/model.py` | 5 | Python | `__init__` |
-| `zBAutomos/ai/model.py` | 10 | Python | `forward` |
-| `zBAutomos/ai/train.py` | 4 | Python | `train` |
-| `zBAutomos/ai/train_cnn.py` | 8 | Python | `train` |
-| `zBAutomos/analytics/core.ts` | 1 | JS/TS | `sharpe` |
-| `zBAutomos/analytics/core.ts` | 12 | JS/TS | `drawdown` |
-| `zBAutomos/analytics/core.ts` | 26 | JS/TS | `var95` |
-| `zBAutomos/api/src/auth/routes.ts` | 5 | JS/TS | `registerAuthRoutes` |
-| `zBAutomos/api/src/copy/routes.ts` | 9 | JS/TS | `registerCopyRoutes` |
-| `zBAutomos/api/src/market/routes.ts` | 3 | JS/TS | `registerMarketRoutes` |
-| `zBAutomos/api/src/server.ts` | 35 | JS/TS | `start` |
-| `zBAutomos/api/src/trading/propagation.ts` | 12 | JS/TS | `propagate` |
-| `zBAutomos/api/src/trading/ranking.ts` | 7 | JS/TS | `rank` |
-| `zBAutomos/api/src/ws/routes.ts` | 3 | JS/TS | `registerWsRoutes` |
-| `zBAutomos/backtest/data_loader.ts` | 3 | JS/TS | `loadTicksFromJson` |
-| `zBAutomos/backtest/tick_engine.ts` | 9 | JS/TS | `constructor` |
-| `zBAutomos/data/ob_collector.ts` | 8 | JS/TS | `toImbalance` |
-| `zBAutomos/install_zba.sh` | 9 | Shell | `require_cmd` |
-| `zBAutomos/options/vol_surface.py` | 4 | Python | `implied_volatility` |
-| `zBAutomos/options/vol_surface.py` | 13 | Python | `surface` |
-| `zBAutomos/worker/engine.ts` | 1 | JS/TS | `runWorkerLoop` |
-| `zBAutomos/worker/execution.ts` | 13 | JS/TS | `execute` |
-| `zBAutomos/worker/risk.ts` | 1 | JS/TS | `enforceRisk` |
-| `zBAutomos/worker/src/arb.ts` | 15 | JS/TS | `latencyArb` |
-| `zBAutomos/worker/src/arb.ts` | 49 | JS/TS | `execBuy` |
-| `zBAutomos/worker/src/arb.ts` | 53 | JS/TS | `execSell` |
-| `zBAutomos/worker/src/arb.ts` | 57 | JS/TS | `placeOrder` |
-| `zBAutomos/worker/src/execution.ts` | 8 | JS/TS | `executeAtomicHedge` |
-| `zBAutomos/worker/src/market_maker.ts` | 3 | JS/TS | `makeMarket` |
-| `zBAutomos/worker/src/queue.ts` | 7 | JS/TS | `enqueue` |
-| `zBAutomos/worker/src/queue.ts` | 12 | JS/TS | `drain` |
-| `zBAutomos/worker/src/risk.ts` | 9 | JS/TS | `constructor` |
-| `zBAutomos/worker/src/risk.ts` | 11 | JS/TS | `updatePnL` |
-| `zBAutomos/worker/src/risk.ts` | 15 | JS/TS | `updateReturns` |
-| `zBAutomos/worker/src/risk.ts` | 22 | JS/TS | `checkPreTrade` |
-| `zBAutomos/worker/src/risk.ts` | 37 | JS/TS | `exposure` |
-| `zBAutomos/worker/src/risk.ts` | 41 | JS/TS | `var95` |
+
+_Display capped at 300 of 491 detected functions/methods._
 
 ### Automation pipeline files
 
@@ -9699,7 +4505,7 @@ Status: **cloned**; commit `ba8382907971`.
 - `zBAutomos/install_zba.sh`
 - `zeaz_ai_full_stack_installer.sh`
 
-## `zeaz-platform`
+## `cvsz/zeaz-platform`
 
 Status: **cloned**; commit `b22f68a3f6b8`.
 
@@ -9715,7 +4521,7 @@ None detected or repository blocked.
 
 - `install-ubuntu-dev-stack.sh`
 
-## `zeapay`
+## `cvsz/zeapay`
 
 Status: **blocked**; commit `blocked`.
 
@@ -9730,4 +4536,2774 @@ None detected or repository blocked.
 ### Automation pipeline files
 
 None detected or repository blocked.
+
+## `cvsz/zcino`
+
+Status: **cloned**; commit `f2e95ee2b857`.
+
+### API/endpoints
+
+| File | Line | Endpoint/expression |
+|---|---:|---|
+| `frontend/components/games/game-card.tsx` | 34 | `/api/track/click` |
+| `frontend/components/games/game-card.tsx` | 40 | `/api/track/click` |
+| `internal/transport/policy_middleware_test.go` | 37 | `/wallet/balance` |
+
+### Functions/methods
+
+| File | Line | Language | Function/method |
+|---|---:|---|---|
+| `cmd/compliance/main.go` | 17 | Go | `main` |
+| `cmd/compliance/main.go` | 43 | Go | `loadBlockedCountries` |
+| `cmd/compliance/main.go` | 57 | Go | `getEnv` |
+| `cmd/compliance/main_test.go` | 5 | Go | `TestLoadBlockedCountriesDefaults` |
+| `cmd/compliance/main_test.go` | 12 | Go | `TestLoadBlockedCountriesNormalizesInput` |
+| `frontend/app/api/games/route.ts` | 45 | JS/TS | `readNumber` |
+| `frontend/app/api/games/route.ts` | 52 | JS/TS | `readFilters` |
+| `frontend/app/api/games/route.ts` | 62 | JS/TS | `isGameCategory` |
+| `frontend/app/api/games/route.ts` | 66 | JS/TS | `createThumbnail` |
+| `frontend/app/api/games/route.ts` | 78 | JS/TS | `mapCatalogGame` |
+| `frontend/app/api/games/route.ts` | 94 | JS/TS | `catalogQuery` |
+| `frontend/app/api/games/route.ts` | 111 | JS/TS | `fetchCatalogProviders` |
+| `frontend/app/api/games/route.ts` | 127 | JS/TS | `fetchCatalogGames` |
+| `frontend/app/api/games/route.ts` | 170 | JS/TS | `GET` |
+| `frontend/app/api/track/click/route.ts` | 5 | JS/TS | `POST` |
+| `frontend/app/providers/query-provider.tsx` | 7 | JS/TS | `QueryProvider` |
+| `frontend/components/games/filter-sidebar.tsx` | 20 | JS/TS | `FilterSidebar` |
+| `frontend/components/games/filter-sidebar.tsx` | 100 | JS/TS | `onChange` |
+| `frontend/components/games/filter-sidebar.tsx` | 115 | JS/TS | `onChange` |
+| `frontend/components/games/game-card.tsx` | 13 | JS/TS | `GameCard` |
+| `frontend/components/games/game-card.tsx` | 14 | JS/TS | `trackClick` |
+| `frontend/components/games/game-card.tsx` | 97 | JS/TS | `getQueryParam` |
+| `frontend/components/games/game-card.tsx` | 102 | JS/TS | `getSessionID` |
+| `frontend/components/games/game-grid.tsx` | 16 | JS/TS | `GameGrid` |
+| `frontend/components/games/game-lobby.tsx` | 13 | JS/TS | `GameLobby` |
+| `frontend/components/games/search-bar.tsx` | 3 | JS/TS | `SearchBar` |
+| `frontend/hooks/use-games.ts` | 8 | JS/TS | `useGames` |
+| `frontend/lib/api.ts` | 5 | JS/TS | `buildGamesQuery` |
+| `frontend/lib/api.ts` | 20 | JS/TS | `fetchGames` |
+| `frontend/lib/games-data.ts` | 40 | JS/TS | `createThumbnail` |
+| `frontend/lib/games-data.ts` | 70 | JS/TS | `getFilterOptions` |
+| `frontend/lib/games-data.ts` | 81 | JS/TS | `getGames` |
+| `internal/auth/jwt.go` | 31 | Go | `NewTokenManager` |
+| `internal/auth/jwt.go` | 35 | Go | `Generate` |
+| `internal/auth/jwt.go` | 51 | Go | `Validate` |
+| `internal/auth/jwt.go` | 68 | Go | `WithClaims` |
+| `internal/auth/jwt.go` | 72 | Go | `ClaimsFromContext` |
+| `internal/auth/jwt.go` | 77 | Go | `HasRole` |
+| `internal/auth/jwt_test.go` | 8 | Go | `TestTokenManagerGenerateValidate` |
+| `internal/auth/jwt_test.go` | 27 | Go | `TestTokenManagerRejectsWrongSecret` |
+| `internal/cache/game_cache.go` | 32 | Go | `NewRedisGameCache` |
+| `internal/cache/game_cache.go` | 36 | Go | `GetGame` |
+| `internal/cache/game_cache.go` | 42 | Go | `SetGame` |
+| `internal/cache/game_cache.go` | 46 | Go | `GetGamePage` |
+| `internal/cache/game_cache.go` | 52 | Go | `SetGamePage` |
+| `internal/cache/game_cache.go` | 56 | Go | `GetProviders` |
+| `internal/cache/game_cache.go` | 62 | Go | `SetProviders` |
+| `internal/cache/game_cache.go` | 66 | Go | `getJSON` |
+| `internal/cache/game_cache.go` | 80 | Go | `setJSON` |
+| `internal/cache/game_cache.go` | 91 | Go | `gameKey` |
+| `internal/cache/game_cache.go` | 95 | Go | `providersKey` |
+| `internal/cache/game_cache.go` | 99 | Go | `gamesKey` |
+| `internal/config/config.go` | 54 | Go | `Load` |
+| `internal/config/config.go` | 144 | Go | `getEnv` |
+| `internal/config/config.go` | 151 | Go | `getEnvInt` |
+| `internal/config/config.go` | 163 | Go | `getEnvDuration` |
+| `internal/config/config.go` | 175 | Go | `getEnvDurationOrDefault` |
+| `internal/database/postgres.go` | 12 | Go | `NewPostgresPool` |
+| `internal/database/redis.go` | 12 | Go | `NewRedisClient` |
+| `internal/domain/errors.go` | 14 | Go | `Error` |
+| `internal/domain/errors.go` | 18 | Go | `Unwrap` |
+| `internal/domain/game.go` | 20 | Go | `IsValid` |
+| `internal/domain/game.go` | 40 | Go | `Validate` |
+| `internal/domain/game.go` | 81 | Go | `Offset` |
+| `internal/domain/tracking.go` | 19 | Go | `IsValid` |
+| `internal/domain/tracking.go` | 47 | Go | `Validate` |
+| `internal/handler/auth_handler.go` | 30 | Go | `NewAuthHandler` |
+| `internal/handler/auth_handler.go` | 34 | Go | `Token` |
+| `internal/handler/auth_handler.go` | 54 | Go | `decodeLoginRequest` |
+| `internal/handler/catalog_handler.go` | 30 | Go | `NewCatalogHandler` |
+| `internal/handler/catalog_handler.go` | 34 | Go | `ListGames` |
+| `internal/handler/catalog_handler.go` | 49 | Go | `GetGame` |
+| `internal/handler/catalog_handler.go` | 65 | Go | `ListProviders` |
+| `internal/handler/catalog_handler.go` | 74 | Go | `handleServiceError` |
+| `internal/handler/catalog_handler.go` | 87 | Go | `parseListGamesQuery` |
+| `internal/handler/catalog_handler.go` | 112 | Go | `parseRTPRange` |
+| `internal/handler/catalog_handler.go` | 142 | Go | `parsePositiveInt` |
+| `internal/handler/catalog_handler.go` | 153 | Go | `writeJSON` |
+| `internal/handler/catalog_handler.go` | 159 | Go | `writeError` |
+| `internal/handler/tracking_handler.go` | 52 | Go | `NewTrackingHandler` |
+| `internal/handler/tracking_handler.go` | 56 | Go | `TrackImpression` |
+| `internal/handler/tracking_handler.go` | 60 | Go | `TrackClick` |
+| `internal/handler/tracking_handler.go` | 64 | Go | `track` |
+| `internal/handler/tracking_handler.go` | 89 | Go | `handleTrackingError` |
+| `internal/handler/tracking_handler.go` | 102 | Go | `decodeTrackingRequest` |
+| `internal/handler/tracking_handler.go` | 116 | Go | `toEvent` |
+| `internal/handler/tracking_handler_test.go` | 22 | Go | `Track` |
+| `internal/handler/tracking_handler_test.go` | 27 | Go | `Start` |
+| `internal/handler/tracking_handler_test.go` | 28 | Go | `Stop` |
+| `internal/handler/tracking_handler_test.go` | 30 | Go | `TestTrackingHandlerAcceptsClick` |
+| `internal/handler/tracking_handler_test.go` | 60 | Go | `TestTrackingRequestUsesProvidedOccurredAt` |
+| `internal/logger/logger.go` | 5 | Go | `New` |
+| `internal/provider/mock_providers.go` | 19 | Go | `NewMockPGSoftProvider` |
+| `internal/provider/mock_providers.go` | 26 | Go | `GetGames` |
+| `internal/provider/mock_providers.go` | 63 | Go | `NewMockPragmaticPlayProvider` |
+| `internal/provider/mock_providers.go` | 70 | Go | `GetGames` |
+| `internal/provider/mock_providers.go` | 91 | Go | `varianceToVolatility` |
+| `internal/provider/mock_providers.go` | 118 | Go | `NewMockEvolutionProvider` |
+| `internal/provider/mock_providers.go` | 125 | Go | `GetGames` |
+| `internal/provider/normalizer.go` | 11 | Go | `NewNormalizer` |
+| `internal/provider/normalizer.go` | 16 | Go | `GetGames` |
+| `internal/provider/normalizer_test.go` | 9 | Go | `TestMockProvidersNormalizeToCanonicalCatalog` |
+| `internal/provider/normalizer_test.go` | 39 | Go | `TestNormalizeGameConvertsProviderFields` |
+| `internal/provider/provider.go` | 41 | Go | `NormalizeGame` |
+| `internal/provider/provider.go` | 67 | Go | `stableGameID` |
+| `internal/provider/provider.go` | 72 | Go | `normalizeCategory` |
+| `internal/provider/provider.go` | 86 | Go | `normalizeRTP` |
+| `internal/provider/provider.go` | 93 | Go | `normalizeVolatility` |
+| `internal/provider/provider.go` | 104 | Go | `normalizeThumbnailURL` |
+| `internal/repository/game_repository.go` | 26 | Go | `NewPostgresGameRepository` |
+| `internal/repository/game_repository.go` | 30 | Go | `ListGames` |
+| `internal/repository/game_repository.go` | 67 | Go | `GetGameByID` |
+| `internal/repository/game_repository.go` | 87 | Go | `ListProviders` |
+| `internal/repository/game_repository.go` | 114 | Go | `buildGameFilters` |
+| `internal/repository/game_repository.go` | 149 | Go | `scanGame` |
+| `internal/repository/tracking_repository.go` | 22 | Go | `NewPostgresTrackingRepository` |
+| `internal/repository/tracking_repository.go` | 26 | Go | `InsertTrackingEvents` |
+| `internal/repository/tracking_repository.go` | 67 | Go | `nullString` |
+| `internal/repository/tracking_repository.go` | 74 | Go | `nullInt64` |
+| `internal/repository/tracking_repository.go` | 81 | Go | `metadataOrEmpty` |
+| `internal/service/catalog_service.go` | 31 | Go | `NewCatalogService` |
+| `internal/service/catalog_service.go` | 35 | Go | `ListGames` |
+| `internal/service/catalog_service.go` | 68 | Go | `GetGame` |
+| `internal/service/catalog_service.go` | 88 | Go | `ListProviders` |
+| `internal/service/catalog_service.go` | 104 | Go | `validateFilter` |
+| `internal/service/catalog_service.go` | 123 | Go | `IsNotFound` |
+| `internal/service/catalog_service_test.go` | 17 | Go | `GetGame` |
+| `internal/service/catalog_service_test.go` | 20 | Go | `SetGame` |
+| `internal/service/catalog_service_test.go` | 21 | Go | `GetGamePage` |
+| `internal/service/catalog_service_test.go` | 24 | Go | `SetGamePage` |
+| `internal/service/catalog_service_test.go` | 27 | Go | `GetProviders` |
+| `internal/service/catalog_service_test.go` | 28 | Go | `SetProviders` |
+| `internal/service/catalog_service_test.go` | 34 | Go | `ListGames` |
+| `internal/service/catalog_service_test.go` | 38 | Go | `TestCatalogServiceRejectsInvalidRTPRange` |
+| `internal/service/tracking_service.go` | 43 | Go | `NewTrackingService` |
+| `internal/service/tracking_service.go` | 62 | Go | `Start` |
+| `internal/service/tracking_service.go` | 68 | Go | `Track` |
+| `internal/service/tracking_service.go` | 87 | Go | `Stop` |
+| `internal/service/tracking_service.go` | 103 | Go | `run` |
+| `internal/service/tracking_service_test.go` | 21 | Go | `InsertTrackingEvents` |
+| `internal/service/tracking_service_test.go` | 29 | Go | `count` |
+| `internal/service/tracking_service_test.go` | 35 | Go | `TestTrackingServiceBatchesBySize` |
+| `internal/service/tracking_service_test.go` | 52 | Go | `TestTrackingServiceRejectsInvalidEvent` |
+| `internal/service/tracking_service_test.go` | 62 | Go | `validTrackingEvent` |
+| `internal/service/tracking_service_test.go` | 74 | Go | `assertEventually` |
+| `internal/transport/auth_middleware.go` | 10 | Go | `optionalAuth` |
+| `internal/transport/auth_middleware.go` | 28 | Go | `requireRole` |
+| `internal/transport/auth_middleware.go` | 45 | Go | `authenticateBearer` |
+| `internal/transport/auth_middleware.go` | 57 | Go | `writeAuthError` |
+| `internal/transport/policy_middleware.go` | 61 | Go | `policyGuard` |
+| `internal/transport/policy_middleware.go` | 91 | Go | `inspectPolicy` |
+| `internal/transport/policy_middleware.go` | 109 | Go | `shouldInspectBody` |
+| `internal/transport/policy_middleware.go` | 118 | Go | `readAndRestoreBody` |
+| `internal/transport/policy_middleware.go` | 133 | Go | `evaluatePolicy` |
+| `internal/transport/policy_middleware.go` | 153 | Go | `tokenSet` |
+| `internal/transport/policy_middleware.go` | 161 | Go | `writePolicyBlock` |
+| `internal/transport/policy_middleware_test.go` | 13 | Go | `TestPolicyGuardAllowsCatalogRequests` |
+| `internal/transport/policy_middleware_test.go` | 31 | Go | `TestPolicyGuardBlocksProhibitedEndpointPaths` |
+| `internal/transport/policy_middleware_test.go` | 58 | Go | `TestPolicyGuardBlocksProhibitedRequestBody` |
+| `internal/transport/policy_middleware_test.go` | 71 | Go | `TestPolicyGuardRestoresAllowedRequestBody` |
+| `internal/transport/policy_middleware_test.go` | 93 | Go | `assertPolicyBlocked` |
+| `internal/transport/rate_limit.go` | 24 | Go | `newRateLimiter` |
+| `internal/transport/rate_limit.go` | 39 | Go | `middleware` |
+| `internal/transport/rate_limit.go` | 50 | Go | `allow` |
+| `internal/transport/rate_limit.go` | 76 | Go | `cleanup` |
+| `internal/transport/rate_limit.go` | 84 | Go | `clientIP` |
+| `internal/transport/rate_limit_test.go` | 10 | Go | `TestRateLimiterBlocksAfterBurst` |
+| `internal/transport/router.go` | 15 | Go | `NewRouter` |
+| `internal/transport/router.go` | 42 | Go | `requestLogger` |
+| `internal/transport/router.go` | 59 | Go | `recoverer` |
+| `internal/transport/router.go` | 76 | Go | `WriteHeader` |
+| `main.go` | 27 | Go | `main` |
+
+### Automation pipeline files
+
+- `infra/docker-compose.yml`
+
+## `cvsz/zGaming`
+
+Status: **cloned**; commit `10f08a39a3ea`.
+
+### API/endpoints
+
+| File | Line | Endpoint/expression |
+|---|---:|---|
+| `api/gateway/server.ts` | 60 | `/health` |
+| `api/gateway/server.ts` | 62 | `/ready` |
+| `api/gateway/server.ts` | 76 | `/metrics` |
+| `api/gateway/server.ts` | 90 | `/auth/token` |
+| `api/gateway/server.ts` | 116 | `/internal/webhook` |
+| `generator/phases/107-meta-orchestrator.sh` | 156 | `/health` |
+| `generator/phases/107-meta-orchestrator.sh` | 158 | `/auth/token` |
+| `generator/phases/107-meta-orchestrator.sh` | 168 | `/secure` |
+| `generator/phases/60-frontend.sh` | 58 | `/api/login.php` |
+| `generator/phases/60-frontend.sh` | 68 | `/api/launch/pragmatic.php` |
+| `generator/phases/60-frontend.sh` | 109 | `/api/admin/users.php` |
+| `infra/kubernetes/api-deployment.yaml` | 10 | `/health` |
+
+### Functions/methods
+
+| File | Line | Language | Function/method |
+|---|---:|---|---|
+| `api/gateway/server.ts` | 9 | JS/TS | `startServer` |
+| `api/gateway/webhook-auth.ts` | 13 | JS/TS | `signWebhookPayload` |
+| `api/gateway/webhook-auth.ts` | 17 | JS/TS | `verifyWebhookSignature` |
+| `backend/api/login.php` | 7 | PHP | `consume_nonce` |
+| `backend/api/regulator/common.php` | 11 | PHP | `regulator_guard` |
+| `backend/api/regulator/common.php` | 24 | PHP | `pagination` |
+| `backend/api/regulator/common.php` | 31 | PHP | `export_data` |
+| `backend/audit/AuditTrail.php` | 7 | PHP | `__construct` |
+| `backend/audit/AuditTrail.php` | 11 | PHP | `append` |
+| `backend/compliance/KycService.php` | 9 | PHP | `__construct` |
+| `backend/compliance/KycService.php` | 13 | PHP | `assessUser` |
+| `backend/compliance/KycService.php` | 24 | PHP | `isWithdrawalAllowed` |
+| `backend/compliance/KycService.php` | 31 | PHP | `shouldFlagHighRisk` |
+| `backend/compliance/OnfidoProvider.php` | 9 | PHP | `verifyUser` |
+| `backend/compliance/OnfidoProvider.php` | 20 | PHP | `sanctionsCheck` |
+| `backend/compliance/SumsubProvider.php` | 9 | PHP | `verifyUser` |
+| `backend/compliance/SumsubProvider.php` | 20 | PHP | `sanctionsCheck` |
+| `backend/finance/AmlEngine.php` | 7 | PHP | `__construct` |
+| `backend/finance/AmlEngine.php` | 11 | PHP | `scanUser` |
+| `backend/finance/AmlEngine.php` | 18 | PHP | `flagLargeTransactions` |
+| `backend/finance/AmlEngine.php` | 27 | PHP | `flagRapidTransactions` |
+| `backend/finance/AmlEngine.php` | 37 | PHP | `flagKycRisk` |
+| `backend/finance/AmlEngine.php` | 51 | PHP | `createFlag` |
+| `backend/finance/FraudEngine.php` | 7 | PHP | `__construct` |
+| `backend/finance/FraudEngine.php` | 11 | PHP | `assess` |
+| `backend/finance/ReconciliationEngine.php` | 7 | PHP | `__construct` |
+| `backend/finance/ReconciliationEngine.php` | 11 | PHP | `runForDate` |
+| `backend/finance/SettlementWorker.php` | 11 | PHP | `__construct` |
+| `backend/finance/SettlementWorker.php` | 16 | PHP | `runOnce` |
+| `backend/finance/SettlementWorker.php` | 43 | PHP | `processJob` |
+| `backend/finance/WalletTierService.php` | 13 | PHP | `__construct` |
+| `backend/finance/WalletTierService.php` | 21 | PHP | `creditDeposit` |
+| `backend/finance/WalletTierService.php` | 30 | PHP | `requestWithdrawal` |
+| `backend/finance/WalletTierService.php` | 84 | PHP | `isReadOnlyMode` |
+| `backend/finance/WalletTierService.php` | 89 | PHP | `isWithdrawalsDisabled` |
+| `backend/finance/WalletTierService.php` | 94 | PHP | `isUserFrozen` |
+| `backend/finance/WalletTierService.php` | 101 | PHP | `isControlEnabled` |
+| `backend/finance/WalletTierService.php` | 108 | PHP | `approveColdWithdrawal` |
+| `backend/finance/WalletTierService.php` | 114 | PHP | `topUpHotFromCold` |
+| `backend/finance/WalletTierService.php` | 125 | PHP | `newTransactionId` |
+| `backend/interfaces/KycProviderInterface.php` | 8 | PHP | `verifyUser` |
+| `backend/interfaces/KycProviderInterface.php` | 10 | PHP | `sanctionsCheck` |
+| `backend/interfaces/SignerInterface.php` | 7 | PHP | `signTransaction` |
+| `backend/interfaces/SignerInterface.php` | 9 | PHP | `getAddress` |
+| `backend/interfaces/SignerInterface.php` | 11 | PHP | `verifySignature` |
+| `backend/lib/Database.php` | 9 | PHP | `conn` |
+| `backend/lib/auth.php` | 5 | PHP | `auth_env` |
+| `backend/lib/auth.php` | 18 | PHP | `base64url_encode` |
+| `backend/lib/auth.php` | 23 | PHP | `jwt_sign` |
+| `backend/lib/auth.php` | 34 | PHP | `hash_nonce` |
+| `backend/lib/auth.php` | 39 | PHP | `read_json_input` |
+| `backend/lib/auth.php` | 48 | PHP | `json_response` |
+| `backend/observability/StructuredLogger.php` | 7 | PHP | `__construct` |
+| `backend/observability/StructuredLogger.php` | 11 | PHP | `info` |
+| `backend/observability/StructuredLogger.php` | 16 | PHP | `warning` |
+| `backend/observability/StructuredLogger.php` | 21 | PHP | `error` |
+| `backend/observability/StructuredLogger.php` | 26 | PHP | `log` |
+| `backend/security/AdminAccess.php` | 15 | PHP | `__construct` |
+| `backend/security/AdminAccess.php` | 19 | PHP | `authorize` |
+| `backend/security/ServiceAuth.php` | 10 | PHP | `__construct` |
+| `backend/security/ServiceAuth.php` | 14 | PHP | `mintToken` |
+| `backend/security/ServiceAuth.php` | 34 | PHP | `verifyIncoming` |
+| `backend/security/ServiceAuth.php` | 66 | PHP | `parse_service_secrets_env` |
+| `backend/security/ServiceAuth.php` | 78 | PHP | `require_service_auth` |
+| `backend/signer/AwsKmsSigner.php` | 10 | PHP | `__construct` |
+| `backend/signer/AwsKmsSigner.php` | 17 | PHP | `signTransaction` |
+| `backend/signer/AwsKmsSigner.php` | 23 | PHP | `getAddress` |
+| `backend/signer/AwsKmsSigner.php` | 28 | PHP | `verifySignature` |
+| `backend/signer/FireblocksSigner.php` | 10 | PHP | `__construct` |
+| `backend/signer/FireblocksSigner.php` | 18 | PHP | `signTransaction` |
+| `backend/signer/FireblocksSigner.php` | 24 | PHP | `getAddress` |
+| `backend/signer/FireblocksSigner.php` | 29 | PHP | `verifySignature` |
+| `backend/signer/HsmSigner.php` | 10 | PHP | `__construct` |
+| `backend/signer/HsmSigner.php` | 17 | PHP | `signTransaction` |
+| `backend/signer/HsmSigner.php` | 23 | PHP | `getAddress` |
+| `backend/signer/HsmSigner.php` | 28 | PHP | `verifySignature` |
+| `backend/signer/LocalSigner.php` | 10 | PHP | `__construct` |
+| `backend/signer/LocalSigner.php` | 18 | PHP | `signTransaction` |
+| `backend/signer/LocalSigner.php` | 24 | PHP | `getAddress` |
+| `backend/signer/LocalSigner.php` | 29 | PHP | `verifySignature` |
+| `backend/signer/SigningAuditLogger.php` | 9 | PHP | `__construct` |
+| `backend/signer/SigningAuditLogger.php` | 14 | PHP | `logRequest` |
+| `core/orchestrator/kernel.ts` | 5 | JS/TS | `init` |
+| `core/orchestrator/kernel.ts` | 6 | JS/TS | `shutdown` |
+| `core/orchestrator/kernel.ts` | 13 | JS/TS | `register` |
+| `core/orchestrator/kernel.ts` | 22 | JS/TS | `boot` |
+| `core/orchestrator/kernel.ts` | 34 | JS/TS | `shutdown` |
+| `core/orchestrator/kernel.ts` | 43 | JS/TS | `getBus` |
+| `core/plugin-loader/loader.ts` | 4 | JS/TS | `loadModules` |
+| `factory/publisher/resumable-upload.ts` | 22 | JS/TS | `acceptChunk` |
+| `factory/publisher/resumable-upload.ts` | 39 | JS/TS | `finalize` |
+| `factory/render/stateless-render-farm.ts` | 18 | JS/TS | `constructor` |
+| `factory/render/stateless-render-farm.ts` | 24 | JS/TS | `dispatch` |
+| `factory/render/stateless-render-farm.ts` | 40 | JS/TS | `hpaTargetMetrics` |
+| `factory/scout/autonomous-content-factory.ts` | 9 | JS/TS | `autonomousContentFactoryLoop` |
+| `frontend-admin/src/transaction-review.ts` | 3 | JS/TS | `validateIntent` |
+| `frontend-player/src/intent-simulation.ts` | 10 | JS/TS | `renderIntent` |
+| `generator/lib/assert.sh` | 27 | Shell | `fail` |
+| `generator/lib/assert.sh` | 32 | Shell | `ok` |
+| `generator/meta-master.sh` | 31 | Shell | `print_header` |
+| `generator/meta-master.sh` | 38 | Shell | `usage` |
+| `generator/meta-master.sh` | 59 | Shell | `fail` |
+| `generator/meta-master.sh` | 106 | Shell | `assert_layout` |
+| `generator/meta-master.sh` | 110 | Shell | `validate_phase_catalog` |
+| `generator/meta-master.sh` | 133 | Shell | `phase_index` |
+| `generator/meta-master.sh` | 147 | Shell | `run_phase` |
+| `generator/meta-master.sh` | 159 | Shell | `print_summary` |
+| `generator/meta-master.sh` | 178 | Shell | `run_all` |
+| `generator/meta-master.sh` | 233 | Shell | `main` |
+| `generator/phases/110-runtest-report.sh` | 21 | Shell | `log_ok` |
+| `generator/phases/110-runtest-report.sh` | 24 | Shell | `log_fail` |
+| `generator/phases/70-nginx.sh` | 11 | Shell | `require_docker_ready` |
+| `generator/phases/70-nginx.sh` | 23 | Shell | `warn_linux_desktop_credsstore` |
+| `generator/phases/85-backup.sh` | 45 | Shell | `fix_linux_docker_credsstore` |
+| `generator/phases/85-backup.sh` | 58 | Shell | `require_docker_ready` |
+| `generator/phases/85-backup.sh` | 78 | Shell | `ensure_db_container` |
+| `generator/phases/87-dr-test.sh` | 11 | Shell | `cleanup_named_containers` |
+| `generator/stages/lib/common.sh` | 23 | Shell | `log` |
+| `generator/stages/lib/common.sh` | 31 | Shell | `progress` |
+| `generator/stages/lib/common.sh` | 35 | Shell | `check_stage_state` |
+| `generator/stages/lib/common.sh` | 44 | Shell | `mark_stage_completed` |
+| `generator/stages/lib/common.sh` | 50 | Shell | `generate_file_checksums` |
+| `generator/stages/lib/common.sh` | 59 | Shell | `generate_manifest` |
+| `generator/stages/lib/common.sh` | 81 | Shell | `rollback_stage` |
+| `generator/stages/lib/common.sh` | 85 | Shell | `run_phase` |
+| `install_and_run.sh` | 6 | Shell | `log` |
+| `install_and_run.sh` | 7 | Shell | `fail` |
+| `install_and_run.sh` | 9 | Shell | `usage` |
+| `installer/zgaming-ultra-installer.sh` | 22 | Shell | `log_json` |
+| `installer/zgaming-ultra-installer.sh` | 28 | Shell | `print_banner` |
+| `installer/zgaming-ultra-installer.sh` | 37 | Shell | `usage` |
+| `installer/zgaming-ultra-installer.sh` | 52 | Shell | `print_plan` |
+| `installer/zgaming-ultra-installer.sh` | 69 | Shell | `rollback` |
+| `installer/zgaming-ultra-installer.sh` | 79 | Shell | `require_bins` |
+| `installer/zgaming-ultra-installer.sh` | 95 | Shell | `check_runtime` |
+| `installer/zgaming-ultra-installer.sh` | 104 | Shell | `extract_repo_metadata` |
+| `installer/zgaming-ultra-installer.sh` | 120 | Shell | `generate_sbom_lite` |
+| `installer/zgaming-ultra-installer.sh` | 147 | Shell | `emit_infrastructure_inventory` |
+| `installer/zgaming-ultra-installer.sh` | 173 | Shell | `compliance_checks` |
+| `installer/zgaming-ultra-installer.sh` | 203 | Shell | `write_audit_report` |
+| `installer/zgaming-ultra-installer.sh` | 237 | Shell | `build_release_package` |
+| `installer/zgaming-ultra-installer.sh` | 266 | Shell | `run_diagnostics` |
+| `installer/zgaming-ultra-installer.sh` | 276 | Shell | `run_chaos` |
+| `installer/zgaming-ultra-installer.sh` | 284 | Shell | `run_quick` |
+| `installer/zgaming-ultra-installer.sh` | 296 | Shell | `run_full` |
+| `installer/zgaming-ultra-installer.sh` | 304 | Shell | `run_no_cost` |
+| `installer/zgaming-ultra-installer.sh` | 315 | Shell | `run_full_project` |
+| `installer/zgaming-ultra-installer.sh` | 324 | Shell | `menu` |
+| `installer/zgaming-ultra-installer.sh` | 340 | Shell | `main` |
+| `modules/game-engine/cascade.ts` | 13 | JS/TS | `isBaseMatchSymbol` |
+| `modules/game-engine/cascade.ts` | 17 | JS/TS | `findClusters` |
+| `modules/game-engine/cascade.ts` | 83 | JS/TS | `applyCascadeAndRefill` |
+| `modules/game-engine/engine.ts` | 24 | JS/TS | `spin` |
+| `modules/game-engine/paytable.ts` | 12 | JS/TS | `payoutForCluster` |
+| `modules/game-engine/provably-fair.ts` | 9 | JS/TS | `createServerSeedCommitment` |
+| `modules/game-engine/provably-fair.ts` | 16 | JS/TS | `sha256` |
+| `modules/game-engine/provably-fair.ts` | 20 | JS/TS | `verifyServerSeedReveal` |
+| `modules/game-engine/provably-fair.ts` | 31 | JS/TS | `buildSeedTrace` |
+| `modules/game-engine/provably-fair.ts` | 35 | JS/TS | `computeProvablyFairRoll` |
+| `modules/game-engine/reels.ts` | 13 | JS/TS | `weightedChoice` |
+| `modules/game-engine/reels.ts` | 33 | JS/TS | `generateGrid` |
+| `modules/game-engine/rng.ts` | 21 | JS/TS | `nextFloat` |
+| `modules/game-engine/rng.ts` | 29 | JS/TS | `nextInt` |
+| `modules/game-engine/rng.ts` | 37 | JS/TS | `getCurrentNonce` |
+| `modules/game-engine/rtp-controller.ts` | 26 | JS/TS | `snapshot` |
+| `modules/game-engine/rtp-controller.ts` | 34 | JS/TS | `update` |
+| `modules/game-engine/rtp-controller.ts` | 43 | JS/TS | `adjust` |
+| `modules/ledger/ledger.ts` | 28 | JS/TS | `transferWithIdempotency` |
+| `modules/ledger/ledger.ts` | 55 | JS/TS | `verifyLedgerIntegrity` |
+| `modules/ledger/ledger.ts` | 123 | JS/TS | `getDerivedBalance` |
+| `modules/ledger/ledger.ts` | 134 | JS/TS | `computeImmutableHash` |
+| `modules/ledger/ledger.ts` | 148 | JS/TS | `computeLedgerChainHash` |
+| `modules/ledger/ledger.ts` | 160 | JS/TS | `transferOnce` |
+| `modules/ledger/ledger.ts` | 270 | JS/TS | `validateAmount` |
+| `modules/ledger/ledger.ts` | 284 | JS/TS | `decimalPlaces` |
+| `modules/ledger/ledger.ts` | 289 | JS/TS | `ensureCoreTables` |
+| `modules/ledger/ledger.ts` | 347 | JS/TS | `ensureSerializable` |
+| `modules/ledger/ledger.ts` | 351 | JS/TS | `safeRollback` |
+| `modules/ledger/ledger.ts` | 359 | JS/TS | `isRetryableSerializationError` |
+| `modules/wallet/chain-validation.ts` | 3 | JS/TS | `validateChainId` |
+| `modules/wallet/eth.ts` | 8 | JS/TS | `hex` |
+| `modules/wallet/eth.ts` | 12 | JS/TS | `hashHex` |
+| `modules/wallet/eth.ts` | 23 | JS/TS | `transfer` |
+| `modules/wallet/index.ts` | 21 | JS/TS | `constructor` |
+| `modules/wallet/index.ts` | 29 | JS/TS | `transfer` |
+| `modules/wallet/index.ts` | 33 | JS/TS | `simulateTransfer` |
+| `modules/wallet/rpc.ts` | 11 | JS/TS | `constructor` |
+| `modules/wallet/rpc.ts` | 17 | JS/TS | `resolve` |
+| `modules/wallet/rpc.ts` | 27 | JS/TS | `withFallbacks` |
+| `modules/wallet/signer.ts` | 9 | JS/TS | `constructor` |
+| `modules/wallet/signer.ts` | 11 | JS/TS | `sign` |
+| `modules/wallet/signer.ts` | 26 | JS/TS | `createEnvBackedHmacProvider` |
+| `modules/wallet/signer.ts` | 41 | JS/TS | `constructor` |
+| `modules/wallet/signer.ts` | 43 | JS/TS | `sign` |
+| `modules/wallet/simulation.ts` | 7 | JS/TS | `simulateTransfer` |
+| `modules/wallet/simulation.ts` | 45 | JS/TS | `failed` |
+| `modules/wallet/sol.ts` | 8 | JS/TS | `base58Like` |
+| `modules/wallet/sol.ts` | 12 | JS/TS | `hashHex` |
+| `modules/wallet/sol.ts` | 23 | JS/TS | `transfer` |
+| `modules/wallet/types.ts` | 53 | JS/TS | `sign` |
+| `modules/wallet/wagmi-viem.ts` | 12 | JS/TS | `createDeterministicWagmiConfig` |
+| `scripts/emergency-control.php` | 50 | PHP | `setControl` |
+| `scripts/emergency-control.php` | 58 | PHP | `setUserFreeze` |
+| `scripts/fix-all.sh` | 14 | Shell | `log` |
+| `scripts/fix-all.sh` | 18 | Shell | `compute_hash` |
+| `scripts/full_logic_scan.py` | 40 | Python | `read_text` |
+| `scripts/full_logic_scan.py` | 44 | Python | `check_phase_integrity` |
+| `scripts/full_logic_scan.py` | 102 | Python | `check_repo_signals` |
+| `scripts/full_logic_scan.py` | 161 | Python | `build_upgrade_actions` |
+| `scripts/full_logic_scan.py` | 182 | Python | `write_upgrade_markdown` |
+| `scripts/full_logic_scan.py` | 201 | Python | `run` |
+| `scripts/full_logic_scan.py` | 237 | Python | `parse_args` |
+| `scripts/full_logic_scan.py` | 253 | Python | `main` |
+| `scripts/meta-master-v2.sh` | 8 | Shell | `log` |
+| `scripts/meta-master-v2.sh` | 23 | Shell | `check_docker` |
+| `scripts/meta-master-v2.sh` | 27 | Shell | `check_db` |
+| `scripts/meta-master-v2.sh` | 31 | Shell | `check_network` |
+| `scripts/meta-master-v2.sh` | 39 | Shell | `recover_docker` |
+| `scripts/meta-master-v2.sh` | 45 | Shell | `recover_db` |
+| `scripts/meta-master-v2.sh` | 72 | Shell | `recover_network` |
+| `scripts/meta-master-v2.sh` | 80 | Shell | `ensure_dep` |
+| `scripts/meta-master-v2.sh` | 100 | Shell | `run_phase` |
+| `scripts/security-baseline-check.sh` | 6 | Shell | `check_no_tracked_paths` |
+| `scripts/security-baseline-check.sh` | 21 | Shell | `check_secret_manifests` |
+| `services/adversarial/self_play.py` | 9 | Python | `generate` |
+| `services/adversarial/self_play.py` | 18 | Python | `score` |
+| `services/adversarial/self_play.py` | 27 | Python | `self_play` |
+| `services/agents/agent_compliance.py` | 4 | Python | `evaluate_compliance` |
+| `services/agents/agent_profit.py` | 4 | Python | `evaluate_profit` |
+| `services/agents/agent_risk.py` | 4 | Python | `evaluate_risk` |
+| `services/agents/economic_agent.py` | 5 | Python | `__init__` |
+| `services/agents/economic_agent.py` | 10 | Python | `act` |
+| `services/agents/economic_agent.py` | 16 | Python | `execute` |
+| `services/autonomous-agent/agent.py` | 7 | Python | `main` |
+| `services/autonomous-controller/controller.py` | 11 | Python | `decide_action` |
+| `services/autonomous_controller/controller.py` | 11 | Python | `decide_action` |
+| `services/bandit/segment_bandit.py` | 9 | Python | `__init__` |
+| `services/bandit/segment_bandit.py` | 13 | Python | `select` |
+| `services/bandit/segment_bandit.py` | 18 | Python | `update` |
+| `services/causal/uplift_model.py` | 6 | Python | `__init__` |
+| `services/causal/uplift_model.py` | 10 | Python | `fit` |
+| `services/causal/uplift_model.py` | 14 | Python | `predict_uplift` |
+| `services/central-bank/policy_ai.py` | 7 | Python | `__init__` |
+| `services/central-bank/policy_ai.py` | 10 | Python | `update` |
+| `services/central-bank/policy_ai.py` | 21 | Python | `supply_adjustment` |
+| `services/feature-pipeline/flink_job.py` | 9 | Python | `compute_features` |
+| `services/feature-pipeline/flink_job.py` | 19 | Python | `build_job` |
+| `services/federated/fl_client.py` | 7 | Python | `__init__` |
+| `services/federated/fl_client.py` | 10 | Python | `train` |
+| `services/federated/fl_server.py` | 7 | Python | `__init__` |
+| `services/federated/fl_server.py` | 10 | Python | `aggregate` |
+| `services/game-theory/nash_solver.py` | 8 | Python | `best_response` |
+| `services/game-theory/nash_solver.py` | 12 | Python | `compute_equilibrium` |
+| `services/game_theory/nash_solver.py` | 8 | Python | `best_response` |
+| `services/game_theory/nash_solver.py` | 12 | Python | `compute_equilibrium` |
+| `services/hierarchy/manager.py` | 9 | Python | `__init__` |
+| `services/hierarchy/manager.py` | 16 | Python | `route` |
+| `services/hierarchy/manager.py` | 24 | Python | `decide` |
+| `services/intents/intent_engine.py` | 5 | Python | `__init__` |
+| `services/intents/intent_engine.py` | 12 | Python | `plan` |
+| `services/intents/intent_engine.py` | 16 | Python | `optimize` |
+| `services/market/mechanism.py` | 5 | Python | `__init__` |
+| `services/market/mechanism.py` | 8 | Python | `submit` |
+| `services/market/mechanism.py` | 11 | Python | `clear` |
+| `services/mechanism/mechanism_design.py` | 5 | Python | `__init__` |
+| `services/mechanism/mechanism_design.py` | 9 | Python | `payoff` |
+| `services/meta-learning/meta_learner.py` | 9 | Python | `__init__` |
+| `services/meta-learning/meta_learner.py` | 12 | Python | `update` |
+| `services/meta-learning/meta_learner.py` | 17 | Python | `normalize` |
+| `services/meta_learning/meta_learner.py` | 9 | Python | `__init__` |
+| `services/meta_learning/meta_learner.py` | 12 | Python | `update` |
+| `services/meta_learning/meta_learner.py` | 17 | Python | `normalize` |
+| `services/mpc/secure_aggregation.py` | 7 | Python | `__init__` |
+| `services/mpc/secure_aggregation.py` | 10 | Python | `split_secret` |
+| `services/mpc/secure_aggregation.py` | 15 | Python | `reconstruct` |
+| `services/multi-agent/orchestrator.py` | 11 | Python | `__init__` |
+| `services/multi-agent/orchestrator.py` | 14 | Python | `decide` |
+| `services/multi-agent/orchestrator.py` | 25 | Python | `evaluate` |
+| `services/multi_agent/orchestrator.py` | 11 | Python | `__init__` |
+| `services/multi_agent/orchestrator.py` | 14 | Python | `decide` |
+| `services/multi_agent/orchestrator.py` | 25 | Python | `evaluate` |
+| `services/policy/adaptive_policy.py` | 1 | Python | `decide` |
+| `services/risk-engine/app.py` | 15 | Python | `infer` |
+| `services/risk-engine/app.py` | 32 | Python | `_features` |
+| `services/risk-engine/app.py` | 42 | Python | `main` |
+| `services/rl-agent/online_rl.py` | 13 | Python | `__init__` |
+| `services/rl-agent/online_rl.py` | 16 | Python | `predict` |
+| `services/rl-agent/online_rl.py` | 20 | Python | `update` |
+| `services/rl-agent/online_rl.py` | 24 | Python | `_softmax` |
+| `services/rl-agent/online_rl.py` | 32 | Python | `main` |
+| `services/rl-agent/reward_consumer.py` | 12 | Python | `__init__` |
+| `services/rl-agent/reward_consumer.py` | 15 | Python | `update` |
+| `services/rl-agent/reward_consumer.py` | 22 | Python | `compute_reward` |
+| `services/rl-agent/reward_consumer.py` | 30 | Python | `main` |
+| `services/training/pipeline.py` | 8 | Python | `train` |
+| `services/treasury/treasury_ai.py` | 9 | Python | `__init__` |
+| `services/treasury/treasury_ai.py` | 12 | Python | `optimize` |
+| `services/treasury/treasury_ai.py` | 25 | Python | `softmax` |
+| `services/world-model/model.py` | 10 | Python | `__init__` |
+| `services/world-model/model.py` | 13 | Python | `train` |
+
+_Display capped at 300 of 314 detected functions/methods._
+
+### Automation pipeline files
+
+- `.github/workflows/ci-cd.yml`
+- `.github/workflows/ci.yml`
+- `.github/workflows/deploy.yml`
+- `.github/workflows/github-actions-demo.yml`
+- `backend/api/regulator/transactions.php`
+- `deploy.sh`
+- `docker-compose.ci.yml`
+- `docker-compose.yml`
+- `docs/clean-installer-ultra-meta-2026.md`
+- `frontend-admin/src/transaction-review.ts`
+- `infra/kubernetes/api-deployment.yaml`
+- `install_and_run.sh`
+- `installer/artifacts/workflow-plan.txt`
+- `installer/zgaming-ultra-installer.sh`
+- `scripts/export-transaction-history.php`
+- `services/training/pipeline.py`
+
+## `cvsz/zSafeGuard`
+
+Status: **cloned**; commit `94d388d96cc5`.
+
+### API/endpoints
+
+| File | Line | Endpoint/expression |
+|---|---:|---|
+| `ai/loadtest/locustfile.py` | 17 | `/metrics` |
+| `ai/main.py` | 49 | `/` |
+| `ai/main.py` | 54 | `/health` |
+| `ai/main.py` | 59 | `/metrics` |
+| `ai/main.py` | 73 | `/events` |
+| `ai/main.py` | 78 | `/report` |
+| `ai/main.py` | 109 | `/analyze` |
+| `ai/main.py` | 125 | `/stream` |
+| `ai/tests/test_api.py` | 119 | `/metrics` |
+| `dashboard/pages/index.js` | 21 | `/api/stats` |
+| `dashboard/pages/index.js` | 59 | `/api/simulate?batch=8` |
+
+### Functions/methods
+
+| File | Line | Language | Function/method |
+|---|---:|---|---|
+| `ai/ensemble.py` | 12 | Python | `_load_models` |
+| `ai/ensemble.py` | 18 | Python | `_fallback_predict` |
+| `ai/ensemble.py` | 26 | Python | `predict` |
+| `ai/loadtest/locustfile.py` | 8 | Python | `analyze` |
+| `ai/loadtest/locustfile.py` | 16 | Python | `metrics` |
+| `ai/loadtest/locustfile.py` | 20 | Python | `report` |
+| `ai/loadtest/locustfile.py` | 24 | Python | `events` |
+| `ai/main.py` | 50 | Python | `home` |
+| `ai/main.py` | 55 | Python | `health` |
+| `ai/main.py` | 60 | Python | `metrics` |
+| `ai/main.py` | 74 | Python | `events` |
+| `ai/main.py` | 79 | Python | `report` |
+| `ai/main.py` | 110 | Python | `analyze` |
+| `ai/main.py` | 126 | Python | `stream` |
+| `ai/main.py` | 127 | Python | `event_generator` |
+| `ai/schemas.py` | 35 | Python | `validate_feature_range` |
+| `ai/tests/test_api.py` | 19 | Python | `setup_function` |
+| `ai/tests/test_api.py` | 23 | Python | `_run_server` |
+| `ai/tests/test_api.py` | 27 | Python | `_wait_for_server` |
+| `ai/tests/test_api.py` | 37 | Python | `_request` |
+| `ai/tests/test_api.py` | 55 | Python | `live_server` |
+| `ai/tests/test_api.py` | 64 | Python | `test_analyze_request_model_validation` |
+| `ai/tests/test_api.py` | 72 | Python | `test_analyze_success_and_event_capture` |
+| `ai/tests/test_api.py` | 88 | Python | `test_validation_errors` |
+| `ai/tests/test_api.py` | 107 | Python | `test_report_and_metrics` |
+| `ai/tests/test_ensemble.py` | 5 | Python | `predict_proba` |
+| `ai/tests/test_ensemble.py` | 11 | Python | `predict` |
+| `ai/tests/test_ensemble.py` | 16 | Python | `test_predict_weighted_score` |
+| `codex.sh` | 10 | Shell | `usage` |
+| `codex.sh` | 14 | Shell | `require_cmd` |
+| `codex.sh` | 23 | Shell | `run_step` |
+| `codex.sh` | 34 | Shell | `main` |
+| `dashboard/pages/api/simulate.js` | 3 | JS/TS | `randomFeatures` |
+| `dashboard/pages/index.js` | 5 | JS/TS | `ScoreBadge` |
+| `dashboard/pages/index.js` | 20 | JS/TS | `loadStats` |
+| `dashboard/pages/index.js` | 57 | JS/TS | `runSimulation` |
+| `deploy.sh` | 32 | Shell | `cleanup` |
+
+### Automation pipeline files
+
+- `.github/workflows/ci-cd.yml`
+- `deploy.sh`
+- `install.sh`
+- `install_full.sh`
+- `install_ultimate.sh`
+- `k8s/deployment.yaml`
+
+## `cvsz/zspin`
+
+Status: **cloned**; commit `09550f99b3cc`.
+
+### API/endpoints
+
+| File | Line | Endpoint/expression |
+|---|---:|---|
+| `examples/betting-platform-mvp/backend/src/modules/admin/admin.controller.ts` | 12 | `users` |
+| `examples/betting-platform-mvp/backend/src/modules/betting/betting.controller.ts` | 27 | `:userId/place` |
+| `examples/betting-platform-mvp/backend/src/modules/betting/betting.controller.ts` | 35 | `:betId/settle` |
+| `examples/betting-platform-mvp/backend/src/modules/wallet/wallet.controller.ts` | 15 | `:userId/deposit` |
+| `examples/betting-platform-mvp/backend/src/modules/wallet/wallet.controller.ts` | 23 | `:userId/withdraw` |
+| `examples/betting-platform-mvp/backend/src/modules/wallet/wallet.controller.ts` | 31 | `:userId/balance` |
+| `examples/zspin-cloud-saas/backend/main.py` | 26 | `/login` |
+| `examples/zspin-cloud-saas/backend/main.py` | 32 | `/query` |
+| `examples/zspin-cloud-saas/backend/main.py` | 39 | `/analytics` |
+| `examples/zspin-cloud-saas/backend/main.py` | 45 | `/billing/checkout` |
+| `examples/zspin-cloud-saas/waitlist/server.py` | 12 | `/waitlist` |
+| `src/zspin/apiserver.py` | 56 | `/apply` |
+| `src/zspin/apiserver.py` | 68 | `/resources` |
+| `src/zspin/control_plane/api.py` | 48 | `/deploy` |
+| `src/zspin/control_plane/api.py` | 66 | `/tenants` |
+| `src/zspin/control_plane/api.py` | 71 | `/clusters` |
+| `src/zspin/control_plane/api.py` | 76 | `/billing` |
+| `src/zspin/kv/api.py` | 42 | `/v1/kv` |
+| `src/zspin/kv/api.py` | 47 | `/v1/kv` |
+| `src/zspin/kv/api.py` | 52 | `/v1/kv` |
+| `src/zspin/kv/api.py` | 57 | `/v1/kv/prefix` |
+| `src/zspin/kv/api.py` | 62 | `/v1/kv/cas` |
+| `src/zspin/kv/api.py` | 67 | `/v1/lease` |
+| `src/zspin/kv/watch.py` | 28 | `/v1/watch/stream` |
+
+### Functions/methods
+
+| File | Line | Language | Function/method |
+|---|---:|---|---|
+| `examples/betting-platform-mvp/admin-panel/src/AdminDashboard.tsx` | 10 | JS/TS | `AdminDashboard` |
+| `examples/betting-platform-mvp/backend/src/main.ts` | 5 | JS/TS | `bootstrap` |
+| `examples/betting-platform-mvp/backend/src/modules/admin/admin.controller.ts` | 13 | JS/TS | `getUsers` |
+| `examples/betting-platform-mvp/backend/src/modules/betting/betting.controller.ts` | 25 | JS/TS | `constructor` |
+| `examples/betting-platform-mvp/backend/src/modules/betting/betting.service.ts` | 27 | JS/TS | `placeBet` |
+| `examples/betting-platform-mvp/backend/src/modules/betting/betting.service.ts` | 45 | JS/TS | `settleBet` |
+| `examples/betting-platform-mvp/backend/src/modules/realtime/realtime.gateway.ts` | 14 | JS/TS | `sendBalanceUpdate` |
+| `examples/betting-platform-mvp/backend/src/modules/realtime/realtime.gateway.ts` | 18 | JS/TS | `sendBetUpdate` |
+| `examples/betting-platform-mvp/backend/src/modules/users/users.service.ts` | 13 | JS/TS | `findAll` |
+| `examples/betting-platform-mvp/backend/src/modules/wallet/wallet.controller.ts` | 13 | JS/TS | `constructor` |
+| `examples/betting-platform-mvp/backend/src/modules/wallet/wallet.service.ts` | 14 | JS/TS | `constructor` |
+| `examples/betting-platform-mvp/backend/src/modules/wallet/wallet.service.ts` | 16 | JS/TS | `deposit` |
+| `examples/betting-platform-mvp/backend/src/modules/wallet/wallet.service.ts` | 23 | JS/TS | `withdraw` |
+| `examples/betting-platform-mvp/backend/src/modules/wallet/wallet.service.ts` | 30 | JS/TS | `getBalance` |
+| `examples/betting-platform-mvp/backend/src/modules/wallet/wallet.service.ts` | 34 | JS/TS | `ensureWallet` |
+| `examples/betting-platform-mvp/frontend/pages/dashboard.tsx` | 17 | JS/TS | `onBalance` |
+| `examples/betting-platform-mvp/frontend/pages/dashboard.tsx` | 22 | JS/TS | `onBet` |
+| `examples/enterprise-blueprint/mlops/dags/retrain_pipeline.py` | 9 | Python | `run_training` |
+| `examples/enterprise-blueprint/mlops/dags/retrain_pipeline.py` | 13 | Python | `run_validation` |
+| `examples/enterprise-blueprint/mlops/dags/retrain_pipeline.py` | 17 | Python | `deploy_canary` |
+| `examples/enterprise-blueprint/mlops/mlflow_tracking_example.py` | 9 | Python | `train_example_model` |
+| `examples/zspin-cloud-saas/backend/analytics.py` | 8 | Python | `get_stats` |
+| `examples/zspin-cloud-saas/backend/auth.py` | 15 | Python | `create_token` |
+| `examples/zspin-cloud-saas/backend/auth.py` | 25 | Python | `verify_token` |
+| `examples/zspin-cloud-saas/backend/billing.py` | 12 | Python | `create_checkout` |
+| `examples/zspin-cloud-saas/backend/main.py` | 15 | Python | `get_user` |
+| `examples/zspin-cloud-saas/backend/main.py` | 27 | Python | `login` |
+| `examples/zspin-cloud-saas/backend/main.py` | 33 | Python | `query` |
+| `examples/zspin-cloud-saas/backend/main.py` | 40 | Python | `analytics` |
+| `examples/zspin-cloud-saas/backend/main.py` | 46 | Python | `billing_checkout` |
+| `examples/zspin-cloud-saas/backend/usage.py` | 10 | Python | `meter` |
+| `examples/zspin-cloud-saas/frontend/src/Dashboard.js` | 6 | JS/TS | `runQuery` |
+| `examples/zspin-cloud-saas/frontend/src/Login.js` | 6 | JS/TS | `handleLogin` |
+| `examples/zspin-cloud-saas/waitlist/server.py` | 13 | Python | `join` |
+| `scripts/deep_audit.py` | 23 | Python | `iter_python_files` |
+| `scripts/deep_audit.py` | 32 | Python | `find_dangerous_patterns` |
+| `scripts/deep_audit.py` | 90 | Python | `gather_inventory` |
+| `scripts/deep_audit.py` | 104 | Python | `compliance_matrix` |
+| `scripts/deep_audit.py` | 125 | Python | `compute_score` |
+| `scripts/deep_audit.py` | 136 | Python | `build_report` |
+| `scripts/deep_audit.py` | 175 | Python | `render_markdown` |
+| `scripts/deep_audit.py` | 224 | Python | `main` |
+| `scripts/validate.py` | 11 | Python | `run` |
+| `scripts/validate.py` | 20 | Python | `main` |
+| `src/zspin/aiops.py` | 5 | Python | `analyze` |
+| `src/zspin/aiops.py` | 12 | Python | `feedback` |
+| `src/zspin/apikeys.py` | 8 | Python | `generate_key` |
+| `src/zspin/apikeys.py` | 14 | Python | `get_tenant` |
+| `src/zspin/apiserver.py` | 14 | Python | `__init__` |
+| `src/zspin/apiserver.py` | 17 | Python | `propose` |
+| `src/zspin/apiserver.py` | 32 | Python | `init_app` |
+| `src/zspin/apiserver.py` | 57 | Python | `apply` |
+| `src/zspin/apiserver.py` | 69 | Python | `list_resources` |
+| `src/zspin/audit.py` | 14 | Python | `write_audit_report` |
+| `src/zspin/auth.py` | 13 | Python | `_b64url_encode` |
+| `src/zspin/auth.py` | 17 | Python | `_b64url_decode` |
+| `src/zspin/auth.py` | 22 | Python | `create_token` |
+| `src/zspin/auth.py` | 39 | Python | `verify_token` |
+| `src/zspin/billing.py` | 10 | Python | `calculate` |
+| `src/zspin/cache.py` | 9 | Python | `get_cache` |
+| `src/zspin/cli.py` | 14 | Python | `build_parser` |
+| `src/zspin/cli.py` | 101 | Python | `_run_cost` |
+| `src/zspin/cli.py` | 113 | Python | `main` |
+| `src/zspin/cli.py` | 202 | Python | `reconcile` |
+| `src/zspin/compliance.py` | 17 | Python | `_has_warn` |
+| `src/zspin/compliance.py` | 21 | Python | `evaluate_controls` |
+| `src/zspin/config.py` | 37 | Python | `_to_bool` |
+| `src/zspin/config.py` | 51 | Python | `_normalize_required_binaries` |
+| `src/zspin/config.py` | 62 | Python | `load_config` |
+| `src/zspin/control_loop.py` | 8 | Python | `__init__` |
+| `src/zspin/control_loop.py` | 20 | Python | `run` |
+| `src/zspin/control_loop.py` | 29 | Python | `run_operator_loop` |
+| `src/zspin/control_plane/api.py` | 18 | Python | `_resolve_identity` |
+| `src/zspin/control_plane/api.py` | 39 | Python | `_apply_rate_limit` |
+| `src/zspin/control_plane/api.py` | 49 | Python | `deploy` |
+| `src/zspin/control_plane/api.py` | 67 | Python | `list_tenants` |
+| `src/zspin/control_plane/api.py` | 72 | Python | `list_clusters` |
+| `src/zspin/control_plane/api.py` | 77 | Python | `get_billing` |
+| `src/zspin/control_plane/manager.py` | 10 | Python | `__init__` |
+| `src/zspin/control_plane/manager.py` | 19 | Python | `register_tenant` |
+| `src/zspin/control_plane/manager.py` | 22 | Python | `list_tenants` |
+| `src/zspin/control_plane/manager.py` | 25 | Python | `list_clusters` |
+| `src/zspin/control_plane/manager.py` | 28 | Python | `deploy` |
+| `src/zspin/controller.py` | 7 | Python | `__init__` |
+| `src/zspin/controller.py` | 11 | Python | `run` |
+| `src/zspin/crd.py` | 5 | Python | `__init__` |
+| `src/zspin/crd.py` | 12 | Python | `__init__` |
+| `src/zspin/crd.py` | 15 | Python | `apply` |
+| `src/zspin/crd.py` | 18 | Python | `list` |
+| `src/zspin/crd.py` | 21 | Python | `get` |
+| `src/zspin/db.py` | 9 | Python | `get_conn` |
+| `src/zspin/diagnostics.py` | 21 | Python | `run_diagnostics` |
+| `src/zspin/distributed_db/columnar.py` | 5 | Python | `__init__` |
+| `src/zspin/distributed_db/columnar.py` | 8 | Python | `insert` |
+| `src/zspin/distributed_db/columnar.py` | 12 | Python | `scan` |
+| `src/zspin/distributed_db/engine.py` | 22 | Python | `__init__` |
+| `src/zspin/distributed_db/engine.py` | 44 | Python | `query` |
+| `src/zspin/distributed_db/engine.py` | 58 | Python | `_apply_mvcc_write` |
+| `src/zspin/distributed_db/engine.py` | 66 | Python | `apply` |
+| `src/zspin/distributed_db/engine.py` | 76 | Python | `snapshot_now` |
+| `src/zspin/distributed_db/engine.py` | 79 | Python | `_load_snapshot` |
+| `src/zspin/distributed_db/engine.py` | 91 | Python | `_replay_wal` |
+| `src/zspin/distributed_db/geo.py` | 5 | Python | `__init__` |
+| `src/zspin/distributed_db/geo.py` | 12 | Python | `get_replicas` |
+| `src/zspin/distributed_db/index.py` | 5 | Python | `__init__` |
+| `src/zspin/distributed_db/index.py` | 8 | Python | `add` |
+| `src/zspin/distributed_db/index.py` | 11 | Python | `search` |
+| `src/zspin/distributed_db/mvcc.py` | 7 | Python | `__init__` |
+| `src/zspin/distributed_db/mvcc.py` | 11 | Python | `write` |
+| `src/zspin/distributed_db/mvcc.py` | 16 | Python | `read` |
+| `src/zspin/distributed_db/sharding.py` | 5 | Python | `__init__` |
+| `src/zspin/distributed_db/sharding.py` | 11 | Python | `get_shard` |
+| `src/zspin/distributed_db/sharding.py` | 18 | Python | `rebalance` |
+| `src/zspin/distributed_db/snapshot.py` | 9 | Python | `__init__` |
+| `src/zspin/distributed_db/snapshot.py` | 12 | Python | `save` |
+| `src/zspin/distributed_db/snapshot.py` | 16 | Python | `load` |
+| `src/zspin/distributed_db/truetime.py` | 7 | Python | `__init__` |
+| `src/zspin/distributed_db/truetime.py` | 10 | Python | `now` |
+| `src/zspin/distributed_db/truetime.py` | 14 | Python | `after` |
+| `src/zspin/distributed_db/tx2pc.py` | 8 | Python | `__init__` |
+| `src/zspin/distributed_db/tx2pc.py` | 12 | Python | `prepare` |
+| `src/zspin/distributed_db/tx2pc.py` | 16 | Python | `commit` |
+| `src/zspin/distributed_db/txn.py` | 9 | Python | `__init__` |
+| `src/zspin/distributed_db/txn.py` | 14 | Python | `read` |
+| `src/zspin/distributed_db/txn.py` | 17 | Python | `write` |
+| `src/zspin/distributed_db/txn.py` | 20 | Python | `commit` |
+| `src/zspin/distributed_db/txn.py` | 26 | Python | `rollback` |
+| `src/zspin/distributed_db/vector.py` | 7 | Python | `__init__` |
+| `src/zspin/distributed_db/vector.py` | 10 | Python | `add` |
+| `src/zspin/distributed_db/vector.py` | 13 | Python | `search` |
+| `src/zspin/distributed_db/vector.py` | 14 | Python | `dist` |
+| `src/zspin/distributed_db/wal.py` | 10 | Python | `__init__` |
+| `src/zspin/distributed_db/wal.py` | 14 | Python | `append` |
+| `src/zspin/distributed_db/wal.py` | 20 | Python | `replay` |
+| `src/zspin/distributed_loop.py` | 7 | Python | `__init__` |
+| `src/zspin/distributed_loop.py` | 12 | Python | `run` |
+| `src/zspin/etcd.py` | 7 | Python | `__init__` |
+| `src/zspin/etcd.py` | 11 | Python | `put` |
+| `src/zspin/etcd.py` | 16 | Python | `get` |
+| `src/zspin/etcd.py` | 19 | Python | `history` |
+| `src/zspin/events.py` | 12 | Python | `send` |
+| `src/zspin/events.py` | 16 | Python | `_build_producer` |
+| `src/zspin/events.py` | 29 | Python | `publish_event` |
+| `src/zspin/finops.py` | 7 | Python | `analyze` |
+| `src/zspin/finops.py` | 20 | Python | `estimate_cost` |
+| `src/zspin/go_live.py` | 29 | Python | `_now_utc` |
+| `src/zspin/go_live.py` | 33 | Python | `_write_json` |
+| `src/zspin/go_live.py` | 39 | Python | `_copy_source_tree` |
+| `src/zspin/go_live.py` | 73 | Python | `_write_linux_installer` |
+| `src/zspin/go_live.py` | 98 | Python | `_write_windows_installer` |
+| `src/zspin/go_live.py` | 119 | Python | `run_go_live_installer_bundle` |
+| `src/zspin/installer.py` | 13 | Python | `_attempt_autoheal` |
+| `src/zspin/installer.py` | 22 | Python | `run_workflow` |
+| `src/zspin/intelligence.py` | 5 | Python | `decide` |
+| `src/zspin/k8s/registry.py` | 1 | Python | `pod_key` |
+| `src/zspin/k8s/registry.py` | 5 | Python | `service_key` |
+| `src/zspin/kv/api.py` | 30 | Python | `init` |
+| `src/zspin/kv/api.py` | 36 | Python | `_require_store` |
+| `src/zspin/kv/api.py` | 43 | Python | `put` |
+| `src/zspin/kv/api.py` | 48 | Python | `get` |
+| `src/zspin/kv/api.py` | 53 | Python | `delete` |
+| `src/zspin/kv/api.py` | 58 | Python | `prefix` |
+| `src/zspin/kv/api.py` | 63 | Python | `cas` |
+| `src/zspin/kv/api.py` | 68 | Python | `grant_lease` |
+| `src/zspin/kv/lease.py` | 10 | Python | `__init__` |
+| `src/zspin/kv/lease.py` | 18 | Python | `grant` |
+| `src/zspin/kv/lease.py` | 24 | Python | `revoke` |
+| `src/zspin/kv/lease.py` | 28 | Python | `_loop` |
+| `src/zspin/kv/revision.py` | 9 | Python | `__init__` |
+| `src/zspin/kv/revision.py` | 13 | Python | `next` |
+| `src/zspin/kv/revision.py` | 19 | Python | `current` |
+| `src/zspin/kv/store.py` | 15 | Python | `__init__` |
+| `src/zspin/kv/store.py` | 22 | Python | `put` |
+| `src/zspin/kv/store.py` | 37 | Python | `get` |
+| `src/zspin/kv/store.py` | 40 | Python | `delete` |
+| `src/zspin/kv/store.py` | 43 | Python | `prefix` |
+| `src/zspin/kv/store.py` | 50 | Python | `cas` |
+| `src/zspin/kv/store.py` | 56 | Python | `watch` |
+| `src/zspin/kv/store.py` | 60 | Python | `_notify_watchers` |
+| `src/zspin/kv/watch.py` | 17 | Python | `init` |
+| `src/zspin/kv/watch.py` | 22 | Python | `_require_store` |
+| `src/zspin/kv/watch.py` | 29 | Python | `watch_stream` |
+| `src/zspin/kv/watch.py` | 33 | Python | `event_stream` |
+| `src/zspin/leader.py` | 8 | Python | `__init__` |
+| `src/zspin/leader.py` | 14 | Python | `try_acquire` |
+| `src/zspin/leader.py` | 24 | Python | `renew` |
+| `src/zspin/logging_utils.py` | 12 | Python | `format` |
+| `src/zspin/logging_utils.py` | 25 | Python | `build_logger` |
+| `src/zspin/main.py` | 14 | Python | `init_app` |
+| `src/zspin/master_meta.py` | 26 | Python | `_deterministic_ai_risk_score` |
+| `src/zspin/master_meta.py` | 34 | Python | `_run_release_packaging` |
+| `src/zspin/master_meta.py` | 48 | Python | `_write_json` |
+| `src/zspin/master_meta.py` | 54 | Python | `run_master_meta_bundle` |
+| `src/zspin/metering.py` | 8 | Python | `record_deploy` |
+| `src/zspin/metering.py` | 12 | Python | `record_cpu` |
+| `src/zspin/metering.py` | 16 | Python | `get_usage` |
+| `src/zspin/multicluster.py` | 5 | Python | `select_cluster` |
+| `src/zspin/observability/alerts.py` | 10 | Python | `__init__` |
+| `src/zspin/observability/alerts.py` | 16 | Python | `handle` |
+| `src/zspin/observability/alerts.py` | 38 | Python | `map_alert` |
+| `src/zspin/observability/metrics.py` | 8 | Python | `start_metrics_server` |
+| `src/zspin/observability/metrics.py` | 12 | Python | `track_request` |
+| `src/zspin/operator.py` | 7 | Python | `__init__` |
+| `src/zspin/operator.py` | 12 | Python | `reconcile` |
+| `src/zspin/platform/deploy.py` | 6 | Python | `deploy` |
+| `src/zspin/platform/gitops.py` | 6 | Python | `apply_gitops` |
+| `src/zspin/platform/runtime.py` | 9 | Python | `_run` |
+| `src/zspin/platform/runtime.py` | 17 | Python | `deploy` |
+| `src/zspin/platform/runtime.py` | 21 | Python | `scale` |
+| `src/zspin/platform/runtime.py` | 31 | Python | `restart` |
+| `src/zspin/platform/services.py` | 5 | Python | `__init__` |
+| `src/zspin/platform/services.py` | 9 | Python | `to_dict` |
+| `src/zspin/policy.py` | 8 | Python | `evaluate` |
+| `src/zspin/raft/cluster.py` | 8 | Python | `handle_append_entries` |
+| `src/zspin/raft/cluster.py` | 19 | Python | `install_snapshot` |
+| `src/zspin/raft/cluster.py` | 28 | Python | `append_entries` |
+| `src/zspin/raft/cluster.py` | 46 | Python | `install_snapshot` |
+| `src/zspin/raft/cluster.py` | 53 | Python | `__init__` |
+| `src/zspin/raft/cluster.py` | 56 | Python | `register` |
+| `src/zspin/raft/cluster.py` | 59 | Python | `clients_for` |
+| `src/zspin/raft/log.py` | 14 | Python | `__init__` |
+| `src/zspin/raft/log.py` | 19 | Python | `append` |
+| `src/zspin/raft/log.py` | 22 | Python | `match` |
+| `src/zspin/raft/log.py` | 29 | Python | `delete_conflicts` |
+| `src/zspin/raft/log.py` | 36 | Python | `commit_to` |
+| `src/zspin/raft/log.py` | 39 | Python | `apply` |
+| `src/zspin/raft/node.py` | 17 | Python | `__init__` |
+| `src/zspin/raft/node.py` | 40 | Python | `attach_clients` |
+| `src/zspin/raft/node.py` | 43 | Python | `become_leader` |
+| `src/zspin/raft/node.py` | 52 | Python | `heartbeat_loop` |
+| `src/zspin/raft/node.py` | 57 | Python | `become_follower` |
+| `src/zspin/raft/node.py` | 65 | Python | `start_election` |
+| `src/zspin/raft/node.py` | 101 | Python | `append_entry` |
+| `src/zspin/raft/node.py` | 104 | Python | `propose` |
+| `src/zspin/raft/node.py` | 115 | Python | `_replicate_over_http` |
+| `src/zspin/raft/node.py` | 126 | Python | `send_heartbeat` |
+| `src/zspin/raft/node.py` | 153 | Python | `update_commit_index` |
+| `src/zspin/raft/node.py` | 166 | Python | `handle_append_entries` |
+| `src/zspin/raft/node.py` | 202 | Python | `append_entries` |
+| `src/zspin/raft/node.py` | 213 | Python | `request_vote` |
+| `src/zspin/raft/node.py` | 248 | Python | `create_snapshot` |
+| `src/zspin/raft/node.py` | 259 | Python | `take_snapshot` |
+| `src/zspin/raft/node.py` | 262 | Python | `install_snapshot` |
+| `src/zspin/raft/node.py` | 281 | Python | `install_snapshot_rpc` |
+| `src/zspin/raft/node.py` | 289 | Python | `add_node` |
+| `src/zspin/raft/node.py` | 301 | Python | `add_peer` |
+| `src/zspin/raft/node.py` | 305 | Python | `remove_peer` |
+| `src/zspin/raft/server.py` | 12 | Python | `__init__` |
+| `src/zspin/raft/server.py` | 15 | Python | `RequestVote` |
+| `src/zspin/raft/server.py` | 22 | Python | `AppendEntries` |
+| `src/zspin/raft/server.py` | 28 | Python | `serve` |
+| `src/zspin/raft/snapshot.py` | 10 | Python | `__init__` |
+| `src/zspin/raft/snapshot.py` | 13 | Python | `save` |
+| `src/zspin/raft/snapshot.py` | 21 | Python | `load` |
+| `src/zspin/raft/state.py` | 10 | Python | `__init__` |
+| `src/zspin/raft/state.py` | 16 | Python | `save` |
+| `src/zspin/raft/state.py` | 20 | Python | `load` |
+| `src/zspin/raft/state.py` | 28 | Python | `set_term` |
+| `src/zspin/raft/state.py` | 33 | Python | `vote_for` |
+| `src/zspin/raft/state_machine.py` | 7 | Python | `__init__` |
+| `src/zspin/raft/state_machine.py` | 11 | Python | `register_handler` |
+| `src/zspin/raft/state_machine.py` | 14 | Python | `apply` |
+| `src/zspin/raft/storage.py` | 8 | Python | `__init__` |
+| `src/zspin/raft/storage.py` | 11 | Python | `append` |
+| `src/zspin/raft/storage.py` | 15 | Python | `read_all` |
+| `src/zspin/rbac.py` | 10 | Python | `check_permission` |
+| `src/zspin/remediation.py` | 12 | Python | `__init__` |
+| `src/zspin/remediation.py` | 22 | Python | `run` |
+| `src/zspin/remediation.py` | 30 | Python | `scale_service` |
+| `src/zspin/remediation.py` | 43 | Python | `restart_service` |
+| `src/zspin/rpc/client.py` | 8 | Python | `send` |
+| `src/zspin/rpc/server.py` | 10 | Python | `do_POST` |
+| `src/zspin/rpc/server.py` | 40 | Python | `log_message` |
+| `src/zspin/rpc/server.py` | 45 | Python | `start_rpc` |
+| `src/zspin/sbom.py` | 11 | Python | `generate_sbom` |
+| `src/zspin/scaling.py` | 48 | Python | `__init__` |
+| `src/zspin/scaling.py` | 52 | Python | `_validate` |
+| `src/zspin/scaling.py` | 60 | Python | `_forecast_peak_rps` |
+| `src/zspin/scaling.py` | 66 | Python | `_target_replicas` |
+| `src/zspin/scaling.py` | 72 | Python | `_hpa_spec` |
+| `src/zspin/scaling.py` | 105 | Python | `_canary_plan` |
+| `src/zspin/scaling.py` | 122 | Python | `_multi_region_plan` |
+| `src/zspin/scaling.py` | 138 | Python | `_diagnostics` |
+| `src/zspin/scaling.py` | 151 | Python | `plan` |
+| `src/zspin/scaling.py` | 179 | Python | `load_scaling_inputs` |
+| `src/zspin/scaling.py` | 206 | Python | `generate_scaling_bundle` |
+| `src/zspin/scheduler.py` | 7 | Python | `__init__` |
+| `src/zspin/scheduler.py` | 10 | Python | `schedule` |
+| `src/zspin/scheduler_scoring.py` | 5 | Python | `__init__` |
+| `src/zspin/scheduler_scoring.py` | 11 | Python | `score` |
+| `src/zspin/scheduler_scoring.py` | 14 | Python | `select` |
+| `src/zspin/slo.py` | 5 | Python | `__init__` |
+| `src/zspin/slo.py` | 11 | Python | `evaluate` |
+| `src/zspin/sql/distributed_executor.py` | 8 | Python | `__init__` |
+| `src/zspin/sql/distributed_executor.py` | 12 | Python | `execute` |
+| `src/zspin/sql/executor.py` | 11 | Python | `__init__` |
+| `src/zspin/sql/executor.py` | 16 | Python | `execute` |
+| `src/zspin/sql/optimizer.py` | 5 | Python | `estimate_cost` |
+| `src/zspin/sql/optimizer.py` | 12 | Python | `choose` |
+| `src/zspin/sql/parser.py` | 5 | Python | `parse` |
+
+_Display capped at 300 of 334 detected functions/methods._
+
+### Automation pipeline files
+
+- `.github/workflows/deploy.yaml`
+- `docs/workflow.md`
+- `examples/betting-platform-mvp/docker-compose.yml`
+- `examples/enterprise-blueprint/kafka/docker-compose.kafka.yml`
+- `examples/enterprise-blueprint/mlops/dags/retrain_pipeline.py`
+- `examples/enterprise-blueprint/observability/docker-compose.observability.yml`
+- `helm/zspin/templates/deployment.yaml`
+- `k8s/deployment.yaml`
+- `observability/prometheus-deploy.yaml`
+- `src/zspin/installer.py`
+- `src/zspin/platform/deploy.py`
+- `tests/test_workflow.py`
+
+## `ZeaZDev/vscode`
+
+Status: **cloned**; commit `ea4ccd5f449b`.
+
+### API/endpoints
+
+| File | Line | Endpoint/expression |
+|---|---:|---|
+| `scripts/playground-server.ts` | 16 | `/` |
+| `scripts/playground-server.ts` | 37 | `/file-changes` |
+| `src/vs/base/common/oauth.ts` | 835 | `/authorize` |
+| `src/vs/base/test/common/labels.test.ts` | 180 | `/auth/c:/some/folder/file.txt` |
+| `src/vs/base/test/common/labels.test.ts` | 181 | `/auth/c:/some/folder/file.txt` |
+| `src/vs/base/test/common/uri.test.ts` | 76 | `/api/files/test.me` |
+| `src/vs/base/test/common/uri.test.ts` | 108 | `/api/files/test.me` |
+| `src/vs/base/test/common/uri.test.ts` | 109 | `/api/files/test.me` |
+| `src/vs/base/test/common/uri.test.ts` | 110 | `/api/files/test.me` |
+| `src/vs/base/test/common/uri.test.ts` | 111 | `/api/files/test.me` |
+| `src/vs/base/test/common/uri.test.ts` | 112 | `/api/files/test.me` |
+| `src/vs/base/test/common/uri.test.ts` | 113 | `/api/files/test.me` |
+| `src/vs/base/test/common/uri.test.ts` | 138 | `/api/files/test.me` |
+
+### Functions/methods
+
+| File | Line | Language | Function/method |
+|---|---:|---|---|
+| `.eslint-plugin-local/code-amd-node-module.ts` | 21 | JS/TS | `create` |
+| `.eslint-plugin-local/code-amd-node-module.ts` | 39 | JS/TS | `checkImport` |
+| `.eslint-plugin-local/code-declare-service-brand.ts` | 16 | JS/TS | `create` |
+| `.eslint-plugin-local/code-ensure-no-disposables-leak-in-test.ts` | 20 | JS/TS | `create` |
+| `.eslint-plugin-local/code-import-patterns.ts` | 33 | JS/TS | `isLayerAllowRule` |
+| `.eslint-plugin-local/code-import-patterns.ts` | 57 | JS/TS | `create` |
+| `.eslint-plugin-local/code-import-patterns.ts` | 78 | JS/TS | `_processOptions` |
+| `.eslint-plugin-local/code-import-patterns.ts` | 93 | JS/TS | `orSegment` |
+| `.eslint-plugin-local/code-import-patterns.ts` | 125 | JS/TS | `findLayer` |
+| `.eslint-plugin-local/code-import-patterns.ts` | 134 | JS/TS | `generateConfig` |
+| `.eslint-plugin-local/code-import-patterns.ts` | 227 | JS/TS | `_checkImport` |
+| `.eslint-plugin-local/code-import-patterns.ts` | 284 | JS/TS | `getRelativeFilename` |
+| `.eslint-plugin-local/code-layering.ts` | 37 | JS/TS | `create` |
+| `.eslint-plugin-local/code-limited-top-functions.ts` | 31 | JS/TS | `create` |
+| `.eslint-plugin-local/code-limited-top-functions.ts` | 57 | JS/TS | `ExportNamedDeclaration` |
+| `.eslint-plugin-local/code-must-use-result.ts` | 20 | JS/TS | `create` |
+| `.eslint-plugin-local/code-must-use-super-dispose.ts` | 12 | JS/TS | `create` |
+| `.eslint-plugin-local/code-must-use-super-dispose.ts` | 13 | JS/TS | `doesCallSuperDispose` |
+| `.eslint-plugin-local/code-no-any-casts.ts` | 11 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-dangerous-type-assertions.ts` | 12 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-deep-import-of-internal.ts` | 29 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-deep-import-of-internal.ts` | 64 | JS/TS | `splitParts` |
+| `.eslint-plugin-local/code-no-global-document-listener.ts` | 10 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-global-document-listener.ts` | 12 | JS/TS | `CallExpression` |
+| `.eslint-plugin-local/code-no-in-operator.ts` | 29 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-in-operator.ts` | 31 | JS/TS | `checkInOperator` |
+| `.eslint-plugin-local/code-no-localization-template-literals.ts` | 34 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-localization-template-literals.ts` | 36 | JS/TS | `checkCallExpression` |
+| `.eslint-plugin-local/code-no-localized-model-description.ts` | 27 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-localized-model-description.ts` | 28 | JS/TS | `reportIfLocalized` |
+| `.eslint-plugin-local/code-no-localized-model-description.ts` | 53 | JS/TS | `isModelDescriptionKey` |
+| `.eslint-plugin-local/code-no-localized-model-description.ts` | 63 | JS/TS | `isModelDescriptionAssignmentTarget` |
+| `.eslint-plugin-local/code-no-localized-model-description.ts` | 70 | JS/TS | `containsLocalizedCall` |
+| `.eslint-plugin-local/code-no-localized-model-description.ts` | 73 | JS/TS | `visit` |
+| `.eslint-plugin-local/code-no-localized-model-description.ts` | 104 | JS/TS | `isLocalizeCall` |
+| `.eslint-plugin-local/code-no-localized-model-description.ts` | 115 | JS/TS | `isLocalizeCallee` |
+| `.eslint-plugin-local/code-no-native-private.ts` | 18 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-nls-in-standalone-editor.ts` | 19 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-observable-get-in-reactive-context.ts` | 20 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-observable-get-in-reactive-context.ts` | 48 | JS/TS | `checkFunctionForObservableGetCalls` |
+| `.eslint-plugin-local/code-no-observable-get-in-reactive-context.ts` | 55 | JS/TS | `traverse` |
+| `.eslint-plugin-local/code-no-observable-get-in-reactive-context.ts` | 81 | JS/TS | `isObservableGetCall` |
+| `.eslint-plugin-local/code-no-observable-get-in-reactive-context.ts` | 111 | JS/TS | `getReaderParameterName` |
+| `.eslint-plugin-local/code-no-observable-get-in-reactive-context.ts` | 124 | JS/TS | `isReactiveFunctionWithReader` |
+| `.eslint-plugin-local/code-no-observable-get-in-reactive-context.ts` | 131 | JS/TS | `walkChildren` |
+| `.eslint-plugin-local/code-no-potentially-unsafe-disposables.ts` | 16 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-potentially-unsafe-disposables.ts` | 17 | JS/TS | `checkVariableDeclaration` |
+| `.eslint-plugin-local/code-no-potentially-unsafe-disposables.ts` | 24 | JS/TS | `checkProperty` |
+| `.eslint-plugin-local/code-no-reader-after-await.ts` | 11 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-reader-after-await.ts` | 39 | JS/TS | `checkFunctionForAwaitBeforeReader` |
+| `.eslint-plugin-local/code-no-reader-after-await.ts` | 47 | JS/TS | `collectPositions` |
+| `.eslint-plugin-local/code-no-reader-after-await.ts` | 121 | JS/TS | `getMethodName` |
+| `.eslint-plugin-local/code-no-reader-after-await.ts` | 129 | JS/TS | `isReaderMethodCall` |
+| `.eslint-plugin-local/code-no-reader-after-await.ts` | 152 | JS/TS | `getReaderParameterName` |
+| `.eslint-plugin-local/code-no-reader-after-await.ts` | 163 | JS/TS | `isFunctionWithReader` |
+| `.eslint-plugin-local/code-no-runtime-import.ts` | 32 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-standalone-editor.ts` | 22 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-static-self-ref.ts` | 15 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-static-self-ref.ts` | 17 | JS/TS | `checkProperty` |
+| `.eslint-plugin-local/code-no-test-async-suite.ts` | 10 | JS/TS | `isCallExpression` |
+| `.eslint-plugin-local/code-no-test-async-suite.ts` | 14 | JS/TS | `isFunctionExpression` |
+| `.eslint-plugin-local/code-no-test-async-suite.ts` | 20 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-test-async-suite.ts` | 21 | JS/TS | `hasAsyncSuite` |
+| `.eslint-plugin-local/code-no-test-only.ts` | 11 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-unexternalized-strings.ts` | 10 | JS/TS | `isStringLiteral` |
+| `.eslint-plugin-local/code-no-unexternalized-strings.ts` | 14 | JS/TS | `isDoubleQuoted` |
+| `.eslint-plugin-local/code-no-unexternalized-strings.ts` | 42 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-unexternalized-strings.ts` | 47 | JS/TS | `collectDoubleQuotedStrings` |
+| `.eslint-plugin-local/code-no-unexternalized-strings.ts` | 53 | JS/TS | `visitLocalizeCall` |
+| `.eslint-plugin-local/code-no-unexternalized-strings.ts` | 100 | JS/TS | `visitL10NCall` |
+| `.eslint-plugin-local/code-no-unexternalized-strings.ts` | 119 | JS/TS | `reportBadStringsAndBadKeys` |
+| `.eslint-plugin-local/code-no-unused-expressions.ts` | 55 | JS/TS | `create` |
+| `.eslint-plugin-local/code-no-unused-expressions.ts` | 66 | JS/TS | `looksLikeDirective` |
+| `.eslint-plugin-local/code-no-unused-expressions.ts` | 91 | JS/TS | `directives` |
+| `.eslint-plugin-local/code-no-unused-expressions.ts` | 101 | JS/TS | `isDirective` |
+| `.eslint-plugin-local/code-no-unused-expressions.ts` | 115 | JS/TS | `isValidExpression` |
+| `.eslint-plugin-local/code-no-unused-expressions.ts` | 143 | JS/TS | `ExpressionStatement` |
+| `.eslint-plugin-local/code-parameter-properties-must-have-explicit-accessibility.ts` | 16 | JS/TS | `create` |
+| `.eslint-plugin-local/code-parameter-properties-must-have-explicit-accessibility.ts` | 17 | JS/TS | `check` |
+| `.eslint-plugin-local/code-policy-localization-key-match.ts` | 37 | JS/TS | `create` |
+| `.eslint-plugin-local/code-policy-localization-key-match.ts` | 39 | JS/TS | `checkLocalizationObject` |
+| `.eslint-plugin-local/code-policy-localization-key-match.ts` | 117 | JS/TS | `isInPolicyBlock` |
+| `.eslint-plugin-local/code-translation-remind.ts` | 23 | JS/TS | `create` |
+| `.eslint-plugin-local/code-translation-remind.ts` | 27 | JS/TS | `_checkImport` |
+| `.eslint-plugin-local/tests/code-no-observable-get-in-reactive-context-test.ts` | 10 | JS/TS | `testValidUsage` |
+| `.eslint-plugin-local/tests/code-no-observable-get-in-reactive-context-test.ts` | 30 | JS/TS | `testInvalidUsage` |
+| `.eslint-plugin-local/tests/code-no-observable-get-in-reactive-context-test.ts` | 65 | JS/TS | `testComplexCases` |
+| `.eslint-plugin-local/tests/code-no-observable-get-in-reactive-context-test.ts` | 83 | JS/TS | `process` |
+| `.eslint-plugin-local/tests/code-no-observable-get-in-reactive-context-test.ts` | 108 | JS/TS | `testValidComplexCases` |
+| `.eslint-plugin-local/tests/code-no-observable-get-in-reactive-context-test.ts` | 125 | JS/TS | `processValues` |
+| `.eslint-plugin-local/tests/code-no-observable-get-in-reactive-context-test.ts` | 139 | JS/TS | `testEdgeCases` |
+| `.eslint-plugin-local/tests/code-no-observable-get-in-reactive-context-test.ts` | 165 | JS/TS | `testQuickFixScenarios` |
+| `.eslint-plugin-local/tests/code-no-reader-after-await-test.ts` | 10 | JS/TS | `testValidUsage` |
+| `.eslint-plugin-local/tests/code-no-reader-after-await-test.ts` | 24 | JS/TS | `testInvalidUsage` |
+| `.eslint-plugin-local/tests/code-no-reader-after-await-test.ts` | 49 | JS/TS | `testComplexCases` |
+| `.eslint-plugin-local/tests/code-no-reader-after-await-test.ts` | 76 | JS/TS | `testValidComplexCases` |
+| `.eslint-plugin-local/utils.ts` | 10 | JS/TS | `createImportRuleListener` |
+| `.eslint-plugin-local/utils.ts` | 12 | JS/TS | `_checkImport` |
+| `.eslint-plugin-local/vscode-dts-cancellation.ts` | 18 | JS/TS | `create` |
+| `.eslint-plugin-local/vscode-dts-create-func.ts` | 18 | JS/TS | `create` |
+| `.eslint-plugin-local/vscode-dts-event-naming.ts` | 27 | JS/TS | `create` |
+| `.eslint-plugin-local/vscode-dts-event-naming.ts` | 86 | JS/TS | `getIdent` |
+| `.eslint-plugin-local/vscode-dts-interface-naming.ts` | 21 | JS/TS | `create` |
+| `.eslint-plugin-local/vscode-dts-literal-or-types.ts` | 17 | JS/TS | `create` |
+| `.eslint-plugin-local/vscode-dts-provider-naming.ts` | 20 | JS/TS | `create` |
+| `.eslint-plugin-local/vscode-dts-string-type-literals.ts` | 20 | JS/TS | `create` |
+| `.eslint-plugin-local/vscode-dts-use-export.ts` | 19 | JS/TS | `create` |
+| `.eslint-plugin-local/vscode-dts-use-thenable.ts` | 18 | JS/TS | `create` |
+| `.eslint-plugin-local/vscode-dts-vscode-in-comments.ts` | 18 | JS/TS | `create` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 10 | JS/TS | `activate` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 20 | JS/TS | `constructor` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 29 | JS/TS | `dispose` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 37 | JS/TS | `all` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 48 | JS/TS | `_refresh` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 63 | JS/TS | `findNodeAtPosition` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 70 | JS/TS | `findImportAt` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 80 | JS/TS | `provideCompletionItems` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 139 | JS/TS | `provideCodeActions` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 148 | JS/TS | `_provideFixAll` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 192 | JS/TS | `_provideFix` |
+| `.vscode/extensions/vscode-selfhost-import-aid/src/extension.ts` | 202 | JS/TS | `_provideFixesForDiag` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/coverageProvider.ts` | 21 | JS/TS | `constructor` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/coverageProvider.ts` | 23 | JS/TS | `add` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/coverageProvider.ts` | 41 | JS/TS | `report` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/coverageProvider.ts` | 62 | JS/TS | `add` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/coverageProvider.ts` | 71 | JS/TS | `report` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/coverageProvider.ts` | 81 | JS/TS | `add` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/coverageProvider.ts` | 157 | JS/TS | `add` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/coverageProvider.ts` | 165 | JS/TS | `testDetails` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/debounce.ts` | 9 | JS/TS | `debounce` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/debounce.ts` | 11 | JS/TS | `debounced` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/extension.ts` | 27 | JS/TS | `getWorkspaceFolderForTestFile` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/extension.ts` | 41 | JS/TS | `activate` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/extension.ts` | 46 | JS/TS | `provideFollowup` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/extension.ts` | 56 | JS/TS | `resolveHandler` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/extension.ts` | 249 | JS/TS | `updateNodeForDocument` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/extension.ts` | 278 | JS/TS | `deactivate` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/extension.ts` | 282 | JS/TS | `getOrCreateFile` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/extension.ts` | 305 | JS/TS | `gatherTestItems` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/extension.ts` | 311 | JS/TS | `startWatchingWorkspace` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/extension.ts` | 341 | JS/TS | `getPendingTestMap` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 32 | JS/TS | `constructor` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 76 | JS/TS | `dispose` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 87 | JS/TS | `formatJsonValue` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 125 | JS/TS | `detectFailingDeepStrictEqualAssertion` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 161 | JS/TS | `fromNode` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 177 | JS/TS | `atPosition` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 191 | JS/TS | `constructor` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 204 | JS/TS | `findNodeAt` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 213 | JS/TS | `getAllTestStatusMessagesAt` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 237 | JS/TS | `getTestResultsWithUri` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failingDeepStrictEqualAssertFixer.ts` | 240 | JS/TS | `walk` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failureTracker.ts` | 36 | JS/TS | `constructor` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failureTracker.ts` | 64 | JS/TS | `getGitState` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failureTracker.ts` | 95 | JS/TS | `append` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failureTracker.ts` | 113 | JS/TS | `captureGitState` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failureTracker.ts` | 133 | JS/TS | `dispose` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/failureTracker.ts` | 137 | JS/TS | `exec` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/importGraph.ts` | 40 | JS/TS | `provideRelatedCode` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/importGraph.ts` | 73 | JS/TS | `provideRelatedTests` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/importGraph.ts` | 115 | JS/TS | `didChange` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/importGraph.ts` | 132 | JS/TS | `getNode` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/importGraph.ts` | 138 | JS/TS | `discoverOutwards` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/importGraph.ts` | 154 | JS/TS | `discoverOutwardsInner` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/importGraph.ts` | 172 | JS/TS | `syncNode` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/importGraph.ts` | 209 | JS/TS | `uriToImportPath` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/importGraph.ts` | 222 | JS/TS | `importPathToUri` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/metadata.ts` | 16 | JS/TS | `getId` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/metadata.ts` | 22 | JS/TS | `attachTestMessageMetadata` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/metadata.ts` | 46 | JS/TS | `getTestMessageMetadata` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/snapshot.ts` | 11 | JS/TS | `registerSnapshotUpdate` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/sourceUtils.ts` | 18 | JS/TS | `extractTestFromNode` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/stackTraceParser.ts` | 23 | JS/TS | `isStackLike` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/stackTraceParser.ts` | 26 | JS/TS | `constructor` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/streamSplitter.ts` | 21 | JS/TS | `constructor` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 109 | JS/TS | `constructor` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 121 | JS/TS | `dispose` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 152 | JS/TS | `scanTestOutput` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 163 | JS/TS | `enqueueOutput` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 382 | JS/TS | `forceCRLF` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 384 | JS/TS | `sourcemapStack` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 411 | JS/TS | `outputToString` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 414 | JS/TS | `tryMakeMarkdown` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 439 | JS/TS | `getSourceLocationMapper` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 491 | JS/TS | `getSourceLocation` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 519 | JS/TS | `getSourceFile` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 539 | JS/TS | `completeSourceMapUrl` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 551 | JS/TS | `loadSourceMap` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 557 | JS/TS | `promise` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 580 | JS/TS | `replaceAllLocations` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 613 | JS/TS | `deriveStackLocations` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testOutputScanner.ts` | 647 | JS/TS | `deriveSourceLocation` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testTree.ts` | 19 | JS/TS | `clearFileDiagnostics` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testTree.ts` | 24 | JS/TS | `guessWorkspaceFolder` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testTree.ts` | 63 | JS/TS | `getId` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testTree.ts` | 67 | JS/TS | `getLabel` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testTree.ts` | 71 | JS/TS | `updateFromDisk` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/testTree.ts` | 102 | JS/TS | `traverse` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/v8CoverageWrangling.ts` | 43 | JS/TS | `initializeBlocks` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/v8CoverageWrangling.ts` | 77 | JS/TS | `clone` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/v8CoverageWrangling.ts` | 84 | JS/TS | `cover` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/v8CoverageWrangling.ts` | 89 | JS/TS | `uncovered` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/v8CoverageWrangling.ts` | 104 | JS/TS | `setCovered` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/v8CoverageWrangling.ts` | 111 | JS/TS | `push` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/v8CoverageWrangling.ts` | 171 | JS/TS | `constructor` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/v8CoverageWrangling.ts` | 179 | JS/TS | `getLineLength` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/v8CoverageWrangling.ts` | 189 | JS/TS | `getLineOfOffset` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/v8CoverageWrangling.ts` | 207 | JS/TS | `toLineColumn` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 18 | JS/TS | `escapeRe` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 27 | JS/TS | `constructor` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 29 | JS/TS | `run` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 40 | JS/TS | `debug` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 72 | JS/TS | `createDebugAdapterTracker` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 80 | JS/TS | `onDidSendMessage` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 85 | JS/TS | `onWillReceiveMessage` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 126 | JS/TS | `findOpenPort` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 142 | JS/TS | `getEnvironment` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 161 | JS/TS | `addTestFileRunPath` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 172 | JS/TS | `addTestCaseOrSuite` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 218 | JS/TS | `readProductJson` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 230 | JS/TS | `createWaitServer` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 259 | JS/TS | `binaryPath` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 273 | JS/TS | `getDefaultArgs` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 280 | JS/TS | `binaryPath` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 286 | JS/TS | `getDefaultArgs` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 293 | JS/TS | `binaryPath` |
+| `.vscode/extensions/vscode-selfhost-test-provider/src/vscodeTestRunner.ts` | 299 | JS/TS | `getDefaultArgs` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 12 | JS/TS | `activate` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 32 | JS/TS | `registerSettingsCompletions` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 34 | JS/TS | `provideCompletionItems` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 40 | JS/TS | `registerVariableCompletions` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 42 | JS/TS | `provideCompletionItems` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 85 | JS/TS | `isCompletingInsidePropertyStringValue` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 97 | JS/TS | `isLocationInsideTopLevelProperty` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 105 | JS/TS | `registerExtensionsCompletions` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 109 | JS/TS | `registerExtensionsCompletionsInExtensionsDocument` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 111 | JS/TS | `provideCompletionItems` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 123 | JS/TS | `registerExtensionsCompletionsInWorkspaceConfigurationDocument` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 125 | JS/TS | `provideCompletionItems` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 137 | JS/TS | `getReplaceRange` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 149 | JS/TS | `provideDocumentSymbols` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 183 | JS/TS | `registerContextKeyCompletions` |
+| `extensions/configuration-editing/src/configurationEditingMain.ts` | 202 | JS/TS | `provideCompletionItems` |
+| `extensions/configuration-editing/src/extensionsProposals.ts` | 9 | JS/TS | `provideInstalledExtensionProposals` |
+| `extensions/configuration-editing/src/importExportProfiles.ts` | 17 | JS/TS | `getOctokit` |
+| `extensions/configuration-editing/src/importExportProfiles.ts` | 35 | JS/TS | `saveProfile` |
+| `extensions/configuration-editing/src/importExportProfiles.ts` | 53 | JS/TS | `getPublicOctokit` |
+| `extensions/configuration-editing/src/importExportProfiles.ts` | 63 | JS/TS | `readProfile` |
+| `extensions/configuration-editing/src/importExportProfiles.ts` | 64 | JS/TS | `readProfile` |
+| `extensions/configuration-editing/src/importExportProfiles.ts` | 65 | JS/TS | `readProfile` |
+| `extensions/configuration-editing/src/node/net.ts` | 17 | JS/TS | `getAgent` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 14 | JS/TS | `constructor` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 16 | JS/TS | `provideCompletionItems` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 72 | JS/TS | `getReplaceRange` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 83 | JS/TS | `isCompletingPropertyValue` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 95 | JS/TS | `provideWindowTitleCompletionItems` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 107 | JS/TS | `getText` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 134 | JS/TS | `provideEditorLabelCompletionItems` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 146 | JS/TS | `getText` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 159 | JS/TS | `provideFilesAssociationsCompletionItems` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 189 | JS/TS | `provideExcludeCompletionItems` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 253 | JS/TS | `provideLanguageCompletionItems` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 265 | JS/TS | `provideLanguageCompletionItemsForLanguageOverrides` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 277 | JS/TS | `provideLanguageOverridesCompletionItems` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 321 | JS/TS | `providePortsAttributesCompletionItem` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 346 | JS/TS | `newSimpleCompletionItem` |
+| `extensions/configuration-editing/src/settingsDocumentHelper.ts` | 355 | JS/TS | `newSnippetCompletionItem` |
+| `extensions/configuration-editing/src/test/completion.test.ts` | 545 | JS/TS | `testCompletion` |
+| `extensions/configuration-editing/src/test/completion.test.ts` | 582 | JS/TS | `setTestContent` |
+| `extensions/css-language-features/client/src/browser/cssClientMain.ts` | 15 | JS/TS | `activate` |
+| `extensions/css-language-features/client/src/browser/cssClientMain.ts` | 33 | JS/TS | `deactivate` |
+| `extensions/css-language-features/client/src/cssClient.ts` | 39 | JS/TS | `startClient` |
+| `extensions/css-language-features/client/src/cssClient.ts` | 61 | JS/TS | `provideCompletionItem` |
+| `extensions/css-language-features/client/src/cssClient.ts` | 63 | JS/TS | `updateRanges` |
+| `extensions/css-language-features/client/src/cssClient.ts` | 70 | JS/TS | `updateLabel` |
+| `extensions/css-language-features/client/src/cssClient.ts` | 79 | JS/TS | `updateProposals` |
+| `extensions/css-language-features/client/src/cssClient.ts` | 122 | JS/TS | `initCompletionProvider` |
+| `extensions/css-language-features/client/src/cssClient.ts` | 126 | JS/TS | `provideCompletionItems` |
+| `extensions/css-language-features/client/src/cssClient.ts` | 152 | JS/TS | `applyCodeAction` |
+| `extensions/css-language-features/client/src/cssClient.ts` | 170 | JS/TS | `updateFormatterRegistration` |
+| `extensions/css-language-features/client/src/cssClient.ts` | 177 | JS/TS | `provideDocumentRangeFormattingEdits` |
+| `extensions/css-language-features/client/src/customData.ts` | 9 | JS/TS | `getCustomDataSource` |
+| `extensions/css-language-features/client/src/customData.ts` | 40 | JS/TS | `getCustomDataPathsInAllWorkspaces` |
+| `extensions/css-language-features/client/src/customData.ts` | 49 | JS/TS | `collect` |
+| `extensions/css-language-features/client/src/customData.ts` | 77 | JS/TS | `getCustomDataPathsFromAllExtensions` |
+| `extensions/css-language-features/client/src/dropOrPaste/dropOrPasteResource.ts` | 64 | JS/TS | `getUriList` |
+| `extensions/css-language-features/client/src/dropOrPaste/dropOrPasteResource.ts` | 82 | JS/TS | `createUriListSnippet` |
+| `extensions/css-language-features/client/src/dropOrPaste/dropOrPasteResource.ts` | 107 | JS/TS | `pasteAsCssUrlByDefault` |
+| `extensions/css-language-features/client/src/dropOrPaste/dropOrPasteResource.ts` | 118 | JS/TS | `getRelativePath` |
+| `extensions/css-language-features/client/src/dropOrPaste/dropOrPasteResource.ts` | 134 | JS/TS | `registerDropOrPasteResourceSupport` |
+| `extensions/css-language-features/client/src/dropOrPaste/shared.ts` | 21 | JS/TS | `getDocumentDir` |
+| `extensions/css-language-features/client/src/dropOrPaste/shared.ts` | 29 | JS/TS | `getParentDocumentUri` |
+| `extensions/css-language-features/client/src/dropOrPaste/uriList.ts` | 8 | JS/TS | `splitUriList` |
+| `extensions/css-language-features/client/src/dropOrPaste/uriList.ts` | 12 | JS/TS | `parseUriList` |
+| `extensions/css-language-features/client/src/dropOrPaste/uriList.ts` | 20 | JS/TS | `from` |
+| `extensions/css-language-features/client/src/node/cssClientMain.ts` | 15 | JS/TS | `activate` |
+| `extensions/css-language-features/client/src/node/cssClientMain.ts` | 43 | JS/TS | `deactivate` |
+| `extensions/css-language-features/client/src/node/nodeFs.ts` | 10 | JS/TS | `getNodeFSRequestService` |
+| `extensions/css-language-features/client/src/node/nodeFs.ts` | 11 | JS/TS | `ensureFileUri` |
+| `extensions/css-language-features/client/src/node/nodeFs.ts` | 17 | JS/TS | `getContent` |
+
+_Display capped at 300 of 64674 detected functions/methods._
+
+### Automation pipeline files
+
+- `.config/1espt/PipelineAutobaseliningConfig.yml`
+- `.devcontainer/install-vscode.sh`
+- `.github/workflows/check-clean-git-state.sh`
+- `.github/workflows/copilot-setup-steps.yml`
+- `.github/workflows/monaco-editor.yml`
+- `.github/workflows/no-package-lock-changes.yml`
+- `.github/workflows/no-yarn-lock-changes.yml`
+- `.github/workflows/pr-darwin-test.yml`
+- `.github/workflows/pr-linux-cli-test.yml`
+- `.github/workflows/pr-linux-test.yml`
+- `.github/workflows/pr-node-modules.yml`
+- `.github/workflows/pr-win32-test.yml`
+- `.github/workflows/pr.yml`
+- `.github/workflows/telemetry.yml`
+- `extensions/emmet/src/abbreviationActions.ts`
+- `extensions/emmet/src/test/abbreviationAction.test.ts`
+- `extensions/emmet/src/test/cssAbbreviationAction.test.ts`
+- `extensions/emmet/src/test/tagActions.test.ts`
+- `extensions/git/src/actionButton.ts`
+- `extensions/postinstall.mjs`
+- `extensions/terminal-suggest/src/completions/upstream/docker-compose.ts`
+- `extensions/typescript-language-features/resources/walkthroughs/install-node-js.svg`
+- `extensions/typescript-language-features/src/filesystems/autoInstallerFs.ts`
+- `extensions/typescript-language-features/src/languageFeatures/util/codeAction.ts`
+- `extensions/typescript-language-features/web/src/typingsInstaller/typingsInstaller.ts`
+- `src/bootstrap-cli.ts`
+- `src/bootstrap-esm.ts`
+- `src/bootstrap-fork.ts`
+- `src/bootstrap-import.ts`
+- `src/bootstrap-meta.ts`
+- `src/bootstrap-node.ts`
+- `src/bootstrap-server.ts`
+- `src/vs/base/browser/ui/actionbar/actionViewItems.ts`
+- `src/vs/base/browser/ui/actionbar/actionbar.css`
+- `src/vs/base/browser/ui/actionbar/actionbar.ts`
+- `src/vs/base/browser/ui/dropdown/dropdownActionViewItem.ts`
+- `src/vs/base/common/actions.ts`
+- `src/vs/base/common/observableInternal/transaction.ts`
+- `src/vs/base/common/worker/webWorkerBootstrap.ts`
+- `src/vs/base/test/browser/actionbar.test.ts`
+- `src/vs/editor/common/editorAction.ts`
+- `src/vs/editor/common/languages/enterAction.ts`
+- `src/vs/editor/contrib/codeAction/browser/codeAction.ts`
+- `src/vs/editor/contrib/codeAction/browser/codeActionCommands.ts`
+- `src/vs/editor/contrib/codeAction/browser/codeActionContributions.ts`
+- `src/vs/editor/contrib/codeAction/browser/codeActionController.ts`
+- `src/vs/editor/contrib/codeAction/browser/codeActionKeybindingResolver.ts`
+- `src/vs/editor/contrib/codeAction/browser/codeActionMenu.ts`
+- `src/vs/editor/contrib/codeAction/browser/codeActionModel.ts`
+- `src/vs/editor/contrib/codeAction/test/browser/codeAction.test.ts`
+- `src/vs/editor/contrib/codeAction/test/browser/codeActionKeybindingResolver.test.ts`
+- `src/vs/editor/contrib/codeAction/test/browser/codeActionModel.test.ts`
+- `src/vs/editor/contrib/colorPicker/browser/standaloneColorPicker/standaloneColorPickerActions.ts`
+- `src/vs/editor/contrib/format/browser/formatActions.ts`
+- `src/vs/editor/contrib/gpu/browser/gpuActions.ts`
+- `src/vs/editor/contrib/hover/browser/hoverActionIds.ts`
+- `src/vs/editor/contrib/hover/browser/hoverActions.ts`
+- `src/vs/editor/contrib/stickyScroll/browser/stickyScrollActions.ts`
+- `src/vs/platform/accessibilitySignal/browser/media/chatUserActionRequired.mp3`
+- `src/vs/platform/accessibilitySignal/browser/media/codeActionApplied.mp3`
+- `src/vs/platform/accessibilitySignal/browser/media/codeActionTriggered.mp3`
+- `src/vs/platform/action/common/action.ts`
+- `src/vs/platform/action/common/actionCommonCategories.ts`
+- `src/vs/platform/actionWidget/browser/actionList.ts`
+- `src/vs/platform/actionWidget/browser/actionWidget.css`
+- `src/vs/platform/actionWidget/browser/actionWidget.ts`
+- `src/vs/platform/actionWidget/browser/actionWidgetDropdown.ts`
+- `src/vs/platform/actionWidget/common/actionWidget.ts`
+- `src/vs/platform/actions/browser/actionViewItemService.ts`
+- `src/vs/platform/actions/browser/actionWidgetDropdownActionViewItem.ts`
+- `src/vs/platform/actions/browser/dropdownActionViewItemWithKeybinding.ts`
+- `src/vs/platform/actions/browser/dropdownWithPrimaryActionViewItem.ts`
+- `src/vs/platform/actions/browser/menuEntryActionViewItem.css`
+- `src/vs/platform/actions/browser/menuEntryActionViewItem.ts`
+- `src/vs/platform/actions/common/actions.contribution.ts`
+- `src/vs/platform/actions/common/actions.ts`
+- `src/vs/platform/actions/common/menuResetAction.ts`
+- `src/vs/platform/quickinput/browser/quickInputActions.ts`
+- `src/vs/workbench/api/common/extHostTypes/codeActionKind.ts`
+- `src/vs/workbench/browser/actions/developerActions.ts`
+- `src/vs/workbench/browser/actions/helpActions.ts`
+- `src/vs/workbench/browser/actions/layoutActions.ts`
+- `src/vs/workbench/browser/actions/media/actions.css`
+- `src/vs/workbench/browser/actions/navigationActions.ts`
+- `src/vs/workbench/browser/actions/quickAccessActions.ts`
+- `src/vs/workbench/browser/actions/textInputActions.ts`
+- `src/vs/workbench/browser/actions/windowActions.ts`
+- `src/vs/workbench/browser/actions/workspaceActions.ts`
+- `src/vs/workbench/browser/parts/activitybar/media/activityaction.css`
+- `src/vs/workbench/browser/parts/auxiliarybar/auxiliaryBarActions.ts`
+- `src/vs/workbench/browser/parts/compositeBarActions.ts`
+- `src/vs/workbench/browser/parts/editor/editorActions.ts`
+- `src/vs/workbench/browser/parts/notifications/media/notificationsActions.css`
+- `src/vs/workbench/browser/parts/notifications/notificationsActions.ts`
+- `src/vs/workbench/browser/parts/panel/panelActions.ts`
+- `src/vs/workbench/browser/parts/sidebar/sidebarActions.ts`
+- `src/vs/workbench/browser/parts/statusbar/statusbarActions.ts`
+- `src/vs/workbench/browser/parts/titlebar/titlebarActions.ts`
+- `src/vs/workbench/browser/parts/views/viewMenuActions.ts`
+- `src/vs/workbench/contrib/accessibility/browser/accessibleViewActions.ts`
+- `src/vs/workbench/contrib/authentication/browser/actions/manageAccountPreferencesForExtensionAction.ts`
+- `src/vs/workbench/contrib/authentication/browser/actions/manageAccountPreferencesForMcpServerAction.ts`
+- `src/vs/workbench/contrib/authentication/browser/actions/manageAccountsAction.ts`
+- `src/vs/workbench/contrib/authentication/browser/actions/manageDynamicAuthenticationProvidersAction.ts`
+- `src/vs/workbench/contrib/authentication/browser/actions/manageTrustedExtensionsForAccountAction.ts`
+- `src/vs/workbench/contrib/authentication/browser/actions/manageTrustedMcpServersForAccountAction.ts`
+- `src/vs/workbench/contrib/authentication/browser/actions/signOutOfAccountAction.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatAccessibilityActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatCodeblockActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatContextActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatContinueInAction.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatCopyActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatDeveloperActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatElicitationActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatExecuteActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatFileTreeActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatLanguageModelActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatMoveActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatNewActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatPromptNavigationActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatQuickInputActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatSessionActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatTitleActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/chatToolActions.ts`
+- `src/vs/workbench/contrib/chat/browser/actions/manageModelsActions.ts`
+- `src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsActions.ts`
+- `src/vs/workbench/contrib/chat/browser/agentSessions/media/agentsessionsactions.css`
+- `src/vs/workbench/contrib/chat/browser/chatContentParts/chatMcpServersInteractionContentPart.ts`
+- `src/vs/workbench/contrib/chat/browser/chatContentParts/media/chatMcpServersInteractionContent.css`
+- `src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatExtensionsInstallToolSubPart.ts`
+- `src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingActions.ts`
+- `src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorActions.ts`
+- `src/vs/workbench/contrib/chat/browser/chatSessions/chatSessionPickerActionItem.ts`
+- `src/vs/workbench/contrib/chat/browser/modelPicker/modePickerActionItem.ts`
+- `src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerActionItem.ts`
+- `src/vs/workbench/contrib/chat/browser/promptSyntax/attachInstructionsAction.ts`
+- `src/vs/workbench/contrib/chat/browser/promptSyntax/chatModeActions.ts`
+- `src/vs/workbench/contrib/chat/browser/promptSyntax/newPromptFileActions.ts`
+- `src/vs/workbench/contrib/chat/browser/promptSyntax/promptCodingAgentActionContribution.ts`
+- `src/vs/workbench/contrib/chat/browser/promptSyntax/promptCodingAgentActionOverlay.ts`
+- `src/vs/workbench/contrib/chat/browser/promptSyntax/promptFileActions.ts`
+- `src/vs/workbench/contrib/chat/browser/promptSyntax/runPromptAction.ts`
+- `src/vs/workbench/contrib/chat/browser/promptSyntax/saveAsPromptFileActions.ts`
+- `src/vs/workbench/contrib/chat/common/chatActions.ts`
+- `src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptCodeActions.ts`
+- `src/vs/workbench/contrib/chat/electron-browser/actions/chatDeveloperActions.ts`
+- `src/vs/workbench/contrib/chat/electron-browser/actions/media/voiceChatActions.css`
+- `src/vs/workbench/contrib/chat/electron-browser/actions/voiceChatActions.ts`
+- `src/vs/workbench/contrib/chat/test/electron-browser/voiceChatActions.test.ts`
+- `src/vs/workbench/contrib/codeActions/browser/codeActions.contribution.ts`
+- `src/vs/workbench/contrib/codeActions/browser/codeActionsContribution.ts`
+- `src/vs/workbench/contrib/codeEditor/electron-browser/inputClipboardActions.ts`
+- `src/vs/workbench/contrib/comments/browser/commentFormActions.ts`
+- `src/vs/workbench/contrib/comments/browser/commentThreadAdditionalActions.ts`
+- `src/vs/workbench/contrib/comments/browser/commentsViewActions.ts`
+- `src/vs/workbench/contrib/comments/browser/reactionsAction.ts`
+- `src/vs/workbench/contrib/debug/browser/debugActionViewItems.ts`
+- `src/vs/workbench/contrib/debug/browser/debugEditorActions.ts`
+- `src/vs/workbench/contrib/emmet/browser/emmetActions.ts`
+- `src/vs/workbench/contrib/emmet/test/browser/emmetAction.test.ts`
+- `src/vs/workbench/contrib/extensions/browser/extensionsActions.ts`
+- `src/vs/workbench/contrib/extensions/browser/media/extensionActions.css`
+- `src/vs/workbench/contrib/extensions/common/installExtensionsTool.ts`
+- `src/vs/workbench/contrib/extensions/common/reportExtensionIssueAction.ts`
+- `src/vs/workbench/contrib/extensions/electron-browser/debugExtensionHostAction.ts`
+- `src/vs/workbench/contrib/extensions/electron-browser/extensionsActions.ts`
+- `src/vs/workbench/contrib/extensions/electron-browser/extensionsSlowActions.ts`
+- `src/vs/workbench/contrib/extensions/test/electron-browser/extensionsActions.test.ts`
+- `src/vs/workbench/contrib/files/browser/fileActions.contribution.ts`
+- `src/vs/workbench/contrib/files/browser/fileActions.ts`
+- `src/vs/workbench/contrib/files/electron-browser/fileActions.contribution.ts`
+- `src/vs/workbench/contrib/files/test/browser/fileActions.test.ts`
+- `src/vs/workbench/contrib/format/browser/formatActionsMultiple.ts`
+- `src/vs/workbench/contrib/format/browser/formatActionsNone.ts`
+- `src/vs/workbench/contrib/inlineChat/browser/inlineChatActions.ts`
+- `src/vs/workbench/contrib/inlineChat/electron-browser/inlineChatActions.ts`
+- `src/vs/workbench/contrib/list/browser/listResizeColumnAction.ts`
+- `src/vs/workbench/contrib/localization/common/localizationsActions.ts`
+- `src/vs/workbench/contrib/logs/common/logsActions.ts`
+- `src/vs/workbench/contrib/logs/electron-browser/logsActions.ts`
+- `src/vs/workbench/contrib/markers/browser/markersViewActions.css`
+- `src/vs/workbench/contrib/markers/browser/markersViewActions.ts`
+- `src/vs/workbench/contrib/mcp/browser/mcpServerActions.ts`
+- `src/vs/workbench/contrib/mcp/browser/media/mcpServerAction.css`
+- `src/vs/workbench/contrib/mcp/common/discovery/installedMcpServersDiscovery.ts`
+- `src/vs/workbench/contrib/mergeEditor/browser/view/conflictActions.ts`
+- `src/vs/workbench/contrib/multiDiffEditor/browser/actions.ts`
+- `src/vs/workbench/contrib/notebook/browser/contrib/cellDiagnostics/cellDiagnosticsActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/contrib/layout/layoutActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/apiActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/cellOutputActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/chat/cellChatActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/coreActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/editActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/executeActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/insertCellActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/layoutActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/notebookIndentationActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/sectionActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/controller/variablesActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/diff/notebookDiffActions.ts`
+- `src/vs/workbench/contrib/notebook/browser/media/notebookKernelActionViewItem.css`
+- `src/vs/workbench/contrib/notebook/browser/view/cellParts/cellActionView.ts`
+- `src/vs/workbench/contrib/notebook/test/browser/contrib/layoutActions.test.ts`
+- `src/vs/workbench/contrib/outline/browser/outlineActions.ts`
+- `src/vs/workbench/contrib/preferences/browser/preferencesActions.ts`
+- `src/vs/workbench/contrib/search/browser/searchActionsBase.ts`
+- `src/vs/workbench/contrib/search/browser/searchActionsCopy.ts`
+- `src/vs/workbench/contrib/search/browser/searchActionsFind.ts`
+- `src/vs/workbench/contrib/search/browser/searchActionsNav.ts`
+- `src/vs/workbench/contrib/search/browser/searchActionsRemoveReplace.ts`
+- `src/vs/workbench/contrib/search/browser/searchActionsSymbol.ts`
+- `src/vs/workbench/contrib/search/browser/searchActionsTextQuickAccess.ts`
+- `src/vs/workbench/contrib/search/browser/searchActionsTopBar.ts`
+- `src/vs/workbench/contrib/search/test/browser/searchActions.test.ts`
+- `src/vs/workbench/contrib/searchEditor/browser/searchEditorActions.ts`
+- `src/vs/workbench/contrib/snippets/browser/commands/abstractSnippetsActions.ts`
+- `src/vs/workbench/contrib/snippets/browser/snippetCodeActionProvider.ts`
+- `src/vs/workbench/contrib/terminal/browser/terminalActions.ts`
+- `src/vs/workbench/contrib/terminal/test/browser/terminalActions.test.ts`
+- `src/vs/workbench/contrib/terminalContrib/chat/browser/terminalChatActions.ts`
+- `src/vs/workbench/contrib/terminalContrib/quickFix/browser/terminalQuickFixBuiltinActions.ts`
+- `src/vs/workbench/contrib/terminalContrib/voice/browser/terminalVoiceActions.ts`
+- `src/vs/workbench/contrib/testing/browser/testExplorerActions.ts`
+- `src/vs/workbench/contrib/userDataProfile/browser/userDataProfileActions.ts`
+- `src/vs/workbench/contrib/welcomeWalkthrough/browser/walkThroughActions.ts`
+- `src/vs/workbench/electron-browser/actions/developerActions.ts`
+- `src/vs/workbench/electron-browser/actions/installActions.ts`
+- `src/vs/workbench/electron-browser/actions/media/actions.css`
+- `src/vs/workbench/electron-browser/actions/windowActions.ts`
+- `src/vscode-dts/vscode.proposed.codeActionAI.d.ts`
+- `src/vscode-dts/vscode.proposed.codeActionRanges.d.ts`
+- `src/vscode-dts/vscode.proposed.contribCommentEditorActionsMenu.d.ts`
+- `src/vscode-dts/vscode.proposed.scmActionButton.d.ts`
+
+## `ZeaZDev/ZeaClicker`
+
+Status: **cloned**; commit `6a4be8b804fa`.
+
+### API/endpoints
+
+None detected or repository blocked.
+
+### Functions/methods
+
+None detected or repository blocked.
+
+### Automation pipeline files
+
+None detected or repository blocked.
+
+## `ZeaZDev/zeazchain`
+
+Status: **cloned**; commit `78ae5ed30c75`.
+
+### API/endpoints
+
+None detected or repository blocked.
+
+### Functions/methods
+
+| File | Line | Language | Function/method |
+|---|---:|---|---|
+| `apps/api/src/main.ts` | 14 | JS/TS | `bootstrap` |
+| `apps/api/src/modules/auth/world-id.service.ts` | 40 | JS/TS | `verify` |
+| `apps/miniapp/components/WorldIDButton.tsx` | 34 | JS/TS | `resolveSecureStore` |
+| `apps/miniapp/components/WorldIDButton.tsx` | 46 | JS/TS | `persistProof` |
+| `apps/miniapp/lib/app-config.ts` | 21 | JS/TS | `loadConfig` |
+| `setup_dev_env.sh` | 16 | Shell | `command_exists` |
+
+### Automation pipeline files
+
+- `.github/workflows/mcp-install.yml`
+- `infra/docker-compose.yml`
+- `script/install-mcp.sh`
+- `script/workflows/mcp-install.yml`
+
+## `ZeaZDev/ZeaZDev`
+
+Status: **cloned**; commit `742079fa3f27`.
+
+### API/endpoints
+
+| File | Line | Endpoint/expression |
+|---|---:|---|
+| `AUTH_SYSTEM.md` | 124 | `/api/auth/nonce` |
+| `AUTH_SYSTEM.md` | 162 | `/api/auth/verify` |
+| `AUTH_SYSTEM.md` | 197 | `/api/auth/nonce` |
+| `AUTH_SYSTEM.md` | 216 | `/api/auth/verify` |
+| `AUTH_SYSTEM.md` | 344 | `/api/worldid/verify` |
+| `AUTH_SYSTEM.md` | 390 | `/api/worldid/verify` |
+| `AUTH_SYSTEM.md` | 522 | `/api/auth/refresh` |
+| `AUTH_SYSTEM.md` | 706 | `/api/stake` |
+| `AUTH_SYSTEM.md` | 714 | `/api/admin/users/:id/ban` |
+| `AUTH_SYSTEM.md` | 734 | `/api/auth/2fa/enable` |
+| `AUTH_SYSTEM.md` | 759 | `/api/auth/2fa/verify` |
+| `AUTH_SYSTEM.md` | 791 | `/api/auth/login/2fa` |
+| `AUTH_SYSTEM.md` | 844 | `/api/kyc/init` |
+| `AUTH_SYSTEM.md` | 863 | `/api/kyc/webhook` |
+| `AUTH_SYSTEM.md` | 930 | `/api/` |
+| `AUTH_SYSTEM.md` | 931 | `/api/auth/` |
+| `AUTH_SYSTEM.md` | 942 | `/api/auth/csrf-token` |
+| `AUTH_SYSTEM.md` | 955 | `/api/developer/keys/create` |
+| `DEPLOYMENT.md` | 930 | `/health` |
+| `Release/ZeaZDev-Release-v10.0.sh` | 18 | `/api/v1/claim` |
+| `Release/ZeaZDev-Release-v10.0.sh` | 575 | `/api/results` |
+| `Release/ZeaZDev-Release-v10.0.sh` | 584 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v10.0.sh` | 658 | `/api/v1/claim` |
+| `Release/ZeaZDev-Release-v10.0.sh` | 738 | `/api/results` |
+| `Release/ZeaZDev-Release-v10.0.sh` | 743 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 18 | `/api/health` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 572 | `/api/health` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 577 | `/api/results` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 586 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 651 | `/api/health` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 664 | `/api/v1/claim` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 744 | `/api/results` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 749 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v5.2.sh` | 392 | `/api/results` |
+| `Release/ZeaZDev-Release-v5.2.sh` | 405 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v5.4.sh` | 450 | `/api/results` |
+| `Release/ZeaZDev-Release-v5.4.sh` | 462 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 245 | `/api/results` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 247 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 296 | `/api/results` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 538 | `/api/results` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 551 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.0.sh` | 383 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.0.sh` | 392 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.0.sh` | 433 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.0.sh` | 434 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.1.sh` | 407 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.1.sh` | 416 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.1.sh` | 457 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.1.sh` | 458 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.2.sh` | 413 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.2.sh` | 422 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.2.sh` | 463 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.2.sh` | 464 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.3.sh` | 415 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.3.sh` | 424 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.3.sh` | 465 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.3.sh` | 466 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.4.sh` | 419 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.4.sh` | 428 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.4.sh` | 469 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.4.sh` | 470 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.5.sh` | 423 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.5.sh` | 432 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v6.5.sh` | 473 | `/api/results` |
+| `Release/ZeaZDev-Release-v6.5.sh` | 474 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.0.sh` | 463 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.0.sh` | 472 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.0.sh` | 513 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.0.sh` | 514 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.1.sh` | 463 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.1.sh` | 472 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.1.sh` | 513 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.1.sh` | 514 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.2.sh` | 517 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.2.sh` | 526 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.2.sh` | 567 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.2.sh` | 568 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.3.sh` | 459 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.3.sh` | 468 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.3.sh` | 509 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.3.sh` | 510 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.4.sh` | 448 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.4.sh` | 457 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.4.sh` | 498 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.4.sh` | 499 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.5.sh` | 501 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.5.sh` | 510 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.5.sh` | 551 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.5.sh` | 552 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.6.sh` | 463 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.6.sh` | 472 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v7.6.sh` | 513 | `/api/results` |
+| `Release/ZeaZDev-Release-v7.6.sh` | 514 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v8.0.sh` | 466 | `/api/results` |
+| `Release/ZeaZDev-Release-v8.0.sh` | 475 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v8.0.sh` | 516 | `/api/results` |
+| `Release/ZeaZDev-Release-v8.0.sh` | 517 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v9.0.sh` | 552 | `/api/results` |
+| `Release/ZeaZDev-Release-v9.0.sh` | 561 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v9.0.sh` | 602 | `/api/results` |
+| `Release/ZeaZDev-Release-v9.0.sh` | 607 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v9.1.sh` | 525 | `/api/results` |
+| `Release/ZeaZDev-Release-v9.1.sh` | 534 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v9.1.sh` | 575 | `/api/results` |
+| `Release/ZeaZDev-Release-v9.1.sh` | 580 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v9.2.sh` | 527 | `/api/results` |
+| `Release/ZeaZDev-Release-v9.2.sh` | 536 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v9.2.sh` | 577 | `/api/results` |
+| `Release/ZeaZDev-Release-v9.2.sh` | 582 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v9.3.sh` | 589 | `/api/results` |
+| `Release/ZeaZDev-Release-v9.3.sh` | 598 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v9.3.sh` | 639 | `/api/results` |
+| `Release/ZeaZDev-Release-v9.3.sh` | 644 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v9.4.sh` | 526 | `/api/results` |
+| `Release/ZeaZDev-Release-v9.4.sh` | 535 | `/api/logtail` |
+| `Release/ZeaZDev-Release-v9.4.sh` | 576 | `/api/results` |
+| `Release/ZeaZDev-Release-v9.4.sh` | 581 | `/api/logtail` |
+| `Release/ZeaZDev-Release.sh` | 401 | `/api/results` |
+| `Release/ZeaZDev-Release.sh` | 414 | `/api/logtail` |
+| `Rewards/api.php` | 42 | `/api/checkin` |
+| `ZeaZDev-Release-v10.1.sh` | 18 | `/api/health` |
+| `ZeaZDev-Release-v10.1.sh` | 572 | `/api/health` |
+| `ZeaZDev-Release-v10.1.sh` | 577 | `/api/results` |
+| `ZeaZDev-Release-v10.1.sh` | 586 | `/api/logtail` |
+| `ZeaZDev-Release-v10.1.sh` | 651 | `/api/health` |
+| `ZeaZDev-Release-v10.1.sh` | 664 | `/api/v1/claim` |
+| `ZeaZDev-Release-v10.1.sh` | 744 | `/api/results` |
+| `ZeaZDev-Release-v10.1.sh` | 749 | `/api/logtail` |
+| `ZeaZDev-Repair-Dashboard.sh` | 49 | `/api/health` |
+| `ZeaZDev-Repair-Dashboard.sh` | 54 | `/api/vault` |
+| `server/verifier.js` | 84 | `/api/verify-worldid` |
+| `server/verifier.js` | 140 | `/api/check-verification/:address` |
+| `server/verifier.js` | 163 | `/api/checkin-status/:address` |
+| `server/verifier.js` | 190 | `/api/claim-airdrop` |
+| `server/verifier.js` | 220 | `/api/daily-checkin` |
+| `server/verifier.js` | 255 | `/api/swap-quote` |
+| `server/verifier.js` | 284 | `/api/execute-swap` |
+| `server/verifier.js` | 358 | `/health` |
+
+### Functions/methods
+
+| File | Line | Language | Function/method |
+|---|---:|---|---|
+| `Release/ZeaZDev-Release-v10.0.sh` | 30 | Shell | `info` |
+| `Release/ZeaZDev-Release-v10.0.sh` | 31 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v10.0.sh` | 32 | Shell | `err` |
+| `Release/ZeaZDev-Release-v10.0.sh` | 435 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 28 | Shell | `info` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 29 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 30 | Shell | `err` |
+| `Release/ZeaZDev-Release-v10.1.sh` | 430 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v5.2.sh` | 11 | Shell | `info` |
+| `Release/ZeaZDev-Release-v5.2.sh` | 12 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v5.2.sh` | 13 | Shell | `err` |
+| `Release/ZeaZDev-Release-v5.2.sh` | 69 | Shell | `normalize_rpc` |
+| `Release/ZeaZDev-Release-v5.2.sh` | 101 | Shell | `try_fetch_world_router` |
+| `Release/ZeaZDev-Release-v5.2.sh` | 130 | Shell | `write_hardhat_config` |
+| `Release/ZeaZDev-Release-v5.2.sh` | 254 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v5.4.sh` | 19 | Shell | `info` |
+| `Release/ZeaZDev-Release-v5.4.sh` | 20 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v5.4.sh` | 21 | Shell | `err` |
+| `Release/ZeaZDev-Release-v5.4.sh` | 89 | Shell | `normalize_rpc` |
+| `Release/ZeaZDev-Release-v5.4.sh` | 102 | Shell | `ensure_swap_if_low_memory` |
+| `Release/ZeaZDev-Release-v5.4.sh` | 124 | Shell | `try_fetch_world_router` |
+| `Release/ZeaZDev-Release-v5.4.sh` | 277 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v5.5.sh` | 17 | Shell | `info` |
+| `Release/ZeaZDev-Release-v5.5.sh` | 18 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v5.5.sh` | 19 | Shell | `err` |
+| `Release/ZeaZDev-Release-v5.5.sh` | 189 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 17 | Shell | `info` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 18 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 19 | Shell | `err` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 98 | Shell | `install_nginx_and_certbot` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 127 | Shell | `configure_nginx_proxy` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 160 | Shell | `request_ssl` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 179 | Shell | `create_systemd_services` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 212 | Shell | `bootstrap_project_files` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 306 | Shell | `start_services_and_confirm` |
+| `Release/ZeaZDev-Release-v5.6.sh` | 325 | Shell | `main_flow` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 17 | Shell | `info` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 18 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 19 | Shell | `err` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 36 | Shell | `create_dir` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 69 | Shell | `normalize_rpc` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 80 | Shell | `check_command` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 123 | Shell | `install_system_deps` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 142 | Shell | `install_node_npm` |
+| `Release/ZeaZDev-Release-v5.7.sh` | 386 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v5.8.sh` | 17 | Shell | `info` |
+| `Release/ZeaZDev-Release-v5.8.sh` | 18 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v5.8.sh` | 19 | Shell | `err` |
+| `Release/ZeaZDev-Release-v6.0.sh` | 21 | Shell | `info` |
+| `Release/ZeaZDev-Release-v6.0.sh` | 22 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v6.0.sh` | 23 | Shell | `err` |
+| `Release/ZeaZDev-Release-v6.0.sh` | 248 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v6.1.sh` | 22 | Shell | `info` |
+| `Release/ZeaZDev-Release-v6.1.sh` | 23 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v6.1.sh` | 24 | Shell | `err` |
+| `Release/ZeaZDev-Release-v6.1.sh` | 258 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v6.2.sh` | 24 | Shell | `info` |
+| `Release/ZeaZDev-Release-v6.2.sh` | 25 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v6.2.sh` | 26 | Shell | `err` |
+| `Release/ZeaZDev-Release-v6.2.sh` | 267 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v6.3.sh` | 26 | Shell | `info` |
+| `Release/ZeaZDev-Release-v6.3.sh` | 27 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v6.3.sh` | 28 | Shell | `err` |
+| `Release/ZeaZDev-Release-v6.3.sh` | 269 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v6.4.sh` | 29 | Shell | `info` |
+| `Release/ZeaZDev-Release-v6.4.sh` | 30 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v6.4.sh` | 31 | Shell | `err` |
+| `Release/ZeaZDev-Release-v6.4.sh` | 272 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v6.5.sh` | 34 | Shell | `info` |
+| `Release/ZeaZDev-Release-v6.5.sh` | 35 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v6.5.sh` | 36 | Shell | `err` |
+| `Release/ZeaZDev-Release-v6.5.sh` | 277 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v6.9.sh` | 30 | Shell | `info` |
+| `Release/ZeaZDev-Release-v6.9.sh` | 31 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v6.9.sh` | 32 | Shell | `err` |
+| `Release/ZeaZDev-Release-v6.9.sh` | 323 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v7.0.sh` | 23 | Shell | `info` |
+| `Release/ZeaZDev-Release-v7.0.sh` | 24 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v7.0.sh` | 25 | Shell | `err` |
+| `Release/ZeaZDev-Release-v7.0.sh` | 316 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v7.1.sh` | 23 | Shell | `info` |
+| `Release/ZeaZDev-Release-v7.1.sh` | 24 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v7.1.sh` | 25 | Shell | `err` |
+| `Release/ZeaZDev-Release-v7.1.sh` | 316 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v7.2.sh` | 29 | Shell | `info` |
+| `Release/ZeaZDev-Release-v7.2.sh` | 30 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v7.2.sh` | 31 | Shell | `err` |
+| `Release/ZeaZDev-Release-v7.2.sh` | 366 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v7.3.sh` | 32 | Shell | `info` |
+| `Release/ZeaZDev-Release-v7.3.sh` | 33 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v7.3.sh` | 34 | Shell | `err` |
+| `Release/ZeaZDev-Release-v7.3.sh` | 317 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v7.4.sh` | 27 | Shell | `info` |
+| `Release/ZeaZDev-Release-v7.4.sh` | 28 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v7.4.sh` | 29 | Shell | `err` |
+| `Release/ZeaZDev-Release-v7.4.sh` | 312 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v7.5.sh` | 28 | Shell | `info` |
+| `Release/ZeaZDev-Release-v7.5.sh` | 29 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v7.5.sh` | 30 | Shell | `err` |
+| `Release/ZeaZDev-Release-v7.5.sh` | 358 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v7.6.sh` | 26 | Shell | `info` |
+| `Release/ZeaZDev-Release-v7.6.sh` | 27 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v7.6.sh` | 28 | Shell | `err` |
+| `Release/ZeaZDev-Release-v7.6.sh` | 328 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v8.0.sh` | 29 | Shell | `info` |
+| `Release/ZeaZDev-Release-v8.0.sh` | 30 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v8.0.sh` | 31 | Shell | `err` |
+| `Release/ZeaZDev-Release-v8.0.sh` | 331 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v9.0.sh` | 29 | Shell | `info` |
+| `Release/ZeaZDev-Release-v9.0.sh` | 30 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v9.0.sh` | 31 | Shell | `err` |
+| `Release/ZeaZDev-Release-v9.0.sh` | 416 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v9.1.sh` | 27 | Shell | `info` |
+| `Release/ZeaZDev-Release-v9.1.sh` | 28 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v9.1.sh` | 29 | Shell | `err` |
+| `Release/ZeaZDev-Release-v9.1.sh` | 389 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v9.2.sh` | 28 | Shell | `info` |
+| `Release/ZeaZDev-Release-v9.2.sh` | 29 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v9.2.sh` | 30 | Shell | `err` |
+| `Release/ZeaZDev-Release-v9.2.sh` | 391 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v9.3.sh` | 28 | Shell | `info` |
+| `Release/ZeaZDev-Release-v9.3.sh` | 29 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v9.3.sh` | 30 | Shell | `err` |
+| `Release/ZeaZDev-Release-v9.3.sh` | 446 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release-v9.4.sh` | 29 | Shell | `info` |
+| `Release/ZeaZDev-Release-v9.4.sh` | 30 | Shell | `warn` |
+| `Release/ZeaZDev-Release-v9.4.sh` | 31 | Shell | `err` |
+| `Release/ZeaZDev-Release-v9.4.sh` | 392 | Shell | `run_network_job` |
+| `Release/ZeaZDev-Release.sh` | 20 | Shell | `info` |
+| `Release/ZeaZDev-Release.sh` | 21 | Shell | `warn` |
+| `Release/ZeaZDev-Release.sh` | 22 | Shell | `err` |
+| `Release/ZeaZDev-Release.sh` | 78 | Shell | `normalize_rpc` |
+| `Release/ZeaZDev-Release.sh` | 110 | Shell | `try_fetch_world_router` |
+| `Release/ZeaZDev-Release.sh` | 139 | Shell | `write_hardhat_config` |
+| `Release/ZeaZDev-Release.sh` | 263 | Shell | `run_network_job` |
+| `Rewards/api.php` | 23 | PHP | `resp` |
+| `Rewards/api.php` | 25 | PHP | `isValidEthereumAddress` |
+| `ZeaZDev-Release-v10.1.sh` | 28 | Shell | `info` |
+| `ZeaZDev-Release-v10.1.sh` | 29 | Shell | `warn` |
+| `ZeaZDev-Release-v10.1.sh` | 30 | Shell | `err` |
+| `ZeaZDev-Release-v10.1.sh` | 430 | Shell | `run_network_job` |
+| `mini-app/src/screens/AuthGate.tsx` | 39 | JS/TS | `checkExistingAuth` |
+| `mini-app/src/screens/AuthGate.tsx` | 56 | JS/TS | `handleVerifySuccess` |
+| `mini-app/src/screens/AuthGate.tsx` | 121 | JS/TS | `handleVerifyFailure` |
+| `mini-app/src/screens/AuthGate.tsx` | 133 | JS/TS | `startVerification` |
+| `mini-app/src/screens/RewardScreen.tsx` | 57 | JS/TS | `loadUserStatus` |
+| `mini-app/src/screens/RewardScreen.tsx` | 80 | JS/TS | `handleClaimAirdrop` |
+| `mini-app/src/screens/RewardScreen.tsx` | 94 | JS/TS | `executeClaimAirdrop` |
+| `mini-app/src/screens/RewardScreen.tsx` | 125 | JS/TS | `handleCheckIn` |
+| `mini-app/src/screens/SwapTradeScreen.tsx` | 64 | JS/TS | `loadQuote` |
+| `mini-app/src/screens/SwapTradeScreen.tsx` | 90 | JS/TS | `handleSwap` |
+| `mini-app/src/screens/SwapTradeScreen.tsx` | 121 | JS/TS | `confirmSwap` |
+| `mini-app/src/screens/SwapTradeScreen.tsx` | 135 | JS/TS | `executeSwapTransaction` |
+| `mini-app/src/screens/SwapTradeScreen.tsx` | 176 | JS/TS | `swapTokenPositions` |
+| `mini-app/src/screens/SwapTradeScreen.tsx` | 187 | JS/TS | `selectToken` |
+| `mini-app/src/screens/WalletScreen.tsx` | 53 | JS/TS | `loadBalances` |
+| `mini-app/src/screens/WalletScreen.tsx` | 76 | JS/TS | `handleSend` |
+| `mini-app/src/screens/WalletScreen.tsx` | 110 | JS/TS | `executeSend` |
+| `mini-app/src/screens/WalletScreen.tsx` | 151 | JS/TS | `copyAddress` |
+| `mini-app/src/services/rewards.ts` | 21 | JS/TS | `getCheckInStatus` |
+| `mini-app/src/services/rewards.ts` | 58 | JS/TS | `claimAirdrop` |
+| `mini-app/src/services/rewards.ts` | 97 | JS/TS | `dailyCheckIn` |
+| `mini-app/src/services/swap.ts` | 26 | JS/TS | `getSwapQuote` |
+| `mini-app/src/services/swap.ts` | 74 | JS/TS | `executeSwap` |
+| `mini-app/src/services/wallet.ts` | 15 | JS/TS | `getBalance` |
+| `mini-app/src/services/wallet.ts` | 54 | JS/TS | `sendToken` |
+| `mini-app/src/services/worldid.ts` | 27 | JS/TS | `verifyProof` |
+| `mini-app/src/services/worldid.ts` | 57 | JS/TS | `checkVerificationStatus` |
+| `server/verifier.js` | 312 | JS/TS | `verifyWithWorldID` |
+| `server/verifier.js` | 350 | JS/TS | `parseProof` |
+| `start-all-phases.sh` | 53 | Shell | `print_banner` |
+| `start-all-phases.sh` | 63 | Shell | `log_info` |
+| `start-all-phases.sh` | 67 | Shell | `log_warn` |
+| `start-all-phases.sh` | 71 | Shell | `log_error` |
+| `start-all-phases.sh` | 75 | Shell | `log_step` |
+| `start-all-phases.sh` | 83 | Shell | `check_prerequisites` |
+| `start-all-phases.sh` | 121 | Shell | `check_directory_structure` |
+| `start-all-phases.sh` | 154 | Shell | `install_dependencies` |
+| `start-all-phases.sh` | 193 | Shell | `check_environment` |
+| `start-all-phases.sh` | 257 | Shell | `start_backend` |
+| `start-all-phases.sh` | 304 | Shell | `start_frontend` |
+| `start-all-phases.sh` | 352 | Shell | `check_contracts` |
+| `start-all-phases.sh` | 377 | Shell | `show_status` |
+| `start-all-phases.sh` | 435 | Shell | `stop_services` |
+| `start-all-phases.sh` | 473 | Shell | `show_help` |
+| `start-all-phases.sh` | 514 | Shell | `main` |
+
+### Automation pipeline files
+
+- `.github/workflows/auto-assign.yml`
+- `.github/workflows/deploy.yml`
+- `.github/workflows/proof-html.yml`
+- `DEPLOYMENT.md`
+- `scripts/deploy.js`
+
+## `ZeaZDev/ZeaZDev-Omega`
+
+Status: **cloned**; commit `41adac95ad68`.
+
+### API/endpoints
+
+| File | Line | Endpoint/expression |
+|---|---:|---|
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 8 | `metric` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 19 | `metrics/:userId` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 36 | `dashboard/:userId` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 41 | `behavior/:userId` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 46 | `recommendations/:userId` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 51 | `compliance/snapshot` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 56 | `prediction` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 68 | `predictions/:userId` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 73 | `fraud/:userId` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 79 | `fraud/:alertId/resolve` |
+| `apps/backend/src/modules/auth/auth.controller.ts` | 33 | `world-id/verify` |
+| `apps/backend/src/modules/auth/auth.controller.ts` | 89 | `wallet/connect` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 25 | `quote` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 41 | `initiate` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 63 | `complete` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 77 | `transactions/:userId` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 85 | `transaction/:hash` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 93 | `chains` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 101 | `chains/:chainId` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 109 | `liquidity/:chainId` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 125 | `liquidity/add` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 143 | `liquidity/remove` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 161 | `stats` |
+| `apps/backend/src/modules/defi/defi.controller.ts` | 20 | `swap/quote` |
+| `apps/backend/src/modules/defi/defi.controller.ts` | 29 | `swap/execute` |
+| `apps/backend/src/modules/defi/defi.controller.ts` | 50 | `pool/liquidity` |
+| `apps/backend/src/modules/defi/defi.controller.ts` | 58 | `stake` |
+| `apps/backend/src/modules/defi/defi.controller.ts` | 69 | `stake/:id/claim` |
+| `apps/backend/src/modules/defi/defi.controller.ts` | 74 | `stake/:id/unstake` |
+| `apps/backend/src/modules/defi/defi.controller.ts` | 82 | `stake/user/:userId` |
+| `apps/backend/src/modules/defi/defi.controller.ts` | 87 | `stake/analytics/:userId` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 23 | `whitelabel` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 47 | `whitelabel/:orgId` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 52 | `whitelabel/:orgId` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 68 | `whitelabel/:orgId/features` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 73 | `whitelabel/:orgId/features` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 84 | `api-usage/:orgId` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 89 | `rate-limits` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 97 | `developer/app` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 104 | `developer/:developerId/apps` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 109 | `developer/app/:appId` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 120 | `plugins` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 128 | `plugins` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 153 | `plugins/install` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 160 | `plugins/installed/:orgId` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 165 | `plugins/uninstall` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 175 | `sdk/list` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 180 | `sdk/example` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 191 | `api/endpoints` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 520 | `/api/wallet/create` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 521 | `/api/wallet/:userId` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 522 | `/api/wallet/:userId/balance` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 528 | `/api/bridge/quote` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 529 | `/api/bridge/initiate` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 530 | `/api/bridge/transaction/:hash` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 536 | `/api/game/types` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 537 | `/api/game/slots/play` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 538 | `/api/game/poker/play` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 539 | `/api/game/stats/:userId` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 545 | `/api/fintech/promptpay/generate` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 546 | `/api/fintech/promptpay/verify/:id` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 547 | `/api/fintech/card/issue` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 553 | `/api/defi/stake` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 554 | `/api/defi/unstake` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 555 | `/api/defi/swap` |
+| `apps/backend/src/modules/fintech/fintech.controller.ts` | 24 | `card/issue` |
+| `apps/backend/src/modules/fintech/fintech.controller.ts` | 41 | `card/user/:userId` |
+| `apps/backend/src/modules/fintech/fintech.controller.ts` | 46 | `bank/thai/deposit` |
+| `apps/backend/src/modules/fintech/fintech.controller.ts` | 61 | `bank/thai/withdraw` |
+| `apps/backend/src/modules/fintech/fintech.controller.ts` | 76 | `transactions/user/:userId` |
+| `apps/backend/src/modules/fintech/fintech.controller.ts` | 84 | `promptpay/generate` |
+| `apps/backend/src/modules/fintech/fintech.controller.ts` | 102 | `promptpay/verify/:transactionId` |
+| `apps/backend/src/modules/fintech/fintech.controller.ts` | 110 | `promptpay/webhook` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 21 | `banks` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 30 | `currencies` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 39 | `exchange-rates` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 48 | `kyc/levels` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 57 | `stats` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 70 | `kyc/submit` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 87 | `kyc/:userId` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 100 | `bank-accounts` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 115 | `bank-accounts/verify` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 127 | `bank-accounts/:userId` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 140 | `deposits/quote` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 153 | `deposits` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 172 | `withdrawals/quote` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 185 | `withdrawals` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 204 | `transactions/:userId` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 222 | `transactions/details/:txId` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 235 | `cards/virtual` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 248 | `cards/physical` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 262 | `cards/:userId` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 271 | `cards/fund` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 284 | `cards/:cardId/transactions` |
+| `apps/backend/src/modules/game/game.controller.ts` | 23 | `types` |
+| `apps/backend/src/modules/game/game.controller.ts` | 31 | `stats/:userId` |
+| `apps/backend/src/modules/game/game.controller.ts` | 39 | `slots/play` |
+| `apps/backend/src/modules/game/game.controller.ts` | 56 | `slots/complete` |
+| `apps/backend/src/modules/game/game.controller.ts` | 74 | `poker/create` |
+| `apps/backend/src/modules/game/game.controller.ts` | 91 | `poker/play` |
+| `apps/backend/src/modules/game/game.controller.ts` | 107 | `roulette/play` |
+| `apps/backend/src/modules/game/game.controller.ts` | 129 | `sports/events` |
+| `apps/backend/src/modules/game/game.controller.ts` | 137 | `sports/bet` |
+| `apps/backend/src/modules/game/game.controller.ts` | 159 | `sessions/user/:userId` |
+| `apps/backend/src/modules/game/game.controller.ts` | 164 | `sessions/:sessionId` |
+| `apps/backend/src/modules/game/game.controller.ts` | 169 | `leaderboard/:gameType?` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 24 | `slots/spin` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 40 | `slots/history/:userId` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 53 | `slots/verify` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 67 | `nfts/:userId` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 76 | `tournaments/create` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 94 | `tournaments/join` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 104 | `tournaments/active` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 109 | `tournaments/:tournamentId/leaderboard` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 118 | `leaderboard` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 123 | `stats/:userId` |
+| `apps/backend/src/modules/governance/governance.controller.ts` | 20 | `proposal` |
+| `apps/backend/src/modules/governance/governance.controller.ts` | 42 | `vote` |
+| `apps/backend/src/modules/governance/governance.controller.ts` | 60 | `proposal/:id` |
+| `apps/backend/src/modules/governance/governance.controller.ts` | 65 | `proposals` |
+| `apps/backend/src/modules/governance/governance.controller.ts` | 76 | `voting-power/:address` |
+| `apps/backend/src/modules/governance/governance.controller.ts` | 82 | `proposal/:id/execute` |
+| `apps/backend/src/modules/governance/governance.controller.ts` | 87 | `proposal/:id/cancel` |
+| `apps/backend/src/modules/rewards/rewards.controller.ts` | 20 | `claim` |
+| `apps/backend/src/modules/rewards/rewards.controller.ts` | 39 | `user/:userId` |
+| `apps/backend/src/modules/rewards/rewards.controller.ts` | 44 | `user/:userId/eligibility` |
+| `apps/backend/src/modules/social/social.controller.ts` | 8 | `profile` |
+| `apps/backend/src/modules/social/social.controller.ts` | 13 | `profile/:userId` |
+| `apps/backend/src/modules/social/social.controller.ts` | 18 | `profile/:userId` |
+| `apps/backend/src/modules/social/social.controller.ts` | 23 | `follow` |
+| `apps/backend/src/modules/social/social.controller.ts` | 28 | `unfollow` |
+| `apps/backend/src/modules/social/social.controller.ts` | 33 | `followers/:userId` |
+| `apps/backend/src/modules/social/social.controller.ts` | 38 | `following/:userId` |
+| `apps/backend/src/modules/social/social.controller.ts` | 43 | `post` |
+| `apps/backend/src/modules/social/social.controller.ts` | 48 | `feed/:userId` |
+| `apps/backend/src/modules/social/social.controller.ts` | 53 | `post/:postId/like` |
+| `apps/backend/src/modules/social/social.controller.ts` | 58 | `achievements/:userId` |
+| `apps/backend/src/modules/social/social.controller.ts` | 63 | `leaderboard` |
+| `docs/API_DOCUMENTATION.md` | 521 | `/api/wallet/create` |
+| `docs/API_DOCUMENTATION.md` | 522 | `/api/wallet/:userId` |
+| `docs/API_DOCUMENTATION.md` | 523 | `/api/wallet/:userId/balance` |
+| `docs/API_DOCUMENTATION.md` | 529 | `/api/bridge/quote` |
+| `docs/API_DOCUMENTATION.md` | 530 | `/api/bridge/initiate` |
+| `docs/API_DOCUMENTATION.md` | 531 | `/api/bridge/transaction/:hash` |
+| `docs/API_DOCUMENTATION.md` | 586 | `/api/wallet/create` |
+| `docs/API_DOCUMENTATION.md` | 596 | `/api/bridge/initiate` |
+| `docs/ENTERPRISE_FEATURES.md` | 514 | `/api/wallet/create` |
+| `docs/PHASE8_COMPLETION.md` | 149 | `/api/wallet/create` |
+| `docs/PHASE8_COMPLETION.md` | 150 | `/api/wallet/:userId` |
+| `docs/PHASE8_COMPLETION.md` | 151 | `/api/wallet/:userId/balance` |
+| `docs/PHASE8_COMPLETION.md` | 157 | `/api/bridge/quote` |
+| `docs/PHASE8_COMPLETION.md` | 158 | `/api/bridge/initiate` |
+| `docs/PHASE8_COMPLETION.md` | 159 | `/api/bridge/transaction/:hash` |
+| `docs/PHASE8_COMPLETION.md` | 200 | `/api/wallet/create` |
+| `docs/PHASE9_10_SECURITY_SUMMARY.md` | 177 | `leaderboard` |
+| `docs/PHASE9_10_SECURITY_SUMMARY.md` | 182 | `fraud/:userId` |
+
+### Functions/methods
+
+| File | Line | Language | Function/method |
+|---|---:|---|---|
+| `apps/backend/src/main.ts` | 17 | JS/TS | `bootstrap` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 6 | JS/TS | `constructor` |
+| `apps/backend/src/modules/analytics/analytics.controller.ts` | 52 | JS/TS | `getComplianceSnapshot` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 6 | JS/TS | `constructor` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 8 | JS/TS | `trackMetric` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 29 | JS/TS | `getUserMetrics` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 44 | JS/TS | `getDashboard` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 62 | JS/TS | `createPrediction` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 73 | JS/TS | `getUserPredictions` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 84 | JS/TS | `updatePredictionAccuracy` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 91 | JS/TS | `createFraudAlert` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 102 | JS/TS | `getFraudAlerts` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 112 | JS/TS | `resolveFraudAlert` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 122 | JS/TS | `analyzeUserBehavior` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 147 | JS/TS | `getComplianceSnapshot` |
+| `apps/backend/src/modules/analytics/analytics.service.ts` | 167 | JS/TS | `generateRecommendations` |
+| `apps/backend/src/modules/auth/worldcoin.service.ts` | 21 | JS/TS | `constructor` |
+| `apps/backend/src/modules/auth/worldcoin.service.ts` | 100 | JS/TS | `parseProof` |
+| `apps/backend/src/modules/auth/worldcoin.service.ts` | 121 | JS/TS | `getNullifierHash` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 20 | JS/TS | `constructor` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 94 | JS/TS | `getSupportedChains` |
+| `apps/backend/src/modules/bridge/bridge.controller.ts` | 162 | JS/TS | `getBridgeStats` |
+| `apps/backend/src/modules/bridge/bridge.service.ts` | 117 | JS/TS | `constructor` |
+| `apps/backend/src/modules/bridge/bridge.service.ts` | 162 | JS/TS | `getChainConfig` |
+| `apps/backend/src/modules/bridge/bridge.service.ts` | 169 | JS/TS | `getSupportedChains` |
+| `apps/backend/src/modules/bridge/bridge.service.ts` | 312 | JS/TS | `getUserBridgeTransactions` |
+| `apps/backend/src/modules/bridge/bridge.service.ts` | 324 | JS/TS | `getBridgeTransaction` |
+| `apps/backend/src/modules/bridge/bridge.service.ts` | 337 | JS/TS | `isSupportedChain` |
+| `apps/backend/src/modules/bridge/bridge.service.ts` | 341 | JS/TS | `assertSupportedToken` |
+| `apps/backend/src/modules/bridge/bridge.service.ts` | 353 | JS/TS | `mapToBridgeTransaction` |
+| `apps/backend/src/modules/bridge/bridge.service.ts` | 373 | JS/TS | `monitorBridgeTransaction` |
+| `apps/backend/src/modules/bridge/bridge.service.ts` | 390 | JS/TS | `getBridgeStats` |
+| `apps/backend/src/modules/defi/defi.controller.ts` | 18 | JS/TS | `constructor` |
+| `apps/backend/src/modules/defi/defi.service.ts` | 23 | JS/TS | `constructor` |
+| `apps/backend/src/modules/defi/defi.service.ts` | 119 | JS/TS | `getPoolLiquidity` |
+| `apps/backend/src/modules/defi/defi.service.ts` | 197 | JS/TS | `getSwapQuote` |
+| `apps/backend/src/modules/defi/defi.service.ts` | 282 | JS/TS | `createStake` |
+| `apps/backend/src/modules/defi/defi.service.ts` | 303 | JS/TS | `claimStakeRewards` |
+| `apps/backend/src/modules/defi/defi.service.ts` | 339 | JS/TS | `getUserStakes` |
+| `apps/backend/src/modules/defi/defi.service.ts` | 365 | JS/TS | `unstake` |
+| `apps/backend/src/modules/defi/defi.service.ts` | 437 | JS/TS | `getStakeAnalytics` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 18 | JS/TS | `constructor` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 176 | JS/TS | `getSDKList` |
+| `apps/backend/src/modules/enterprise/enterprise.controller.ts` | 192 | JS/TS | `getAPIEndpoints` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 51 | JS/TS | `constructor` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 78 | JS/TS | `getWhiteLabel` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 101 | JS/TS | `trackApiUsage` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 138 | JS/TS | `getApiUsage` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 151 | JS/TS | `createDeveloperApp` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 167 | JS/TS | `getDeveloperApps` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 183 | JS/TS | `getDeveloperApp` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 189 | JS/TS | `updateDeveloperApp` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 196 | JS/TS | `verifyApiKey` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 204 | JS/TS | `generateApiKey` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 208 | JS/TS | `generateApiSecret` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 251 | JS/TS | `listPlugins` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 318 | JS/TS | `installPlugin` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 339 | JS/TS | `getInstalledPlugins` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 354 | JS/TS | `uninstallPlugin` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 374 | JS/TS | `getSDKList` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 416 | JS/TS | `generateSDKExample` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 515 | JS/TS | `getAPIEndpoints` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 563 | JS/TS | `getRateLimits` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 604 | JS/TS | `getWhiteLabelFeatures` |
+| `apps/backend/src/modules/enterprise/enterprise.service.ts` | 632 | JS/TS | `updateWhiteLabelFeatures` |
+| `apps/backend/src/modules/fintech/bank.thai.service.ts` | 39 | JS/TS | `constructor` |
+| `apps/backend/src/modules/fintech/bank.thai.service.ts` | 46 | JS/TS | `deposit` |
+| `apps/backend/src/modules/fintech/bank.thai.service.ts` | 86 | JS/TS | `withdraw` |
+| `apps/backend/src/modules/fintech/bank.thai.service.ts` | 141 | JS/TS | `getUserTransactions` |
+| `apps/backend/src/modules/fintech/bank.thai.service.ts` | 164 | JS/TS | `verifyBankAccount` |
+| `apps/backend/src/modules/fintech/bank.thai.service.ts` | 274 | JS/TS | `formatPromptPayTag` |
+| `apps/backend/src/modules/fintech/bank.thai.service.ts` | 284 | JS/TS | `formatReferenceTag` |
+| `apps/backend/src/modules/fintech/bank.thai.service.ts` | 292 | JS/TS | `calculateCRC16` |
+| `apps/backend/src/modules/fintech/bank.thai.service.ts` | 320 | JS/TS | `verifyPromptPayPayment` |
+| `apps/backend/src/modules/fintech/card.service.ts` | 22 | JS/TS | `constructor` |
+| `apps/backend/src/modules/fintech/card.service.ts` | 27 | JS/TS | `issueCard` |
+| `apps/backend/src/modules/fintech/card.service.ts` | 75 | JS/TS | `getUserCard` |
+| `apps/backend/src/modules/fintech/card.service.ts` | 97 | JS/TS | `generateMockCardNumber` |
+| `apps/backend/src/modules/fintech/card.service.ts` | 104 | JS/TS | `maskCardNumber` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 11 | JS/TS | `constructor` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 22 | JS/TS | `getSupportedBanks` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 31 | JS/TS | `getSupportedCurrencies` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 40 | JS/TS | `getExchangeRates` |
+| `apps/backend/src/modules/fintech/tradfi.controller.ts` | 49 | JS/TS | `getKYCLevels` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 110 | JS/TS | `constructor` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 118 | JS/TS | `getSupportedBanks` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 125 | JS/TS | `getSupportedCurrencies` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 135 | JS/TS | `getKYCLevels` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 180 | JS/TS | `getUserKYC` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 252 | JS/TS | `getUserBankAccounts` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 283 | JS/TS | `getExchangeRates` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 531 | JS/TS | `getTransaction` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 608 | JS/TS | `getUserCards` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 652 | JS/TS | `getCardTransactions` |
+| `apps/backend/src/modules/fintech/tradfi.service.ts` | 679 | JS/TS | `getTradFiStats` |
+| `apps/backend/src/modules/game/game.controller.ts` | 18 | JS/TS | `constructor` |
+| `apps/backend/src/modules/game/game.controller.ts` | 24 | JS/TS | `getGameTypes` |
+| `apps/backend/src/modules/game/game.service.ts` | 38 | JS/TS | `constructor` |
+| `apps/backend/src/modules/game/game.service.ts` | 180 | JS/TS | `getLeaderboard` |
+| `apps/backend/src/modules/game/game.service.ts` | 204 | JS/TS | `getUserSessions` |
+| `apps/backend/src/modules/game/game.service.ts` | 227 | JS/TS | `getSession` |
+| `apps/backend/src/modules/game/game.service.ts` | 252 | JS/TS | `generateSlotResult` |
+| `apps/backend/src/modules/game/game.service.ts` | 276 | JS/TS | `generateSymbols` |
+| `apps/backend/src/modules/game/game.service.ts` | 355 | JS/TS | `generatePokerResult` |
+| `apps/backend/src/modules/game/game.service.ts` | 398 | JS/TS | `generatePokerCards` |
+| `apps/backend/src/modules/game/game.service.ts` | 520 | JS/TS | `getSportsEvents` |
+| `apps/backend/src/modules/game/game.service.ts` | 625 | JS/TS | `getGameTypes` |
+| `apps/backend/src/modules/game/game.service.ts` | 639 | JS/TS | `getGameStatistics` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 18 | JS/TS | `constructor` |
+| `apps/backend/src/modules/game/gamefi.controller.ts` | 105 | JS/TS | `getActiveTournaments` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 82 | JS/TS | `constructor` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 166 | JS/TS | `generateProvablyFairResult` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 217 | JS/TS | `updateUserStats` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 335 | JS/TS | `getUserNFTs` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 388 | JS/TS | `joinTournament` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 423 | JS/TS | `getTournamentLeaderboard` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 448 | JS/TS | `getActiveTournaments` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 485 | JS/TS | `getGlobalLeaderboard` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 510 | JS/TS | `getUserStats` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 551 | JS/TS | `getGameHistory` |
+| `apps/backend/src/modules/game/gamefi.service.ts` | 578 | JS/TS | `verifyProvablyFair` |
+| `apps/backend/src/modules/governance/governance.controller.ts` | 18 | JS/TS | `constructor` |
+| `apps/backend/src/modules/governance/governance.service.ts` | 40 | JS/TS | `constructor` |
+| `apps/backend/src/modules/governance/governance.service.ts` | 182 | JS/TS | `getProposal` |
+| `apps/backend/src/modules/governance/governance.service.ts` | 292 | JS/TS | `getVotingPower` |
+| `apps/backend/src/modules/governance/governance.service.ts` | 306 | JS/TS | `executeProposal` |
+| `apps/backend/src/modules/governance/governance.service.ts` | 337 | JS/TS | `cancelProposal` |
+| `apps/backend/src/modules/rewards/rewards.controller.ts` | 18 | JS/TS | `constructor` |
+| `apps/backend/src/modules/rewards/rewards.service.ts` | 133 | JS/TS | `getUserRewards` |
+| `apps/backend/src/modules/rewards/rewards.service.ts` | 150 | JS/TS | `checkEligibility` |
+| `apps/backend/src/modules/social/social.controller.ts` | 6 | JS/TS | `constructor` |
+| `apps/backend/src/modules/social/social.service.ts` | 6 | JS/TS | `constructor` |
+| `apps/backend/src/modules/social/social.service.ts` | 8 | JS/TS | `createProfile` |
+| `apps/backend/src/modules/social/social.service.ts` | 16 | JS/TS | `getProfile` |
+| `apps/backend/src/modules/social/social.service.ts` | 22 | JS/TS | `updateProfile` |
+| `apps/backend/src/modules/social/social.service.ts` | 29 | JS/TS | `followUser` |
+| `apps/backend/src/modules/social/social.service.ts` | 59 | JS/TS | `unfollowUser` |
+| `apps/backend/src/modules/social/social.service.ts` | 85 | JS/TS | `getFollowers` |
+| `apps/backend/src/modules/social/social.service.ts` | 94 | JS/TS | `getFollowing` |
+| `apps/backend/src/modules/social/social.service.ts` | 103 | JS/TS | `createPost` |
+| `apps/backend/src/modules/social/social.service.ts` | 109 | JS/TS | `getFeed` |
+| `apps/backend/src/modules/social/social.service.ts` | 127 | JS/TS | `likePost` |
+| `apps/backend/src/modules/social/social.service.ts` | 134 | JS/TS | `addExperience` |
+| `apps/backend/src/modules/social/social.service.ts` | 155 | JS/TS | `unlockAchievement` |
+| `apps/backend/src/modules/social/social.service.ts` | 181 | JS/TS | `getAchievements` |
+| `apps/backend/src/modules/social/social.service.ts` | 188 | JS/TS | `getLeaderboard` |
+| `apps/backend/src/prisma.service.ts` | 18 | JS/TS | `onModuleInit` |
+| `apps/backend/src/prisma.service.ts` | 22 | JS/TS | `onModuleDestroy` |
+| `apps/frontend-miniapp/src/screens/BridgeScreen.tsx` | 51 | JS/TS | `getQuote` |
+| `apps/frontend-miniapp/src/screens/BridgeScreen.tsx` | 76 | JS/TS | `initiateBridge` |
+| `apps/frontend-miniapp/src/screens/BridgeScreen.tsx` | 92 | JS/TS | `addLiquidity` |
+| `apps/frontend-miniapp/src/screens/DeFiScreen.tsx` | 51 | JS/TS | `loadUserStakes` |
+| `apps/frontend-miniapp/src/screens/DeFiScreen.tsx` | 65 | JS/TS | `loadStakeAnalytics` |
+| `apps/frontend-miniapp/src/screens/DeFiScreen.tsx` | 76 | JS/TS | `getSwapQuote` |
+| `apps/frontend-miniapp/src/screens/DeFiScreen.tsx` | 105 | JS/TS | `executeSwap` |
+| `apps/frontend-miniapp/src/screens/DeFiScreen.tsx` | 135 | JS/TS | `createStake` |
+| `apps/frontend-miniapp/src/screens/DeFiScreen.tsx` | 172 | JS/TS | `claimRewards` |
+| `apps/frontend-miniapp/src/screens/DeFiScreen.tsx` | 191 | JS/TS | `unstakeTokens` |
+| `apps/frontend-miniapp/src/screens/DeFiScreen.tsx` | 211 | JS/TS | `formatEther` |
+| `apps/frontend-miniapp/src/screens/FinTechScreen.tsx` | 34 | JS/TS | `generatePromptPayQR` |
+| `apps/frontend-miniapp/src/screens/FinTechScreen.tsx` | 74 | JS/TS | `checkPaymentStatus` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 60 | JS/TS | `loadStats` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 70 | JS/TS | `loadSportsEvents` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 80 | JS/TS | `playSlots` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 111 | JS/TS | `playPoker` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 135 | JS/TS | `playRoulette` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 162 | JS/TS | `placeSportsBet` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 191 | JS/TS | `renderGameMenu` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 261 | JS/TS | `renderSlotsGame` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 303 | JS/TS | `renderPokerGame` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 346 | JS/TS | `renderRouletteGame` |
+| `apps/frontend-miniapp/src/screens/GameScreen.tsx` | 425 | JS/TS | `renderSportsBetting` |
+| `apps/frontend-miniapp/src/screens/GovernanceScreen.tsx` | 47 | JS/TS | `loadProposals` |
+| `apps/frontend-miniapp/src/screens/GovernanceScreen.tsx` | 59 | JS/TS | `loadVotingPower` |
+| `apps/frontend-miniapp/src/screens/GovernanceScreen.tsx` | 72 | JS/TS | `createProposal` |
+| `apps/frontend-miniapp/src/screens/GovernanceScreen.tsx` | 113 | JS/TS | `vote` |
+| `apps/frontend-miniapp/src/screens/GovernanceScreen.tsx` | 140 | JS/TS | `formatVotes` |
+| `apps/frontend-miniapp/src/screens/GovernanceScreen.tsx` | 145 | JS/TS | `renderProposal` |
+| `apps/frontend-miniapp/src/screens/RewardScreen.tsx` | 17 | JS/TS | `handleClaimDaily` |
+| `apps/frontend-miniapp/src/screens/SlotMachineScreen.tsx` | 93 | JS/TS | `loadStats` |
+| `apps/frontend-miniapp/src/screens/SlotMachineScreen.tsx` | 103 | JS/TS | `loadNFTs` |
+| `apps/frontend-miniapp/src/screens/SlotMachineScreen.tsx` | 113 | JS/TS | `loadTournaments` |
+| `apps/frontend-miniapp/src/screens/SlotMachineScreen.tsx` | 123 | JS/TS | `loadLeaderboard` |
+| `apps/frontend-miniapp/src/screens/SlotMachineScreen.tsx` | 133 | JS/TS | `spinSlots` |
+| `apps/frontend-miniapp/src/screens/SlotMachineScreen.tsx` | 177 | JS/TS | `joinTournament` |
+| `apps/frontend-miniapp/src/screens/SlotMachineScreen.tsx` | 197 | JS/TS | `renderSlotsTab` |
+| `apps/frontend-miniapp/src/screens/SlotMachineScreen.tsx` | 359 | JS/TS | `renderTournamentsTab` |
+| `apps/frontend-miniapp/src/screens/SlotMachineScreen.tsx` | 404 | JS/TS | `renderNFTsTab` |
+| `apps/frontend-miniapp/src/screens/SlotMachineScreen.tsx` | 435 | JS/TS | `renderLeaderboardTab` |
+| `apps/frontend-miniapp/src/screens/SocialScreen.tsx` | 16 | JS/TS | `createPost` |
+| `apps/frontend-miniapp/src/screens/WorldIDScreen.tsx` | 23 | JS/TS | `handleVerifyWorldID` |
+| `install-ubuntu.sh` | 35 | Shell | `print_success` |
+| `install-ubuntu.sh` | 39 | Shell | `print_error` |
+| `install-ubuntu.sh` | 43 | Shell | `print_warning` |
+| `install-ubuntu.sh` | 47 | Shell | `print_info` |
+| `install-ubuntu.sh` | 52 | Shell | `check_root` |
+| `install-ubuntu.sh` | 61 | Shell | `detect_ubuntu_version` |
+| `install.sh` | 37 | Shell | `print_success` |
+| `install.sh` | 41 | Shell | `print_error` |
+| `install.sh` | 45 | Shell | `print_warning` |
+| `install.sh` | 49 | Shell | `print_info` |
+| `packages/contracts/scripts/deploy-multichain.ts` | 15 | JS/TS | `main` |
+| `packages/contracts/scripts/deploy.ts` | 15 | JS/TS | `main` |
+
+### Automation pipeline files
+
+- `.github/workflows/omega-auto-fix.yml`
+- `.github/workflows/omega-auto-test.yml`
+- `.github/workflows/omega-autoscale.yml`
+- `.github/workflows/omega-heartbeat.yml`
+- `.github/workflows/omega-metrics.yml`
+- `.github/workflows/omega-onchain.yml`
+- `.github/workflows/omega-sync.yml`
+- `.github/workflows/omega-threat.yml`
+- `INSTALLER_OS_REQUIREMENTS.md`
+- `ZeaZDev-Omega_AuditPack/.github/workflows/smoke_test.yml`
+- `docker-compose.yml`
+- `docs/WORKFLOW_CICD_2026.md`
+- `install-ubuntu.sh`
+- `install.sh`
+- `packages/contracts/scripts/deploy-multichain.ts`
+- `packages/contracts/scripts/deploy.ts`
+
+## `ZeaZDev/zeazdev-repo`
+
+Status: **cloned**; commit `5b73116fbde4`.
+
+### API/endpoints
+
+| File | Line | Endpoint/expression |
+|---|---:|---|
+| `zeaz/app/main.py` | 67 | `/healthz` |
+| `zeaz/app/main.py` | 72 | `/auth/token` |
+| `zeaz/app/main.py` | 77 | `/wallet/balance/{user_id}/{currency}` |
+| `zeaz/app/main.py` | 87 | `/wallet/credit` |
+| `zeaz/app/main.py` | 102 | `/wallet/debit` |
+| `zeaz/app/main.py` | 117 | `/webhooks/stripe` |
+| `zeaz/app/main.py` | 130 | `/tiktok/feed-product-form/generate` |
+| `zeaz/app/main.py` | 145 | `/tiktok/video/generate` |
+| `zeaz/app/main.py` | 158 | `/tiktok/shop-affiliate/upload` |
+| `zeaz/app/main.py` | 171 | `/tiktok/jobs` |
+| `zeaz/app/main.py` | 177 | `/tiktok/jobs/{job_id}` |
+| `zeaz/app/main.py` | 186 | `/admin/control-panel` |
+| `zeaz/app/main.py` | 203 | `/user/control-panel` |
+
+### Functions/methods
+
+| File | Line | Language | Function/method |
+|---|---:|---|---|
+| `zeaz/app/auth.py` | 14 | Python | `mint_jwt` |
+| `zeaz/app/auth.py` | 23 | Python | `decode_jwt` |
+| `zeaz/app/auth.py` | 33 | Python | `current_principal` |
+| `zeaz/app/auth.py` | 39 | Python | `require_role` |
+| `zeaz/app/auth.py` | 40 | Python | `_dependency` |
+| `zeaz/app/chain_worker.py` | 13 | Python | `process_confirmed_tx` |
+| `zeaz/app/chain_worker.py` | 26 | Python | `process_candidates` |
+| `zeaz/app/chain_worker.py` | 48 | Python | `run` |
+| `zeaz/app/db.py` | 45 | Python | `database_url` |
+| `zeaz/app/db.py` | 53 | Python | `db_connection` |
+| `zeaz/app/ledger.py` | 21 | Python | `_normalize_currency` |
+| `zeaz/app/ledger.py` | 28 | Python | `_write_audit` |
+| `zeaz/app/ledger.py` | 33 | Python | `append_entry` |
+| `zeaz/app/ledger.py` | 63 | Python | `user_balance` |
+| `zeaz/app/main.py` | 30 | Python | `normalize_currency` |
+| `zeaz/app/main.py` | 68 | Python | `healthz` |
+| `zeaz/app/main.py` | 73 | Python | `create_token` |
+| `zeaz/app/main.py` | 78 | Python | `wallet_balance` |
+| `zeaz/app/main.py` | 88 | Python | `wallet_credit` |
+| `zeaz/app/main.py` | 103 | Python | `wallet_debit` |
+| `zeaz/app/main.py` | 118 | Python | `stripe_webhook` |
+| `zeaz/app/main.py` | 131 | Python | `generate_feed_product_form` |
+| `zeaz/app/main.py` | 146 | Python | `generate_product_video` |
+| `zeaz/app/main.py` | 159 | Python | `upload_tiktok_shop_affiliate` |
+| `zeaz/app/main.py` | 172 | Python | `get_tiktok_jobs` |
+| `zeaz/app/main.py` | 178 | Python | `get_tiktok_job` |
+| `zeaz/app/main.py` | 187 | Python | `admin_control_panel` |
+| `zeaz/app/main.py` | 204 | Python | `user_control_panel` |
+| `zeaz/app/migrate.py` | 6 | Python | `migrate` |
+| `zeaz/app/stripe_webhook.py` | 14 | Python | `_extract_v1` |
+| `zeaz/app/stripe_webhook.py` | 24 | Python | `verify_signature` |
+| `zeaz/app/stripe_webhook.py` | 34 | Python | `process_payment_intent_succeeded` |
+| `zeaz/app/tiktok_affiliate.py` | 12 | Python | `_utc_now` |
+| `zeaz/app/tiktok_affiliate.py` | 16 | Python | `_create_job` |
+| `zeaz/app/tiktok_affiliate.py` | 31 | Python | `create_feed_product_form` |
+| `zeaz/app/tiktok_affiliate.py` | 43 | Python | `create_product_video` |
+| `zeaz/app/tiktok_affiliate.py` | 57 | Python | `upload_to_tiktok_affiliate` |
+| `zeaz/app/tiktok_affiliate.py` | 67 | Python | `get_job` |
+| `zeaz/app/tiktok_affiliate.py` | 71 | Python | `list_jobs` |
+| `zeaz/app/wallet.py` | 6 | Python | `credit_wallet` |
+| `zeaz/app/wallet.py` | 29 | Python | `debit_wallet` |
+| `zeaz/preview_project.py` | 14 | Python | `generate_preview` |
+| `zeaz/preview_project.py` | 54 | Python | `main` |
+| `zeaz/ui/admin/src/dataProvider.ts` | 5 | JS/TS | `httpClient` |
+| `zeaz/ui/admin/src/dataProvider.ts` | 14 | JS/TS | `oneItemList` |
+| `zeaz/ui/admin/src/main.tsx` | 16 | JS/TS | `TiktokFeedFormCreate` |
+| `zeaz/ui/admin/src/main.tsx` | 30 | JS/TS | `TiktokVideoCreate` |
+| `zeaz/ui/admin/src/main.tsx` | 40 | JS/TS | `TiktokUploadCreate` |
+| `zeaz/ui/admin/src/main.tsx` | 50 | JS/TS | `TiktokJobsList` |
+| `zeaz/ui/admin/src/main.tsx` | 61 | JS/TS | `AdminPanelList` |
+| `zeaz/ui/admin/src/main.tsx` | 71 | JS/TS | `UserPanelList` |
+
+### Automation pipeline files
+
+- `zeaz/install.sh`
+
+## `ZeaZDev/zeaztools`
+
+Status: **cloned**; commit `7a971921b431`.
+
+### API/endpoints
+
+None detected or repository blocked.
+
+### Functions/methods
+
+None detected or repository blocked.
+
+### Automation pipeline files
+
+None detected or repository blocked.
+
+## `ZeaZDev/zlms-prod`
+
+Status: **cloned**; commit `f26c75d7083b`.
+
+### API/endpoints
+
+None detected or repository blocked.
+
+### Functions/methods
+
+| File | Line | Language | Function/method |
+|---|---:|---|---|
+| `app/Admin/Default.aspx.cs` | 14 | C# | `Page_Load` |
+| `app/CConnect.cs` | 27 | C# | `CConnect` |
+| `app/CConnect.cs` | 38 | C# | `connOpen` |
+| `app/CConnect.cs` | 45 | C# | `checkConn` |
+| `app/CConnect.cs` | 50 | C# | `connClose` |
+| `app/CConnect.cs` | 55 | C# | `drClose` |
+| `app/CConnect.cs` | 60 | C# | `sqlCmd` |
+| `app/CConnect.cs` | 77 | C# | `sqlCmdCheck` |
+| `app/CConnect.cs` | 95 | C# | `sqlCmd` |
+| `app/CConnect.cs` | 111 | C# | `sqlCmdText` |
+| `app/CConnect.cs` | 116 | C# | `sqlCmdAddParam` |
+| `app/CConnect.cs` | 121 | C# | `sqlCmdReturn` |
+| `app/CConnect.cs` | 140 | C# | `sqlReader` |
+| `app/CConnect.cs` | 147 | C# | `sqlReader` |
+| `app/CConnect.cs` | 153 | C# | `rsMoveNext` |
+| `app/CConnect.cs` | 158 | C# | `Recordset` |
+| `app/CConnect.cs` | 163 | C# | `Recordset` |
+| `app/CConnect.cs` | 168 | C# | `daFill` |
+| `app/CConnect.cs` | 188 | C# | `daDeleteCmd` |
+| `app/CConnect.cs` | 205 | C# | `daFill` |
+| `app/CConnect.cs` | 225 | C# | `daUpdate` |
+| `app/CConnect.cs` | 231 | C# | `daUpdate` |
+| `app/CConnect.cs` | 237 | C# | `daUpdate` |
+| `app/CConnect.cs` | 243 | C# | `daUpdate` |
+| `app/CConnect.cs` | 249 | C# | `getMd5Hash` |
+| `app/CConnect.cs` | 258 | C# | `verifyMd5Hash` |
+| `app/Certificate/Certificate_adjust.aspx` | 16 | C# | `reportDesigner_EndCallback` |
+| `app/Certificate/Certificate_adjust.aspx.cs` | 25 | C# | `Page_Load` |
+| `app/Certificate/Certificate_adjust.aspx.cs` | 43 | C# | `reportDesigner_SaveReportLayout` |
+| `app/Certificate/Certificate_adjust.aspx.cs` | 47 | C# | `btExportReport_Click` |
+| `app/Certificate/Certificate_edit.aspx.cs` | 23 | C# | `Page_Load` |
+| `app/Certificate/Certificate_edit.aspx.cs` | 36 | C# | `ADD_COM_CODE` |
+| `app/Certificate/Certificate_edit.aspx.cs` | 55 | C# | `coursename` |
+| `app/Certificate/Certificate_edit.aspx.cs` | 77 | C# | `Button1_Click` |
+| `app/Certificate/Certificatedetail.aspx.cs` | 21 | C# | `Page_Load` |
+| `app/Certificate/Certificatedetail_user.aspx.cs` | 21 | C# | `Page_Load` |
+| `app/Certificate/Certificatedetail_user.aspx.cs` | 33 | C# | `mapmonth` |
+| `app/Certificate/Certificatedetail_user.aspx.cs` | 66 | C# | `GetReportByName` |
+| `app/Certificate/Certificatedetail_user.aspx.cs` | 90 | C# | `coursename` |
+| `app/Certificate/Default.aspx` | 7 | C# | `openModal` |
+| `app/Certificate/Default.aspx.cs` | 27 | C# | `ShowMessage` |
+| `app/Certificate/Default.aspx.cs` | 32 | C# | `Page_Load` |
+| `app/Certificate/Default.aspx.cs` | 39 | C# | `ADD_COM_CODE` |
+| `app/Certificate/Default.aspx.cs` | 58 | C# | `Button1_Click` |
+| `app/Certificate/Default.aspx.cs` | 66 | C# | `delete_course` |
+| `app/Certificate/Default.aspx.cs` | 85 | C# | `Button2_Click` |
+| `app/Certificate/Default.aspx.cs` | 102 | C# | `SetSession` |
+| `app/Certificate/Default.aspx.cs` | 107 | C# | `bnAdduser_Click` |
+| `app/Certificate/Default.aspx.cs` | 124 | C# | `clearAddnew` |
+| `app/Certificate/Default.aspx.cs` | 130 | C# | `addUser` |
+| `app/Certificate/Issue.aspx.cs` | 25 | C# | `Page_Load` |
+| `app/Certificate/Issue.aspx.cs` | 33 | C# | `ADD_COM_CODE` |
+| `app/Certificate/Issue.aspx.cs` | 52 | C# | `ADD_COM_CODE1` |
+| `app/Certificate/Issue.aspx.cs` | 72 | C# | `SetSession` |
+| `app/Certificate/Issue.aspx.cs` | 77 | C# | `Button1_Click` |
+| `app/Certificate/Issue.aspx.cs` | 85 | C# | `bnAdduser_Click` |
+| `app/Certificate/Issue.aspx.cs` | 93 | C# | `addUser` |
+| `app/Certificate/ViewCertificate.aspx.cs` | 22 | C# | `ShowMessage` |
+| `app/Certificate/ViewCertificate.aspx.cs` | 27 | C# | `Page_Load` |
+| `app/Certificate/ViewCertificate.aspx.cs` | 51 | C# | `coursename` |
+| `app/Certificate/ViewCertificate.aspx.cs` | 71 | C# | `Button1_Click` |
+| `app/Certificate/WebForm1.aspx` | 16 | C# | `reportDesigner_EndCallback` |
+| `app/Certificate/WebForm1.aspx.cs` | 25 | C# | `Page_Load` |
+| `app/Certificate/WebForm1.aspx.cs` | 32 | C# | `reportDesigner_SaveReportLayout` |
+| `app/Certificate/WebForm1.aspx.cs` | 36 | C# | `btExportReport_Click` |
+| `app/Certificate/XtraReport1.resx.cs` | 19 | C# | `XtraReport1` |
+| `app/Certificate/XtraReport1.resx.cs` | 24 | C# | `Dispose` |
+| `app/Certificate/XtraReport1.resx.cs` | 31 | C# | `InitializeComponent` |
+| `app/Checkservice.aspx.cs` | 22 | C# | `Page_Load` |
+| `app/Checkservice.aspx.cs` | 26 | C# | `Button1_Click` |
+| `app/Course/Class.aspx` | 6 | C# | `openModal` |
+| `app/Course/Class.aspx.cs` | 31 | C# | `ShowMessage` |
+| `app/Course/Class.aspx.cs` | 36 | C# | `Page_Load` |
+| `app/Course/Class.aspx.cs` | 59 | C# | `coursename` |
+| `app/Course/Class.aspx.cs` | 82 | C# | `Button1_Click` |
+| `app/Course/Class.aspx.cs` | 90 | C# | `delete_course` |
+| `app/Course/Class.aspx.cs` | 109 | C# | `Button2_Click` |
+| `app/Course/Class.aspx.cs` | 126 | C# | `SetSession` |
+| `app/Course/Class.aspx.cs` | 131 | C# | `bnAdduser_Click` |
+| `app/Course/Class.aspx.cs` | 148 | C# | `clearAddnew` |
+| `app/Course/Class.aspx.cs` | 154 | C# | `addUser` |
+| `app/Course/ClassItemdetail.aspx` | 6 | C# | `ReGen` |
+| `app/Course/ClassItemdetail.aspx.cs` | 28 | C# | `ShowMessage` |
+| `app/Course/ClassItemdetail.aspx.cs` | 33 | C# | `Page_Load` |
+| `app/Course/ClassItemdetail.aspx.cs` | 47 | C# | `coursename` |
+| `app/Course/ClassItemdetail.aspx.cs` | 77 | C# | `renderdata` |
+| `app/Course/ClassItemdetail.aspx.cs` | 134 | C# | `renderdata1` |
+| `app/Course/ClassItemdetail.aspx.cs` | 195 | C# | `ReGenToken` |
+| `app/Course/ClassItemdetail.aspx.cs` | 214 | C# | `getquestion` |
+| `app/Course/ClassItemdetail.aspx.cs` | 240 | C# | `checkanswer` |
+| `app/Course/ClassItemdetail.aspx.cs` | 263 | C# | `addUser` |
+| `app/Course/ClassItemdetail.aspx.cs` | 270 | C# | `CConnect` |
+| `app/Course/ClassItemdetail.aspx.cs` | 273 | C# | `Button1_Click` |
+| `app/Course/Coursecalenda.aspx.cs` | 18 | C# | `Page_Load` |
+| `app/Course/Coursecalenda.aspx.cs` | 31 | C# | `SetupMappings` |
+| `app/Course/Coursedetail.aspx` | 6 | C# | `openModal` |
+| `app/Course/Coursedetail.aspx.cs` | 29 | C# | `ShowMessage` |
+| `app/Course/Coursedetail.aspx.cs` | 34 | C# | `Page_Load` |
+| `app/Course/Coursedetail.aspx.cs` | 58 | C# | `coursename` |
+| `app/Course/Coursedetail.aspx.cs` | 79 | C# | `Button1_Click` |
+| `app/Course/Coursedetail.aspx.cs` | 87 | C# | `delete_course` |
+| `app/Course/Coursedetail.aspx.cs` | 106 | C# | `Button2_Click` |
+| `app/Course/Coursedetail.aspx.cs` | 123 | C# | `SetSession` |
+| `app/Course/Coursedetail.aspx.cs` | 128 | C# | `bnAdduser_Click` |
+| `app/Course/Coursedetail.aspx.cs` | 145 | C# | `clearAddnew` |
+| `app/Course/Coursedetail.aspx.cs` | 151 | C# | `addUser` |
+| `app/Course/Default.aspx` | 6 | C# | `openModal` |
+| `app/Course/Default.aspx` | 44 | C# | `getDate` |
+| `app/Course/Default.aspx.cs` | 28 | C# | `ShowMessage` |
+| `app/Course/Default.aspx.cs` | 33 | C# | `Page_Load` |
+| `app/Course/Default.aspx.cs` | 38 | C# | `Button1_Click` |
+| `app/Course/Default.aspx.cs` | 46 | C# | `Button3_Click` |
+| `app/Course/Default.aspx.cs` | 54 | C# | `Button4_Click` |
+| `app/Course/Default.aspx.cs` | 62 | C# | `delete_course` |
+| `app/Course/Default.aspx.cs` | 81 | C# | `Button2_Click` |
+| `app/Course/Default.aspx.cs` | 98 | C# | `SetSession` |
+| `app/Course/Default.aspx.cs` | 103 | C# | `bnAdduser_Click` |
+| `app/Course/Default.aspx.cs` | 120 | C# | `clearAddnew` |
+| `app/Course/Default.aspx.cs` | 126 | C# | `addUser` |
+| `app/Course/Question.aspx` | 6 | C# | `openModal` |
+| `app/Course/Question.aspx.cs` | 28 | C# | `Page_Load` |
+| `app/Course/Question.aspx.cs` | 42 | C# | `ADD_COM_CODE` |
+| `app/Course/Question.aspx.cs` | 63 | C# | `coursename` |
+| `app/Course/Question.aspx.cs` | 94 | C# | `Button1_Click` |
+| `app/Course/Viewresult.aspx.cs` | 23 | C# | `ShowMessage` |
+| `app/Course/Viewresult.aspx.cs` | 28 | C# | `Page_Load` |
+| `app/Course/Viewresult.aspx.cs` | 52 | C# | `coursename` |
+| `app/Course/class_edit.aspx.cs` | 22 | C# | `Page_Load` |
+| `app/Course/class_edit.aspx.cs` | 35 | C# | `coursename` |
+| `app/Course/class_edit.aspx.cs` | 56 | C# | `Button1_Click` |
+| `app/Course/classitem_edit.aspx.cs` | 23 | C# | `Page_Load` |
+| `app/Course/classitem_edit.aspx.cs` | 36 | C# | `coursename` |
+| `app/Course/classitem_edit.aspx.cs` | 58 | C# | `Button1_Click` |
+| `app/Course/classitemupload.aspx` | 11 | C# | `ReGen` |
+| `app/Course/classitemupload.aspx.cs` | 25 | C# | `Page_Load` |
+| `app/Course/classitemupload.aspx.cs` | 71 | C# | `addUser` |
+| `app/Course/classitemupload.aspx.cs` | 86 | C# | `renderdata` |
+| `app/Course/classitemupload.aspx.cs` | 127 | C# | `coursename` |
+| `app/Course/classitemupload.aspx.cs` | 148 | C# | `ReGenToken` |
+| `app/Course/course_edit.aspx.cs` | 25 | C# | `Page_Load` |
+| `app/Course/course_edit.aspx.cs` | 38 | C# | `coursename` |
+| `app/Course/course_edit.aspx.cs` | 60 | C# | `Button1_Click` |
+| `app/Course/period.aspx` | 6 | C# | `openModal` |
+| `app/Course/period.aspx.cs` | 35 | C# | `ShowMessage` |
+| `app/Course/period.aspx.cs` | 40 | C# | `Page_Load` |
+| `app/Course/period.aspx.cs` | 65 | C# | `ADD_COM_CODE` |
+| `app/Course/period.aspx.cs` | 84 | C# | `Button5_Click` |
+| `app/Course/period.aspx.cs` | 92 | C# | `coursename` |
+| `app/Course/period.aspx.cs` | 117 | C# | `Button1_Click` |
+| `app/Course/period.aspx.cs` | 125 | C# | `Button3_Click` |
+| `app/Course/period.aspx.cs` | 133 | C# | `Button4_Click` |
+| `app/Course/period.aspx.cs` | 141 | C# | `gvDP_RowDataBound` |
+| `app/Course/period.aspx.cs` | 152 | C# | `delete_course` |
+| `app/Course/period.aspx.cs` | 171 | C# | `Button2_Click` |
+| `app/Course/period.aspx.cs` | 188 | C# | `SetSession` |
+| `app/Course/period.aspx.cs` | 193 | C# | `bnAdduser_Click` |
+| `app/Course/period.aspx.cs` | 210 | C# | `clearAddnew` |
+| `app/Course/period.aspx.cs` | 216 | C# | `search_actiontype` |
+| `app/Course/period.aspx.cs` | 237 | C# | `addUser` |
+| `app/Course/period_edit.aspx.cs` | 24 | C# | `Page_Load` |
+| `app/Course/period_edit.aspx.cs` | 37 | C# | `coursename` |
+| `app/Course/period_edit.aspx.cs` | 60 | C# | `Button1_Click` |
+| `app/Course/setusercourse.aspx.cs` | 24 | C# | `ShowMessage` |
+| `app/Course/setusercourse.aspx.cs` | 29 | C# | `Page_Load` |
+| `app/Course/setusercourse.aspx.cs` | 51 | C# | `ADD_COM_CODE` |
+| `app/Course/setusercourse.aspx.cs` | 70 | C# | `Button1_Click` |
+| `app/Course/setusercourse.aspx.cs` | 91 | C# | `delete_course` |
+| `app/Course/setusercourse.aspx.cs` | 110 | C# | `Button2_Click` |
+| `app/Course/setusercourse.aspx.cs` | 127 | C# | `SetSession` |
+| `app/Course_user/Course_enroll.aspx.cs` | 18 | C# | `Page_Load` |
+| `app/Course_user/Course_enroll.aspx.cs` | 33 | C# | `Button1_Click` |
+| `app/Course_user/Course_enroll.aspx.cs` | 41 | C# | `addUser` |
+| `app/Course_user/Course_enroll.aspx.cs` | 43 | C# | `CConnect` |
+| `app/Course_user/Coursedetail.aspx.cs` | 23 | C# | `ShowMessage` |
+| `app/Course_user/Coursedetail.aspx.cs` | 28 | C# | `Page_Load` |
+| `app/Course_user/Coursedetail.aspx.cs` | 52 | C# | `coursename` |
+| `app/Course_user/Default.aspx.cs` | 20 | C# | `ShowMessage` |
+| `app/Course_user/Default.aspx.cs` | 25 | C# | `Page_Load` |
+| `app/Course_user/Default.aspx.cs` | 40 | C# | `Button3_Click` |
+| `app/Course_user/Default.aspx.cs` | 48 | C# | `Button1_Click` |
+| `app/Course_user/Default.aspx.cs` | 59 | C# | `check_enroll` |
+| `app/Course_user/Default.aspx.cs` | 81 | C# | `addUser` |
+| `app/Course_user/Default.aspx.cs` | 83 | C# | `CConnect` |
+| `app/Course_user/View_pollresult.aspx.cs` | 16 | C# | `ShowMessage` |
+| `app/Course_user/View_pollresult.aspx.cs` | 21 | C# | `Page_Load` |
+| `app/Course_user/View_pollresult.aspx.cs` | 26 | C# | `renderdata1` |
+| `app/Course_user/_class.aspx.cs` | 25 | C# | `ShowMessage` |
+| `app/Course_user/_class.aspx.cs` | 30 | C# | `Page_Load` |
+| `app/Course_user/_class.aspx.cs` | 53 | C# | `coursename` |
+| `app/Course_user/classitemdetail.aspx.cs` | 28 | C# | `ShowMessage` |
+| `app/Course_user/classitemdetail.aspx.cs` | 33 | C# | `Page_Load` |
+| `app/Course_user/classitemdetail.aspx.cs` | 47 | C# | `coursename` |
+| `app/Course_user/classitemdetail.aspx.cs` | 77 | C# | `renderdata` |
+| `app/Course_user/classitemdetail.aspx.cs` | 134 | C# | `checkquestion` |
+| `app/Course_user/classitemdetail.aspx.cs` | 184 | C# | `showrdetailresult` |
+| `app/Course_user/classitemdetail.aspx.cs` | 227 | C# | `showrdansresult` |
+| `app/Course_user/classitemdetail.aspx.cs` | 250 | C# | `renderdata1` |
+| `app/Course_user/classitemdetail.aspx.cs` | 329 | C# | `ReGenToken` |
+| `app/Course_user/classitemdetail.aspx.cs` | 348 | C# | `getquestion` |
+| `app/Course_user/classitemdetail.aspx.cs` | 409 | C# | `addUser` |
+| `app/Course_user/classitemdetail.aspx.cs` | 411 | C# | `CConnect` |
+| `app/Course_user/classitemdetail.aspx.cs` | 414 | C# | `addUser1` |
+| `app/Course_user/classitemdetail.aspx.cs` | 421 | C# | `CConnect` |
+| `app/Course_user/classitemdetail.aspx.cs` | 424 | C# | `fillquestion` |
+| `app/Course_user/classitemdetail.aspx.cs` | 444 | C# | `Button1_Click` |
+| `app/Course_user/period.aspx.cs` | 31 | C# | `ShowMessage` |
+| `app/Course_user/period.aspx.cs` | 36 | C# | `Page_Load` |
+| `app/Course_user/period.aspx.cs` | 61 | C# | `checkpoll` |
+| `app/Course_user/period.aspx.cs` | 84 | C# | `coursename` |
+| `app/Course_user/period.aspx.cs` | 109 | C# | `Button1_Click` |
+| `app/Course_user/period.aspx.cs` | 117 | C# | `addPoll` |
+| `app/Course_user/period.aspx.cs` | 119 | C# | `CConnect` |
+| `app/Course_user/poll.aspx.cs` | 27 | C# | `ShowMessage` |
+| `app/Course_user/poll.aspx.cs` | 32 | C# | `Page_Load` |
+| `app/Course_user/poll.aspx.cs` | 37 | C# | `renderdata1` |
+| `app/Course_user/poll.aspx.cs` | 92 | C# | `renderdata3` |
+| `app/Course_user/poll.aspx.cs` | 150 | C# | `renderdata2` |
+| `app/Course_user/poll.aspx.cs` | 178 | C# | `addUser` |
+| `app/Course_user/poll.aspx.cs` | 193 | C# | `Button1_Click` |
+| `app/Course_user/poll1.aspx.cs` | 31 | C# | `ShowMessage` |
+| `app/Course_user/poll1.aspx.cs` | 36 | C# | `Page_Load` |
+| `app/Course_user/poll1.aspx.cs` | 41 | C# | `renderdata1` |
+| `app/Course_user/poll1.aspx.cs` | 96 | C# | `addUser` |
+| `app/Course_user/poll1.aspx.cs` | 111 | C# | `Button1_Click` |
+| `app/Course_user/profile.aspx.cs` | 54 | C# | `Page_Load` |
+| `app/Default.aspx.cs` | 14 | C# | `Page_Load` |
+| `app/DropzoneJs_scripts/dropzone.js` | 12 | JS/TS | `require` |
+| `app/DropzoneJs_scripts/dropzone.js` | 72 | JS/TS | `Emitter` |
+| `app/DropzoneJs_scripts/dropzone.js` | 84 | JS/TS | `mixin` |
+| `app/DropzoneJs_scripts/dropzone.js` | 122 | JS/TS | `on` |
+| `app/DropzoneJs_scripts/dropzone.js` | 543 | JS/TS | `Dropzone` |
+| `app/DropzoneJs_scripts/dropzone.js` | 1837 | JS/TS | `define` |
+| `app/Dummy.aspx.cs` | 12 | C# | `Page_Load` |
+| `app/MissingExternalDependencies.Stubs.cs` | 19 | C# | `ExpandToLevel` |
+| `app/MissingExternalDependencies.Stubs.cs` | 27 | C# | `FromFile` |
+| `app/MissingExternalDependencies.Stubs.cs` | 28 | C# | `Dispose` |
+| `app/MissingExternalDependencies.Stubs.cs` | 29 | C# | `Dispose` |
+| `app/MissingExternalDependencies.Stubs.cs` | 30 | C# | `EndInit` |
+| `app/MissingExternalDependencies.Stubs.cs` | 46 | C# | `OpenReport` |
+| `app/MissingExternalDependencies.Stubs.cs` | 103 | C# | `AddXY` |
+| `app/Police.Master.cs` | 18 | C# | `Page_Load` |
+| `app/Police.Master.cs` | 32 | C# | `getuser` |
+| `app/Police_noform.Master.cs` | 18 | C# | `Page_Load` |
+| `app/Police_noform.Master.cs` | 22 | C# | `getuser` |
+| `app/Police_service/GET_NAME.cs` | 111 | C# | `RaisePropertyChanged` |
+| `app/Police_service/IPolice_web.cs` | 17 | C# | `Check_user` |
+| `app/Police_service/Police_webClient.cs` | 18 | C# | `Police_webClient` |
+| `app/Police_service/Police_webClient.cs` | 22 | C# | `Police_webClient` |
+| `app/Police_service/Police_webClient.cs` | 27 | C# | `Police_webClient` |
+| `app/Police_service/Police_webClient.cs` | 32 | C# | `Police_webClient` |
+| `app/Police_service/Police_webClient.cs` | 37 | C# | `Police_webClient` |
+| `app/Police_service/Police_webClient.cs` | 42 | C# | `Check_user` |
+| `app/Police_user.Master.cs` | 20 | C# | `Page_Load` |
+| `app/Police_user.Master.cs` | 25 | C# | `getuser` |
+| `app/QA/Activities.aspx.cs` | 27 | C# | `ShowMessage` |
+| `app/QA/Activities.aspx.cs` | 32 | C# | `Page_Load` |
+| `app/QA/Activities.aspx.cs` | 54 | C# | `ADD_COM_CODE` |
+| `app/QA/Activities.aspx.cs` | 73 | C# | `Button4_Click` |
+| `app/QA/Activities.aspx.cs` | 81 | C# | `Button1_Click` |
+| `app/QA/Activities.aspx.cs` | 89 | C# | `delete_course` |
+| `app/QA/Activities.aspx.cs` | 108 | C# | `Button2_Click` |
+| `app/QA/Activities.aspx.cs` | 125 | C# | `SetSession` |
+| `app/QA/Activities.aspx.cs` | 130 | C# | `bnAdduser_Click` |
+| `app/QA/Activities.aspx.cs` | 147 | C# | `clearAddnew` |
+| `app/QA/Activities.aspx.cs` | 152 | C# | `addUser` |
+| `app/QA/Activityupload.aspx` | 11 | C# | `ReGen` |
+| `app/QA/Activityupload.aspx.cs` | 23 | C# | `Page_Load` |
+| `app/QA/Activityupload.aspx.cs` | 68 | C# | `addUser` |
+| `app/QA/Activityupload.aspx.cs` | 83 | C# | `renderdata` |
+| `app/QA/Activityupload.aspx.cs` | 124 | C# | `ReGenToken` |
+| `app/QA/Default.aspx.cs` | 25 | C# | `ShowMessage` |
+| `app/QA/Default.aspx.cs` | 30 | C# | `Page_Load` |
+| `app/QA/Default.aspx.cs` | 35 | C# | `Button1_Click` |
+| `app/QA/Default.aspx.cs` | 43 | C# | `Button3_Click` |
+| `app/QA/Default.aspx.cs` | 51 | C# | `Button4_Click` |
+| `app/QA/Default.aspx.cs` | 59 | C# | `delete_course` |
+| `app/QA/Default.aspx.cs` | 78 | C# | `Button2_Click` |
+| `app/QA/Default.aspx.cs` | 95 | C# | `SetSession` |
+| `app/QA/Default.aspx.cs` | 100 | C# | `bnAdduser_Click` |
+| `app/QA/Default.aspx.cs` | 117 | C# | `clearAddnew` |
+| `app/QA/Default.aspx.cs` | 122 | C# | `addUser` |
+| `app/QA/Default.aspx.cs` | 124 | C# | `CConnect` |
+| `app/QA/Poll_detail.aspx.cs` | 26 | C# | `ShowMessage` |
+| `app/QA/Poll_detail.aspx.cs` | 31 | C# | `Page_Load` |
+| `app/QA/Poll_detail.aspx.cs` | 52 | C# | `delete_course` |
+| `app/QA/Poll_detail.aspx.cs` | 71 | C# | `Button2_Click` |
+| `app/QA/Poll_detail.aspx.cs` | 88 | C# | `SetSession` |
+| `app/QA/Poll_detail.aspx.cs` | 93 | C# | `bnAdduser_Click` |
+| `app/QA/Poll_detail.aspx.cs` | 110 | C# | `clearAddnew` |
+| `app/QA/Poll_detail.aspx.cs` | 115 | C# | `addUser` |
+| `app/QA/Project_edit.aspx.cs` | 14 | C# | `Page_Load` |
+| `app/QA/Standard.aspx.cs` | 25 | C# | `ShowMessage` |
+| `app/QA/Standard.aspx.cs` | 30 | C# | `Page_Load` |
+| `app/QA/Standard.aspx.cs` | 51 | C# | `delete_course` |
+| `app/QA/Standard.aspx.cs` | 70 | C# | `Button2_Click` |
+| `app/QA/Standard.aspx.cs` | 87 | C# | `SetSession` |
+| `app/QA/Standard.aspx.cs` | 92 | C# | `bnAdduser_Click` |
+| `app/QA/Standard.aspx.cs` | 109 | C# | `clearAddnew` |
+| `app/QA/Standard.aspx.cs` | 114 | C# | `addUser` |
+| `app/QA/Standard_detail.aspx.cs` | 26 | C# | `ShowMessage` |
+
+_Display capped at 300 of 6044 detected functions/methods._
+
+### Automation pipeline files
+
+- `.github/workflows/build-and-package.yml`
+- `.github/workflows/ci.yml`
+- `.github/workflows/deploy-staging.yml`
+- `.github/workflows/security-scan.yml`
+- `INSTALLER.md`
+- `app/Properties/PublishProfiles/peb-lms-staging - Web Deploy.pubxml`
+- `app/Properties/PublishProfiles/peb-lms-staging - Web Deploy.pubxml.user`
+- `app/courseware/tests/Bootstrap.php`
+- `app/courseware/user_guide/database/transactions.html`
+- `app/examdb/user_guide/database/transactions.html`
+- `app/knowledge/forum/install/mssql/install/azure/InstallCommon.sql`
+- `app/knowledge/forum/install/mssql/install/azure/InstallMembership.sql`
+- `app/knowledge/forum/install/mssql/install/azure/InstallProfile.SQL`
+- `app/knowledge/forum/install/mssql/install/azure/InstallRoles.sql`
+- `app/ui__/css/bootstrap-table.css`
+- `app/ui__/css/bootstrap-theme.css`
+- `app/ui__/css/bootstrap-theme.css.map`
+- `app/ui__/css/bootstrap-theme.min.css`
+- `app/ui__/css/bootstrap-theme.min.css.map`
+- `app/ui__/css/bootstrap.css`
+- `app/ui__/css/bootstrap.css.map`
+- `app/ui__/css/bootstrap.min.css`
+- `app/ui__/css/bootstrap.min.css.map`
+- `app/ui__/js/bootstrap-datepicker.js`
+- `app/ui__/js/bootstrap.js`
+- `app/ui__/js/bootstrap.min.js`
+- `app/web/css/bootstrap-table.css`
+- `app/web/css/bootstrap-theme.css`
+- `app/web/css/bootstrap-theme.css.map`
+- `app/web/css/bootstrap-theme.min.css`
+- `app/web/css/bootstrap-theme.min.css.map`
+- `app/web/css/bootstrap.css`
+- `app/web/css/bootstrap.css.map`
+- `app/web/css/bootstrap.min.css`
+- `app/web/css/bootstrap.min.css.map`
+- `app/web/js/bootstrap-datepicker.js`
+- `app/web/js/bootstrap.js`
+- `app/web/js/bootstrap.min.js`
+- `installer.sh`
+- `scripts/generate_installer.sh`
 

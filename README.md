@@ -5,7 +5,7 @@ This repository is the enterprise architecture, security, and infrastructure con
 ## Contents
 
 - `docs/repo-audit.md` — repo-by-repo architecture, feature, dependency, runtime, and security audit.
-- `docs/source-inventory.md` — clone/intake evidence, endpoint hits, automation side effects, and quarantine status for unavailable repositories.
+- `docs/source-inventory.md` — clone/intake evidence, requested cvsz + ZeaZDev repository-list catalog expansion, endpoint hits, automation side effects, and quarantine status for unavailable repositories.
 - `docs/unified-architecture.md` — domain model, service boundaries, API surface, diagrams, rollout plan, TSS/Vault/HSM design, validation, and operations guide.
 - `docs/security-risk-report.md` — OWASP-level risk matrix, attack surface map, exploit scenarios, and hardening baseline.
 - `docs/production-deployment-guide.md` — production promotion, Terraform, GitOps, TSS, rollback, failure recovery, load, and chaos procedures.
@@ -19,7 +19,7 @@ This repository is the enterprise architecture, security, and infrastructure con
 
 - `docs/generated/full-spectrum-analysis.md` — deterministic full-spectrum repo inventory, normalized service ownership, flow map, and inconsistency analysis generated from cloned sources.
 - `docs/generated/function-api-inventory.md` — complete static index of detected functions, API expressions, and automation pipeline files.
-- `scripts/full-spectrum-audit.py` — GitHub CLI-first clone/intake analyzer with anonymous git fallback for public repositories.
+- `scripts/full-spectrum-audit.py` — GitHub CLI-first clone/intake analyzer with anonymous git and public REST metadata fallback for the expanded cvsz + ZeaZDev repository set.
 - `scripts/meta-installer.sh` — idempotent enterprise installer; default validate mode performs no DNS, cluster, or persistence mutations.
 - `scripts/deploy-unified-stack.sh` — deployment wrapper for Cloudflare, Kubernetes, and ArgoCD promotion.
 

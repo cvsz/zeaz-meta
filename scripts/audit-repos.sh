@@ -3,17 +3,35 @@ set -euo pipefail
 
 ROOT="${1:-$(pwd)/sources}"
 mkdir -p "$ROOT"
-repos=(zgitcp zwallet ABTPi18n zypto ZeaZDev-Omega ztsaff zLinebot zlttbots zttlbots zTTato-Platform zvath tiktok-shop-bot tiktokshop-api-client tiktok-shop-sdk tiktokshop-php zLinebot-automos zeaz-platform zeapay)
+repos=(
+  cvsz/zgitcp cvsz/zwallet cvsz/ABTPi18n cvsz/zypto cvsz/ZeaZDev-Omega
+  cvsz/ztsaff cvsz/zLinebot cvsz/zlttbots cvsz/zttlbots cvsz/zTTato-Platform
+  cvsz/zvath cvsz/tiktok-shop-bot cvsz/tiktokshop-api-client cvsz/tiktok-shop-sdk
+  cvsz/tiktokshop-php cvsz/zLinebot-automos cvsz/zeaz-platform cvsz/zeapay
+  cvsz/zcino cvsz/zGaming cvsz/zSafeGuard cvsz/zspin
+  ZeaZDev/vscode ZeaZDev/ZeaClicker ZeaZDev/zeazchain ZeaZDev/ZeaZDev
+  ZeaZDev/ZeaZDev-Omega ZeaZDev/zeazdev-repo ZeaZDev/zeaztools ZeaZDev/zlms-prod
+)
 
-for repo in "${repos[@]}"; do
-  if [[ -d "$ROOT/$repo/.git" ]]; then
-    echo "exists $repo"
+repo_dir_name() {
+  local full="$1" owner="${full%%/*}" repo="${full##*/}"
+  if [[ "$owner" == "cvsz" ]]; then
+    printf '%s\n' "$repo"
+  else
+    printf '%s__%s\n' "$owner" "$repo"
+  fi
+}
+
+for full in "${repos[@]}"; do
+  dir="$(repo_dir_name "$full")"
+  if [[ -d "$ROOT/$dir/.git" ]]; then
+    echo "exists $full"
     continue
   fi
   if command -v gh >/dev/null 2>&1; then
-    gh repo clone "cvsz/$repo" "$ROOT/$repo" || git clone --depth 1 "https://github.com/cvsz/$repo.git" "$ROOT/$repo" || echo "blocked $repo"
+    gh repo clone "$full" "$ROOT/$dir" -- --depth=1 || git clone --depth 1 "https://github.com/$full.git" "$ROOT/$dir" || echo "blocked $full"
   else
-    git clone --depth 1 "https://github.com/cvsz/$repo.git" "$ROOT/$repo" || echo "blocked $repo"
+    git clone --depth 1 "https://github.com/$full.git" "$ROOT/$dir" || echo "blocked $full"
   fi
 done
 
