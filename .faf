@@ -1,0 +1,52 @@
+faf_version: "0.1"
+project:
+  name: "zeaz-meta"
+  owner: "ZeaZDev"
+  repository: "cvsz/zeaz-meta"
+  type: "governance-repository"
+  description: "Architecture, roadmap, standards, repository governance, and persistent AI project context for the ZeaZDev ecosystem."
+
+architecture:
+  style: "ecosystem-governance"
+  scope:
+    - repository-portfolio-management
+    - architecture-standards
+    - product-roadmap
+    - persistent-ai-context
+  flagship_repositories:
+    - zeaz-platform
+    - zeaz-meta
+    - zeaz-ai-tooling
+    - zeaz-linebot-suite
+    - zeaz-wallet
+    - zeaz-lms
+    - zeaz-safeguard
+
+stack:
+  documentation:
+    - Markdown
+    - YAML
+    - FAF
+  automation:
+    - GitHub
+    - GitHub Actions
+    - AI Agents
+
+conventions:
+  commit_style: "conventional commits"
+  branch_strategy: "main + feature branches"
+  public_repo_rule: "public repos must be polished products or reusable tools"
+  private_repo_rule: "experiments, automation, trading, gaming, and internal tooling stay private until production-ready"
+  archive_rule: "forks, samples, duplicates, and outdated prototypes should be archived"
+
+constraints:
+  - "Do not commit secrets, credentials, API keys, or private customer data."
+  - "Do not expose compliance-sensitive automation publicly without review."
+  - "Every public flagship repository must include README, .faf, security policy, and clear status."
+  - "Repository names should be readable, product-oriented, and consistent with the ZeaZDev brand."
+
+goals:
+  - "Present ZeaZDev as a professional AI-native product ecosystem."
+  - "Reduce public repository noise."
+  - "Consolidate related tools into coherent monorepos."
+  - "Use .FAF as persistent AI project context across flagship repositories."
