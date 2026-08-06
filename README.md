@@ -5,9 +5,11 @@ This repository is the enterprise architecture, security, infrastructure, and re
 ## Repository governance
 
 - `docs/github/portfolio.md` — public portfolio map, lifecycle tiers, product families, and review queues.
+- `docs/github/work-areas-and-visibility.md` — workstream boundaries, responsibilities, and Public/Private decision rules.
 - `docs/github/repository-policy.md` — naming, lifecycle, ownership, branch, security, and archive approval policy.
 - `docs/github/cleanup-backlog.md` — phased non-destructive cleanup and normalization backlog.
-- `config/github-portfolio.yaml` — machine-readable public repository classification.
+- `config/github-portfolio.yaml` — machine-readable public repository lifecycle classification.
+- `config/github-visibility-review.yaml` — machine-readable workstream and visibility recommendations.
 - GitHub issue `#16` — portfolio organization epic and approval boundary.
 
 Private repository names and metadata are intentionally excluded from public governance documents. Destructive changes such as archive, delete, transfer, visibility change, and rename require separate explicit owner approval.
