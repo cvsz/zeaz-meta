@@ -1,11 +1,23 @@
 # ZeaZ Meta Platform
 
-This repository is the enterprise architecture, security, and infrastructure control plane for consolidating the cvsz ZeaZ ecosystem into a unified Go microservices platform.
+This repository is the enterprise architecture, security, infrastructure, and repository-governance control plane for the cvsz ZeaZ ecosystem.
+
+## Repository governance
+
+- `docs/github/portfolio.md` — public portfolio map, lifecycle tiers, product families, and review queues.
+- `docs/github/work-areas-and-visibility.md` — workstream boundaries, responsibilities, and Public/Private decision rules.
+- `docs/github/repository-policy.md` — naming, lifecycle, ownership, branch, security, and archive approval policy.
+- `docs/github/cleanup-backlog.md` — phased non-destructive cleanup and normalization backlog.
+- `config/github-portfolio.yaml` — machine-readable public repository lifecycle classification.
+- `config/github-visibility-review.yaml` — machine-readable workstream and visibility recommendations.
+- GitHub issue `#16` — portfolio organization epic and approval boundary.
+
+Private repository names and metadata are intentionally excluded from public governance documents. Destructive changes such as archive, delete, transfer, visibility change, and rename require separate explicit owner approval.
 
 ## Contents
 
 - `docs/repo-audit.md` — repo-by-repo architecture, feature, dependency, runtime, and security audit.
-- `docs/source-inventory.md` — clone/intake evidence, requested cvsz + ZeaZDev repository-list catalog expansion, endpoint hits, automation side effects, and quarantine status for unavailable repositories.
+- `docs/source-inventory.md` — historical clone/intake evidence, requested cvsz + ZeaZDev repository-list catalog expansion, endpoint hits, automation side effects, and quarantine status for unavailable repositories.
 - `docs/unified-architecture.md` — domain model, service boundaries, API surface, diagrams, rollout plan, TSS/Vault/HSM design, validation, and operations guide.
 - `docs/security-risk-report.md` — OWASP-level risk matrix, attack surface map, exploit scenarios, and hardening baseline.
 - `docs/production-deployment-guide.md` — production promotion, Terraform, GitOps, TSS, rollback, failure recovery, load, and chaos procedures.
@@ -16,7 +28,6 @@ This repository is the enterprise architecture, security, and infrastructure con
 - `scripts/clean-os.sh` — removes legacy cron/systemd/watchdog/docker residue before deterministic GitOps bootstrap.
 - `scripts/safe-deploy.sh` — ArgoCD sync/wait deployment wrapper for controlled promotion.
 - `scripts/audit-repos.sh` — repeatable source repository evidence inventory command.
-
 - `docs/generated/full-spectrum-analysis.md` — deterministic full-spectrum repo inventory, normalized service ownership, flow map, and inconsistency analysis generated from cloned sources.
 - `docs/generated/function-api-inventory.md` — complete static index of detected functions, API expressions, and automation pipeline files.
 - `scripts/full-spectrum-audit.py` — GitHub CLI-first clone/intake analyzer with anonymous git and public REST metadata fallback for the expanded cvsz + ZeaZDev repository set.

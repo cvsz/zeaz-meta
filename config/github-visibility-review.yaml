@@ -1,0 +1,186 @@
+schema_version: 1
+snapshot_date: "2026-08-06"
+owner: cvsz
+policy:
+  visibility_change_requires_explicit_owner_approval: true
+  public_catalog_must_not_disclose_private_repository_names: true
+  public_repository_requirements:
+    - clear-license
+    - no-credentials-or-sensitive-history
+    - no-production-topology
+    - no-customer-or-personal-data
+    - no-unapproved-proprietary-assets
+    - safe-ci-permissions
+    - documented-security-contact
+    - clear-purpose-and-support-status
+visibility_classes:
+  public-by-design:
+    description: reusable, inspectable, or community-facing source
+  public-after-review:
+    description: public only after security, licensing, topology, and proprietary-asset review
+  private-by-default:
+    description: commercial product, internal workflow, or unfinished product
+  private-required:
+    description: production infrastructure, payment/auth, account automation, sensitive data, or confidential operations
+  reference-public:
+    description: upstream fork, mirror, sample, or research dependency with attribution and divergence policy
+  archive-or-quarantine-review:
+    description: duplicated, historical, unsupported, unsafe, or unclear-purpose repository
+workstreams:
+  governance:
+    purpose: portfolio policy, inventory, lifecycle, and decision records
+    default_visibility: public-by-design
+    repositories:
+      - zeaz-meta
+  core-platform:
+    purpose: shared platform runtime and governed dashboard surface
+    default_visibility: public-after-review
+    repositories:
+      - z-platform
+      - zdash
+    private_components:
+      - production-overlays
+      - tenant-configuration
+      - secrets-and-account-structure
+      - incident-and-private-audit-data
+  ai-coding-and-agent-tooling:
+    purpose: cli, agents, providers, automation, harnesses, and developer environment tooling
+    default_visibility: public-after-review
+    repositories:
+      - zai-coder
+      - aicoder
+      - zcodex
+      - zc
+      - codex-universal
+      - agent-harness-generator
+      - zagents-generator
+      - git-env-manager
+      - GPTxCODEX-CONFIG
+      - zsp-aitool
+  reusable-sdks-and-libraries:
+    purpose: versioned clients, schemas, reusable integration code, and sanitized examples
+    default_visibility: public-by-design
+    repositories:
+      - tiktok-shop-sdk
+      - tiktokshop-php
+      - ABTPi18n
+      - openapi-builder
+      - SECGenerator
+  product-applications:
+    purpose: commercial or end-user products and product-specific business workflows
+    default_visibility: private-by-default
+    repositories:
+      - zytgen
+      - zveo
+      - zAcademy
+      - learnship
+      - my-virtual-office
+      - zsticker
+      - zGaming
+      - OmegaQuant
+      - zkbtrader
+      - zcino
+      - zeye
+      - ZeaZDev-Omega
+  account-automation-and-bots:
+    purpose: social, messaging, marketplace, merchant, webhook, and account automation
+    default_visibility: private-required
+    repositories:
+      - tiktok-shop-bot
+      - zLinebot
+      - zLinebot-automos
+      - zlttbots
+      - zttlbots
+  payments-wallets-and-identity:
+    purpose: payment, wallet, settlement, authentication, identity, and personal-data processing
+    default_visibility: private-required
+    repositories:
+      - zwallet
+      - zypto
+      - zvath
+      - class.truewallet.php
+      - passport-reader
+  infrastructure-and-production-operations:
+    purpose: cloud, dns, network, deployment, production configuration, backup, and recovery
+    default_visibility: private-required
+    repositories:
+      - zlms-prod
+      - wowza-server
+  upstream-and-reference:
+    purpose: upstream forks, mirrors, samples, and research dependencies
+    default_visibility: reference-public
+    repositories:
+      - open-webui
+      - vscode
+      - ComfyUI
+      - opencode
+      - one-api
+      - adk-python
+      - python-docs-samples
+      - nodejs-docs-samples
+      - golang-samples
+      - cloud-code-custom-samples-example
+      - awesome-copilot
+      - everything-claude-code
+      - everything-gemini-code
+      - free-claude-code
+  historical-duplicate-and-security-review:
+    purpose: preserve or retire historical, duplicated, unsupported, or security-sensitive source
+    default_visibility: archive-or-quarantine-review
+    repositories:
+      - THGirlclock
+      - phonegap-plugins
+      - traccar
+      - traccar-web
+      - traccar-web-1
+      - traccar-manager-android
+      - traccar-client-android
+      - traccar-client-ios
+      - traccar-manager-ios
+      - TraccarInstaller
+      - clipbucket
+      - clipbucketv3
+      - rathena
+      - openkore
+      - NEMO
+      - FluxCP
+      - CORA
+      - mssql-jdbc
+      - adminer
+      - Mirai-Source-Code
+      - rs-csv-importer
+      - vesta
+      - cars-for-sale-php-website
+priority_reviews:
+  immediate-private-review:
+    - zlms-prod
+    - tiktok-shop-bot
+    - zLinebot
+    - zLinebot-automos
+    - zlttbots
+    - zttlbots
+    - zwallet
+    - zypto
+    - zvath
+    - class.truewallet.php
+    - passport-reader
+  immediate-quarantine-review:
+    - Mirai-Source-Code
+  product-open-source-decision:
+    - zytgen
+    - zveo
+    - zAcademy
+    - learnship
+    - my-virtual-office
+    - zGaming
+    - OmegaQuant
+    - zkbtrader
+execution_order:
+  - governance-and-core-protection
+  - production-infrastructure-private-review
+  - payment-wallet-identity-review
+  - account-automation-private-review
+  - sdk-and-product-code-separation
+  - product-source-of-truth-decisions
+  - upstream-reference-declarations
+  - duplicate-and-archive-review
