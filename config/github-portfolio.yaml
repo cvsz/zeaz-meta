@@ -1,0 +1,164 @@
+schema_version: 1
+snapshot_date: "2026-08-06"
+owner: cvsz
+catalog_scope: public-repositories-visible-to-connected-github-account
+governance_repository: cvsz/zeaz-meta
+primary_platform_repository: cvsz/z-platform
+privacy:
+  include_private_repository_names: false
+  private_inventory_location: private-control-plane
+approval:
+  destructive_changes_require_explicit_owner_approval: true
+  destructive_changes:
+    - archive
+    - delete
+    - transfer
+    - visibility-change
+    - rename
+    - default-branch-history-rewrite
+lifecycle_states:
+  - governance
+  - core
+  - active
+  - incubating
+  - reference
+  - maintenance
+  - archive-review
+repositories:
+  governance:
+    - name: zeaz-meta
+      role: portfolio-governance-and-architecture-control-plane
+  core:
+    - name: z-platform
+      role: primary-platform-monorepo
+    - name: zdash
+      role: governed-dashboard-product
+      integration: z-platform:apps/zdash
+  active:
+    ai-coding-and-agents:
+      - zai-coder
+      - aicoder
+      - zcodex
+      - zc
+      - codex-universal
+      - agent-harness-generator
+      - zagents-generator
+      - git-env-manager
+      - GPTxCODEX-CONFIG
+      - zsp-aitool
+    content-and-media:
+      - zytgen
+      - zveo
+      - zsticker
+      - aioci-content-summary
+    commerce:
+      - tiktok-shop-sdk
+      - tiktok-shop-bot
+      - tiktokshop-php
+    messaging:
+      - zLinebot
+      - zLinebot-automos
+      - zlttbots
+      - zttlbots
+    learning-and-workspace:
+      - zAcademy
+      - learnship
+      - my-virtual-office
+    wallet-and-identity-adjacent:
+      - zwallet
+      - zypto
+      - zvath
+    operations-and-security:
+      - zSafeGuard
+      - zgitcp
+      - livescan
+      - SECGenerator
+  incubating:
+    - ZeaZDev-Omega
+    - ABTPi18n
+    - openapi-builder
+    - ztsaff
+    - zGaming
+    - zspin
+    - zcino
+    - zeye
+    - zkbtrader
+    - OmegaQuant
+  reference:
+    - open-webui
+    - vscode
+    - ComfyUI
+    - opencode
+    - one-api
+    - adk-python
+    - python-docs-samples
+    - nodejs-docs-samples
+    - golang-samples
+    - cloud-code-custom-samples-example
+    - awesome-copilot
+    - everything-claude-code
+    - everything-gemini-code
+    - free-claude-code
+  archive-review:
+    traccar-family:
+      - traccar
+      - traccar-web
+      - traccar-web-1
+      - traccar-manager-android
+      - traccar-client-android
+      - traccar-client-ios
+      - traccar-manager-ios
+      - TraccarInstaller
+    clipbucket-family:
+      - clipbucket
+      - clipbucketv3
+    ragnarok-and-game-server-family:
+      - rathena
+      - openkore
+      - NEMO
+      - FluxCP
+      - CORA
+    historical-and-imported-code:
+      - THGirlclock
+      - phonegap-plugins
+      - passport-reader
+      - mssql-jdbc
+      - adminer
+      - Mirai-Source-Code
+      - rs-csv-importer
+      - class.truewallet.php
+      - vesta
+      - cars-for-sale-php-website
+      - wowza-server
+classification_rules:
+  default_for_unknown_owned_product: incubating
+  default_for_upstream_copy_or_sample: reference
+  default_for_duplicate_or_stale_candidate: archive-review
+  archive_review_is_not_authorization: true
+  public_catalog_must_not_disclose_private_repositories: true
+required_metadata:
+  core:
+    - owner
+    - lifecycle
+    - description
+    - topics
+    - README.md
+    - SECURITY.md
+    - LICENSE
+    - CHANGELOG.md
+    - validation
+    - release-policy
+  active:
+    - owner
+    - lifecycle
+    - description
+    - README.md
+    - SECURITY.md
+    - license
+    - roadmap-or-milestone
+  reference:
+    - upstream-url
+    - upstream-revision
+    - license
+    - divergence-policy
+    - update-cadence
