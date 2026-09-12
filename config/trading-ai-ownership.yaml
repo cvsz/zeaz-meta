@@ -1,0 +1,91 @@
+version: 1
+updated: "2026-09-12"
+policy: non-destructive-consolidation
+canonical:
+  trading_intelligence: cvsz/zworkforce
+  agent_orchestration: cvsz/zworkforce
+  trading_execution: cvsz/zksato
+  paper_trading: cvsz/zksato
+  risk_reconciliation: cvsz/zksato
+  onchain_wallet: cvsz/zwallet
+  dex_liquidity: cvsz/zwallet
+  ai_gateway: cvsz/zaiman
+  trading_dashboard: cvsz/zdash
+  notifications_line: cvsz/zLinebot-automos
+  agent_templates_mcp: cvsz/zagents-generator
+  production_gitops: cvsz/z-platform
+  governance: cvsz/zeaz-meta
+  commercial_agents_skills: cvsz/zomega
+  network_control: cvsz/zos
+
+migration_sources:
+  cvsz/ABTPi18n:
+    state: feature-freeze
+    destinations:
+      execution: cvsz/zksato
+      ui: cvsz/zdash
+      intelligence: cvsz/zworkforce
+  cvsz/zkbtrader:
+    state: feature-freeze
+    destinations:
+      execution: cvsz/zksato
+      risk: cvsz/zksato
+  cvsz/OmegaQuant:
+    state: research-source
+    destinations:
+      quant_research: cvsz/zksato
+      intelligence: cvsz/zworkforce
+  cvsz/zypto:
+    state: legacy-research-source
+    destinations:
+      execution: cvsz/zksato
+      infrastructure: cvsz/z-platform
+  cvsz/zeaz:
+    scope: apps/ztrader
+    state: migration-source
+    destinations:
+      intelligence: cvsz/zworkforce
+      execution: cvsz/zksato
+      ui: cvsz/zdash
+  cvsz/cmeerp:
+    scope: apps/ztrader
+    state: migration-source
+    destinations:
+      intelligence: cvsz/zworkforce
+      execution: cvsz/zksato
+      ui: cvsz/zdash
+  cvsz/zeaz-platform:
+    state: legacy-platform-source
+    destination: cvsz/z-platform
+  cvsz/one-api:
+    state: deprecation-candidate
+    destination: cvsz/zaiman
+    preserve:
+      - API compatibility tests
+      - robustness tests
+      - health contract
+
+gates:
+  live_trading:
+    default: false
+    required_evidence:
+      - backtest
+      - out_of_sample
+      - paper_trading
+      - forward_validation
+      - deterministic_risk
+      - explicit_operator_approval
+  legacy_retirement:
+    required:
+      - feature_inventory
+      - parity_matrix
+      - migrated_tests
+      - no_runtime_references
+      - ci_green
+      - rollback_path
+      - owner_archive_approval
+
+exclusions:
+  - repository: cvsz/zsme
+    policy: do-not-touch
+    reason: explicit owner instruction
