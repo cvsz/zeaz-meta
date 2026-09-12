@@ -432,3 +432,11 @@ The consolidation is complete only when:
 ## Final policy
 
 The target architecture favors consolidation over additional repositories. New functionality must be implemented in the canonical owner for its domain or exposed through a versioned integration contract.
+
+## Explicit exclusions
+
+The following repository is explicitly out of scope and must not be read, modified, migrated, archived, or used as a consolidation source by this program:
+
+- `cvsz/zsme`
+
+This exclusion overrides generic repository-discovery or automation rules for the trading/AI consolidation work.
