@@ -84,3 +84,8 @@ gates:
       - ci_green
       - rollback_path
       - owner_archive_approval
+
+exclusions:
+  - repository: cvsz/zsme
+    policy: do-not-touch
+    reason: explicit owner instruction
